@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GLSL example 5 parallax mapping</title>
+<meta name="date" content="2011-03-24T01:02:00+0100">
+<meta name="keywords" content="glsl_example_5_parallax_mapping">
+<link rel="start" href="http://www.pythonstuff.org/dokuwiki/">
+<link rel="stylesheet" media="screen" type="text/css" href="GLSL%20example%205%20parallax%20mapping_files/screen.css">
+<link rel="stylesheet" media="all" type="text/css" href="GLSL%20example%205%20parallax%20mapping_files/all.css">
+<link rel="stylesheet" media="print" type="text/css" href="GLSL%20example%205%20parallax%20mapping_files/print.css">
+</head>
+<body>
+<map id="languagemap" name="languagemap">
+ <area href="http://www.pythonstuff.org/glsl/example_5_parallax_mapping.html" alt="Pythonstuff GLSL in English" title="Pythonstuff GLSL in English" shape="rect" coords="0,129,36,149">
+ <area href="http://www.pythonstuff.org/glsl/example_5_parallax_mapping_ger.html" alt="Pythonstuff GLSL auf Deutsch" title="Pythonstuff GLSL auf Deutsch" shape="rect" coords="37,129,73,149">
+ <area href="http://www.pythonstuff.org/glsl/index.html" alt="Pythonstuff GLSL" shape="rect" coords="0,0,1050,150">
+ <area href="http://www.pythonstuff.org/glsl/index.html" alt="Pythonstuff" shape="default">
+</map>
+<table class="noprint" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td><a href="http://www.pythonstuff.org/glsl/index.html"><img src="GLSL%20example%205%20parallax%20mapping_files/pythonstuff.jpg" alt="PythonStuff Home" style="border-style: none" usemap="#languagemap"></a></td></tr>
+<tr><td bgcolor="blue"><font size="1">&nbsp;</font></td></tr>
+</tbody></table><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td class="noprint" valign="top">
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_ab4105a3-8b2a-4990-9613-ed21ed79c43c" height="400px" width="120px"> <param name="movie" value="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&amp;MarketPlace=US&amp;ID=V20070822%2FUS%2Fhttpwwwpython-20%2F8009%2Fab4105a3-8b2a-4990-9613-ed21ed79c43c&amp;Operation=GetDisplayTemplate"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF"><param name="allowscriptaccess" value="always"><embed src="GLSL%20example%205%20parallax%20mapping_files/q.swf" id="Player_ab4105a3-8b2a-4990-9613-ed21ed79c43c" quality="high" bgcolor="#ffffff" name="Player_ab4105a3-8b2a-4990-9613-ed21ed79c43c" allowscriptaccess="always" type="application/x-shockwave-flash" align="middle" height="400px" width="120px"></object> <noscript><a href="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&amp;MarketPlace=US&amp;ID=V20070822%2FUS%2Fhttpwwwpython-20%2F8009%2Fab4105a3-8b2a-4990-9613-ed21ed79c43c&amp;Operation=NoScript">Amazon.com Widgets</a></noscript>
+<br>&nbsp;<br>
+<iframe kabl="89517" src="GLSL%20example%205%20parallax%20mapping_files/cm.htm" marginwidth="0" marginheight="0" border="0" style="display: none !important" frameborder="0" height="450" scrolling="no" width="120"></iframe>
+</td><td valign="top">
+<div class="dokuwiki export">
+
+<h2 class="sectionedit1"><a name="example_5_-_glsl_parallax_mapping_with_pyglet" id="example_5_-_glsl_parallax_mapping_with_pyglet">Example 5 - GLSL Parallax Mapping with Pyglet</a></h2>
+<div class="level2">
+
+<p>
+Based on the <a href="http://www.pythonstuff.org/glsl/example_4_bump_mapping.html" class="wikilink1" title="example 4 bump mapping">previous example</a> we do Parallax Mapping.
+</p>
+
+</div>
+
+<h4><a name="what_is_parallax_mapping" id="what_is_parallax_mapping">What is parallax mapping ?</a></h4>
+<div class="level4">
+
+<p>
+As <a href="http://en.wikipedia.org/wiki/Parallax_mapping" class="urlextern" title="http://en.wikipedia.org/wiki/Parallax_mapping" rel="nofollow">Wikipedia</a> says:
+</p>
+
+<p>
+Parallax mapping is implemented by displacing the texture coordinates at a
+point on the rendered polygon by a function of the view angle in tangent space
+(the angle relative to the surface normal) and the value of the height map at that point.
+At steeper view-angles, the texture coordinates are displaced more, giving the illusion
+of depth due to parallax effects as the view changes.
+</p>
+
+<p>
+Or - as a picture says more:
+</p>
+
+<p>
+<a href="http://www.pythonstuff.org/glsl/media/parallax_method.jpg" class="media" title="glsl:parallax_method.jpg"><img src="GLSL%20example%205%20parallax%20mapping_files/parallax_method.jpg" class="media" title="parallax_method.jpg" alt="parallax_method.jpg"></a>
+</p>
+
+<p>
+The result looks like this:
+</p>
+
+<p>
+<a href="http://www.pythonstuff.org/glsl/media/with_parallax.jpg" class="media" title="glsl:with_parallax.jpg"><img src="GLSL%20example%205%20parallax%20mapping_files/with_parallax.jpg" class="media" title="with_parallax.jpg" alt="with_parallax.jpg" width="250"></a> <a href="http://www.pythonstuff.org/glsl/media/without_parallax.jpg" class="media" title="glsl:without_parallax.jpg"><img src="GLSL%20example%205%20parallax%20mapping_files/without_parallax.jpg" class="media" title="without_parallax.jpg" alt="without_parallax.jpg" width="250"></a>
+</p>
+
+<p>
+In the left picture the red pyramid tops look shifted sideways when they are not oriented towards the viewer.
+This effect can never be realized by texture mapping alone (even bump mapping just changes the lighting -
+see the picture to the right for comparison).
+</p>
+
+<p>
+Even better do the pyramids look if they are upside down (concave) - so you are not irritated by
+the missing silhouette:
+</p>
+
+<p>
+<a href="http://www.pythonstuff.org/glsl/media/concave_parallax.jpg" class="media" title="glsl:concave_parallax.jpg"><img src="GLSL%20example%205%20parallax%20mapping_files/concave_parallax.jpg" class="media" title="concave_parallax.jpg" alt="concave_parallax.jpg" width="250"></a>
+</p>
+
+<p>
+Parallax mapping looks best in movement, but here is another one:
+</p>
+
+<p>
+<a href="http://www.pythonstuff.org/glsl/media/ziegel_mit_parallaxe.jpg" class="media" title="glsl:ziegel_mit_parallaxe.jpg"><img src="GLSL%20example%205%20parallax%20mapping_files/ziegel_mit_parallaxe.jpg" class="media" title="ziegel_mit_parallaxe.jpg" alt="ziegel_mit_parallaxe.jpg" width="250"></a> <a href="http://www.pythonstuff.org/glsl/media/ziegel_ohne_parallaxe.jpg" class="media" title="glsl:ziegel_ohne_parallaxe.jpg"><img src="GLSL%20example%205%20parallax%20mapping_files/ziegel_ohne_parallaxe.jpg" class="media" title="ziegel_ohne_parallaxe.jpg" alt="ziegel_ohne_parallaxe.jpg" width="250"></a>
+</p>
+
+<p>
+In the left screenshot you can see the cement between the bricks only in
+ the center of the picture - under steeper angles the bricks hide the 
+cement.
+In the right screenshot the “parallax height” parameter is set to zero, 
+so you see just the “bump mapped” bricks.
+</p>
+<ul>
+<li class="level1"><div class="li"> Source Code is here: <a href="http://www.pythonstuff.org/glsl/media/demo_parallax.py" class="media mediafile mf_py" title="glsl:demo_parallax.py">Pyglet GLSL Parallax Shader Code</a></div>
+</li>
+</ul>
+
+<p>
+The textures I use in this example are in the <a href="http://www.pythonstuff.org/glsl/media/texture_pack3.zip" class="media mediafile mf_zip" title="glsl:texture_pack3.zip">Texture Pack 3</a>.
+</p>
+
+<p>
+To run this demo, you need Pyglet and
+<a href="http://swiftcoder.wordpress.com/2008/12/19/simple-glsl-wrapper-for-pyglet/" class="urlextern" title="http://swiftcoder.wordpress.com/2008/12/19/simple-glsl-wrapper-for-pyglet/" rel="nofollow">Tristam Macdonald's Library Shader.py</a>.
+You find everything on the <a href="http://www.pythonstuff.org/glsl/installation.html" class="wikilink1" title="installation">installation</a> page.
+</p>
+
+</div>
+<!-- EDIT1 SECTION "Example 5 - GLSL Parallax Mapping with Pyglet" [1-2021] -->
+<h3 class="sectionedit2"><a name="program_description" id="program_description">Program description</a></h3>
+<div class="level3">
+
+<p>
+To properly view this effect (and its limits), I added a “zoom” keyboard function:
+</p>
+<pre class="code">global dist
+def on_draw():
+    ....
+    glTranslatef(0.0, 0.0, dist); # instead of fixed "-3.5"
+    ....
+
+def on_key_press(...):
+    ....
+    elif symbol == key.PLUS:
+        dist += 0.5
+        print 'Distance now ', dist
+    elif symbol == key.MINUS:
+        dist -= 0.5
+        print 'Distance now ', dist</pre>
+
+<p>
+We also need a value for scaling the effect:
+</p>
+<pre class="code">global parallaxheight
+def on_draw():
+    ....
+    shader.uniformf('parallaxheight', parallaxheight )
+    ....
+
+def on_key_press(...):
+    ....
+    elif symbol == key.P:
+        parallaxheight += 0.01
+        print 'Parallax Height now ', parallaxheight
+    elif symbol == key.O:
+        parallaxheight -= 0.01
+        if parallaxheight &lt;= 0.0:
+            parallaxheight = 0.0
+            print 'Parallax now OFF'
+        else:
+            print 'Parallax Height now ', parallaxheight</pre>
+
+<p>
+then add another texture, the “height texture”. This is an 8bit-greyscale image,
+“black” meaning “lowest” and “white” means “highest”:
+</p>
+<pre class="code">texturecnt = 3          # Texturemap0.jpg = Colormap Texturemap1.jpg = Bumpmap Texturemap2.jpg = Heightmap</pre>
+
+<p>
+That is all there is in the surrounding Python program, so we can concentrate on the GLSL-Effect in the
+pixel shader. For a bumpmapped pixel we sampled the Colormap:
+</p>
+<pre class="code">vec4 texColor = vec4(texture2D(my_color_texture[0], gl_TexCoord[0].st).rgb, 1.0);</pre>
+
+<p>
+Now we look at the “height” at the position:
+</p>
+<pre class="code">vec2 coords1 = gl_TexCoord[0].st;
+float height1 = parallaxheight * (texture2D( my_color_texture[2], coords1).r - 0.5);</pre>
+
+<p>
+The value -0.5..+0.5 (after scaling) sampled from the heightmap is multiplied by our value “parallaxheight” - 
+if we set “parallaxheight” to zero by pressing “O” repeatedly, we get a “height1” of zero,
+meaning “just bumpmap, no parallax effect” (try it !).
+</p>
+
+<p>
+Now we do <em class="u">not</em> select the color pixel from gl_TexCoord[0].st as in
+</p>
+<pre class="code">vec4 texColor = vec4(texture2D(my_color_texture[0], gl_TexCoord[0].st).rgb, 1.0);</pre>
+
+<p>
+but from gl_TexCoord[0].st + offset1 as in
+</p>
+<pre class="code">offset1  = height1 *  vec2( eye.x, eye.y );
+
+vec4 texColor = vec4(texture2D(my_color_texture[0], gl_TexCoord[0].st + offset1).rgb, 1.0);</pre>
+
+<p>
+where the place of sampling is moved away in eye direction (projected to the texture) proportional to
+the height we just calculated.
+</p>
+
+<p>
+This follows the original implementation of Tomomichi Kaneko from 2001. There have been various improvements since
+then.
+</p>
+<ul>
+<li class="level1"><div class="li"> You could limit the displacement that could get quite large in case of pathological eye angles.</div>
+</li>
+<li class="level1"><div class="li"> You could check for a “higher” part of the height map in the line of sight, giving correct occlusion (“Steep Parallax Mapping”)</div>
+</li>
+<li class="level1"><div class="li"> You could do a light vector calculation in addition to the eye vector an implement very detailed shadows on the surface</div>
+</li>
+<li class="level1"><div class="li"> You could improve the precision of the intersection coordinate by some kind of interpolation </div>
+</li>
+</ul>
+
+<p>
+and more.
+</p>
+
+<p>
+In my source file I tried to improve the intersection search by doing <em class="u">one</em> interpolation step between height values.
+So I reduce the artefacts introduced by too steep height changes (a bit):
+</p>
+<pre class="code">vec2  coords1 = gl_TexCoord[0].st;
+vec2  coords2  = coords1 + offset1;
+float height2 = parallaxheight * (texture2D( my_color_texture[2], coords2).r - 0.5);
+vec2  newCoords = coords2;
+vec2  newCoords = coords1 + (height2/height1) * offset1;
+vec4  texColor = vec4(texture2D(my_color_texture[0], newCoords).rgb, 1.0);</pre>
+
+<p>
+Enjoy !
+</p>
+
+<p>
+If you have enjoyed this enough, let's get continue with <a href="http://www.pythonstuff.org/glsl/example_6_vertex_offset.html" class="wikilink1" title="example 6 vertex offset">Example 6 - Vertex Offset Shader</a> for deformable Objects.
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Program description" [2022-] --></div>
+</td></tr>
+</tbody></table>
+<hr>
+<div class="noprint" style="width=50%;float:left"><a href="http://www.pythonstuff.org/glsl/index_ger.html" class="wikilink1" title="index">Deutschsprachige Version</a>, <a href="http://www.pythonstuff.org/glsl/index.html" class="wikilink1" title="index">Start</a></div><div style="width=50%;float:right"><a href="http://www.pythonstuff.org/glsl/legalese.html" class="wikilink1" title="legalese">Impressum &amp; Disclaimer</a></div>
+
+
+</body></html>

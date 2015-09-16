@@ -1,0 +1,4 @@
+texture0="abstract::cobblestones.dds"
+texture1="abstract::cobblestonesdot3.dds"
+texture2="abstract::cobblestones_step.dds"
+shader="abstract::mesh_diffuse_bumpmap_parallax.vert","abstract::mesh_diffuse_bumpmap_specular_CONESTEP.frag"

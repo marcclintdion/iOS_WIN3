@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+		<title>Gamasutra - Book Excerpt: Shadow Techniques for Relief Texture Mapped Objects</title>
+	<meta name="keywords" content="game development, game developer, game programming, game programmer, videogame, artificial intelligence, 3D animation, game design, 3D modeling, game business, game jobs, game directory, game development software, game technology, 3D technology, game producer, game audio, game animation, virtual reality, digital entertainment, PC game, Xbox game, game news, new game, arcade development, Nintendo development, Playstation development, Playstation 2, PS2, Dreamcast development, Game Developer magazine, Computer Game Developers Conference, Game Developers Conference, Independent Game Developers Conference, CMP Game Media Group, game industry research, online game development, digital assets, free textures, free 3D models, free shaders, Gamasutra Exchange, 3D Studio Max textures"><meta name="description" content="This excerpt from Advanced Game Development with Programmable Graphics Hardware covers integrating shadows to relief map objects, an important feature in fully integrating shadows into a game scenario. "><link rel="image_src" href="http://www.gamasutra.com/features/20051003/index_watt_sm.jpg">
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- CSS -->
+        
+                            <meta property="og:title" content="Book Excerpt: Shadow Techniques for Relief Texture Mapped Objects">
+            <meta property="og:image" content="http://www.gamasutra.com">
+            <meta property="og:description" content="This excerpt from  Advanced Game Development with Programmable Graphics Hardware  covers integrating shadows to relief map objects, an important feature in fully integrating shadows into a game scenario. ">
+                <link rel="alternate" type="application/rss+xml" title="Gamasutra Article Feed" href="http://feeds.feedburner.com/GamasutraFeatureArticles/">
+	<link rel="alternate" type="application/rss+xml" title="Gamasutra News Feed" href="http://feeds.feedburner.com/GamasutraNews/">
+	<link rel="alternate" type="application/rss+xml" title="Gamasutra Columns Feed" href="http://feeds.feedburner.com/GamasutraColumns/">
+	<link rel="alternate" type="application/rss+xml" title="Gamasutra Jobs Feed" href="http://feeds.feedburner.com/GamasutraJobs/">
+	
+        <link href="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/redesign_comments.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/superfooter.css">
+        <script src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/elqCfg.js" async="" type="text/javascript"></script><script async="" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/cbgapi.loaded_1"></script><script async="" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/cbgapi.loaded_0"></script><script type="text/javascript" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/redesign_comments.js"></script>
+        <link rel="stylesheet" type="text/css" href="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/grid.css">
+	<link rel="stylesheet" type="text/css" href="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/typography.css">
+	<link rel="stylesheet" type="text/css" href="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/style.css">
+        <script type="text/javascript" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/jquery-1.js"></script>
+        <script type="text/javascript" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/jquery.js"></script>
+        <meta name="node" content="228">
+	<meta name="pagecaching" content="137">
+           
+	<script type="text/javascript"> 
+        
+	function checkMail(obj){
+	 
+		   var think_opt_out = document.getElementById('Think_Opt_Out');
+	 
+		   if (document.getElementById('Think_Opt_Out').checked) {
+	 
+				 document.getElementById('Think_Opt_In').value = 0;
+		   } else {
+	 
+				 document.getElementById('Think_Opt_In').value = 1;
+		   }
+		   var firstname = document.getElementById('firstname').value;
+		   if (firstname == ""){
+				 alert('Please provide your first name');
+				 return false;
+		   }
+	 
+		   if (document.getElementById('lastname').value == ''){
+				 alert("Please provide your lastt name");
+				 return false;
+		   }
+	 
+	 
+		   var x = document.getElementById('EmailAddr').value;
+	 
+		   var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		   if (filter.test(x)) { return true; }
+		   else  { alert('Invalid Email Address detected. Please correct.'); return false; }
+	 
+	 
+	}
+	 
+	</script>
+	 
+	<script type="text/javascript" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/md5.js"></script>
+        
+
+        <script type="text/javascript">
+        var adrand = parseInt(Math.random()*1000000000, 10);
+        var adkeys = "key1+key2+key3+key4";
+        </script>
+
+                                <script type="text/javascript">
+            //alert('130830+programming+art');
+            var adkeys = '130830+programming+art';
+            </script>
+        	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+	
+	<script type="text/javascript">
+            
+		var browser			= navigator.userAgent;
+		var browserRegex	= /(Android|BlackBerry|IEMobile|Nokia|iP(ad|hone|od)|Opera M(obi|ini))/;
+		var isMobile		= false;
+		if(browser.match(browserRegex)) {
+			isMobile			= true;
+			addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+			function hideURLbar(){
+				window.scrollTo(0,1);
+			}
+		}
+        
+	</script>
+
+        <!-- Start Visual Website Optimizer Asynchronous Code -->
+        <script type="text/javascript">
+        
+        var _vwo_code=(function(){
+        var account_id=32069,
+        settings_tolerance=2000,
+        library_tolerance=2500,
+        use_existing_jquery=false,
+        // DO NOT EDIT BELOW THIS LINE
+        f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+        
+        </script><script type="text/javascript" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/j.js"></script>
+        <!-- End Visual Website Optimizer Asynchronous Code -->
+        
+        <!-- Start: GPT Sync -->
+        <script type="text/javascript">
+         
+         var gptadslots=[];
+         (function(){
+          var useSSL = 'https:' == document.location.protocol;
+          var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+          document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+         })();
+         
+        </script><script src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/gpt.js"></script>
+
+        <script type="text/javascript">
+              
+                      googletag.pubads().setTargeting('kw',['programming','art']);
+                                            googletag.pubads().setTargeting('aid',['130830']);
+           
+            
+          //Adslot 1 declaration
+          gptadslots[1]= googletag.defineSlot('/2441/Gamasutra', [[1,2]],'div-gpt-ad-skin').setTargeting('pos',['skin']).addService(googletag.pubads());
+
+          //Adslot 2 declaration
+          gptadslots[2]= googletag.defineSlot('/2441/Gamasutra', [[728,90]],'div-gpt-ad-top').setTargeting('pos',['top']).addService(googletag.pubads());
+
+          //Adslot 3 declaration
+          gptadslots[3]= googletag.defineSlot('/2441/Gamasutra', [[164,59]],'div-gpt-ad-button1').setTargeting('pos',['button1']).addService(googletag.pubads());
+
+          //Adslot 4 declaration
+          gptadslots[4]= googletag.defineSlot('/2441/Gamasutra', [[164,59]],'div-gpt-ad-button2').setTargeting('pos',['button2']).addService(googletag.pubads());
+
+          //Adslot 5 declaration
+          gptadslots[5]= googletag.defineSlot('/2441/Gamasutra', [[164,409]],'div-gpt-ad-callout').setTargeting('pos',['callout']).addService(googletag.pubads());
+
+          //Adslot 6 declaration
+          gptadslots[6]= googletag.defineSlot('/2441/Gamasutra', [[300,250]],'div-gpt-ad-rec1').setTargeting('pos',['rec1']).addService(googletag.pubads());
+
+          //Adslot 7 declaration
+          gptadslots[7]= googletag.defineSlot('/2441/Gamasutra', [[160,600]],'div-gpt-ad-sky1').setTargeting('pos',['sky1']).addService(googletag.pubads());
+
+          //Adslot 8 declaration
+          gptadslots[8]= googletag.defineSlot('/2441/Gamasutra', [[160,160]],'div-gpt-ad-Ltile1').setTargeting('pos',['Ltile1']).addService(googletag.pubads());
+
+          //Adslot 9 declaration
+          gptadslots[9]= googletag.defineSlot('/2441/Gamasutra', [[164,177]],'div-gpt-ad-custom1').setTargeting('pos',['custom1']).addService(googletag.pubads());
+
+          //Adslot 10 declaration
+          gptadslots[10]= googletag.defineSlot('/2441/Gamasutra', [[666,171]],'div-gpt-ad-custom2').setTargeting('pos',['custom2']).addService(googletag.pubads());
+
+          //Adslot 11 declaration
+          gptadslots[11]= googletag.defineSlot('/2441/Gamasutra', [[164,177]],'div-gpt-ad-custom3').setTargeting('pos',['custom3']).addService(googletag.pubads());
+
+          googletag.pubads().enableSingleRequest();
+          googletag.pubads().enableSyncRendering();
+          googletag.enableServices();
+        </script><script kabl="40222" style="display: none !important" type="text/javascript" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/pubads_impl_27.js"></script>
+        <!-- End: GPT -->
+        
+        <script src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/ckeditor.js"></script><style>.cke{visibility:hidden;}</style>
+        <script src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/ckfinder.js"></script>
+ 
+</head>
+<body>
+    <div class="hide-phone">
+                                <!-- Beginning Sync AdSlot 1 for Ad unit Gamasutra/ ### size: [[1,2]]  -->
+<div id="div-gpt-ad-skin">
+ <script type="text/javascript">
+  googletag.display('div-gpt-ad-skin');
+ </script>
+</div>
+<!-- End AdSlot 1 -->
+            </div>
+
+    <div class="hide-phone">
+         <div class="wrapper properties">
+            <div class="container">
+                    <ul>
+                        <li>Our Properties:</li>
+                        <li class="activetab"><a href="http://www.gamasutra.com/" class="active">Gamasutra</a></li>
+                        <li><a href="http://www.gamecareerguide.com/">GameCareerGuide</a></li>
+                        <li><a href="http://www.indiegames.com/">IndieGames</a></li>
+                        <li><a href="http://www.gdcvault.com/">GDC Vault</a></li>
+                        <li><a href="http://www.gdconf.com/">GDC</a></li>
+                        <li><a href="http://www.igf.com/">IGF</a></li>
+                        <li><a href="http://www.appdevstories.com/">App Dev Stories</a></li>
+                        <li><a href="http://www.adconf.com/">ADC</a></li>
+                        <li><a href="http://www.game-advertising-online.com/">GAO</a></li>
+                   </ul>
+              </div>
+         </div><!--end wrapper-->
+    </div>
+    
+    <br>
+     <div class="container bottom3">
+     	<div class="span-7">
+          	<a href="http://www.gamasutra.com/"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/gamasutra_logo.png" alt="Gamasutra: The Art &amp; Business of Making Games" height="77" border="0" width="243"></a><img alt="spacer" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/spacer.gif" width="27">
+		</div>
+          <div class="hide-phone">
+              <div class="div span-16 last leaderboard">
+                     
+                                                                               <!-- Beginning Sync AdSlot 2 for Ad unit Gamasutra/ ### size: [[728,90]]  -->
+<div id="div-gpt-ad-top">
+ <script type="text/javascript">
+  googletag.display('div-gpt-ad-top');
+ </script>
+</div>
+<!-- End AdSlot 2 -->
+                                           
+    
+              </div>
+          </div>
+    </div>
+          
+<div class="container"> 
+		<div class="span-20">
+                    <div class="show-phone"><!--there is another on the page for the regular size, this is phone only-->
+                         <div class="span-5 last nav_search">
+                              <div class="content center">
+                                   <span class="nav_searchtxt">SEARCH</span>
+                                   <form class="left" name="topsearch" action="http://www.gamasutra.com/search/" method="GET">
+          
+                                               <input name="search_text" size="25" class="search" type="text">	  
+                                              <span class="nav_searchbutton"><a href="" onclick="javascript: document.topsearch.submit(); return false;">GO</a></span>
+                                   
+                                   </form>
+                              </div>
+                         </div>
+                    </div><!--end show phone-->
+                    
+                    <div class="show-phone"><!--sadie change-->
+                        <div class="span-3">
+                                  <div class="login_phone">
+                                       <a href="http://www.gamasutra.com/sso/login.php?">LOGIN</a>
+                                   </div>
+                        </div>
+                    </div><!--end showphone-->
+                    <div class="nav">
+                	<div class="span-3 nav_jobs">
+                    	<div class="content">
+                              <a href="http://jobs.gamasutra.com/">GAME JOBS</a>
+                          </div>
+                    </div>
+                    <div class="span-12 nav_links">
+                         <div class="content">
+                                   <a href="http://www.gamasutra.com/updates/">updates</a>
+                                   <a href="http://www.gamasutra.com/blogs/">Blogs</a>
+                                   <a href="http://www.gamasutra.com/calendar/calendar.php">events</a>
+                                   <a href="http://www.gamasutra.com/contractors/contractor_display.php">contractors</a>
+                                   <a href="https://www.gamasutra.com/sso/profile.php#newsletters">newsletter</a>
+                                   <a href="https://store.cmpgame.com/storefront.php?loc=&amp;skin=gamasutra_redesign">store</a>
+                         </div>
+                    </div>
+                    <div class="hide-phone">
+                        <div class="span-5 last nav_search">
+                             <div class="content">
+                                  <span class="nav_searchtxt">SEARCH</span>
+                                  <form class="left" name="topsearch" action="http://www.gamasutra.com/search/" method="GET">
+
+                                              <input name="search_text" size="10" class="search" type="text">	  
+                                             <span class="nav_searchbutton"><a href="" onclick="javascript: document.topsearch.submit(); return false;">GO</a></span>
+
+                                    </form>
+                             </div>
+                        </div>
+                    </div>
+                    <br class="clear">
+               </div><!--end nav-->
+               <div class="hide-phone"> 
+                    <div class="span-20 last"> 
+                       <div class="topicmenu">
+                            <ul>
+                                <li class="activetab"><a href="http://www.gamasutra.com/">ALL</a>
+                                </li><li><a href="http://www.gamasutra.com/topic/console-pc">CONSOLE/PC GAMES</a>
+                                </li><li><a href="http://www.gamasutra.com/topic/social-online">SOCIAL/ONLINE GAMES</a>
+                                </li><li><a href="http://www.gamasutra.com/topic/smartphone-tablet">SMARTPHONE/TABLET GAMES</a>
+                                </li><li><a href="http://www.gamasutra.com/topic/indie">INDEPENDENT GAMES</a>
+                                 </li></ul>
+                                                          <span class="gdmag"><a href="http://www.gamasutra.com/topic/game-developer"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/btn_gdmag0.png"></a></span>
+                       </div>
+                   </div>
+               </div>		
+                    <div class="span-20 last content_bg">
+                        <div class="hide-phone">
+<div class="span-4">
+  <div class="content_box_left">
+    <div class="leftcol">
+        <!--member login-->
+            <table border="0" cellpadding="0" cellspacing="0" width="166">
+  <tbody><tr>
+    <td id="memberLoginHeading" class="whiteTop" height="19" bgcolor="#82BC7A" width="166"><span class="MedGreenHeader">Member Login </span></td>  	
+  </tr>
+  
+  <tr>   
+    <td id="memberLogin"><form method="POST" action="" onsubmit="return false;" name="login_form"><table border="0" cellpadding="0" cellspacing="0" width="166"><tbody><tr><td rowspan="5" width="5"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/spacer.gif" border="0" width="5"></td><td class="SmWhiteText" align="right" width="70">Email:&nbsp;&nbsp;</td><td width="87"><input name="email" class="login_1" type="text"></td><td rowspan="5" width="5"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/spacer.gif" border="0" width="5"></td></tr><tr><td class="SmWhiteText" align="right">Password:&nbsp;&nbsp;</td><td><input name="password" class="login_1" onkeypress="if((window.event &amp;&amp; window.event.keyCode == 13) || event.keyCode == 13)if(login.checkForm(document.login_form)) login.loginUser(document.login_form);" type="password"></td></tr><tr><td>&nbsp;</td><td style="padding: 3px;"><span class="whiteBorder"><a href="" onclick="if(login.checkForm(document.login_form)) login.loginUser(document.login_form); return false;" class="loginButton">LOGIN</a></span></td></tr><tr><td colspan="2"><a href="http://www.gamasutra.com/sso/lostpw.php" class="SmWhiteText">Forgot Password?</a>&nbsp;<a href="https://www.gamasutra.com/sso/join.php" class="SmRedText">Sign Up</a></td></tr></tbody></table></form></td>   
+  </tr>
+</tbody></table>
+
+<iframe id="searchease_login_iframe" style="display: none;" src="" name="myInlineFrame" frameborder="0" height="10" scrolling="no" width="10"></iframe>
+<script type="text/javascript" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/login_box.js"></script>
+         <!--end memberlogin-->
+        
+        <!--begin social icons-->
+            <!--begin social icons-->
+<div class="bottom2">
+    <ul class="leftcol_social">
+       <li class="facebook"><a href="http://www.facebook.com/pages/Gamasutra/31610613408" target="_blank">&nbsp;</a></li>
+       <li class="twitter"><a href="http://twitter.com/gamasutra" target="_blank">&nbsp;</a></li>
+       <li class="feed"><a href="http://www.gamasutra.com/static2/rssfeeds.html">&nbsp;</a></li>
+       <li class="newsletter"><a href="http://www.gamasutra.com/sso/profile.php#newsletters">&nbsp;</a></li>
+    </ul>
+</div>
+<!--end social icons-->
+        <!--end social icons-->
+        
+        <!--begin page numbers-->
+                <!--end page numbers-->
+        
+        <!--begin leftnav-->
+                <div class="leftnav_categories bottom2">
+   <a href="http://www.gamasutra.com/category/programming/"><img alt="arrow" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/button_programming.gif"></a>
+   <div class="leftnav_btn"><a href="http://www.gamasutra.com/category/programming/">PROGRAMMING</a></div>
+
+   <hr>
+
+   <a href="http://www.gamasutra.com/category/art/"><img alt="spacer" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/button_art.gif"></a>
+   <div class="leftnav_btn"><a href="http://www.gamasutra.com/category/art/">ART</a></div>
+
+   <hr>
+
+   <a href="http://www.gamasutra.com/category/audio/"><img alt="spacer" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/button_audio.gif"></a>         
+   <div class="leftnav_btn"><a href="http://www.gamasutra.com/category/audio/">AUDIO</a></div>
+
+   <hr>
+
+   <a href="http://www.gamasutra.com/category/design/"><img alt="arrow" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/button_design.gif"></a>
+   <div class="leftnav_btn"><a href="http://www.gamasutra.com/category/design/">DESIGN</a></div>
+
+   <hr>
+
+   <a href="http://www.gamasutra.com/category/production/"><img alt="arrow" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/button_production.gif"></a>
+   <div class="leftnav_btn"><a href="http://www.gamasutra.com/category/production/">PRODUCTION</a></div>
+
+   <hr>
+   <a href="http://www.gamasutra.com/category/business-marketing/"><img alt="arrow" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/button_business.gif"></a>
+   <div class="leftnav_btn"><a href="http://www.gamasutra.com/category/business-marketing/">BIZ/MARKETING</a></div>
+
+   <br class="clear">
+</div>          <!--end leftnav-->
+                  
+                    <!-- Beginning Sync AdSlot 3 for Ad unit Gamasutra/ ### size: [[164,59]]  -->
+<div id="div-gpt-ad-button1">
+ <script type="text/javascript">
+  googletag.display('div-gpt-ad-button1');
+ </script>
+</div>
+<!-- End AdSlot 3 -->
+            <!-- Beginning Sync AdSlot 4 for Ad unit Gamasutra/ ### size: [[164,59]]  -->
+<div id="div-gpt-ad-button2">
+ <script type="text/javascript">
+  googletag.display('div-gpt-ad-button2');
+ </script>
+</div>
+<!-- End AdSlot 4 -->
+            <!-- Beginning Sync AdSlot 5 for Ad unit Gamasutra/ ### size: [[164,409]]  -->
+<div id="div-gpt-ad-callout">
+ <script type="text/javascript">
+  googletag.display('div-gpt-ad-callout');
+ </script>
+</div>
+<!-- End AdSlot 5 -->
+            <!-- Beginning Sync AdSlot 9 for Ad unit Gamasutra/ ### size: [[164,177]]  -->
+<div id="div-gpt-ad-custom1">
+ <script type="text/javascript">
+  googletag.display('div-gpt-ad-custom1');
+ </script>
+</div>
+<!-- End AdSlot 9 -->
+            <!-- Beginning Sync AdSlot 11 for Ad unit Gamasutra/ ### size: [[164,177]]  -->
+<div id="div-gpt-ad-custom3">
+ <script type="text/javascript">
+  googletag.display('div-gpt-ad-custom3');
+ </script>
+</div>
+<!-- End AdSlot 11 -->
+                
+        <!-- begin event tickers -->
+                           
+        <!-- end event tickers -->
+	
+         <!--begin jobs-->
+                     <!--end jobs-->   
+           			
+         <!--begin blogs-->
+            <div class="header"><img alt="arrow" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/icon_blogs.png"><a href="http://www.gamasutra.com/blogs/">Latest Blogs</a></div>
+<div class="leftnav bottom2">
+    <a href="http://www.gamasutra.com/blogs/"><strong>View All</strong></a> 
+    &nbsp;&nbsp;&nbsp; <a href="http://www.gamasutra.com/blogs/edit/"><strong>Post</strong></a>
+    &nbsp;&nbsp;&nbsp; <a href="http://www.gamasutra.com/blogs/rss/"><strong>RSS</strong></a>
+    <hr>
+    <strong>October  4, 2013</strong>
+    <hr>   
+    <ul>
+        
+        <li>
+            <a href="http://www.gamasutra.com/blogs/LisaHanson/20131003/201367/Niko_Opinion_Chinas_Government_Lifts_the_Ban_on_Game_Consoles_What_Happens_Now.php">Niko Opinion: China's Government Lifts the Ban on Game Consoles. What Happens Now?</a>
+                    </li>
+        <li class="line"></li>
+        
+        <li>
+            <a href="http://www.gamasutra.com/blogs/HughReynolds/20131003/201591/If_Analytics_is_the_Answer_Youre_Asking_The_Wrong_Question.php">If Analytics is the Answer, You’re Asking The Wrong Question</a>
+                    </li>
+        <li class="line"></li>
+        
+        <li>
+            <a href="http://www.gamasutra.com/blogs/AndrewSmith/20131003/201569/The_Cusp.php">The Cusp</a>
+                    </li>
+        <li class="line"></li>
+        
+        <li>
+            <a href="http://www.gamasutra.com/blogs/HeatherStark/20131003/201559/The_recipe_for_Candy_Crush_Saga_luck_skill_and_puzzles.php">The recipe for Candy Crush Saga: luck,  skill and puzzles</a>
+             
+                [<a title="2 comments" href="http://www.gamasutra.com/blogs/HeatherStark/20131003/201559/The_recipe_for_Candy_Crush_Saga_luck_skill_and_puzzles.php#comments">2</a>]
+                    </li>
+        <li class="line"></li>
+        
+        <li>
+            <a href="http://www.gamasutra.com/blogs/MajdiKraiem/20131002/201377/The_digital_publishing_partnership_behind_Call_of_Juarez_Gunslinger.php">The digital publishing partnership behind Call of Juarez: Gunslinger </a>
+                    </li>
+        <li class="line"></li>
+       
+    </ul>
+</div>
+         <!--end blogs-->
+         
+         <!--begin features archive-->
+            <div class="header"><img alt="arrow" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/icon_blogs.png"><a href="http://www.gamasutra.com/php-bin/article_display.php">Features</a></div>
+<div class="leftnav bottom2">
+    <a href="http://www.gamasutra.com/php-bin/article_display.php"><strong>View All</strong></a> 
+    &nbsp;&nbsp;&nbsp; <a href="http://feeds.feedburner.com/GamasutraFeatureArticles"><strong>RSS</strong></a>
+    <hr>
+    <strong>October  4, 2013</strong>
+    <hr>   
+    <ul>
+        
+        <li>
+            <a href="http://www.gamasutra.com/view/feature/200998/chris_roberts_on_star_citizen_.php">Chris Roberts on <i>Star Citizen</i> Crowdfunding Success, and Why He Doesn't Want a Publisher</a>
+                            [<a title="36 comments" href="http://www.gamasutra.com/view/feature/200998/chris_roberts_on_star_citizen_.php#comments">36</a>]
+                    </li>
+        <li class="line"></li>
+        
+        <li>
+            <a href="http://www.gamasutra.com/view/feature/200658/postmortem_drinkbox_studios_.php">Postmortem: DrinkBox Studios' <i>Guacamelee!</i></a>
+                            [<a title="6 comments" href="http://www.gamasutra.com/view/feature/200658/postmortem_drinkbox_studios_.php#comments">6</a>]
+                    </li>
+        <li class="line"></li>
+        
+        <li>
+            <a href="http://www.gamasutra.com/view/feature/200560/a_new_pokmon_for_a_new_era.php">A New <i>Pokémon</i> for a New Era</a>
+                            [<a title="8 comments" href="http://www.gamasutra.com/view/feature/200560/a_new_pokmon_for_a_new_era.php#comments">8</a>]
+                    </li>
+        <li class="line"></li>
+       
+    </ul>
+</div>	         <!--end features archive-->
+                         
+         <!--begin press releases-->
+            <div class="header"><img alt="arrow" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/icon_blogs.png"><a href="http://www.gamasutra.com/pressreleases_index.php">Press Releases</a></div>
+<div class="leftnav bottom2">
+    <a href="http://www.gamasutra.com/pressreleases_index.php"><strong>View All</strong></a> 
+    &nbsp;&nbsp;&nbsp; <a href="http://www.gamasutra.com/pressreleases/rss/"><strong>RSS</strong></a>
+    <hr>
+    <strong>October  4, 2013</strong>
+    <hr>
+    <ul>
+        
+    </ul>
+</div>         <!--end press releases-->
+                         
+         <!--begin calendar-->
+            <div class="header"><img alt="arrow" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/icon_calendar.png"><a href="http://www.gamasutra.com/calendar/calendar.php">Calendar</a></div>
+<div class="leftnav bottom2">
+    <a href="http://www.gamasutra.com/calendar/calendar.php"><strong>View All</strong></a> &nbsp;&nbsp;&nbsp; <a href="http://www.gamasutra.com/calendar/calendar_submit.php"><strong>Submit Event</strong></a>
+    <hr>
+    <ul>
+        
+    </ul>
+</div>         <!--end calendar-->
+                         
+         <!--begin about-->
+            <div class="header"><img alt="arrow" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/icon_about.png"><a href="http://www.gamasutra.com/contactus">About</a></div>
+<div class="leftnav bottom2">
+    <ul>
+            <li><strong>Editor-In-Chief: </strong><br><a href="mailto:kgraft@gamasutra.com">Kris Graft</a></li>
+            <li class="line"></li>
+            <li><strong>Blog Director: </strong><br><a href="mailto:christian.nutt@ubm.com">Christian Nutt</a></li>
+            <li class="line"></li>
+            <li><strong>Senior Contributing Editor: </strong><br><a href="mailto:bsheffield@gdmag.com">Brandon Sheffield</a></li>
+            <li class="line"></li>
+            <li><strong>News Editors: </strong><br>Mike Rose, Kris Ligman</li>
+            <li class="line"></li>
+            <li><strong>Editors-At-Large:</strong><br> Leigh Alexander, Chris Morris</li>
+            <li class="line"></li>
+            <li><strong>Advertising: </strong><br><a href="mailto:jennifer.sulik@ubm.com">Jennifer Sulik</a></li>
+            <li class="line"></li>
+            <li><strong>Recruitment: </strong><br><a href="http://www.jointhegamenetwork.com/recruitment/online/jobs.html">Gina Gross</a></li>
+            <li class="line"></li>
+            <li><strong>Education: </strong><br><a href="http://www.jointhegamenetwork.com/education/index.html">Gillian Crowley</a></li>
+    </ul>
+    <hr>
+    <div class="center"><a href="http://www.gamasutra.com/contactus">Contact Gamasutra</a></div>
+    <hr>
+    <div class="center"><a href="mailto:support@gamasutra.com">Report a Problem</a></div>
+    <hr>
+    <div class="center"><a href="mailto:news@gamasutra.com">Submit News</a></div>
+    <hr>
+    <div class="center"><a href="http://www.gamasutra.com/static2/comment_guidelines.html">Comment Guidelines</a></div>
+    <hr>
+    <div class="center"><a href="http://www.gamasutra.com/static2/blogsubmissions.html">Blogging Guidelines</a></div>
+</div>
+
+<div class="bottom2">
+    <a href="http://www.jointhegamenetwork.com/online/gamasutra/index.html" target="_blank">
+        <img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/AdwGama_177x60_button_v1.jpg" alt="Sponsor" class="whiteTop" border="0" width="164">
+    </a>
+</div>
+             <!--end about-->
+         
+         <!--begin network-->
+            <div class="header"><img alt="arrow" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/icon_about.png"><a href="#">Gama Network</a></div>
+<div class="leftnav_network bottom2">
+    If you enjoy reading this site, you might also want to check out these UBM TechWeb sites:
+    <hr>
+    <a href="http://www.gamecareerguide.com/"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/gcgmini.jpg" align="left" hspace="2"></a> 
+    <div class="leftnav_btn"><a href="http://www.gamecareerguide.com/">Game Career Guide</a></div>
+    <hr>
+    <a href="http://www.indiegames.com/blog"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/indiemini.jpg" align="left" hspace="2"></a>
+    <div class="leftnav_btn"><a href="http://www.indiegames.com/blog">Indie Games</a></div>
+    <br class="clear">
+</div>         <!--end network-->
+         
+         <!--begin store-->
+                     <!--end store-->
+         
+                
+    </div><!--end leftcol-->
+  </div>
+</div> 
+</div>  
+<div class="span-16 last">
+    <div class="content_box_middle">
+        <!-- InstanceBeginEditable name="BodyContent" --> 
+        <div class="header_large">
+            <span class="left"><img alt="arrow" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/icon_blogs.png"><a href="http://www.gamasutra.com/features/">Features</a></span>
+        </div>
+        <div class="page_item"> 
+            <div class="clear">&nbsp;</div>
+
+            <div class="item_title">Book Excerpt: Shadow Techniques for Relief Texture Mapped Objects</div>
+            
+            <div>
+                <span class="newsAuth">by <a href="http://www.gamasutra.com/view/authors/52524/Fabio_Policarpo.php">Fabio Policarpo</a>, <a href="http://www.gamasutra.com/view/authors/606617/alan_watt.php">alan watt</a></span><span class="pageNav">&nbsp;[<span class="category_links"><a class="category_links" href="http://www.gamasutra.com/features/programming/">Programming</a>, <a class="category_links" href="http://www.gamasutra.com/features/art/">Art</a></span>]</span><br>
+            </div>
+            <div>
+                <br>
+                <span class="comment_text">
+                                            <a href="#comments">Post A Comment</a>
+                                    </span>
+                <a name="twitter_share" type="button" href="http://twitter.com/?status=RT%20@gamasutra:%20Book%20Excerpt:%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects%20http://www.gamasutra.com/view/feature/130830/" target="_blank"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/twitter.gif" alt="Share on Twitter" height="20" border="0"></a>
+                <a name="fb_share" type="button" href="http://www.facebook.com/sharer.php?u=/view/feature/130830/book_excerpt_shadow_techniques_.php" target="_blank"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/facebook_button.png" alt="Share on Facebook" border="0"></a> <!-- <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script> -->
+                <script gapi_processed="true" type="text/javascript" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/plusone.js"></script>
+                <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 32px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/fastbutton.htm" name="I1_1380864620824" id="I1_1380864620824" vspace="0" tabindex="0" style="position: static; top: 0px; width: 32px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div>
+                                <a href="http://feeds.feedburner.com/GamasutraFeatureArticles"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/icon_rss.gif" alt="RSS" height="15" border="0" width="15"></a>
+            </div>
+            <hr>
+            <strong>October 3, 2005</strong>
+                                                            <hr>
+            <div class="item_body mobile_image_transform">
+                <div class="clear">&nbsp;</div>
+                <p>
+The following is an excerpt from <em>Advanced Game Development with Programmable Graphics Hardware</em> (ISBN 1-56881-240-X) published by A K Peters, Ltd. 
+</p>
+<p>
+--
+</p>
+                <div class="hide-phone">
+                    <div class="module_right right bottom30">
+                                                                                    <!-- Beginning Sync AdSlot 6 for Ad unit Gamasutra/ ### size: [[300,250]]  -->
+<div id="div-gpt-ad-rec1">
+ <script type="text/javascript">
+  googletag.display('div-gpt-ad-rec1');
+ </script>
+</div>
+<!-- End AdSlot 6 -->
+                                                                        </div>
+                </div>
+                
+<p>
+Integrating
+shadows to the relief map objects is an important feature in fully
+integrating the effect into a game scenario. The corrected depth option
+(see Chapter 5), which ensures that the depth values stored in <em>Z</em>-buffer
+include the displaced depth from the relief map, makes it possible to
+implement correct shadow effects for such objects. We consider the use
+of stencil shadows and shadow maps in this context. We can implement
+three types of shadows: shadows from relief object to the world, from
+the world to relief object and from relief object to itself
+(self-shadows). 
+</p>
+<p>
+Let
+us first consider what can be achieved using stencil volume shadows.
+When generating the shadow volumes, we can only use the polygons from
+the original mesh to generate the volume. This means that the shadows
+from relief objects to the world will not show the displaced geometry
+of the relief texture, but will reflect the shape of the original
+triangle mesh without the displaced pixels (Figure 1). 
+</p>
+<table align="right" height="334" border="0" cellpadding="0" cellspacing="0" width="142">
+	<tbody>
+		<tr>
+			<td rowspan="2" height="3" bgcolor="#ccc999" valign="top" width="11">
+			<div align="right">
+			<img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/corner_top_left.gif" alt="" align="top" height="11" width="10"> 
+			</div>
+			</td>
+			<td colspan="3" rowspan="2" height="3" bgcolor="#ccc999" valign="top"> <br>
+			<img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/figure4-23.jpg" alt="" height="288" width="307">  </td>
+			<td align="right" height="3" bgcolor="#ccc999" valign="top" width="10"> <img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/corner_top_right.gif" alt="" align="top" height="11" width="10"></td>
+		</tr>
+		<tr>
+			<td rowspan="2" align="right" bgcolor="#ccc999" valign="bottom" width="10"> <img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/corner_bottom_right.gif" alt="" align="bottom" height="11" width="10"></td>
+		</tr>
+		<tr valign="top">
+			<td align="left" height="2" bgcolor="#ccc999" valign="bottom" width="11"> <img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/corner_bottom_left.gif" alt="" align="bottom" height="11" width="10"></td>
+			<td colspan="3" height="2" bgcolor="#ccc999" valign="top">
+			<p>
+			<strong>Figure 1. A relief mapped object cannot produce correct object to world shadows using shadow volumes. </strong>
+			</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+However, as we have the corrected depth stored in <em>Z</em>-buffer
+when rendering the lighting pass we can have shadows volumes from the
+world projected onto the relief objects correctly, and they will follow
+the displaced geometry properly. Self-shadows (relief object to itself)
+are not possible with stencil shadows. 
+</p>
+<p>
+Thus, using relief maps in conjunction with shadow volumes, we have the following: 
+</p>
+<ul>
+	<li><strong> Relief object to world:</strong> correct silhouette or displacement visible in shadows is not possible. </li>
+	<li><strong>World to relief object:</strong> shadows can project on displaced pixels correctly.</li>
+	<li><strong>Relief object to relief object:</strong> not possible. </li>
+</ul>
+<p>
+Relief
+mapped objects integrate much better into shadow map algorithms. Using
+a shadow map, we can resolve all three cases; as for any other object,
+we render the relief mapped object into the shadow map. As the shadow
+map only needs depth values, the shader, used when rendering the object
+to the shadow map, does not need to calculate lighting. Also if no
+self-shadows are desired, we could simplify the ray intersect function
+to invoke only the linear search (as in this case we only need to know
+if a pixel has an intersection and we do not need the exact
+intersection point). The shader used when rendering relief objects to a
+shadow map is given in Listing 4.4, and an example is shown in Figure
+2. 
+</p>
+<table align="center" height="334" border="0" cellpadding="0" cellspacing="0" width="142">
+	<tbody>
+		<tr>
+			<td rowspan="2" height="3" bgcolor="#ccc999" valign="top" width="11">
+			<div align="right">
+			<img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/corner_top_left.gif" alt="" align="top" height="11" width="10"> 
+			</div>
+			</td>
+			<td colspan="3" rowspan="2" height="3" bgcolor="#ccc999" valign="top"> <br>
+			<img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/figure4-24.jpg" alt="" height="288" width="307">  </td>
+			<td align="right" height="3" bgcolor="#ccc999" valign="top" width="10"> <img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/corner_top_right.gif" alt="" align="top" height="11" width="10"></td>
+		</tr>
+		<tr>
+			<td rowspan="2" align="right" bgcolor="#ccc999" valign="bottom" width="10"> <img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/corner_bottom_right.gif" alt="" align="bottom" height="11" width="10"></td>
+		</tr>
+		<tr valign="top">
+			<td align="left" height="2" bgcolor="#ccc999" valign="bottom" width="11"> <img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/corner_bottom_left.gif" alt="" align="bottom" height="11" width="10"></td>
+			<td colspan="3" height="2" bgcolor="#ccc999" valign="top">
+			<p>
+			<strong>Figure 2.  Using relief mapped objects in conjunction with shadow maps. Shadows from relief object to world. </strong>
+			</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+To
+project shadows from the world to the relief map objects, we need to
+pass the shadow map texture and light matrix (light frustum
+view/projection/bias multiplied by inverse camera view matrix). Then,
+just before calculating the final colour in the shader we project the
+displaced pixel position into the light space and compare the depth map
+at that position to the pixel depth in light space. 
+</p>
+<p>
+<strong>#ifdef RM_SHADOWS<br>
+</strong><strong>&nbsp;&nbsp;// transform pixel position to shadow map space<br>
+&nbsp;&nbsp;sm= mul (viewinverse_lightviewprojbias,position); 
+&nbsp;&nbsp;<br>
+&nbsp;
+sm/=sm.w; <br>
+&nbsp;&nbsp;if (sm.z&gt; f1tex2D (shadowmap,sm.xy)) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;att=0; // set attenuation to 0<br>
+#endif</strong>
+</p>
+<table align="center" height="334" border="0" cellpadding="0" cellspacing="0" width="142">
+	<tbody>
+		<tr>
+			<td rowspan="2" height="3" bgcolor="#ccc999" valign="top" width="11">
+			<div align="right">
+			<img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/corner_top_left.gif" alt="" align="top" height="11" width="10"> 
+			</div>
+			</td>
+			<td colspan="3" rowspan="2" height="3" bgcolor="#ccc999" valign="top"> <br>
+			
+			<table border="0" cellspacing="1" width="275">
+				<tbody>
+					<tr>
+						<td><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/figure4-25-left.jpg" alt="" height="288" width="260"></td>
+						<td><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/figure4-25-right.jpg" alt="" height="288" width="260"></td>
+					</tr>
+				</tbody>
+			</table>
+			                  </td>
+			<td align="right" height="3" bgcolor="#ccc999" valign="top" width="10"> <img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/corner_top_right.gif" alt="" align="top" height="11" width="10"></td>
+		</tr>
+		<tr>
+			<td rowspan="2" align="right" bgcolor="#ccc999" valign="bottom" width="10"> <img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/corner_bottom_right.gif" alt="" align="bottom" height="11" width="10"></td>
+		</tr>
+		<tr valign="top">
+			<td align="left" height="2" bgcolor="#ccc999" valign="bottom" width="11"> <img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/corner_bottom_left.gif" alt="" align="bottom" height="11" width="10"></td>
+			<td colspan="3" height="2" bgcolor="#ccc999" valign="top">
+			<p>
+			<strong>Figure
+			3. Shadows from world to relief objects. Left image shows normal
+			mapping, and right image, relief mapping (notice how the shadow
+			boundary follows the displaced relief correctly). </strong>
+			</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+An
+example of this approach is shown in Figure 3. This is compared with a
+conventional render using a normal map in conjunction with a shadow
+map. Thus, using relief maps in conjunction with shadow maps, we can
+implement the following: 
+</p>
+<ul>
+	<li><strong>Relief object to world:</strong> good silhouette and displacement visible in <br>
+	shadows. </li>
+	<li><strong>World to relief object:</strong> Shadows can project on displaced pixels correctly. </li>
+	<li><strong>Relief object to relief object:</strong> possible if full linear/binary search and <br>
+	depth correct used when rendering to shadow map. </li>
+</ul>
+<p>
+<strong>Listing 4.4 <br>
+</strong>Using relief mapped objects in conjunction with shadow maps.
+</p>
+<p>
+<strong>float ray_intersect_rm_shadow(<br>
+&nbsp;&nbsp;<strong>&nbsp;&nbsp;</strong></strong><strong>in sampler2D reliefmap, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;in float2 tx, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;in float3 v, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;in float f, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;in float tmax) <br>
+{<br>
+&nbsp;&nbsp;const int linear_search_steps=10; </strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;float t=0.0; <br>
+&nbsp;&nbsp;float best_t=tmax+0.001; <br>
+&nbsp;&nbsp;float size=best_t/linear_search_steps; </strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;// search for first point inside object</strong><strong><br>
+&nbsp;
+for ( int i=0;i&lt;linear_search_steps-1;i++ )<br>
+&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;t+=size; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;float3 p=ray_position(t,tx,v,f); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;float4 tex= tex2D (reliefmap,p.xy); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (best_t&gt;tmax) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (p.z&gt;tex.w) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; best_t=t; <br>
+&nbsp;&nbsp;} </strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;return best_t; <br>
+} </strong>
+</p>
+<p>
+<strong>f2s main_frag_relief_shadow( <br>
+&nbsp;&nbsp;&nbsp;&nbsp;v2f IN, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;uniform sampler2D rmtex: TEXUNIT0 , // rm texture map <br>
+&nbsp;&nbsp;&nbsp;&nbsp;uniform float4 planes, &nbsp;&nbsp;&nbsp;&nbsp;// near and far plane info <br>
+&nbsp;&nbsp;&nbsp;&nbsp;uniform float tile, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+ tile factor <br>
+&nbsp;&nbsp;&nbsp;&nbsp;uniform float depth) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// depth factor<br>
+</strong><strong>{ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;f2s OUT; </strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;&nbsp;&nbsp;// view vector in eye space<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>float3 view= normalize (IN.vpos); </strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;&nbsp;&nbsp;// view vector in tangent space<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>float3 v= normalize ( float3 ( dot (view,IN.tangent.xyz), <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dot (view,IN.binormal.xyz), dot (-view,IN.normal))); </strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;&nbsp;&nbsp;// mapping scale from object to texture space<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>float2 mapping= float2 (IN.tangent.w,IN.binormal.w)/tile; </strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;&nbsp;&nbsp;// quadric coefficients transformed to texture space<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>float2 quadric=IN.curvature.xy*mapping.xy*mapping.xy/depth; </strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;&nbsp;&nbsp;// view vector in texture space<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>v.xy/=mapping; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;v.z/=depth; <br>
+</strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;&nbsp;&nbsp;// quadric applied to view vector coodinates<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>float f=quadric.x*v.x*v.x+quadric.y*v.y*v.y; </strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;&nbsp;&nbsp;// compute max distance for search min(t(z=0),t(z=1))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>float d=v.z*v.z-4*f; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;float tmax=100; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (d&gt;0) &nbsp;&nbsp;&nbsp;&nbsp;// t when z=1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>tmax=(-v.z+ sqrt (d))/(-2*f); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;d=v.z/f; &nbsp;&nbsp;&nbsp;&nbsp;// t when z=0 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (d&gt;0) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>tmax= min (tmax,d); </strong>
+</p>
+<p>
+<strong>#ifndef RM_DEPTHCORRECT<br>
+</strong><strong>&nbsp;&nbsp;// no depth correct, use simple ray_intersect<br>
+</strong><strong>&nbsp;&nbsp;float t=ray_intersect_rm_shadow(rmtex,IN. texcoord*tile,v,f,tmax); <br>
+&nbsp;&nbsp;if (t&gt;tmax) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;discard ; // no intesection, discard fragment <br>
+#else<br>
+</strong><strong>&nbsp;&nbsp;&nbsp;&nbsp;// with depth correct, use full ray_intersect<br>
+</strong><strong>&nbsp;&nbsp;&nbsp;&nbsp;float t=ray_intersect_rm(rmtex,IN.texcoord*tile,v,f,tmax); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (t&gt;tmax) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;discard ; // no intesection, discard fragment</strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;</strong><strong>&nbsp;&nbsp;</strong><strong>// compute displaced pixel position in view space<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>float3 p=IN.vpos.xyz+view*t; </strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;&nbsp;&nbsp;// a=-far/(far-near) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;// b=-far*near/(far-near) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;// Z=(a*z+b)/-z<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>OUT.depth=((planes.x*p.z+planes.y)/-p.z);<br>
+</strong><strong>#endif </strong>
+</p>
+<p>
+<strong>&nbsp;&nbsp;&nbsp;&nbsp;return OUT;<br>
+</strong><strong>}</strong>
+</p>
+<blockquote>
+	 
+	<blockquote>
+		 
+		<p>
+		______________________________________________________
+		</p>
+	</blockquote>
+</blockquote>
+
+            </div>
+                        <hr>
+            <div class="hide-phone">
+                                    <h3>Top Stories</h3>
+                                           <div class="stories_item">
+                            <div class="thumb"><a href="http://www.gamasutra.com/view/news/201354/Bored_with_violence_Goldeneye_007_director_makes_a_game_all_about_love.php"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/201354_thumb.jpg"></a></div>
+                            <div class="title"><a href="http://www.gamasutra.com/view/news/201354/Bored_with_violence_Goldeneye_007_director_makes_a_game_all_about_love.php"><strong>Bored with violence, <i>Goldeneye 007</i> director makes a game all about love</strong></a></div>
+                       </div>
+                                           <div class="stories_item">
+                            <div class="thumb"><a href="http://www.gamasutra.com/blogs/DavidEdery/20131001/201401/F2P_game_publishing_is_a_tricky_thing.php"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/201515_thumb.jpg"></a></div>
+                            <div class="title"><a href="http://www.gamasutra.com/blogs/DavidEdery/20131001/201401/F2P_game_publishing_is_a_tricky_thing.php"><strong>Three tricky issues with free-to-play publishing</strong></a></div>
+                       </div>
+                                           <div class="stories_item">
+                            <div class="thumb"><a href="http://www.gamasutra.com/view/news/201508/In_the_era_of_digital_publishing_workforhire_studios_face_a_new_reality.php"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/201508_thumb.jpg"></a></div>
+                            <div class="title"><a href="http://www.gamasutra.com/view/news/201508/In_the_era_of_digital_publishing_workforhire_studios_face_a_new_reality.php"><strong>In the era of digital publishing, work-for-hire studios face a new reality</strong></a></div>
+                       </div>
+                                           <div class="stories_item">
+                            <div class="thumb"><a href="http://www.gamasutra.com/view/news/201490/GDC_Next_10_adds_Project_Eternity_CounterSpy_talks.php"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/201490_thumb.jpg"></a></div>
+                            <div class="title"><a href="http://www.gamasutra.com/view/news/201490/GDC_Next_10_adds_Project_Eternity_CounterSpy_talks.php"><strong>GDC Next 10 adds <i>Project Eternity</i>, <i>CounterSpy</i> talks</strong></a></div>
+                       </div>
+                                                </div>
+            
+                            <br class="clear">
+<h2><a name="comments">Comments</a></h2>
+  
+
+<div style="display: none;" id="comment_form">
+<hr class="solid">
+<br>
+<form name="comments_submit" action="/view/feature/2420/book_excerpt_shadow_vtechiques_.php" method="post">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+  <td class="td_comment_name">
+    <div id="user_name_comment">none
+     </div>
+  </td>
+  <td class="td_comment_anonymous" valign="top">
+      </td>
+  <td>
+    &nbsp;  </td>
+</tr> 
+<tr>
+  <td class="td_blank_comment_website">
+    <div id="website_comment">
+      Comment:
+    </div>
+  </td>
+  <td>
+    <div class="td_comment_website">
+        </div>
+  </td>
+  <td>&nbsp;</td>
+</tr>
+
+</tbody></table>
+<textarea class="comment_textarea" name="comment_body" rows="8" style="width: 99%"></textarea>
+<input name="comment_type" value="comment" type="hidden">
+<br>
+<br>
+<div class="comment_submit">
+  <a class="noline" onclick="document.comments_submit.submit(); javascript:trackComment(); return false;" href="#">Submit Comment</a>
+</div>
+</form>
+</div> 
+<div id="no_comment_form">
+<br>
+<span class="comment_login">
+ <a href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/view/feature/2420/book_excerpt_shadow_vtechiques_.php">        
+    <img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/btn_comment.gif" alt="Login to Comment" height="16" border="0" width="113"></a>    
+ </span>
+
+<br>
+</div>
+
+<script type="text/javascript">
+if(login.loggedIn)
+document.getElementById('no_comment_form').style.display='none';
+else
+document.getElementById('comment_form').style.display='none';
+
+    function editComment(c)
+    {
+            document.getElementById('comment'+c+'_show').style.display = 'none';
+            document.getElementById('comment'+c+'_edit').style.display = 'block';
+    }
+
+    function cancelEditComment(c)
+    {
+            document.getElementById('comment'+c+'_show').style.display = 'block';
+            document.getElementById('comment'+c+'_edit').style.display = 'none';
+    }
+    function replyComment(c)
+    {
+        if(login.loggedIn) {
+            document.getElementById('comment'+c+'_replyLink').style.display = 'none';
+            document.getElementById('comment'+c+'_replyForm').style.display = 'block';
+        } else {
+            window.location.assign('/sso/login.php?from=' + document.URL);
+        }
+
+    }
+
+    function cancelReplyComment(c)
+    {
+            document.getElementById('comment'+c+'_replyLink').style.display = 'block';
+            document.getElementById('comment'+c+'_replyForm').style.display = 'none';
+    }	
+
+    function trackComment(){
+              var s=s_gi('cmpglobalvista'); 
+              s.eVar24=s.prop7 +" | "+ s.prop4;  
+              s.events='event8';
+              s.tl(this,'o','Article Comment Posted');
+
+    }
+
+</script>
+
+<br>
+<br>                       </div>
+        <!-- InstanceEndEditable -->
+    </div><!--end contentbox-->
+</div><!--end span-16-->
+
+            </div>
+            <br class="clear">
+	</div><!--end span-21-->
+
+        <!--begin right sidebar-->
+     	<div class="hide-phone center">
+               <div class="span-4 last">
+                   <!--right hand ads start here-->
+
+  
+                            <!-- Beginning Sync AdSlot 7 for Ad unit Gamasutra/ ### size: [[160,600]]  -->
+<div id="div-gpt-ad-sky1">
+ <script type="text/javascript">
+  googletag.display('div-gpt-ad-sky1');
+ </script>
+</div>
+<!-- End AdSlot 7 -->
+        <!-- Beginning Sync AdSlot 8 for Ad unit Gamasutra/ ### size: [[160,160]]  -->
+<div id="div-gpt-ad-Ltile1">
+ <script type="text/javascript">
+  googletag.display('div-gpt-ad-Ltile1');
+ </script>
+</div>
+<!-- End AdSlot 8 -->
+      
+		 
+               	</div>
+                 </div>
+     <!--end right sidebar-->         
+        </div>
+     
+     <!--end container-->
+     
+     <br class="clear">
+    
+<!--begin footer-->
+<div class="hide-phone">
+     <div class="footer1">
+          <div class="footerline"></div>
+          <div id="footercontent">
+               <div class="left">
+                                  <a href="http://www.ubmtechweb.com/" target="_blank"><img src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/logo_ubmtech_white.png" alt="UBM Tech" height="111" width="88"></a>
+                                  </div>
+                                   <!-- LEFT SIDE -->
+                                   <div id="rightlinks">
+                                    <ul>
+                                      <li>FEATURED UBM TECH SITES:
+                                      </li><li><a href="http://www.gdconf.com/" target="_blank">Game Developers Conference</a></li> | 
+                                      <li><a href="http://www.gamasutra.com/" target="_blank">Gamasutra</a></li> | 
+                                      <li><a href="http://www.appdevstories.com/" target="_blank">App Dev Stories</a></li> | 
+                                      <li><a href="http://www.gamecareerguide.com/" target="_blank">Game Career Guide</a></li>
+                                    </ul>
+                                       
+                                   <ul>
+                                      <li>OUR MARKETS: 
+                                      </li><li><a href="http://tech.ubm.com/businesses/business-technology/" target="_blank">Business Technology</a></li> | 
+                                      <li><a href="http://tech.ubm.com/businesses/channel/" target="_blank">Channel</a></li> | 
+                                      <li><a href="http://tech.ubm.com/businesses/electronics/" target="_blank">Electronics</a></li> | 
+                                      <li><a href="http://tech.ubm.com/businesses/game-app-development/" target="_blank">Game &amp; App Development</a></li>
+                                  </ul>
+                                   
+                                    <ul class="normal">
+                                      <li><b>Working With Us:</b>
+                                      </li><li><a href="http://www.jointhegamenetwork.com/" target="_blank">Game Network Advertising</a></li> | 
+                                      <li><a href="http://www.jointhegamenetwork.com/event/" target="_blank">Event Calendar</a></li> | 
+                                      <li><a href="http://www.jointhegamenetwork.com/contact/" target="_blank">Contact Us</a></li> 
+                                    </ul>
+                                   
+                                   <ul class="colored">
+                                      <li><a href="http://www.gamasutra.com/static2/terms_of_service.html" target="_blank" class="blue">Terms of Service</a></li>  |
+                                      <li><a href="http://legal.us.ubm.com/privacy-policy/" target="_blank" class="blue">Privacy Statement</a></li>  |
+                                      <li><a href="http://legal.us.ubm.com/copyright-notice/" target="_blank" class="blue">Copyright © <script type="text/javascript">
+                                                  <!--
+                                                  var currentTime = new Date()
+                                                  var year = currentTime.getFullYear()
+                                                  document.write( year)
+                                                  //-->
+                                              </script>2013
+                                      UBM Tech, All rights reserved</a></li>
+                                  </ul>
+                                   </div>
+                                    <br>
+          </div>
+          </div><!--end footer 1-->
+      </div>
+<!-- Eloqua tracking code -->
+<script type="text/javascript" language="JavaScript" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/elqCfg_002.js"></script>
+<script type="text/javascript" language="JavaScript" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/elqImg.js"></script>
+<!-- End Eloqua tracking code -->
+
+<!-- SiteCatalyst code version: H.21.
+Copyright 1996-2010 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script kabl="40222" style="display: none !important" language="JavaScript" type="text/javascript" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/h_s_code_remote.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+    /* You may give each page an identifying name, server, and channel on
+    the next lines. */
+	s.pageName="";
+	s.server="";
+	s.channel="";
+	s.pageType="";
+	s.prop1="";
+	s.prop2="130830";
+	s.prop3="Gamasustra | 130830 | Book Excerpt: Shadow Techniques for Relief Texture Mapped Objects";
+	s.prop4="Book Excerpt: Shadow Techniques for Relief Texture Mapped Objects";
+	s.prop5="GAMASUTRA FEATURE";
+	s.prop6="";
+	s.prop7="Fabio Policarpo,alan watt";
+	s.prop8="96.54.165.41 | Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0";
+	s.prop9="";
+	s.prop10="";
+	s.prop13="/view/feature/130830/book_excerpt_shadow_techniques_.php";
+	/* Conversion Variables */
+	s.campaign="";
+	s.state="";
+	s.zip="";
+	s.events="event5";
+	s.products="";
+	s.purchaseID="";
+	s.eVar1="";
+	s.eVar2="";
+	s.eVar3="";
+	s.eVar4="";
+	s.eVar5="";
+	/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code = s.t(); if (s_code) document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.appVersion.indexOf('MSIE') >= 0) document.write(unescape('%3C') + '\!-' + '-')
+//--></script><noscript><a href="http://www.omniture.com" title="Web Analytics"><img
+src="http://cmp.112.2o7.net/b/ss/cmpglobalvista/1/H.21--NS/0"
+height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.21. -->          
+  
+
+       <iframe style="width: 1px; height: 1px; position: absolute; top: -100px;" src="Gamasutra%20-%20Book%20Excerpt%20%20Shadow%20Techniques%20for%20Relief%20Texture%20Mapped%20Objects_files/postmessageRelay.htm" id="oauth2relay561540933" name="oauth2relay561540933"></iframe></body></html>

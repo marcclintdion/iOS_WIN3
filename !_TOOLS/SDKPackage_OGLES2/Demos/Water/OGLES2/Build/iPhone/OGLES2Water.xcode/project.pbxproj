@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2D500B9A0D5A79CF00DBA0E3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D500B990D5A79CF00DBA0E3 /* QuartzCore.framework */; };
+		BA240AC20FEFE77A00DE852D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA240AC10FEFE77A00DE852D /* OpenGLES.framework */; };
+		F806027CBCF442669D2590D6 /* PlaneTexFShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F8150E71A4FDB0E658AFB6CA /* PlaneTexFShader.fsh */; };
+		F80E80BB929B9B1EBD52133E /* Tex2DFShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F86BA5C1AEEE56417B185EEC /* Tex2DFShader.fsh */; };
+		F812461A1015DE7B003F1905 /* libOGLES2Tools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F80B21C91015CA1600A93BE2 /* libOGLES2Tools.a */; };
+		F8205A8B130408E100253AE7 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A82130408E100253AE7 /* Default-Portrait.png */; };
+		F8205A8C130408E100253AE7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A83130408E100253AE7 /* Default.png */; };
+		F8205A8D130408E100253AE7 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A84130408E100253AE7 /* Icon-72.png */; };
+		F8205A8E130408E100253AE7 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A85130408E100253AE7 /* Icon-Small-50.png */; };
+		F8205A8F130408E100253AE7 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A86130408E100253AE7 /* Icon-Small.png */; };
+		F8205A90130408E100253AE7 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A87130408E100253AE7 /* Icon-Small@2x.png */; };
+		F8205A91130408E100253AE7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A88130408E100253AE7 /* Icon.png */; };
+		F8205A92130408E100253AE7 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A89130408E100253AE7 /* Icon@2x.png */; };
+		F8205A93130408E100253AE7 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = F8205A8A130408E100253AE7 /* iTunesArtwork */; };
+		F82312F5D4B9703760482462 /* SkyboxFShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F88C90D39A2C6457F1A65AD8 /* SkyboxFShader.fsh */; };
+		F8292E7CCE52973FB5D90098 /* Scene.pod in Resources */ = {isa = PBXBuildFile; fileRef = F810699597C4BF5DA29688F9 /* Scene.pod */; };
+		F83566DA8AED1DD9C0C17F04 /* ModelVShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F8963379CA05E1DC143C1971 /* ModelVShader.vsh */; };
+		F8376310219E7A31782B3285 /* NewNormalMap.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8D9C1E0FB722E05C03FB10A /* NewNormalMap.pvr */; };
+		F8411F7FA35ADD4338A91C4F /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F83A86645DDC3D69B5253277 /* EAGLView.mm */; };
+		F8511E325A14C7B1512D37CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B085DF517D53BDEC57548B /* main.m */; };
+		F85F986B3B1E3DC98D9FAA9A /* VertShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F81BCA31C4499C36ACCE89C4 /* VertShader.vsh */; };
+		F8630E83E2409C83D56FBEC7 /* PVRShell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F86806AB073BCF43114182F8 /* PVRShell.cpp */; };
+		F864940310F75E5100F46F54 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = F864940210F75E5100F46F54 /* Entitlements.plist */; };
+		F869BEBD44384AC2147622A7 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F812B82B586D7AEF8F327E60 /* AppController.mm */; };
+		F870BBA9895779E0AE68561F /* FragShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F895137C16F9AE9B63DD3558 /* FragShader.fsh */; };
+		F88E8C2855F68256D159251D /* wood.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8FC499A855B75A9AFB22A8A /* wood.pvr */; };
+		F8907216D2B696A9D7D24B3E /* OGLES2Water.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F89CD9892390DC4A381C8CE2 /* OGLES2Water.cpp */; };
+		F8ACCAF07267930DCCA4029B /* ModelFShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F81176817C9BD954919703B4 /* ModelFShader.fsh */; };
+		F8B27DA00D94222EAE556897 /* SkyboxVShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F8843DE80D581E84A4289D4C /* SkyboxVShader.vsh */; };
+		F8BC0A26D1DFE7D24AF67727 /* PVRShellAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8685712661BB8886AD7514E /* PVRShellAPI.cpp */; };
+		F8BF78B51453C49A98541817 /* Mountain.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8424D74DDB3480BD22E3CB8 /* Mountain.pvr */; };
+		F8C7322B0955D23BAB7A4B85 /* Tex2DVShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F853E220FDCBC2DBFB1B4905 /* Tex2DVShader.vsh */; };
+		F8C74DD011DDEE7DBB3EBD19 /* PlaneTexVShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F8F46C70C7FE865B33094F38 /* PlaneTexVShader.vsh */; };
+		F8DD445EC802A113BADECABE /* PVRShellOS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F80E48ED567B8029CD035DCC /* PVRShellOS.cpp */; };
+		F8E44F7CC16E6CEF71E91549 /* MountainFloor.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F859DE03D820DCEA86BFE612 /* MountainFloor.pvr */; };
+		F8FD6137A0DF51AB752B1BA1 /* sail.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8B5101317DF16833E66B22E /* sail.pvr */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F80B21C81015CA1600A93BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = F8748A3A0FF221480052D400;
+			remoteInfo = OGLES2Tools;
+		};
+		F80B21CA1015CA2B00A93BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */;
+			proxyType = 1;
+			remoteGlobalIDString = F8748A390FF221480052D400;
+			remoteInfo = OGLES2Tools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BA909F0A0FF0EADD00A4C97C /* data */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = data;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA909F0B0FF0EADD00A4C97C /* textures */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data/textures;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = textures;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA909F1C0FF0EB3200A4C97C /* shaders */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data/shaders;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = shaders;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* OGLES2Water.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OGLES2Water.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2D500B990D5A79CF00DBA0E3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		BA240AC10FEFE77A00DE852D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OGLES2Tools.xcode; path = ../../../../../Tools/OGLES2/Build/iPhone/OGLES2Tools.xcode; sourceTree = SOURCE_ROOT; };
+		F80E48ED567B8029CD035DCC /* PVRShellOS.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PVRShellOS.cpp; path = ../../../../../Shell/OS/iPhone/PVRShellOS.cpp; sourceTree = SOURCE_ROOT; };
+		F810699597C4BF5DA29688F9 /* Scene.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = Scene.pod; path = ../../Scene.pod; sourceTree = SOURCE_ROOT; };
+		F81176817C9BD954919703B4 /* ModelFShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = ModelFShader.fsh; path = ../../ModelFShader.fsh; sourceTree = SOURCE_ROOT; };
+		F812B82B586D7AEF8F327E60 /* AppController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppController.mm; path = ../../../../../Shell/OS/iPhone/AppController.mm; sourceTree = SOURCE_ROOT; };
+		F8150E71A4FDB0E658AFB6CA /* PlaneTexFShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = PlaneTexFShader.fsh; path = ../../PlaneTexFShader.fsh; sourceTree = SOURCE_ROOT; };
+		F81BCA31C4499C36ACCE89C4 /* VertShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = VertShader.vsh; path = ../../VertShader.vsh; sourceTree = SOURCE_ROOT; };
+		F81ED8D2EC0F22F741D90292 /* PVRShellOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRShellOS.h; path = ../../../../../Shell/OS/iPhone/PVRShellOS.h; sourceTree = SOURCE_ROOT; };
+		F8205A82130408E100253AE7 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "../../../../../Builds/iPhone/Media/Default-Portrait.png"; sourceTree = SOURCE_ROOT; };
+		F8205A83130408E100253AE7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../../../Builds/iPhone/Media/Default.png; sourceTree = SOURCE_ROOT; };
+		F8205A84130408E100253AE7 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../../../../../Builds/iPhone/Media/Icon-72.png"; sourceTree = SOURCE_ROOT; };
+		F8205A85130408E100253AE7 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "../../../../../Builds/iPhone/Media/Icon-Small-50.png"; sourceTree = SOURCE_ROOT; };
+		F8205A86130408E100253AE7 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "../../../../../Builds/iPhone/Media/Icon-Small.png"; sourceTree = SOURCE_ROOT; };
+		F8205A87130408E100253AE7 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "../../../../../Builds/iPhone/Media/Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
+		F8205A88130408E100253AE7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../../../../Builds/iPhone/Media/Icon.png; sourceTree = SOURCE_ROOT; };
+		F8205A89130408E100253AE7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../../../../Builds/iPhone/Media/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		F8205A8A130408E100253AE7 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = ../../../../../Builds/iPhone/Media/iTunesArtwork; sourceTree = SOURCE_ROOT; };
+		F833D1896E78E6DC6AACFF8A /* sail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sail.png; path = ../../../Media/sail.png; sourceTree = SOURCE_ROOT; };
+		F83A1F5C3CD9301907D06259 /* PVRShell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRShell.h; path = ../../../../../Shell/PVRShell.h; sourceTree = SOURCE_ROOT; };
+		F83A86645DDC3D69B5253277 /* EAGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = EAGLView.mm; path = ../../../../../Shell/API/EAGL/OpenGLSupport/EAGLView.mm; sourceTree = SOURCE_ROOT; };
+		F841DEA05FC3DB3140F5C68C /* mountain5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mountain5.png; path = ../../../Media/mountain5.png; sourceTree = SOURCE_ROOT; };
+		F8424D74DDB3480BD22E3CB8 /* Mountain.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Mountain.pvr; path = ../../Mountain.pvr; sourceTree = SOURCE_ROOT; };
+		F8487485C506C516302421D7 /* mountain2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mountain2.png; path = ../../../Media/mountain2.png; sourceTree = SOURCE_ROOT; };
+		F853E220FDCBC2DBFB1B4905 /* Tex2DVShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Tex2DVShader.vsh; path = ../../Tex2DVShader.vsh; sourceTree = SOURCE_ROOT; };
+		F859DE03D820DCEA86BFE612 /* MountainFloor.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = MountainFloor.pvr; path = ../../MountainFloor.pvr; sourceTree = SOURCE_ROOT; };
+		F864940210F75E5100F46F54 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		F86806AB073BCF43114182F8 /* PVRShell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PVRShell.cpp; path = ../../../../../Shell/PVRShell.cpp; sourceTree = SOURCE_ROOT; };
+		F8685712661BB8886AD7514E /* PVRShellAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PVRShellAPI.cpp; path = ../../../../../Shell/API/EAGL/PVRShellAPI.cpp; sourceTree = SOURCE_ROOT; };
+		F86BA5C1AEEE56417B185EEC /* Tex2DFShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Tex2DFShader.fsh; path = ../../Tex2DFShader.fsh; sourceTree = SOURCE_ROOT; };
+		F870FACBC6625F872CE2250D /* mountain4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mountain4.png; path = ../../../Media/mountain4.png; sourceTree = SOURCE_ROOT; };
+		F8843DE80D581E84A4289D4C /* SkyboxVShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = SkyboxVShader.vsh; path = ../../SkyboxVShader.vsh; sourceTree = SOURCE_ROOT; };
+		F88C90D39A2C6457F1A65AD8 /* SkyboxFShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = SkyboxFShader.fsh; path = ../../SkyboxFShader.fsh; sourceTree = SOURCE_ROOT; };
+		F88E0D816D169BDC9A632C46 /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ../../../../../Shell/OS/iPhone/AppController.h; sourceTree = SOURCE_ROOT; };
+		F895137C16F9AE9B63DD3558 /* FragShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = FragShader.fsh; path = ../../FragShader.fsh; sourceTree = SOURCE_ROOT; };
+		F8963379CA05E1DC143C1971 /* ModelVShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = ModelVShader.vsh; path = ../../ModelVShader.vsh; sourceTree = SOURCE_ROOT; };
+		F89CC8D701225E2D0108EAA2 /* mountain6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mountain6.png; path = ../../../Media/mountain6.png; sourceTree = SOURCE_ROOT; };
+		F89CD9892390DC4A381C8CE2 /* OGLES2Water.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OGLES2Water.cpp; path = ../../OGLES2Water.cpp; sourceTree = SOURCE_ROOT; };
+		F89F5B34B637E4D369EF52C5 /* mountain1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mountain1.png; path = ../../../Media/mountain1.png; sourceTree = SOURCE_ROOT; };
+		F8AC9773EA9223369E5EFE8F /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wood.png; path = ../../../Media/wood.png; sourceTree = SOURCE_ROOT; };
+		F8B085DF517D53BDEC57548B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../../../../Shell/OS/iPhone/main.m; sourceTree = SOURCE_ROOT; };
+		F8B5101317DF16833E66B22E /* sail.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = sail.pvr; path = ../../sail.pvr; sourceTree = SOURCE_ROOT; };
+		F8BA1F04D4B2171A86ABBC82 /* EAGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EAGLView.h; path = ../../../../../Shell/API/EAGL/OpenGLSupport/EAGLView.h; sourceTree = SOURCE_ROOT; };
+		F8BAC2610CB2F11798CA2CB6 /* mountain3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mountain3.png; path = ../../../Media/mountain3.png; sourceTree = SOURCE_ROOT; };
+		F8BFC2A67A761E2BC1E22F6E /* PVRShellImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRShellImpl.h; path = ../../../../../Shell/PVRShellImpl.h; sourceTree = SOURCE_ROOT; };
+		F8D0DF10578798846BCDB085 /* PVRShellAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRShellAPI.h; path = ../../../../../Shell/API/EAGL/PVRShellAPI.h; sourceTree = SOURCE_ROOT; };
+		F8D9C1E0FB722E05C03FB10A /* NewNormalMap.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = NewNormalMap.pvr; path = ../../NewNormalMap.pvr; sourceTree = SOURCE_ROOT; };
+		F8F16F596360FAA33EB0AAD6 /* NewNormalMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NewNormalMap.png; path = ../../../Media/NewNormalMap.png; sourceTree = SOURCE_ROOT; };
+		F8F46C70C7FE865B33094F38 /* PlaneTexVShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = PlaneTexVShader.vsh; path = ../../PlaneTexVShader.vsh; sourceTree = SOURCE_ROOT; };
+		F8FC499A855B75A9AFB22A8A /* wood.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = wood.pvr; path = ../../wood.pvr; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F812461A1015DE7B003F1905 /* libOGLES2Tools.a in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */,
+				2D500B9A0D5A79CF00DBA0E3 /* QuartzCore.framework in Frameworks */,
+				BA240AC20FEFE77A00DE852D /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* OGLES2Water.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */,
+				F85E2B260DD21E3F00CA9BEB /* PVRDemo */,
+				F8DAC1360DD2069F008D2EBD /* PVRShell */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				F8E27FF71004EDC30006BBB4 /* Shaders */,
+				F82C4A6F10298C9800FF3CC6 /* Effects */,
+				F8E27FF61004EDBD0006BBB4 /* Textures */,
+				F8E27FF51004EDB10006BBB4 /* Models */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				F864940210F75E5100F46F54 /* Entitlements.plist */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8205A82130408E100253AE7 /* Default-Portrait.png */,
+				F8205A83130408E100253AE7 /* Default.png */,
+				F8205A84130408E100253AE7 /* Icon-72.png */,
+				F8205A85130408E100253AE7 /* Icon-Small-50.png */,
+				F8205A86130408E100253AE7 /* Icon-Small.png */,
+				F8205A87130408E100253AE7 /* Icon-Small@2x.png */,
+				F8205A88130408E100253AE7 /* Icon.png */,
+				F8205A89130408E100253AE7 /* Icon@2x.png */,
+				F8205A8A130408E100253AE7 /* iTunesArtwork */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA240AC10FEFE77A00DE852D /* OpenGLES.framework */,
+				1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */,
+				2D500B990D5A79CF00DBA0E3 /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F80B21C11015CA1600A93BE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F80B21C91015CA1600A93BE2 /* libOGLES2Tools.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F82C4A6F10298C9800FF3CC6 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Effects;
+			sourceTree = "<group>";
+		};
+		F85E2B260DD21E3F00CA9BEB /* PVRDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F89CD9892390DC4A381C8CE2 /* OGLES2Water.cpp */,
+			);
+			name = PVRDemo;
+			sourceTree = "<group>";
+		};
+		F8DAC1360DD2069F008D2EBD /* PVRShell */ = {
+			isa = PBXGroup;
+			children = (
+				F86806AB073BCF43114182F8 /* PVRShell.cpp */,
+				F8685712661BB8886AD7514E /* PVRShellAPI.cpp */,
+				F83A86645DDC3D69B5253277 /* EAGLView.mm */,
+				F80E48ED567B8029CD035DCC /* PVRShellOS.cpp */,
+				F8B085DF517D53BDEC57548B /* main.m */,
+				F812B82B586D7AEF8F327E60 /* AppController.mm */,
+				F83A1F5C3CD9301907D06259 /* PVRShell.h */,
+				F8BFC2A67A761E2BC1E22F6E /* PVRShellImpl.h */,
+				F8D0DF10578798846BCDB085 /* PVRShellAPI.h */,
+				F8BA1F04D4B2171A86ABBC82 /* EAGLView.h */,
+				F81ED8D2EC0F22F741D90292 /* PVRShellOS.h */,
+				F88E0D816D169BDC9A632C46 /* AppController.h */,
+			);
+			name = PVRShell;
+			sourceTree = "<group>";
+		};
+		F8E27FF51004EDB10006BBB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F810699597C4BF5DA29688F9 /* Scene.pod */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F8E27FF61004EDBD0006BBB4 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				F8F16F596360FAA33EB0AAD6 /* NewNormalMap.png */,
+				F89F5B34B637E4D369EF52C5 /* mountain1.png */,
+				F8487485C506C516302421D7 /* mountain2.png */,
+				F8BAC2610CB2F11798CA2CB6 /* mountain3.png */,
+				F870FACBC6625F872CE2250D /* mountain4.png */,
+				F841DEA05FC3DB3140F5C68C /* mountain5.png */,
+				F89CC8D701225E2D0108EAA2 /* mountain6.png */,
+				F8AC9773EA9223369E5EFE8F /* wood.png */,
+				F833D1896E78E6DC6AACFF8A /* sail.png */,
+				F89CC8D701225E2D0108EAA2 /* mountain6.png */,
+				F8D9C1E0FB722E05C03FB10A /* NewNormalMap.pvr */,
+				F8424D74DDB3480BD22E3CB8 /* Mountain.pvr */,
+				F8FC499A855B75A9AFB22A8A /* wood.pvr */,
+				F8B5101317DF16833E66B22E /* sail.pvr */,
+				F859DE03D820DCEA86BFE612 /* MountainFloor.pvr */,
+			);
+			name = Textures;
+			sourceTree = "<group>";
+		};
+		F8E27FF71004EDC30006BBB4 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				F895137C16F9AE9B63DD3558 /* FragShader.fsh */,
+				F81BCA31C4499C36ACCE89C4 /* VertShader.vsh */,
+				F88C90D39A2C6457F1A65AD8 /* SkyboxFShader.fsh */,
+				F8843DE80D581E84A4289D4C /* SkyboxVShader.vsh */,
+				F81176817C9BD954919703B4 /* ModelFShader.fsh */,
+				F8963379CA05E1DC143C1971 /* ModelVShader.vsh */,
+				F86BA5C1AEEE56417B185EEC /* Tex2DFShader.fsh */,
+				F853E220FDCBC2DBFB1B4905 /* Tex2DVShader.vsh */,
+				F8150E71A4FDB0E658AFB6CA /* PlaneTexFShader.fsh */,
+				F8F46C70C7FE865B33094F38 /* PlaneTexVShader.vsh */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* OGLES2Water */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "OGLES2Water" */;
+			buildPhases = (
+				F823D6BD1028C4B200D01178 /* ShellScript */,
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				BA909F0A0FF0EADD00A4C97C /* data */,
+				BA909F0B0FF0EADD00A4C97C /* textures */,
+				BA909F1C0FF0EB3200A4C97C /* shaders */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F80B21CB1015CA2B00A93BE2 /* PBXTargetDependency */,
+			);
+			name = OGLES2Water;
+			productName = foo;
+			productReference = 1D6058910D05DD3D006BFB54 /* OGLES2Water.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OGLES2Water" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F80B21C11015CA1600A93BE2 /* Products */;
+					ProjectRef = F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* OGLES2Water */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F80B21C91015CA1600A93BE2 /* libOGLES2Tools.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOGLES2Tools.a;
+			remoteRef = F80B21C81015CA1600A93BE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F864940310F75E5100F46F54 /* Entitlements.plist in Resources */,
+				F8205A8B130408E100253AE7 /* Default-Portrait.png in Resources */,
+				F8205A8C130408E100253AE7 /* Default.png in Resources */,
+				F8205A8D130408E100253AE7 /* Icon-72.png in Resources */,
+				F8205A8E130408E100253AE7 /* Icon-Small-50.png in Resources */,
+				F8205A8F130408E100253AE7 /* Icon-Small.png in Resources */,
+				F8205A90130408E100253AE7 /* Icon-Small@2x.png in Resources */,
+				F8205A91130408E100253AE7 /* Icon.png in Resources */,
+				F8205A92130408E100253AE7 /* Icon@2x.png in Resources */,
+				F8205A93130408E100253AE7 /* iTunesArtwork in Resources */,
+				F8292E7CCE52973FB5D90098 /* Scene.pod in Resources */,
+				F8376310219E7A31782B3285 /* NewNormalMap.pvr in Resources */,
+				F8BF78B51453C49A98541817 /* Mountain.pvr in Resources */,
+				F88E8C2855F68256D159251D /* wood.pvr in Resources */,
+				F8FD6137A0DF51AB752B1BA1 /* sail.pvr in Resources */,
+				F8E44F7CC16E6CEF71E91549 /* MountainFloor.pvr in Resources */,
+				F870BBA9895779E0AE68561F /* FragShader.fsh in Resources */,
+				F85F986B3B1E3DC98D9FAA9A /* VertShader.vsh in Resources */,
+				F82312F5D4B9703760482462 /* SkyboxFShader.fsh in Resources */,
+				F8B27DA00D94222EAE556897 /* SkyboxVShader.vsh in Resources */,
+				F8ACCAF07267930DCCA4029B /* ModelFShader.fsh in Resources */,
+				F83566DA8AED1DD9C0C17F04 /* ModelVShader.vsh in Resources */,
+				F80E80BB929B9B1EBD52133E /* Tex2DFShader.fsh in Resources */,
+				F8C7322B0955D23BAB7A4B85 /* Tex2DVShader.vsh in Resources */,
+				F806027CBCF442669D2590D6 /* PlaneTexFShader.fsh in Resources */,
+				F8C74DD011DDEE7DBB3EBD19 /* PlaneTexVShader.vsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F823D6BD1028C4B200D01178 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ../../ && test -f content.mak \\\n&& make -f content.mak textures PVRTEXTOOL=../../../Utilities/PVRTexTool/PVRTexToolCL/MacOS_x86/PVRTexTool || true";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8907216D2B696A9D7D24B3E /* OGLES2Water.cpp in Sources */,
+				F8630E83E2409C83D56FBEC7 /* PVRShell.cpp in Sources */,
+				F8BC0A26D1DFE7D24AF67727 /* PVRShellAPI.cpp in Sources */,
+				F8411F7FA35ADD4338A91C4F /* EAGLView.mm in Sources */,
+				F8DD445EC802A113BADECABE /* PVRShellOS.cpp in Sources */,
+				F8511E325A14C7B1512D37CC /* main.m in Sources */,
+				F869BEBD44384AC2147622A7 /* AppController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F80B21CB1015CA2B00A93BE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OGLES2Tools;
+			targetProxy = F80B21CA1015CA2B00A93BE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					_DEBUG,
+					BUILD_OGLES2,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/c++/4.2.1/armv6-apple-darwin9";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				PRODUCT_NAME = OGLES2Water;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../../../Builds/OGLES2/Include ../../../../../Tools/OGLES2 ../../../../../Tools";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = stabs;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = BUILD_OGLES2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/c++/4.2.1/armv6-apple-darwin9";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PREBINDING = NO;
+				PRODUCT_NAME = OGLES2Water;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../../../Builds/OGLES2/Include ../../../../../Tools/OGLES2 ../../../../../Tools";
+			};
+			name = Release;
+		};
+		F864940010F75E0600F46F54 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = BUILD_OGLES2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/c++/4.2.1/armv6-apple-darwin9";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PREBINDING = NO;
+				PRODUCT_NAME = OGLES2Water;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../../../Builds/OGLES2/Include ../../../../../Tools/OGLES2 ../../../../../Tools";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		F864940110F75E0600F46F54 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Distribution;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "OGLES2Water" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				F864940110F75E0600F46F54 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OGLES2Water" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				F864940010F75E0600F46F54 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

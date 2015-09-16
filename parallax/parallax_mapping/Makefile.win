@@ -1,0 +1,33 @@
+# Project: ogl_glslang_simple_parallax
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = oglu_glslang_parallax_mapping_private.res
+OBJ  = oglu_glslang_parallax_mapping.o $(RES)
+LINKOBJ  = oglu_glslang_parallax_mapping.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -mwindows "../../../Users/Marc Clint Dion/Downloads/openGL_2012/SHADOWS/shadowMapping/1/0_0_1_AA_commonLib/libddraw.a" "../../../Users/Marc Clint Dion/Downloads/openGL_2012/SHADOWS/shadowMapping/1/0_0_1_AA_commonLib/libglaux.a" "../../../Users/Marc Clint Dion/Downloads/openGL_2012/SHADOWS/shadowMapping/1/0_0_1_AA_commonLib/libglu32.a" "../../../Users/Marc Clint Dion/Downloads/openGL_2012/SHADOWS/shadowMapping/1/0_0_1_AA_commonLib/libglut32.a" "../../../Users/Marc Clint Dion/Downloads/openGL_2012/SHADOWS/shadowMapping/1/0_0_1_AA_commonLib/libopenal32.a" "../../../Users/Marc Clint Dion/Downloads/openGL_2012/SHADOWS/shadowMapping/1/0_0_1_AA_commonLib/libopengl32.a" "../../../Users/Marc Clint Dion/Downloads/openGL_2012/SHADOWS/shadowMapping/1/0_0_1_AA_commonLib/libwinmm.a" "../../../Users/Marc Clint Dion/Downloads/openGL_2012/SHADOWS/shadowMapping/1/0_0_1_AA_commonLib/fmod.lib" "../../../Users/Marc Clint Dion/Downloads/openGL_2012/SHADOWS/shadowMapping/1/0_0_1_AA_commonLib/FreeImage.lib" "../../../Users/Marc Clint Dion/Downloads/openGL_2012/SHADOWS/shadowMapping/1/0_0_1_AA_commonLib/libEGL.lib" "../../../Users/Marc Clint Dion/Downloads/openGL_2012/SHADOWS/shadowMapping/1/0_0_1_AA_commonLib/libGLESv2.lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = oglu_glslang_parallax_mapping.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before oglu_glslang_parallax_mapping.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "oglu_glslang_parallax_mapping.exe" $(LIBS)
+
+oglu_glslang_parallax_mapping.o: oglu_glslang_parallax_mapping.cpp
+	$(CPP) -c oglu_glslang_parallax_mapping.cpp -o oglu_glslang_parallax_mapping.o $(CXXFLAGS)
+
+oglu_glslang_parallax_mapping_private.res: oglu_glslang_parallax_mapping_private.rc oglu_glslang_parallax_mapping.rc 
+	$(WINDRES) -i oglu_glslang_parallax_mapping_private.rc --input-format=rc -o oglu_glslang_parallax_mapping_private.res -O coff 

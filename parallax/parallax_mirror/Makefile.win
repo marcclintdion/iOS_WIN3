@@ -1,0 +1,33 @@
+# Project: ogl_glslang_simple_parallax
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = oglu_glslang_parallax_mapping_private.res
+OBJ  = oglu_glslang_parallax_mapping.o $(RES)
+LINKOBJ  = oglu_glslang_parallax_mapping.o $(RES)
+LIBS =  -L"lib" -mwindows ../../ZONK_BALL_1/0_0_1_AA_commonLib/libddraw.a ../../ZONK_BALL_1/0_0_1_AA_commonLib/libglaux.a ../../ZONK_BALL_1/0_0_1_AA_commonLib/libglu32.a ../../ZONK_BALL_1/0_0_1_AA_commonLib/libglut32.a ../../ZONK_BALL_1/0_0_1_AA_commonLib/libopenal32.a ../../ZONK_BALL_1/0_0_1_AA_commonLib/libopengl32.a ../../ZONK_BALL_1/0_0_1_AA_commonLib/libwinmm.a ../../ZONK_BALL_1/0_0_1_AA_commonLib/FreeImage.lib  
+INCS =  -I"include" 
+CXXINCS =  -I"lib/gcc/mingw32/3.4.2/include"  -I"include/c++/3.4.2/backward"  -I"include/c++/3.4.2/mingw32"  -I"include/c++/3.4.2"  -I"include" 
+BIN  = oglu_glslang_parallax_mapping.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before oglu_glslang_parallax_mapping.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "oglu_glslang_parallax_mapping.exe" $(LIBS)
+
+oglu_glslang_parallax_mapping.o: oglu_glslang_parallax_mapping.cpp
+	$(CPP) -c oglu_glslang_parallax_mapping.cpp -o oglu_glslang_parallax_mapping.o $(CXXFLAGS)
+
+oglu_glslang_parallax_mapping_private.res: oglu_glslang_parallax_mapping_private.rc oglu_glslang_parallax_mapping.rc 
+	$(WINDRES) -i oglu_glslang_parallax_mapping_private.rc --input-format=rc -o oglu_glslang_parallax_mapping_private.res -O coff 

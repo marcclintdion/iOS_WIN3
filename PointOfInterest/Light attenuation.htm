@@ -1,0 +1,904 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><!--
+	generated in 0.360 seconds
+	60439 bytes batcached for 300 seconds
+--><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Light attenuation « I'm doing it wrong</title>
+
+<link rel="stylesheet" href="Light%20attenuation_files/style_002.css" type="text/css" media="screen">
+<link rel="pingback" href="http://imdoingitwrong.wordpress.com/xmlrpc.php">
+
+<link rel="alternate" type="application/rss+xml" title="I'm doing it wrong » Feed" href="http://imdoingitwrong.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="I'm doing it wrong » Comments Feed" href="http://imdoingitwrong.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="I'm doing it wrong » Light&nbsp;attenuation Comments Feed" href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/feed/">
+<script kabl="61708" style="display: none !important" type="text/javascript" async="" src="Light%20attenuation_files/quant.js"></script><script src="Light%20attenuation_files/725X1342.js" async="" type="text/javascript"></script><script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel="stylesheet" id="all-css-0" href="Light%20attenuation_files/a.css" type="text/css" media="all">
+<link rel="stylesheet" id="print-css-0" href="Light%20attenuation_files/global-print.css" type="text/css" media="print">
+<script type="text/javascript">
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Light%20attenuation_files/a_002.js"></script>
+<link rel="stylesheet" id="all-css-0" href="Light%20attenuation_files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://imdoingitwrong.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://imdoingitwrong.wordpress.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="4-bit random&nbsp;numbers" href="http://imdoingitwrong.wordpress.com/2011/01/20/4-bit-random-numbers/">
+<link rel="next" title="Improved light&nbsp;attenuation" href="http://imdoingitwrong.wordpress.com/2011/02/10/improved-light-attenuation/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/">
+<link rel="shortlink" href="http://wp.me/p127LW-79">
+<link rel="alternate" type="application/json+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=http%3A%2F%2Fimdoingitwrong.wordpress.com%2F2011%2F01%2F31%2Flight-attenuation%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=http%3A%2F%2Fimdoingitwrong.wordpress.com%2F2011%2F01%2F31%2Flight-attenuation%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Light attenuation">
+<meta property="og:url" content="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/">
+<meta property="og:description" content="The canonical equation for point light attenuation goes something like this: $latex f_{att} = \frac{1}{k_c + k_ld + k_qd^2} &amp;s=2$ where: d = distance between the light and the surface being sha...">
+<meta property="og:site_name" content="I'm doing it wrong">
+<meta property="og:image" content="http://0.gravatar.com/blavatar/ac55f97de2de7cb937b2f7029d8812b9?s=200">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<link rel="shortcut icon" type="image/x-icon" href="http://0.gravatar.com/blavatar/4578123d95ff8ec9f49ea30bc65c76ee?s=16" sizes="16x16">
+<link rel="icon" type="image/x-icon" href="http://0.gravatar.com/blavatar/4578123d95ff8ec9f49ea30bc65c76ee?s=16" sizes="16x16">
+<link rel="apple-touch-icon-precomposed" href="http://0.gravatar.com/blavatar/ac55f97de2de7cb937b2f7029d8812b9?s=114">
+<link rel="openid.server" href="http://imdoingitwrong.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="http://imdoingitwrong.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="http://imdoingitwrong.wordpress.com/osd.xml" title="I'm doing it wrong">
+<link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com">
+		<style>
+		/* <![CDATA[ */
+		/* Block: reblog */
+		
+		.reblog-from img                   { margin: 0 10px 0 0; vertical-align: middle; padding: 0; border: 0; }
+		.reblogger-note img.avatar         { float: left; padding: 0; border: 0; }
+		.reblogger-note-content            { margin: 0 0 20px; }
+		.reblog-post .wpcom-enhanced-excerpt-content { border-left: 3px solid #eee; padding-left: 15px; }
+		.reblog-post ul.thumb-list         { display: block; list-style: none; margin: 2px 0; padding: 0; clear: both; }
+		.reblog-post ul.thumb-list li      { display: inline; margin: 0; padding: 0 1px; border: 0; }
+		.reblog-post ul.thumb-list li a    { margin: 0; padding: 0; border: 0; }
+		.reblog-post ul.thumb-list li img  { margin: 0; padding: 0; border: 0; }
+		
+		.reblog-post .wpcom-enhanced-excerpt { clear: both; }
+		
+		.reblog-post .wpcom-enhanced-excerpt address,
+		.reblog-post .wpcom-enhanced-excerpt li,
+		.reblog-post .wpcom-enhanced-excerpt h1,
+		.reblog-post .wpcom-enhanced-excerpt h2,
+		.reblog-post .wpcom-enhanced-excerpt h3,
+		.reblog-post .wpcom-enhanced-excerpt h4,
+		.reblog-post .wpcom-enhanced-excerpt h5,
+		.reblog-post .wpcom-enhanced-excerpt h6,
+		.reblog-post .wpcom-enhanced-excerpt p { font-size: 100% !important; }
+		
+		.reblog-post .wpcom-enhanced-excerpt blockquote,
+		.reblog-post .wpcom-enhanced-excerpt pre,
+		.reblog-post .wpcom-enhanced-excerpt code,
+		.reblog-post .wpcom-enhanced-excerpt q { font-size: 98% !important; }
+		
+
+		/* ]]> */
+		</style>
+		<style type="text/css">.recentcomments a{display:inline !important;padding: 0 !important;margin: 0 !important;}</style>
+<meta name="application-name" content="I'm doing it wrong"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="more often than not."><meta name="msapplication-task" content="name=Subscribe;action-uri=http://imdoingitwrong.wordpress.com/feed/;icon-uri=http://0.gravatar.com/blavatar/4578123d95ff8ec9f49ea30bc65c76ee?s=16"><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="title" content="Light&nbsp;attenuation | I'm doing it wrong on WordPress.com">
+<meta name="description" content="more often than not. (by Tom Madams)">
+
+<style type="text/css">
+table.recentcommentsavatar img.avatar {border: 0px; margin:0;}
+table.recentcommentsavatar a {border: 0px !important;background-color: transparent !important}
+td.recentcommentsavatartop {padding:0px 0px 1px 0px;margin:0px; }
+td.recentcommentsavatarend {padding:0px 0px 1px 0px;margin:0px; }
+td.recentcommentstexttop { border: none !important;padding:0px 0px 0px 10px;}
+td.recentcommentstextend { border: none !important;padding:0px 0px 2px 10px;}
+</style>
+<script kabl="61708" style="display: none !important" type="text/javascript" src="Light%20attenuation_files/google_service.js">
+</script>
+<script type="text/javascript">
+GS_googleAddAdSenseService("ca-pub-3443918307802676");
+GS_googleEnableAllServices();
+</script>
+<script type="text/javascript">
+GA_googleAddSlot("ca-pub-3443918307802676", "wpcom_below_post");
+</script>
+<script type="text/javascript">
+GA_googleFetchAds();
+</script>
+<script type="text/javascript"> 
+	window.google_analytics_uacct = "UA-52447-2"; 
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script kabl="61708" style="display: none !important" src="Light%20attenuation_files/ga.js" async="" type="text/javascript"></script>
+<link href="Light%20attenuation_files/shThemeDefault.css" type="text/css" rel="stylesheet"><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="Light%20attenuation_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="Light%20attenuation_files/services.css"><script kabl="61708" style="display: none !important" src="Light%20attenuation_files/a.htm" async="" type="text/javascript"></script></head>
+<body class="single single-post postid-443 single-format-standard highlander-enabled highlander-light">
+
+<div id="wrap">
+	<div id="header">
+		<h1><a href="http://imdoingitwrong.wordpress.com/">I'm doing it wrong</a></h1>
+		<p class="description">more often than not.</p>
+			</div><!-- / #header -->
+
+	<div id="content">
+								<div class="post-443 post type-post status-publish format-standard hentry category-wrongness tag-attenuation tag-glsl tag-graphics tag-lighting tag-point-light entry entry-1" id="post-443">
+	<div class="entrytitle">
+		<h2>
+					Light&nbsp;attenuation				</h2>
+		<h3>January 31, 2011</h3>
+	</div>
+	<div class="entrybody">
+		<p>The canonical equation for point light attenuation goes something like this:<br>
+<img src="Light%20attenuation_files/latex_005.png" alt="f_{att} = \frac{1}{k_c + k_ld + k_qd^2} " title="f_{att} = \frac{1}{k_c + k_ld + k_qd^2} " class="latex"><br>
+where:<br>
+d = distance between the light and the surface being shaded<br>
+kc = constant attenuation factor<br>
+kl = linear attenuation factor<br>
+kq = quadratic attenuation factor</p>
+<p>Since I first read about light attenuation in the <a href="http://www.opengl.org/documentation/red_book/">Red Book</a>
+ I’ve often wondered where this equation came from and what values 
+should actually be used for the attenuation factors, but I could never 
+find a satisfactory explanation. Pretty much every reference to light 
+attenuation in both books and online simply presents some variant of 
+this equation, along with screenshots of objects being lit by lights 
+with different attenuation factors. If you’re lucky, there’s sometimes 
+an accompanying bit of handwaving.</p>
+<p>Today, I did some experimentation with my path tracer and was 
+pleasantly surprised to find a correlation between the direct 
+illumination from a physically based spherical area light source and the
+ point light attenuation equation.</p>
+<p>I set up a simple scene in which to conduct the tests: a spherical 
+area light above a diffuse plane. By setting the light’s radius and 
+distance above the plane to different values and then sampling the 
+direct illumination at a point on the plane directly below the light, I 
+built up a table of attenuation values. Here’s a plot of a some of the 
+results; the distance on the horizontal axis is that between the plane 
+and the light’s <em>surface</em>, not its centre.<br>
+<a href="http://imdoingitwrong.files.wordpress.com/2012/01/light_attenuation_curves_2.png"><img src="Light%20attenuation_files/light_attenuation_curves_2.png" alt="" title="light_attenuation_curves_2" class="aligncenter size-full wp-image-536" height="268" width="480"></a></p>
+<p>After looking at the results from a series of tests, it became 
+apparent that the attenuation of a spherical light can be modeled as:<br>
+<img src="Light%20attenuation_files/latex_006.png" alt="f_{att} = \frac{1}{(\frac{d}{r} + 1)^2} " title="f_{att} = \frac{1}{(\frac{d}{r} + 1)^2} " class="latex"><br>
+where:<br>
+d = distance between the light’s surface and the point being shaded<br>
+r = the light’s radius</p>
+<p>Expanding this out, we get:<br>
+<img src="Light%20attenuation_files/latex_003.png" alt="f_{att} = \frac{1}{1 + \frac{2}{r}d + \frac{1}{r^2}d^2} " title="f_{att} = \frac{1}{1 + \frac{2}{r}d + \frac{1}{r^2}d^2} " class="latex"><br>
+which is the original point light attenuation equation with the following attenuation factors:<br>
+<img src="Light%20attenuation_files/latex_004.png" alt="k_c = 1  " title="k_c = 1  " class="latex"><br>
+<img src="Light%20attenuation_files/latex.png" alt="k_l = \frac{2}{r}  " title="k_l = \frac{2}{r}  " class="latex"><br>
+<img src="Light%20attenuation_files/latex_002.png" alt="k_q = \frac{1}{r^2}  " title="k_q = \frac{1}{r^2}  " class="latex"></p>
+<p>Below are a couple of renders of four lights above a plane. The first
+ is a ground-truth render of direct illumination calculated using Monte 
+Carlo integration:<br>
+<a href="http://imdoingitwrong.files.wordpress.com/2012/01/light_attenuation_montecarlo.png"><img src="Light%20attenuation_files/light_attenuation_montecarlo.png" alt="" title="light_attenuation_montecarlo" class="aligncenter size-full wp-image-462" height="240" width="480"></a></p>
+<p>In this second render, direct illumination is calculated analytically
+ using the attenuation factors derived from the light radius:<br>
+<a href="http://imdoingitwrong.files.wordpress.com/2012/01/light_attenuation_analytical.png"><img src="Light%20attenuation_files/light_attenuation_analytical.png" alt="" title="light_attenuation_analytical" class="aligncenter size-full wp-image-457" height="240" width="480"></a></p>
+<p>The only noticeable difference between the two is that in the second 
+image, an area of the plane to the far left is slightly too bright due 
+to a lack of a shadowing term.</p>
+<p>Maybe this is old news to many people, but I was pretty happy to find
+ out that an equation that had seemed fairly arbitrary to me for so many
+ years actually had some physical motivation behind it. I don’t really 
+understand why this relationship is never pointed out, not even in <a onclick="return mugicPopWin(this,event);" oncontextmenu="mugicRightClick(this);" href="http://www.amazon.com/Computer-Graphics-Principles-Practice-2nd/dp/0201848406">Foley and van Dam’s</a> venerable tome*.</p>
+<p>Unfortunately this attenuation model is still problematic for 
+real-time rendering, since a light’s influence is essentially unbounded.
+ We can, however, artificially enforce a finite influence by clipping 
+all contributions that fall below a certain threshold. Given a spherical
+ light of radius <em>r</em> and intensity <em>Li</em>, the illumination <em>I</em> at distance <em>d</em> is:<br>
+<img src="Light%20attenuation_files/latex_008.png" alt="I = \frac{L_i}{(\frac{d}{r} + 1)^2} " title="I = \frac{L_i}{(\frac{d}{r} + 1)^2} " class="latex"></p>
+<p>Assuming we want to ignore all illumination that falls below some cutoff threshold <em>Ic</em>, we can solve for <em>d</em> to find the maximum distance of the light’s influence:<br>
+<img src="Light%20attenuation_files/latex_007.png" alt="d_{max} = r(\sqrt{\frac{L_i}{I_c}}-1) " title="d_{max} = r(\sqrt{\frac{L_i}{I_c}}-1) " class="latex"></p>
+<p>Biasing the calculated illumination by <em>-Ic</em> and then scaling by <em>1/(1-Ic)</em> ensures that illumination drops to zero at the furthest extent, and the maximum illumination is unchanged.</p>
+<p>Here’s the result of applying these changes with a cutoff threshold 
+of 0.001; in the second image, areas which receive no illumination are 
+highlighted in red:<br>
+<a href="http://imdoingitwrong.files.wordpress.com/2012/01/light_attenuation_cutoff_0_1.png"><img src="Light%20attenuation_files/light_attenuation_cutoff_0_1.png" alt="" title="light_attenuation_cutoff_0_1" class="aligncenter size-full wp-image-458" height="240" width="480"></a></p>
+<p><a href="http://imdoingitwrong.files.wordpress.com/2012/01/light_attenuation_cutoff_0_1_range.png"><img src="Light%20attenuation_files/light_attenuation_cutoff_0_1_range.png" alt="" title="light_attenuation_cutoff_0_1_range" class="aligncenter size-full wp-image-459" height="240" width="480"></a></p>
+<p>And here’s a cutoff threshold of 0.005; if you compare to the version
+ with no cutoff, you’ll see that the illumination is now noticeably 
+darker:<br>
+<a href="http://imdoingitwrong.files.wordpress.com/2012/01/light_attenuation_cutoff_0_5.png"><img src="Light%20attenuation_files/light_attenuation_cutoff_0_5.png" alt="" title="light_attenuation_cutoff_0_5" class="aligncenter size-full wp-image-460" height="240" width="480"></a></p>
+<p><a href="http://imdoingitwrong.files.wordpress.com/2012/01/light_attenuation_cutoff_0_5_range.png"><img src="Light%20attenuation_files/light_attenuation_cutoff_0_5_range.png" alt="" title="light_attenuation_cutoff_0_5_range" class="aligncenter size-full wp-image-461" height="240" width="480"></a></p>
+<p>Just to round things off, here’s a GLSL snippet for calculating the 
+approximate direct illumination from a spherical light source. Soft 
+shadows are left as an exercise for the reader.<br>
+ <img src="Light%20attenuation_files/icon_wink.gif" alt=";)" class="wp-smiley"><br>
+</p><div class="syntaxhighlighter  " id="highlighter_894637"><div class="bar"><div class="toolbar"><a class="item viewSource" style="width: 16px; height: 16px;" title="view source" href="#viewSource">view source</a><div class="item copyToClipboard"><embed id="highlighter_894637_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_894637" menu="false" src="Light%20attenuation_files/clipboard.swf" height="16" width="16"></div><a class="item printSource" style="width: 16px; height: 16px;" title="print" href="#printSource">print</a><a class="item about" style="width: 16px; height: 16px;" title="?" href="#about">?</a></div></div><div class="lines no-wrap"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">vec3 DirectIllumination(vec3 P, vec3 N, vec3 lightCentre, </code><code class="color1 bold">float</code> <code class="plain">lightRadius, vec3 lightColour, </code><code class="color1 bold">float</code> <code class="plain">cutoff)</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">// calculate normalized light vector and distance to sphere light surface</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">float</code> <code class="plain">r = lightRadius;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">vec3 L = lightCentre - P;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">float</code> <code class="plain">distance = length(L);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">float</code> <code class="plain">d = max(distance - r, 0);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">L /= distance;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">// calculate basic attenuation</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">float</code> <code class="plain">denom = d/r + 1;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">float</code> <code class="plain">attenuation = 1 / (denom*denom);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">// scale and bias attenuation such that:</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">//&nbsp;&nbsp; attenuation == 0 at extent of max influence</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">//&nbsp;&nbsp; attenuation == 1 when d == 0</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">attenuation = (attenuation - cutoff) / (1 - cutoff);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">attenuation = max(attenuation, 0);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">float</code> <code class="plain">dot = max(dot(L, N), 0);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword bold">return</code> <code class="plain">lightColour * dot * attenuation;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div><p></p>
+<p><span style="color:#999999;">* I always felt a little sorry for Feiner and Hughes.</span></p>
+
+<div class="wpadvert" style="position: relative; width:300px; text-align: center; padding: 0; margin: 10px auto; overflow: hidden; clear: both;">
+<a style="position: absolute; text-align: left; display: block; font: 9px/1 sans-serif; text-decoration: underline;" href="http://en.wordpress.com/about-these-ads/" rel="nofollow">About these ads</a>
+<script type="text/javascript">
+		var wpcom_adclk_hovering = false;
+		var wpcom_adclk_recorded = false;
+		var wpcom_adclk_theme = "Simpla";
+		var wpcom_adclk_slot = "wpcom_below_post";
+		var wpcom_adclk_network = ( typeof wpcom_adclk_network === "undefined" ) ? "" : wpcom_adclk_network ;
+
+		jQuery(document).ready( function() {
+			function wpcom_adclk_hover_yes() { wpcom_adclk_hovering = true; }
+			function wpcom_adclk_hover_no() { wpcom_adclk_hovering = false; }
+			jQuery(".wpadvert").click(wpcom_adclk_click);
+			jQuery(".wpadvert iframe").hover( wpcom_adclk_hover_yes, wpcom_adclk_hover_no );
+			jQuery(".wpadvert object").hover( wpcom_adclk_hover_yes, wpcom_adclk_hover_no );
+
+			jQuery(window).blur( function() {
+				if ( wpcom_adclk_hovering ) { wpcom_adclk_click(); }
+			});
+		});
+
+		function wpcom_adclk_impression() {
+			var stat_gif = document.location.protocol + "//stats.wordpress.com/g.gif?v=wpcom-no-pv";
+			stat_gif += "&x_ads_imp_theme=" + wpcom_adclk_theme;
+			stat_gif += "&x_ads_imp_placement="+wpcom_adclk_slot;
+			stat_gif += "&x_ads_imp_network=" + wpcom_adclk_network;
+			stat_gif += "&x_ads_imp_theme_network="+wpcom_adclk_theme+"_"+wpcom_adclk_network;
+			new Image().src = stat_gif + "&baba=" + Math.random();
+			return true;
+		}
+
+		function wpcom_adclk_click() {
+			if (wpcom_adclk_recorded) { return true; } // no double counting
+			var stat_gif = document.location.protocol + "//stats.wordpress.com/g.gif?v=wpcom-no-pv";
+			stat_gif += "&x_ads_click_theme=" + wpcom_adclk_theme;
+			stat_gif += "&x_ads_click_placement="+wpcom_adclk_slot;
+			stat_gif += "&x_ads_click_network=" + wpcom_adclk_network;
+			stat_gif += "&x_ads_click_theme_network="+wpcom_adclk_theme+"_"+wpcom_adclk_network;
+
+			new Image().src = stat_gif + "&baba=" + Math.random();
+			wpcom_adclk_recorded = true;
+			var now=new Date(); var end=now.getTime()+250;
+			while(true){now=new Date();if(now.getTime()>end){break;}}
+			return true;
+		}
+	
+GA_googleAddAttr("AdOpt", "1");
+GA_googleAddAttr("Origin", "other");
+GA_googleAddAttr("LangId", "1");
+GA_googleAddAttr("Domain", "imdoingitwrong.wordpress.com");
+GA_googleAddAttr("BlogId", "15282872");
+GA_googleAddAttr("Autotag", "science");
+GA_googleAddAttr("Tag", "wrongness");
+GA_googleAddAttr("Tag", "attenuation");
+GA_googleAddAttr("Tag", "glsl");
+GA_googleAddAttr("Tag", "graphics");
+GA_googleAddAttr("Tag", "lighting");
+GA_googleAddAttr("Tag", "point-light");
+GA_googleAddAttr("theme_bg", "ffffff");
+GA_googleAddAttr("theme_text", "555555");
+GA_googleAddAttr("theme_link", "557799");
+GA_googleAddAttr("theme_border", "dddddd");
+GA_googleAddAttr("theme_url", "b4c24b");
+GA_googleAddAdSensePageAttr("google_page_url", "http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/");
+GA_googleFillSlot("wpcom_below_post");
+</script>
+</div>
+<style type="text/css">
+div.wpadvert>div { margin-top: 1em; }
+</style>
+<script type="text/javascript">
+jQuery( window ).load( function() {
+    if ( jQuery(".wpadvert script[src*='shareth.ru']").length > 0 || jQuery(".wpadvert .sharethrough-placement").length > 0 ) {
+        jQuery( '.wpadvert' ).css( 'width', '400px' );
+    }
+setTimeout(function(){if(typeof GS_googleAddAdSenseService !== 'function'){new Image().src=document.location.protocol+"//stats.wordpress.com/g.gif?v=wpcom-no-pv&x_noads=adblock&baba="+Math.random()}},100);
+} );
+</script>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled"><div class="wpl-likebox sd-block sd-like"><h3 class="sd-title">Like this:</h3><div class="sd-content"><div id="like-443" class="wpl-button "><a href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/?like=1&amp;source=post_flair&amp;_wpnonce=bcc517a348" title="I like this." class="like needs-login sd-button" rel="nofollow"><span>Like</span></a></div><div class="wpl-count sd-like-count">Be the first to like this.</div></div></div></div>			</div>
+
+	<div class="entrymeta">
+	<div class="postinfo">
+		<span class="postedby">Posted by Tom Madams</span><br>
+					<span class="filedto">Filed in <a href="http://imdoingitwrong.wordpress.com/category/wrongness/" title="View all posts in wrongness" rel="category tag">wrongness</a></span><br>
+			<span class="filedto">Tags: <a href="http://imdoingitwrong.wordpress.com/tag/attenuation/" rel="tag">attenuation</a>, <a href="http://imdoingitwrong.wordpress.com/tag/glsl/" rel="tag">GLSL</a>, <a href="http://imdoingitwrong.wordpress.com/tag/graphics/" rel="tag">graphics</a>, <a href="http://imdoingitwrong.wordpress.com/tag/lighting/" rel="tag">lighting</a>, <a href="http://imdoingitwrong.wordpress.com/tag/point-light/" rel="tag">point light</a></span><br>					</div>
+	<a href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/#comments" class="commentslink" title="Comment on Light&nbsp;attenuation">6 Comments »</a>	</div>
+
+</div>
+<div class="commentsblock">
+		<h3 id="comments">6 Responses to “Light&nbsp;attenuation”</h3>
+
+	<ol class="commentlist">
+	<li class="comment even thread-even depth-1 parent highlander-comment" id="comment-15">
+	<div id="div-comment-15">
+	<div class="comment-author vcard">
+		<img id="grav-e67c6d5fd86a8a950ee7709e204929b0-0" alt="" src="Light%20attenuation_files/e67c6d5fd86a8a950ee7709e204929b0.png" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32">		<cite class="fn">David</cite> Says:
+	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/#comment-15" title="">January 31, 2011 at 3:05 pm</a> </small>
+
+	<p>I remember first learning about this in my electro magnetism class.</p>
+<p>You can also prove analytically that a infinitely small point light 
+has a falloff of d^2 and a infinite plane will have a 1/d falloff.</p>
+<p>-= Dave</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/?replytocom=15#respond" onclick='return addComment.moveForm("div-comment-15", "15", "respond", "443")'>Reply</a>	</div>
+	</div>
+<ul class="children">
+<li class="comment odd alt depth-2 parent highlander-comment" id="comment-16">
+	<div id="div-comment-16">
+	<div class="comment-author vcard">
+		<img id="grav-6099e8e545958dea773cf0c549224703-0" alt="" src="Light%20attenuation_files/6099e8e545958dea773cf0c549224703.jpg" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32">		<cite class="fn"><a href="http://dmadev.com/" rel="external nofollow" class="url">Dominic Hamon</a></cite> Says:
+	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/#comment-16" title="">February 4, 2011 at 6:07 pm</a> </small>
+
+	<p>Not quite. A point light has a falloff of 1/d^2, an infinite 
+linear-source (an approximation of an infinite fluorescent tube) has a 
+falloff of 1/d, and an infinite planar-source will have a falloff of 
+1/1.</p>
+<p>To be clear, the term attenuation usually applies to the absorption 
+and scattering of photons as they pass through some medium, and is often
+ exponential based on the length of the path through that medium. The 
+decrease in intensity that you’re describing here is purely a geometric 
+factor due to the constant flux of a light source propagating as a 
+spherical wavefront.</p>
+<p>I haven’t worked through the maths to figure out why f_att isn’t a pure inverse quadratic which is what I would expect.</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/?replytocom=16#respond" onclick='return addComment.moveForm("div-comment-16", "16", "respond", "443")'>Reply</a>	</div>
+	</div>
+<ul class="children">
+<li class="comment byuser comment-author-tommadams bypostauthor even depth-3 highlander-comment" id="comment-17">
+	<div id="div-comment-17">
+	<div class="comment-author vcard">
+		<img id="grav-14a2045bb4108ae582bb3f931985609d-0" alt="" src="Light%20attenuation_files/14a2045bb4108ae582bb3f931985609d_002.jpg" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32">		<cite class="fn"><a href="http://imdoingitwrong.wordpress.com/" rel="external nofollow" class="url">Tom Madams</a></cite> Says:
+	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/#comment-17" title="">February 4, 2011 at 7:30 pm</a> </small>
+
+	<p>Hey Dom, it’s good to hear from you. In times like this I miss being able to pick your physics brain <img src="Light%20attenuation_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+<p>If you’re interested in the proof, Miles pointed out over email that 
+Iñigo Quilez worked through something very similar for analytic sphere 
+occlusion:</p>
+<p><a href="http://www.iquilezles.org/www/articles/sphereao/sphereao.htm" rel="nofollow">http://www.iquilezles.org/www/articles/sphereao/sphereao.htm</a></p>
+<p>I got lost somewhere around the forth double integral.</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/?replytocom=17#respond" onclick='return addComment.moveForm("div-comment-17", "17", "respond", "443")'>Reply</a>	</div>
+	</div>
+</li>
+<li class="comment odd alt depth-3 parent highlander-comment" id="comment-25">
+	<div id="div-comment-25">
+	<div class="comment-author vcard">
+		<img id="grav-e67c6d5fd86a8a950ee7709e204929b0-1" alt="" src="Light%20attenuation_files/e67c6d5fd86a8a950ee7709e204929b0.png" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32">		<cite class="fn">David</cite> Says:
+	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/#comment-25" title="">February 10, 2011 at 3:12 pm</a> </small>
+
+	<p>Yes, sorry infinite rod is 1/d. It’s been a while.</p>
+<p>I do also remember when I first started studying this I was talking 
+to my friend who has his PhD in physics and asking him to explain to me 
+the attenuation equation. We had quite the confusing conversation 
+because in my mind attenuation was the spreading of flux and he thought 
+of it as absorption in participating media. It would be interesting to 
+find the origin of the term attenuation for graphics to see the authors 
+reasoning.</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/?replytocom=25#respond" onclick='return addComment.moveForm("div-comment-25", "25", "respond", "443")'>Reply</a>	</div>
+	</div>
+<ul class="children">
+<li class="comment byuser comment-author-tommadams bypostauthor even depth-4 highlander-comment" id="comment-26">
+	<div id="div-comment-26">
+	<div class="comment-author vcard">
+		<img id="grav-14a2045bb4108ae582bb3f931985609d-1" alt="" src="Light%20attenuation_files/14a2045bb4108ae582bb3f931985609d_002.jpg" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32">		<cite class="fn"><a href="http://imdoingitwrong.wordpress.com/" rel="external nofollow" class="url">Tom Madams</a></cite> Says:
+	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/#comment-26" title="">February 11, 2011 at 11:22 am</a> </small>
+
+	<p>Dominic is correct when he describes the usual meaning of 
+attenuation, but correctly calculating scattering and absorption is 
+non-trivial. In games we normally just place our world in a vacuum and 
+hope nobody suffocates.</p>
+<p>The effects of participating media can be approximated using a simple
+ exponential (or even linear!) fog model, or a scattering model such as 
+Preetham’s or Bruneton &amp; Neyrett’s for outdoor scenes.</p>
+<p>Glows around light sources can be approximated with a post process 
+bloom, a simple view-aligned sprite, or a combination of both.</p>
+<p>Unfortunately, these approaches don’t capture effects such as the softening of specular lobes due to scattering.</p>
+<p>You have just reminded me of an interesting <a href="http://www.cs.columbia.edu/CAVE/projects/scattering_model/scattering_model.php" rel="nofollow">paper</a> from SIGGRAPH 2005 though, which does approximate these effects for the single-scattering case.</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/?replytocom=26#respond" onclick='return addComment.moveForm("div-comment-26", "26", "respond", "443")'>Reply</a>	</div>
+	</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-59">
+	<div id="div-comment-59">
+	<div class="comment-author vcard">
+				<cite class="fn"><a href="http://www.rockalypse.org/blogs/rescue/2011/07/07/light-attenuation-in-our-bonding-boxes/" rel="external nofollow" class="url">Light attenuation in our bonding boxes. | Rescue Robotics</a></cite> Says:
+	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/#comment-59" title="">July 7, 2011 at 9:15 am</a> </small>
+
+	<p>[...] We further looked into these constants and found a relative 
+equation which calculates the lights attenuation. This has helped us to 
+better the brightness of our light in all four rooms.   This entry was 
+[...]</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/?replytocom=59#respond" onclick='return addComment.moveForm("div-comment-59", "59", "respond", "443")'>Reply</a>	</div>
+	</div>
+</li>
+	</ol>
+
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div>
+	<br>
+
+	
+								<div class="js" id="respond">
+				<h3 id="reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://imdoingitwrong.wordpress.com/wp-comments-post.php" method="post" id="commentform">
+																										
+
+
+												
+<input name="hc_post_as" id="hc_post_as" value="guest" type="hidden">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="height: 37px; resize: none; overflow-y: hidden; position: absolute; top: 0px; left: -9999px; width: 422px; line-height: 17px; text-decoration: none; letter-spacing: 0px;" placeholder="Enter your comment here..."></textarea><textarea style="height: 37px; resize: none; overflow-y: hidden;" placeholder="Enter your comment here..." id="comment" name="comment"></textarea></div>
+</div>
+
+<div style="display: none;" id="comment-form-identity">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="Light%20attenuation_files/ad516503a11cd5ca435acc9bb6523536.png" alt="Gravatar" class="no-grav" width="25">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email"></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text"></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text"></div>
+				</div> 
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="Light%20attenuation_files/wplogo.png" alt="WordPress.com Logo" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" type="hidden">
+				<input name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" type="hidden">
+				<input name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" type="hidden">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'wordpress'%20);">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="Light%20attenuation_files/ad516503a11cd5ca435acc9bb6523536.png" alt="Twitter picture" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" type="hidden">
+				<input name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" type="hidden">
+				<input name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" type="hidden">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'twitter'%20);">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="Light%20attenuation_files/ad516503a11cd5ca435acc9bb6523536.png" alt="Facebook photo" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" type="hidden">
+				<input name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" type="hidden">
+				<input name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" type="hidden">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'facebook'%20);">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+	
+	
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+});
+</script>
+
+<div style="display: none;" id="comment-form-subscribe"> 
+	<p class="comment-subscription-form"><input name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6" type="checkbox"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of follow-up comments via email.</label></p><p class="post-subscription-form"><input name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;" tabindex="7" type="checkbox"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Notify me of new posts via email.</label></p></div>
+
+												<p style="display: none;" class="form-submit">
+							<input name="submit" id="comment-submit" value="Post Comment" type="submit">
+							<input name="comment_post_ID" value="443" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+						</p>
+						
+<input name="genseq" value="1360539906" type="hidden">
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="1c2e3c7ad3" type="hidden"></p><script type="text/javascript" src="Light%20attenuation_files/form.js"></script>
+<p style="display: none;"><input id="ak_js" name="ak_js" value="1360539911696" type="hidden"></p>					</form>
+							</div><!-- #respond -->
+			<div style="clear: both"></div>			</div>		
+			<div class="navigation">
+			<div class="alignleft"><a href="http://imdoingitwrong.wordpress.com/2011/01/20/4-bit-random-numbers/" rel="prev"><span class="meta-nav">«</span> 4-bit random&nbsp;numbers</a></div>
+			<div class="alignright"><a href="http://imdoingitwrong.wordpress.com/2011/02/10/improved-light-attenuation/" rel="next">Improved light&nbsp;attenuation <span class="meta-nav">»</span></a></div>
+		</div>
+	
+	</div>
+<ul id="sidebar">
+<li id="rss_links-3" class="widget widget_rss_links"><h2 class="widgettitle">Feeds</h2>
+<ul><li><a href="http://imdoingitwrong.wordpress.com/feed/" title="Subscribe to Posts">RSS - Posts</a></li><li><a href="http://imdoingitwrong.wordpress.com/comments/feed/" title="Subscribe to Comments">RSS - Comments</a></li></ul>
+</li>
+<li id="linkcat-1356" class="widget widget_links"><h2 class="widgettitle">Blogroll</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="http://altdevblogaday.org/">#AltDevBlogADay</a></li>
+<li><a href="http://cbloomrants.blogspot.com/">cbloom rants</a></li>
+<li><a href="http://realtimecollisiondetection.net/blog/">Christer Ericson</a></li>
+<li><a href="http://copypastepixel.blogspot.com/">copypastepixel</a></li>
+<li><a href="http://dmadev.com/">dominic hamon</a></li>
+<li><a href="http://www.iquilezles.org/blog/">el trastero</a></li>
+<li><a href="http://aras-p.info/blog/">Lost in the Triangles</a></li>
+<li><a href="http://mmack.wordpress.com/">Miles Macklin</a></li>
+<li><a href="http://www.sjbrown.co.uk/">Simon's Graphics Blog</a></li>
+<li><a href="http://mynameismjp.wordpress.com/">The Danger Zone</a></li>
+<li><a href="http://prideout.net/blog/">The Little Grasshopper</a></li>
+<li><a href="http://home.comcast.net/%7Etom_forsyth/blog.wiki.html">TomF's Tech Blog</a></li>
+
+	</ul>
+</li>
+
+		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://imdoingitwrong.wordpress.com/2011/04/23/quadrilaterals-and-brown-trousers/" title="Quadrilaterals and brown&nbsp;trousers">Quadrilaterals and brown&nbsp;trousers</a>
+						</li>
+					<li>
+				<a href="http://imdoingitwrong.wordpress.com/2011/04/14/spherical-harmonics-wtf/" title="Spherical harmonics,&nbsp;WTF?">Spherical harmonics,&nbsp;WTF?</a>
+						</li>
+					<li>
+				<a href="http://imdoingitwrong.wordpress.com/2011/04/02/realtime-global-illumination/" title="Realtime global&nbsp;illumination">Realtime global&nbsp;illumination</a>
+						</li>
+					<li>
+				<a href="http://imdoingitwrong.wordpress.com/2011/02/10/improved-light-attenuation/" title="Improved light&nbsp;attenuation">Improved light&nbsp;attenuation</a>
+						</li>
+					<li>
+				<a href="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/" title="Light&nbsp;attenuation">Light&nbsp;attenuation</a>
+						</li>
+				</ul>
+		</aside>	<li id="recent-comments" class="widget widget_recent_comments">		<h2 class="widgettitle">Recent Comments</h2>
+		<table class="recentcommentsavatar" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td title="Paul" class="recentcommentsavatartop" style="height:48px; width:48px"><img id="grav-735ced9599a294bc6bf6969bcae54f84-0" alt="" src="Light%20attenuation_files/735ced9599a294bc6bf6969bcae54f84.png" class="avatar avatar-48 grav-hashed grav-hijack" height="48" width="48"></td><td class="recentcommentstexttop">Paul on <a href="http://imdoingitwrong.wordpress.com/2011/01/20/4-bit-random-numbers/#comment-72">4-bit random&nbsp;numbers</a></td></tr><tr><td title="Ruud van Gaal" class="recentcommentsavatarend" style="height:48px; width:48px"><a href="http://www.racer.nl/" rel="nofollow"><img id="grav-c84a6523bb5572109fc16796c5fd19b2-0" alt="" src="Light%20attenuation_files/c84a6523bb5572109fc16796c5fd19b2.png" class="avatar avatar-48 grav-hashed" height="48" width="48"></a></td><td class="recentcommentstextend"><a href="http://www.racer.nl/" rel="nofollow">Ruud van Gaal</a> on <a href="http://imdoingitwrong.wordpress.com/2010/08/19/why-reinhard-desaturates-my-blacks-3/#comment-71">Why Reinhard desaturates my…</a></td></tr><tr><td title="Readings on color management | Light is beautiful" class="recentcommentsavatarend" style="height:48px; width:48px"><a href="http://lousodrome.net/blog/light/2012/09/11/readings-on-color-management/" rel="nofollow"></a></td><td class="recentcommentstextend"><a href="http://lousodrome.net/blog/light/2012/09/11/readings-on-color-management/" rel="nofollow">Readings on color ma…</a> on <a href="http://imdoingitwrong.wordpress.com/2010/08/19/why-reinhard-desaturates-my-blacks-3/#comment-70">Why Reinhard desaturates my…</a></td></tr><tr><td title="Nirans Viewer (fixed) - Page 44 - SLUniverse Forums" class="recentcommentsavatarend" style="height:48px; width:48px"><a href="http://www.sluniverse.com/php/vb/alternative-sl-clients/64897-nirans-viewer-fixed-44.html#post1606308" rel="nofollow"></a></td><td class="recentcommentstextend"><a href="http://www.sluniverse.com/php/vb/alternative-sl-clients/64897-nirans-viewer-fixed-44.html#post1606308" rel="nofollow">Nirans Viewer (fixed…</a> on <a href="http://imdoingitwrong.wordpress.com/2010/08/19/why-reinhard-desaturates-my-blacks-3/#comment-69">Why Reinhard desaturates my…</a></td></tr><tr><td title="Tom Madams" class="recentcommentsavatarend" style="height:48px; width:48px"><a href="http://imdoingitwrong.wordpress.com/" rel="nofollow"><img id="grav-14a2045bb4108ae582bb3f931985609d-2" alt="" src="Light%20attenuation_files/14a2045bb4108ae582bb3f931985609d.jpg" class="avatar avatar-48 grav-hashed" height="48" width="48"></a></td><td class="recentcommentstextend"><a href="http://imdoingitwrong.wordpress.com/" rel="nofollow">Tom Madams</a> on <a href="http://imdoingitwrong.wordpress.com/2010/12/14/why-my-fluids-dont-flow/#comment-68">Why my fluids don’t…</a></td></tr></tbody></table>
+	</li>
+</ul></div><!-- / #wrap -->
+
+
+<div id="footer">
+	Theme: <a href="http://theme.wordpress.com/themes/simpla/" title="Learn more about this theme">Simpla</a> by <a href="http://ifelse.co.uk/" rel="designer">Phu</a>. <a href="http://wordpress.com/?ref=footer" rel="generator">Blog at WordPress.com</a>.
+</div><!-- / #footer -->
+
+
+<script type="text/javascript">
+var _qevents = _qevents || [], wpcomQuantcastData = {"qacct":"p-18-mFEk4J448M","labels":",language.en,type.wpcom,posttag.attenuation,posttag.glsl,posttag.graphics,posttag.lighting,posttag.point-light,as"};
+function wpcomQuantcastPixel( labels, options ) {
+	var i, defaults = wpcomQuantcastData, data = { event: 'ajax' };
+
+	labels  = labels  || '';
+	options = options || {};
+
+	if ( typeof labels != 'string' )
+		options = labels;
+
+	for ( i in defaults ) {
+		data[i] = defaults[i];
+	}
+
+	for ( i in options ) {
+		data[i] = options[i];
+	}
+
+	if ( data.labels ) {
+		data.labels += ',' + labels;
+	} else {
+		data.labels = labels;
+	}
+
+	_qevents.push( data );
+};
+(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);  })();
+_qevents.push( wpcomQuantcastData );
+</script>
+<noscript><div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-18-mFEk4J448M.gif?labels=%2Clanguage.en%2Ctype.wpcom%2Cposttag.attenuation%2Cposttag.glsl%2Cposttag.graphics%2Cposttag.lighting%2Cposttag.point-light%2Cas" height="1" width="1" alt="" /></div></noscript>
+
+
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	(function($){
+		$(document).on( 'ready post-load', function() {
+
+			// Remove the login box when clicking the page
+			$( document ).mousedown( function( e ) {
+				if ( null == $( e.target ).closest( '#wpl-mustlogin' ).get( 0 ) ) {
+					$( '#wpl-mustlogin' ).remove();
+				}
+			});
+
+			// Handle clicking the like button itself
+			$('.wpl-button > a.like').click( function(e) {
+				e.preventDefault();
+
+				var postid = $(this).parent().attr('id').split('like-')[1];
+				$.post( 'http://imdoingitwrong.wordpress.com/wp-admin/admin-ajax.php', {
+					'action': 'wpl_record_stat',
+					'stat_name': 'loggedout_like_click'
+				} );
+
+				var tenMins = new Date();
+				tenMins.setTime( tenMins.getTime() + 600000 );
+				document.cookie = 'wpl_rand=05a14f8879; expires=' + tenMins.toGMTString() + '; domain=wordpress.com; path=/;';
+
+				$(this).parent().siblings('.wpl-count').after( '\
+					<div id="wpl-mustlogin"> \
+						<form action="https://imdoingitwrong.wordpress.com/wp-login.php" method="post"> \
+							<p>Just one more step to like this:</p> \
+							<label><span>Username</span> <input type="text" name="log" id="user_login" class="input" value="" size="20" tabindex="80" /></label> \
+							<label><span>Password</span> <input type="password" name="pwd" id="user_pass" class="input" value="" size="20" tabindex="81" /></label> \
+							<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Log In" tabindex="82" /> \
+							<input type="hidden" name="postid" value="' + postid + '" /> \
+							<input type="hidden" name="redirect_to" value="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation?year=2011&#038;monthnum=01&#038;day=31&#038;name=light-attenuation&#038;like=1" /> \
+							<input type="hidden" name="wpl_rand" value="05a14f8879" /> \
+							<p>Not a member yet? <a href="http://wordpress.com/signup/?ref=likebox&user=1" id="wpl-signup-link">Sign up with WordPress.com for free</a></p> \
+						</form> \
+					</div> \
+				');
+
+				$('#wpl-mustlogin').hide().slideDown('fast');
+			} );
+
+			$('#wpl-mustlogin input.input').live( 'focus', function() {
+				$(this).prev().hide();
+			}).live( 'blur', function() {
+				if ( $(this).val() == '' ) {
+					$(this).prev().show();
+				}
+			});
+
+			$('#wpl-mustlogin input#wp-submit').live( 'click', function(e) {
+				e.preventDefault();
+
+				$.post( 'http://imdoingitwrong.wordpress.com/wp-admin/admin-ajax.php', {
+					'action': 'wpl_record_stat',
+					'stat_name': 'loggedout_login_submit'
+				}, function() {
+					$('#wpl-mustlogin form').submit();
+				} );
+			});
+
+			$('#wpl-mustlogin a#wpl-signup-link').live( 'click', function(e) {
+				e.preventDefault();
+
+				var link = $(this).attr('href');
+
+				$.post( 'http://imdoingitwrong.wordpress.com/wp-admin/admin-ajax.php', {
+					'action': 'wpl_record_stat',
+					'stat_name': 'loggedout_signup_click'
+				}, function() {
+					location.href = link;
+				} );
+			});
+		})
+	})(jQuery);
+	/* ]]> */
+	</script>
+<script type="text/javascript" src="Light%20attenuation_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Light%20attenuation_files/wpgroho.js"></script>
+<script>jQuery(document).ready(function($){ Gravatar.profile_cb = function( h, d ) { WPGroHo.syncProfileData( h, d );	}; Gravatar.my_hash = WPGroHo.my_hash; Gravatar.init( 'body', '#wp-admin-bar-my-account' ); });</script>	<div style="display:none">
+	<div class="grofile-hash-map-e67c6d5fd86a8a950ee7709e204929b0">
+	</div>
+	<div class="grofile-hash-map-6099e8e545958dea773cf0c549224703">
+	</div>
+	<div class="grofile-hash-map-14a2045bb4108ae582bb3f931985609d">
+	</div>
+	<div class="grofile-hash-map-735ced9599a294bc6bf6969bcae54f84">
+	</div>
+	<div class="grofile-hash-map-c84a6523bb5572109fc16796c5fd19b2">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"http:\/\/imdoingitwrong.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"http:\/\/imdoingitwrong.wordpress.com\/wp-login.php?action=logout&_wpnonce=243deaa88d","homeURL":"http:\/\/imdoingitwrong.wordpress.com\/","postID":"443","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Light%20attenuation_files/script.js"></script>
+
+	<div style="bottom: -232px;" id="bit" class="loggedout-follow-normal">
+		<a class="bsub" href="javascript:void(0)"><span id="bsub-text">Follow</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow “I'm doing it wrong”</label></h3>
+
+			<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+			
+			<p><input name="email" style="width: 95%; padding: 1px 2px" value="Enter your email address" onfocus='this.value=(this.value=="Enter your email address") ? "" : this.value;' onblur='this.value=(this.value=="") ? "Enter email address" : this.value;' id="loggedout-follow-field" type="email"></p>
+
+			<input name="action" value="subscribe" type="hidden">
+			<input name="blog_id" value="15282872" type="hidden">
+			<input name="source" value="http://imdoingitwrong.wordpress.com/2011/01/31/light-attenuation/" type="hidden">
+			<input name="sub-type" value="loggedout-follow" type="hidden">
+
+			<input id="_wpnonce" name="_wpnonce" value="b561b74c66" type="hidden"><input name="_wp_http_referer" value="/2011/01/31/light-attenuation/" type="hidden">
+			<p id="bsub-subscribe-button"><input value="Sign me up" type="submit"></p>
+			</form>
+					<div id="bsub-credit"><a href="http://wordpress.com/signup/?ref=lof">Powered by WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+
+	<script type="text/javascript" src="Light%20attenuation_files/wordpress.js"></script> 
+	<script type="text/javascript">
+		var skimlinks_pub_id = "725X584219"
+		var skimlinks_sitename = 'imdoingitwrong.wordpress.com';
+		skimlinks();
+	</script> 		
+	<script type="text/javascript" src="Light%20attenuation_files/a.js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var themecssurl = "http://s0.wp.com/wp-content/plugins/syntaxhighlighter-wpcom/shThemeDefault.css?m=1267535107g&amp;ver=2.1.364b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.getElementsByTagName("head")[0].appendChild(themecss);
+	})();
+	SyntaxHighlighter.config.clipboardSwf = 'http://s2.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter/scripts/clipboard.swf?m=1303859956g';
+	SyntaxHighlighter.config.strings.expandSource = 'show source';
+	SyntaxHighlighter.config.strings.viewSource = 'view source';
+	SyntaxHighlighter.config.strings.copyToClipboard = 'copy to clipboard';
+	SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'The code is in your clipboard now';
+	SyntaxHighlighter.config.strings.print = 'print';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.all();
+</script>
+<script type="text/javascript" src="Light%20attenuation_files/devicepx.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="Light%20attenuation_files/w.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({'blog':'15282872','v':'wpcom','tz':'-7','user_id':'0','post':'443','subd':'imdoingitwrong'});
+ex_go({'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdWFnNncxc1tjZG9XVXhReSxUWGsyWm13UzRMJkdMTDNXandqNThKaWpMdllSMlJOdDZ8USYrMj14W0NNcFJIM3hbMjFnW1BEK0JXYyU/Y1Q/Z3lMTXpPL01CWiVWWz9kTUNQTXFxVy5RLFQ/eX5CMVV4U3lHQ0FdZVpLWWNnL2VFbVpWZGgrV09ybWJESHotNUNSSlR+cDY5NkZKY2VBbXVSP1Z+cENBMWF+c0NvWGZQVV1Yc3ksVWJEcUxPMnZRLm9TWEpHJTNJYVFMUnRKQVUsYl0yMmsmMG1fcnx5RGtyVjNIcUtWWVBjLzE/SWxkdXFSaWpHVjdjcFhYUG1Za0NKckpZODN8RndxZHkvP3N3cmF6LzRXbExyLngyVVtPVklEemw='});
+addLoadEvent(function(){linktracker_init('15282872',443);});
+	</script><img id="wpstats" src="Light%20attenuation_files/g_002.gif" alt=""><img id="wpstats2" src="Light%20attenuation_files/g.gif" alt="" style="display:none">
+<noscript><img src="http://stats.wordpress.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+
+</body></html>

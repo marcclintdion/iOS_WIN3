@@ -1,0 +1,1401 @@
+Content-Type: multipart/related; start=<op.mhtml.1362032349503.5f368b6a457299e8@184.66.148.196>; boundary=----------dlPxf5dKvAf43zi2yDXdY7
+Content-Location: http://kesen.realtimerendering.com/
+Subject: =?utf-8?Q?Resource=20for=20Computer=20Graphics=20-=20Ke-Sen=20Huang's=20Home=20Page?=
+MIME-Version: 1.0
+
+------------dlPxf5dKvAf43zi2yDXdY7
+Content-Disposition: inline; filename=default.htm
+Content-Type: text/html; charset=utf-8; name=default.htm
+Content-ID: <op.mhtml.1362032349503.5f368b6a457299e8@184.66.148.196>
+Content-Location: http://kesen.realtimerendering.com/
+Content-Transfer-Encoding: Quoted-Printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://w=
+ww.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+  <title>Resource for Computer Graphics - Ke-Sen Huang&#39;s Home Page</=
+title>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-=
+8" />
+  <style type=3D"text/css">
+  #g_title p, #g_footer p, #g_description p {
+    margin: 0;
+  }
+  /*
+
+  	-- -- -- -- -- -- --
+  	Browser Fixes
+  	-- -- -- -- -- -- --
+  	=
+
+  	This file uses CSS filtering methods to fix various
+  	layout bugs.
+
+  	Each of the following three imported files is a =
+
+  	separate, browser-specific CSS file that keeps all =
+
+  	hacks out of the main style sheet.
+  	=
+
+  	Over time, as supporting these browsers no longer
+  	remains a priority, cleaning up the hacks is as
+  	easy as deleting the @import statement below, or
+  	simply no longer linking this file from the HTML.
+  	=
+
+  */
+
+  /* =
+
+    fix ie6 "peekaboo bug" using the "holly hack". =
+
+    Note, this style only gets applied to ie6
+  */
+  * html .wrapper {
+    height: 0.1%;
+  }
+
+  /* =
+
+   * IE5 mac - overrides the IE/Win hack =
+
+   */
+
+  /*\*//*/
+
+  * html #threecolumn div {
+  	height: auto;
+  }
+
+  /**/
+
+
+  /* =
+
+   * IE5/Win-specific CSS -ensures #container wraps all content on windo=
+w resize
+   */
+
+  @media tty {
+   i{content:"\";/*" "*/}} * html #container { height: 1%; } /*";}
+  }/* */
+  /* Styling for editable elements. Eventually, this will be part of the=
+ style. */
+  .editable {
+    border: 1px dashed blue;
+  }
+  =
+
+  #footer {
+    clear: both;
+  }
+  =
+
+  /* Extra divs hidden by default. The custom CSS can override this thou=
+gh */
+  #extraDiv1, #extraDiv2, #extraDiv3, #extraDiv4, #extraDiv5, #extraDiv6=
+ {
+    display: none;
+  }
+  =
+
+  a img,:link img,:visited img {border: none;}
+
+
+  body {
+    text-align: center;
+  }
+  #container {
+    width: 718px;
+    text-align: left;
+    margin: 0 auto;
+  }
+  /** BEGIN CUSTOM SKIN **/
+  /*
+
+  	-- -- -- -- -- -- --
+  	Base CSS
+  	-- -- -- -- -- -- --
+  	=
+
+  	This file simply removes default styling on most HTML elements in =
+
+  	order to reduce the need to later override them.
+  	=
+
+  */
+
+  h1,h2,h3,h4,h5,h6,pre,code,p {font-size: 1em;}
+  dl,li,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset=
+,input {margin: 0; padding: 0;}
+  a img,:link img,:visited img {border: none;}
+  address {font-style: normal;}/*
+
+  	-- -- -- -- -- -- --
+  	Type Scheme: Deco
+  	-- -- -- -- -- -- --
+  	=
+
+  */
+
+  body {
+  	font: 76% Verdana, sans-serif;
+  }	=
+
+
+  h1, h2, h3, h4, h5, h6, p.description {
+  	font-family: "Trebuchet MS", Trebuchet, sans-serif;
+  }
+  h1 {
+  	font-size: 3em;
+  	font-weight: bold;
+  	letter-spacing: 2px;
+  }
+  h2 {
+  	font-size: 2em;
+  	font-weight: normal;
+  }
+  h3 {
+  	font-size: 1.5em;
+  }
+  h4 {
+  	font-size: 1.2em;
+  	letter-spacing: 0.2em;
+  }
+  h5 {
+  	font-size: 1.2em;
+  }
+  h6 {
+  	font-size: 1em;
+  	font-weight: bold;
+  }
+
+  p, td {
+  	line-height: 1.8em;
+  }
+  code, kbd {
+  	font-size: 1.25em;
+  }/*
+
+  	-- -- -- -- -- -- --
+  	STYLE: Chemise
+  	-- -- -- -- -- -- --
+
+  */
+
+
+
+
+  /* ie6win */
+
+  #footer {
+  	height: 1%;
+  }
+
+  /* ie5mac */
+
+  /*\*//*/
+  #footer { height: auto; }
+  /**/
+
+  /* ie5 win */
+  @media tty {
+   i{content:"\";/*" "*/}} td, * html th { font-size: 0.8em; } h1 { heig=
+ht: 1%; } /*";}
+  }/* */
+
+  /* Basic HTML style
+  ----------------------------------------------- */
+  a:link {
+  	padding: 0 2px;
+  }
+  body {
+  	font: 80% "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  }
+  blockquote {
+          margin: 1em 1em;
+          font-style: italic;
+  }
+  caption {
+  	font-size: 1em;
+  	text-align: left;
+  	padding: 4px 6px;
+  }
+  	font-weight: bold;
+  }
+  dd {
+  	margin: 0 0 1em 1em;
+  }
+  hr {
+  	color: #222;
+  	background: #222;
+  	border-color: #222;
+  }
+  td {
+  	padding: 2px 5px;
+  	vertical-align: top;
+  }
+  th {
+  	font-size: 1em;
+  	padding: 2px 5px;
+  	text-align: left;
+  	border-top: solid 1px #000;
+  	border-right: solid 1px #000;
+  	border-bottom: solid 1px #000;
+  }
+
+  td p {
+  	margin-top: 0;
+  }
+
+  ul li {
+  	margin-bottom: 0.8em;
+  }
+  ol li {
+  	list-style: lower-alpha;
+  	margin-left: 2em;
+  	margin-bottom: 0.8em;
+  }
+
+
+
+
+
+
+
+
+  /* Header
+  ----------------------------------------------- */
+  #container {
+  }
+
+  #header {
+  	border-bottom: solid 1px #000;
+  	position: relative;
+  	margin: 0;
+  	margin-bottom: 10px;
+  }
+  p.description {
+  	font-size: 1em;
+  	margin: 0;
+  	padding: 0.5em 15px;
+  	border-bottom: solid 1px #000;
+  }
+  #g_description {
+  	margin: 1em 0 1em 15px;
+  }
+
+
+  /* Custom font definitions
+  ----------------------------------------------- */
+  p {
+  	margin: 1em 0;
+  	line-height: 1.5;
+  }
+  td, td p {
+  	line-height: 1.5;
+  }
+  h1,h2,h3,h4,h5,h6 {
+  	font-family: "Trebuchet MS", arial, sans-serif;
+  }
+  h1 {
+  	text-align: left;
+  	font-weight: normal;
+  	font-size: 2em;
+  	font-weight: bold;
+  	line-height: 1.5em;
+  	padding: 30px 20px 10px 15px;
+  	margin: 0;
+  	border-top: solid 1px #000;
+  	border-bottom: solid 1px #000;
+  }
+  h2 {
+  	font-size: 1.5em;
+  	color: #000;
+  	margin: 0 0 1em 0;
+  	background: url(/-/include/style/chemise/slate/h2.gif) no-repeat left=
+ bottom;
+
+  }
+  h3 {
+  	font-size: 1.2em;
+  	padding: 4px 10px;
+  	margin-top: 0.5em;
+  }
+  h4 {
+  	margin-top: 0.6em;
+  	margin-left: 0.2em;
+  	font-size: 0.9em;
+  }
+  h5 {
+  	padding-left: 10px;
+  	font-size: 1em;
+  }
+  h6 {
+  	font-size: 0.9em;
+  }
+
+  a:link {
+     	color: #f6952e;
+  }
+  a:hover {
+  	background-color: #dbd4a6;
+  }
+
+  /* sidebar
+  ----------------------------------------------- */
+  #sidebar, #sidebar-alternate {
+  	margin-bottom: 2em;
+  }
+  #sidebar h3, #sidebar-alternate h3 {
+  	font-weight: normal;
+  	font-size: 1.3em;
+  	border-top: solid 1px #000;
+  	margin-bottom: 0.5em;
+  }
+  #sidebar h4, #sidebar h5, #sidebar h6,
+  #sidebar-alternate h4, #sidebar-alternate h5, #sidebar-alternate h6,
+  #sidebar p, #sidebar-alternate p {
+  	margin-left: 10px;
+  	margin-right: 20px;
+  }
+
+  #sidebar li, #sidebar-alternate li {
+  	margin-bottom: 0.8em;
+  }
+  #sidebar .links {
+  	margin-bottom: 2em;
+  }
+  #adsense {
+  	text-align: center;
+  }
+
+
+  .editable {
+  	border: dashed 1px #666;
+  }
+
+
+
+  /* layout patches
+  ----------------------------------------------- */
+  #twocolumn-liquid-left #sidebar {
+  	float: left;
+  }
+  #twocolumn-liquid-right #sidebar {
+  	float: right;
+  }
+  #threecolumn #sidebar-alternate {
+  	float: right;
+  }
+
+
+
+  /* Footer
+  ----------------------------------------------- */
+  #footer {
+  	padding: 1px 15px;
+  	border-top: solid 1px #000;
+  	border-bottom: solid 1px #000;
+  	clear: both;
+  }
+  #footer hr {
+  	display: none;
+  }
+
+
+
+  /* fixed 1 column
+  ----------------------------------------------- */
+  #onecolumn #main-content .wrapper {
+  	margin: 20px;
+  }
+
+
+  /* fixed left 2 column
+  ----------------------------------------------- */
+  #twocolumn-left #main-content .wrapper {
+  	padding: 0 20px;
+  }
+
+
+
+  /* fixed right 2 column
+  ----------------------------------------------- */
+  #twocolumn-right #main-content .wrapper {
+  	padding: 0 20px;
+  }
+
+  /* fixed right 3 column
+  ----------------------------------------------- */
+  #threecolumn #main-content .wrapper {
+  	padding: 0 20px;
+  }
+  #threecolumn #sidebar h3, #threecolumn #sidebar-alternate h3 {
+  	margin-bottom: 0;
+  }
+
+  /* liquid left 2 column
+  ----------------------------------------------- */
+  #twocolumn-liquid-left #main-content .wrapper {
+  	margin: 0 20px;
+  }
+
+
+  /* liquid right 2 column
+  ----------------------------------------------- */
+  #twocolumn-liquid-right #main-content .wrapper {
+  	margin: 0 20px;
+  }
+  /*
+
+  	-- -- -- -- -- -- --
+  	COLOR SCHEME: Asp
+  	-- -- -- -- -- -- --
+
+  */
+
+
+  /* Basic HTML style
+  ----------------------------------------------- */
+  body {
+  	color: #1C2023;
+  	background: #F4F4F4 url(/-/includes/style/chemise/asp/body.gif) repea=
+t-y center top;
+  }
+  caption {
+  	color: #fff;
+  	background: #2AA63B url(/-/includes/style/chemise/asp/h3.gif) repeat;=
+
+  }
+  code, kbd {
+  	color: #139522;
+  }
+  dt {
+  	color: #139522;
+  }
+  hr {
+  	background: #604829;
+  	border-color: #604829;
+  	border-top: none;
+  }
+  th {
+  	color: #fff;
+  	background: #001474 url(/-/includes/style/chemise/asp/th.gif) repeat-=
+x 0 0;
+  	border-top: solid 1px #63AFDF;
+  	border-right: solid 1px #002797;
+  	border-bottom: solid 1px #002797;
+  }
+
+
+
+
+
+
+
+
+  /* Header
+  ----------------------------------------------- */
+  #container {
+  	background: #fff url(/-/includes/style/chemise/asp/container.gif) rep=
+eat-x;
+  }
+
+  #header {
+  	border-bottom: solid 1px #7DA9C5;
+  }
+  p.description {
+  	color: #85C0E5;
+  	background: #0039A0 url(/-/includes/style/chemise/asp/description.gif=
+) repeat-x 0 0;
+  	border-bottom: solid 1px #002797;
+  }
+
+
+
+  /* Custom font definitions
+  ----------------------------------------------- */
+  h1 {
+  	color: #fff;
+  	background: #55C76B url(/-/includes/style/chemise/asp/h1.gif) repeat-=
+x left bottom;
+  	border-top: solid 1px #9EDFAA;
+  	border-bottom: solid 1px #63AFDF;
+  }
+  h2 {
+  	color: #0D83CE;
+  	background: url(/-/includes/style/chemise/asp/h2.gif) no-repeat left =
+bottom;
+  }
+  h3 {
+  	color: #fff;
+  	background: #2AA63B url(/-/includes/style/chemise/asp/h3.gif) repeat;=
+
+  }
+  h4 {
+  	color: #0D83CE;
+  	border-bottom: dotted 1px #7F9CCF;
+  }
+  h5 {
+  	color: #139522;
+  	background: url(/-/includes/style/chemise/asp/h5.gif) no-repeat left =
+center;
+  }
+
+
+  /* sidebar
+  ----------------------------------------------- */
+  #sidebar, #sidebar-alternate {
+  	background: url(/-/includes/style/chemise/asp/sidebar.gif) repeat-x 0=
+ 0;
+  }
+  #sidebar h3, #sidebar-alternate h3 {
+  	color: #0D83CE;
+  	background: #E5E5E5 url(/-/includes/style/chemise/asp/sidebar-h3.gif)=
+ repeat-x left top;
+  	border-top: solid 1px #ddd;
+  }
+
+  .editable {
+  	border: dashed 1px #f00;
+  }
+
+
+
+  /* Footer
+  ----------------------------------------------- */
+  #footer {
+  	color: #fff;
+  	background: #55C76B url(/-/includes/style/chemise/asp/h1.gif) repeat-=
+x left bottom;
+  	border-top: solid 1px #9EDFAA;
+  	border-bottom: solid 1px #0B8218;
+  }
+
+  /** END CUSTOM SKIN **/
+  </style>
+
+  <!-- Hack to avoid flash of unstyled content in IE -->
+  <script> </script>
+</head>
+
+<body id=3D"onecolumn">
+  <div id=3D"container">
+    <div class=3D"wrapper">
+      <div id=3D"header">
+        <div class=3D"wrapper">
+          <h1 id=3D"page-title"><div id=3D'g_title'><p></p>Ke-Sen Huang&=
+#39;s Home Page</div></h1>
+          <div style=3D"clear: both;"></div>
+          <p class=3D"description"><div id=3D'g_description'><ul>
+          	<li><span class=3D"BigSF">I got my Ph. D from the <a href=3D"=
+http://web-en.cs.nthu.edu.tw/bin/home.php">Department of Computer Scienc=
+e</a> of <a href=3D"http://www.nthu.edu.tw/english/index.php">National T=
+sing-Hua University</a>, <a href=3D"http://eng.taiwan.net.tw/">Taiwan</a=
+>.</span></li>
+			<li>My research interests include: animation synthesis, animation sum=
+marization, and motion retrieval.</li>
+			<li><a href=3D"ke-senhuang%27shomepagechangelog.html">My Web Changelo=
+g</a> </li></ul></div></p>
+          <div style=3D"clear: both"></div>
+        </div>
+      </div>
+      <!-- /editable --><!-- /wrapper --><!-- /header -->
+      <div id=3D"main-content">
+        =
+
+        <div class=3D"wrapper">
+          <div class=3D"content-item "><div id=3D'g_body'>
+          	<h3>Paper Collection / Resources<br></h3>
+          		<ul>
+          		<li><a href=3D"http://jcgt.org/" target=3D"_blank">Journal o=
+f Computer Graphics Techniques</a></li>
+          		<li><a href=3D"PointBasedPaper.html" target=3D"_blank">Point=
+-based Graphics Papers</a></li>
+          		<li><a href=3D"http://www.physicsbasedanimation.com/" target=
+=3D"_blank">Physics-Based Animation Resources</a>
+          			(Maintained by=C2=A0<a href=3D"http://www.cs.columbia.edu/~=
+batty/">Christopher Batty</a>) <img style=3D"" src=3D"new.gif"></li>
+          		<li><a href=3D"http://www.realtimerendering.com/">Real-Time =
+Rendering Resources</a> =
+
+          			(Maintained by=C2=A0<a href=3D"http://www.cs.lth.se/%7Etam/=
+">Tomas Akenine-M=C3=B6ller</a>, =
+
+          			<a href=3D"http://www.erichaines.com/">Eric Haines</a>, and=
+ =
+
+          			<a href=3D"http://www.renderwonk.com/">Naty Hoffman</a>) <i=
+mg style=3D"" src=3D"new.gif"></li></ul>
+            <h3>Computer Graphics Conference and Special Issue Calendar<=
+/h3><ul>
+ 							<li><a href=3D"conference.html" target=3D"_blank">2013</a><img s=
+tyle=3D"" src=3D"new.gif">, =
+
+ 								<a href=3D"conference2012.html" target=3D"_blank">2012</a>, =
+
+ 								<a href=3D"conference2011.html" target=3D"_blank">2011</a>, =
+
+ 								<a href=3D"conference2010.html" target=3D"_blank">2010</a>, =
+
+ 								<a href=3D"conference2009.html" target=3D"_blank">2009</a>, =
+
+ 								<a href=3D"conference2008.html" target=3D"_blank">2008</a></li>=
+</ul>
+ 						<h3>SIGGRAPH</h3><ul>
+ 							<li>Page maintained by <a href=3D"http://kesen.huang.googlepages=
+.com/">Ke-Sen Huang</a><br></li><ul>
+ 							<li><a href=3D"sig2012.html" target=3D"_blank">SIGGRAPH 2012</a>=
+ (Submitted: 449 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0  94 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 21%) <img src=3D"new.gif"><br></li>
+ 							<li><a href=3D"sig2011.html" target=3D"_blank">SIGGRAPH 2011</a>=
+ (Submitted: 432 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0  82 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 19%) <br></li>
+ 							<li><a href=3D"sig2010.html" target=3D"_blank">SIGGRAPH 2010</a>=
+ (Submitted: 390 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 103 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 26%) <br></li>
+ 							<li><a href=3D"sig2009.html" target=3D"_blank">SIGGRAPH 2009</a>=
+ (Submitted: 439 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0=C2=A0 78 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate: 18%) <br></li>
+ 							<li><a href=3D"sig2008.html" target=3D"_blank">SIGGRAPH 2008</a>=
+ (Submitted: 518 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0=C2=A0 90 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate: 17%) </li></ul>
+ 							<li>Page maintained by <a href=3D"http://kesen.huang.googlepages=
+.com/">Ke-Sen Huang</a> and <a href=3D"http://trowley.org/">Tim Rowley</=
+a><br></li><ul>
+ 							<li><a href=3D"sig2007.html" target=3D"_blank">SIGGRAPH 2007</a>=
+ (Submitted: 455 =C2=A0=C2=A0=C2=A0 Accepted: 108 =C2=A0=C2=A0=C2=A0 Acc=
+eptance Rate: 24%)</li></ul><ul>
+ 							<li><a href=3D"sig2006.html" target=3D"_blank">SIGGRAPH 2006</a>=
+ (Submitted: 474 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 86 =C2=A0=C2=A0=C2=A0=
+ Acceptance Rate: 18%)</li></ul><ul>
+ 							<li><a href=3D"sig2005.html" target=3D"_blank">SIGGRAPH 2005</a>=
+ (Submitted: 461 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 98 =C2=A0=C2=A0=C2=A0=
+ Acceptance Rate: 21%)</li></ul>
+							<li>Page maintained by <a href=3D"http://trowley.org/">Tim Rowley=
+</a><br></li>
+							  <ul><li>SIGGRAPH 2004 (Submitted: 478 =C2=A0=C2=A0=C2=A0 Accept=
+ed: =C2=A0 83 =C2=A0=C2=A0=C2=A0 Acceptance Rate: 17%)=C2=A0</li></ul>
+								<ul><li>SIGGRAPH 2003 (Submitted: 424 =C2=A0=C2=A0=C2=A0 Accepte=
+d: =C2=A0 81 =C2=A0=C2=A0=C2=A0 Acceptance Rate: 19%) <br></li></ul>
+								<ul><li>SIGGRAPH 2002 (Submitted: 358 =C2=A0=C2=A0=C2=A0 Accepte=
+d: =C2=A0 67 =C2=A0=C2=A0=C2=A0 Acceptance Rate: 19%) <br></li></ul>
+								<ul><li>SIGGRAPH 2001 (Submitted: 300 =C2=A0=C2=A0=C2=A0 Accepte=
+d: =C2=A0 65 =C2=A0=C2=A0=C2=A0 Acceptance Rate: 22%) <br></li></ul>
+								<ul><li>SIGGRAPH 2000 (Submitted: 304 =C2=A0=C2=A0=C2=A0 Accepte=
+d: =C2=A0 59 =C2=A0=C2=A0=C2=A0 Acceptance Rate: 19%)<br></li></ul></ul>=
+
+								<!--	=
+
+							  <ul><li><a href=3D"http://trowley.org/sig2004.html" target=3D"_=
+blank">SIGGRAPH 2004</a> (Submitted: 478 =C2=A0=C2=A0=C2=A0 Accepted: =C2=
+=A0 83 =C2=A0=C2=A0=C2=A0 Acceptance Rate: 17%)=C2=A0</li></ul>
+								<ul><li><a href=3D"http://trowley.org/sig2003.html" target=3D"_b=
+lank">SIGGRAPH 2003</a> (Submitted: 424 =C2=A0=C2=A0=C2=A0 Accepted: =C2=
+=A0 81 =C2=A0=C2=A0=C2=A0 Acceptance Rate: 19%) <br></li></ul>
+								<ul><li><a href=3D"http://trowley.org/sig2002.html" target=3D"_b=
+lank">SIGGRAPH 2002</a> (Submitted: 358 =C2=A0=C2=A0=C2=A0 Accepted: =C2=
+=A0 67 =C2=A0=C2=A0=C2=A0 Acceptance Rate: 19%) <br></li></ul>
+								<ul><li><a href=3D"http://trowley.org/sig2001.html" target=3D"_b=
+lank">SIGGRAPH 2001</a> (Submitted: 300 =C2=A0=C2=A0=C2=A0 Accepted: =C2=
+=A0 65 =C2=A0=C2=A0=C2=A0 Acceptance Rate: 22%) <br></li></ul>
+								<ul><li><a href=3D"http://trowley.org/sig2000.html" target=3D"_b=
+lank">SIGGRAPH 2000</a> (Submitted: 304 =C2=A0=C2=A0=C2=A0 Accepted: =C2=
+=A0 59 =C2=A0=C2=A0=C2=A0 Acceptance Rate: 19%)<br></li></ul></ul>
+								-->
+						<h3>SIGGRAPH Asia<br></h3><ul><li>Page maintained by <a href=3D"ht=
+tp://kesen.huang.googlepages.com/">Ke-Sen Huang</a><br></li><ul>
+							<li><a href=3D"siga2012Papers.htm" target=3D"_blank">SIGGRAPH Asi=
+a 2012</a> (Submitted:=C2=A0 326 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 77 =
+=C2=A0=C2=A0=C2=A0 Acceptance Rate:=C2=A0 24%) <img src=3D"new.gif"></li=
+>
+							<li><a href=3D"siga2011Papers.htm" target=3D"_blank">SIGGRAPH Asi=
+a 2011</a> (Submitted:=C2=A0 330 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 68 =
+=C2=A0=C2=A0=C2=A0 Acceptance Rate:=C2=A0 21%)</li>
+							<li><a href=3D"siga2010Papers.htm" target=3D"_blank">SIGGRAPH Asi=
+a 2010</a> (Submitted:=C2=A0 274 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 49 =
+=C2=A0=C2=A0=C2=A0 Acceptance Rate:=C2=A0 18%)</li>
+							<li><a href=3D"siga2009Papers.htm" target=3D"_blank">SIGGRAPH Asi=
+a 2009</a> (Submitted:=C2=A0 275 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 70 =
+=C2=A0=C2=A0=C2=A0 Acceptance Rate:=C2=A0 25%)</li>
+							<li><a href=3D"siga2008Papers.htm" target=3D"_blank">SIGGRAPH Asi=
+a 2008</a> (Submitted:=C2=A0 320 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 59 =
+=C2=A0=C2=A0=C2=A0 Acceptance Rate:=C2=A0 18%)</li></ul></ul>
+						<h3>SIGGRAPH Resource<br></h3><ul><li>Page maintained by <a href=3D=
+"http://blog.selfshadow.com/">Stephen Hill</a><br></li><ul>
+							<li><a href=3D"http://blog.selfshadow.com/2012/08/11/siggraph-201=
+2-links/">SIGGRAPH 2012 Resource (Courses, Posters, ...)</a> <img src=3D=
+"new.gif"></li>
+							<li><a href=3D"http://blog.selfshadow.com/2011/08/13/hpg-siggraph=
+-2011/">SIGGRAPH 2011 Resource (Courses, Posters, ...)</a> <img src=3D"n=
+ew.gif"></li></ul></ul>
+						<h3>Eurographics</h3><ul>
+							<li><a href=3D"eg2013Papers.htm" target=3D"_blank">EG 2013</a> (S=
+ubmitted:=C2=A0=C2=A0 ??? =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 ?? =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate: ??%) <img src=3D"new.gif"></li>
+							<li><a href=3D"eg2012Papers.htm" target=3D"_blank">EG 2012</a> (S=
+ubmitted:=C2=A0=C2=A0 260 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 66 =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate: 25%)</li>
+							<li><a href=3D"eg2011Papers.htm" target=3D"_blank">EG 2011</a> (S=
+ubmitted:=C2=A0=C2=A0 236 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 40 =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate: 17%) </li>
+							<li><a href=3D"eg2010Papers.htm" target=3D"_blank">EG 2010</a> (S=
+ubmitted:=C2=A0=C2=A0 261 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 53 =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate: 20%) </li>
+							<li><a href=3D"eg2009Papers.htm" target=3D"_blank">EG 2009</a> (S=
+ubmitted:=C2=A0=C2=A0 243 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 56 =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate: 23%)=C2=A0</li>
+							<li><a href=3D"eg2008Papers.htm" target=3D"_blank">EG 2008</a> (S=
+ubmitted:=C2=A0=C2=A0 300 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 58 =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate: 19%)=C2=A0</li>
+							<li><a href=3D"eg2007Papers.htm" target=3D"_blank">EG 2007</a> (S=
+ubmitted:=C2=A0=C2=A0 212 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 50 =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate: 24%)</li>
+							<li><a href=3D"eg2006Papers.htm">EG 2006</a> (Submitted:=C2=A0=C2=
+=A0 250 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 42 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 17%)</li>
+							<li><a href=3D"eg2005Papers.htm">EG 2005</a> (Submitted:=C2=A0=C2=
+=A0 303 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 47 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 16%) <br></li>
+							<li><a href=3D"eg2004Papers.htm">EG 2004</a> (Submitted:=C2=A0=C2=
+=A0 243 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 44 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 18%) </li>
+							<li><a href=3D"eg2003Papers.htm">EG 2003</a> (Submitted:=C2=A0=C2=
+=A0 221 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 45 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 20%)</li></ul>
+						<h3>Symposium on Interactive 3D Graphics and Games</h3><ul>
+							<li><a href=3D"i3d2013Papers.htm" target=3D"_blank">I3D 2013</a> =
+(Submitted:=C2=A0=C2=A0 68 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 20 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 29%) <img src=3D"new.gif"></li>
+							<li><a href=3D"i3d2012Papers.htm" target=3D"_blank">I3D 2012</a> =
+(Submitted:=C2=A0=C2=A0 63 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 25 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 40%)</li>
+							<li><a href=3D"i3d2011Papers.htm" target=3D"_blank">I3D 2011</a> =
+(Submitted:=C2=A0=C2=A0 64 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 24 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 38%)</li>
+							<li><a href=3D"i3d2010Papers.htm" target=3D"_blank">I3D 2010</a> =
+(Submitted:=C2=A0=C2=A0 72 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 24 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 33%)</li>
+							<li><a href=3D"i3d2009Papers.htm" target=3D"_blank">I3D 2009</a> =
+(Submitted:=C2=A0=C2=A0 87 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 28 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 32%)</li>
+							<li><a href=3D"i3d2008Papers.htm" target=3D"_blank">I3D 2008</a> =
+(Submitted:=C2=A0=C2=A0 57 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 24 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 42%)</li>
+							<li><a href=3D"i3d2007Papers.htm" target=3D"_blank">I3D 2007</a> =
+(Submitted:=C2=A0=C2=A0 72 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 25 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 35%)</li>
+							<li><a href=3D"i3d2006Papers.htm" target=3D"_blank">I3D 2006</a> =
+(Submitted:=C2=A0=C2=A0 73 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 28 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 38%)</li>
+							<li><a href=3D"i3d2005Papers.htm" target=3D"_blank">I3D 2005</a> =
+(Submitted: =C2=A0 95 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 26 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate: 27%)</li>
+							<li><a href=3D"i3d2003Papers.htm" target=3D"_blank">I3D 2003</a> =
+(Submitted:  102 =C2=A0=C2=A0  Accepted: =C2=A0 27 =C2=A0=C2=A0=C2=A0 Ac=
+ceptance Rate: 26%)</li></ul>
+						<h3>Eurographics Symposium on Rendering</h3><ul>
+							<li><a href=3D"egsr2012Papers.htm" target=3D"_blank">EGSR 2012</a=
+> (Submitted:=C2=A0=C2=A0 69 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 21 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate:=C2=A0 30%)=C2=A0 <img src=3D"new.gif"></li=
+>
+							<li><a href=3D"egsr2011Papers.htm" target=3D"_blank">EGSR 2011</a=
+> (Submitted:=C2=A0=C2=A0 56 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 22 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate:=C2=A0 39%)</li>
+							<li><a href=3D"egsr2010Papers.htm" target=3D"_blank">EGSR 2010</a=
+> (Submitted:=C2=A0=C2=A0 72 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 28 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate:=C2=A0 39%)</li>
+							<li><a href=3D"egsr2009Papers.htm" target=3D"_blank">EGSR 2009</a=
+> (Submitted:=C2=A0=C2=A0 72 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 21 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate:=C2=A0 29%)</li>
+							<li><a href=3D"egsr2008Papers.htm" target=3D"_blank">EGSR 2008</a=
+> (Submitted:=C2=A0=C2=A0 71 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 26 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate:=C2=A0 37%)</li>
+							<li><a href=3D"egsr2007Papers.htm" target=3D"_blank">EGSR 2007</a=
+> (Submitted:=C2=A0=C2=A0 94 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 33 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate:=C2=A0 35%)</li>
+							<li><a href=3D"egsr2006Papers.htm" target=3D"_blank">EGSR 2006</a=
+> (Submitted:  109 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 39 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate:=C2=A0 36%)</li>
+							<li><a href=3D"egsr2005Papers.htm" target=3D"_blank">EGSR 2005</a=
+> (Submitted: =C2=A0 93 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 31 =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate:=C2=A0 33%)</li>
+							<li><a href=3D"egsr2004Papers.htm" target=3D"_blank">EGSR 2004</a=
+> (Submitted:=C2=A0=C2=A0 98 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 39 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate:=C2=A0 40%)</li>
+							<li><a href=3D"egsr2003Papers.htm" target=3D"_blank">EGSR 2003</a=
+> (Submitted:=C2=A0=C2=A0 81 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 30 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate:=C2=A0 37%)</li></ul>
+						<h3>ACM SIGGRAPH / Eurographics Symposium on Computer Animation</h=
+3><ul>
+							<li><a href=3D"sca2012Papers.htm" target=3D"_blank">SCA 2012</a> =
+(Submitted:=C2=A0=C2=A0 80 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 27 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 34%)<img src=3D"new.gif"></li>
+							<li><a href=3D"sca2011Papers.htm" target=3D"_blank">SCA 2011</a> =
+(Submitted:=C2=A0=C2=A0 77 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 30 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 39%)</li>
+							<li><a href=3D"sca2010Papers.htm" target=3D"_blank">SCA 2010</a> =
+(Submitted:=C2=A0=C2=A0 56 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 24 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 43%)</li>
+							<li><a href=3D"sca2009Papers.htm" target=3D"_blank">SCA 2009</a> =
+(Submitted:=C2=A0=C2=A0 67 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 26 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 39%)</li>
+							<li><a href=3D"sca2008Papers.htm" target=3D"_blank">SCA 2008</a> =
+(Submitted:=C2=A0=C2=A0 60 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 24 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 40%)</li>
+							<li><a href=3D"sca2007Papers.htm" target=3D"_blank">SCA 2007</a> =
+(Submitted:=C2=A0=C2=A0 81 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 28 =C2=A0=
+=C2=A0=C2=A0 Acceptance Rate: 35%)</li>
+							<li><a href=3D"sca2006Papers.htm" target=3D"_blank">SCA 2006</a> =
+(Submitted:  126 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 37 =C2=A0=C2=A0=C2=A0=
+ Acceptance Rate: 29%)</li>
+							<li><a href=3D"sca2005Papers.htm" target=3D"_blank">SCA 2005</a> =
+(Submitted:  100 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 35 =C2=A0=C2=A0=C2=A0=
+ Acceptance Rate: 35%)</li>
+							<li><a href=3D"sca2004Papers.htm" target=3D"_blank">SCA 2004</a> =
+(Submitted:  120 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 37 =C2=A0=C2=A0=C2=A0=
+ Acceptance Rate: 31%)</li>
+							<li><a href=3D"sca2003Papers.htm" target=3D"_blank">SCA 2003</a> =
+(Submitted:  100 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 38 =C2=A0=C2=A0=C2=A0=
+ Acceptance Rate: 38%)</li></ul>
+						<h3>IEEE/Eurographics Symposium on Point-based Graphics</h3><ul>
+							<li><a href=3D"pbg2007Papers.htm" target=3D"_blank">PBG 2007</a> =
+(Submitted:=C2=A0 26 =C2=A0=C2=A0=C2=A0  Accepted: =C2=A0 14 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate:=C2=A0 54%)</li>
+							<li><a href=3D"pbg2006Papers.htm" target=3D"_blank">PBG 2006</a> =
+(Submitted:=C2=A0 33 =C2=A0=C2=A0=C2=A0  Accepted: =C2=A0 16 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate:  48%)</li>
+							<li><a href=3D"pbg2005Papers.htm" target=3D"_blank">PBG 2005</a> =
+(Submitted:=C2=A0 30 =C2=A0=C2=A0=C2=A0  Accepted: =C2=A0 15 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate:  50%)</li>
+							<li><a href=3D"pbg2004Papers.htm" target=3D"_blank">PBG 2004</a> =
+(Submitted:=C2=A0 44 =C2=A0=C2=A0=C2=A0  Accepted: =C2=A0 24 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate:  55%)</li></ul>
+						<h3>Eurographics Symposium on Geometry Processing</h3><ul>
+							<li><a href=3D"sgp2012Papers.htm" target=3D"_blank">SGP 2012</a> =
+(Submitted:=C2=A0 72 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 25 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate:=C2=A0=C2=A0=C2=A0 35%)<img style=3D"" src=3D"new=
+.gif"></li>
+							<li><a href=3D"sgp2011Papers.htm" target=3D"_blank">SGP 2011</a> =
+(Submitted:=C2=A0 77 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 23 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate:=C2=A0=C2=A0=C2=A0 30%)</li>
+							<li><a href=3D"sgp2010Papers.htm" target=3D"_blank">SGP 2010</a> =
+(Submitted:=C2=A0 70 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 24 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate:=C2=A0=C2=A0=C2=A0 34%)</li>
+							<li><a href=3D"sgp2009Papers.htm" target=3D"_blank">SGP 2009</a> =
+(Submitted:=C2=A0 75 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 26 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate:=C2=A0=C2=A0=C2=A0 35%)</li>
+							<li><a href=3D"sgp2008Papers.htm" target=3D"_blank">SGP 2008</a> =
+(Submitted:=C2=A0 96 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 23 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate:=C2=A0=C2=A0=C2=A0 24%)</li>
+							<li><a href=3D"sgp2007Papers.htm" target=3D"_blank">SGP 2007</a> =
+(Submitted:=C2=A0 74 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0=C2=A0 21 =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate:=C2=A0=C2=A0=C2=A0 28%)</li>
+							<li><a href=3D"sgp2006Papers.htm" target=3D"_blank">SGP 2006</a> =
+(Submitted:=C2=A0 79 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0=C2=A0 21 =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate:=C2=A0=C2=A0=C2=A0 27%)</li>
+							<li><a href=3D"sgp2005Papers.htm" target=3D"_blank">SGP 2005</a> =
+(Submitted:=C2=A0 87 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0=C2=A0 22 =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate:=C2=A0=C2=A0=C2=A0 25%)</li>
+							<li><a href=3D"sgp2004Papers.htm" target=3D"_blank">SGP 2004</a> =
+(Submitted:=C2=A0=C2=A0 ? =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 25 =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate:=C2=A0=C2=A0=C2=A0 29%)</li>
+							<li><a href=3D"sgp2003Papers.htm" target=3D"_blank">SGP 2003</a> =
+(Submitted:=C2=A0 72 =C2=A0=C2=A0=C2=A0 Accepted: =C2=A0 25 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate:=C2=A0=C2=A0  35%)</li></ul>
+						<h3>High Performance Graphics<br></h3><ul>
+							<li><a href=3D"hpg2012Papers.htm" target=3D"_blank">HPG 2012</a> =
+(Submitted: 47 =C2=A0=C2=A0=C2=A0 Accepted: 14 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 30%)<img style=3D"" src=3D"new.gif"></li>
+							<li><a href=3D"hpg2011Papers.htm" target=3D"_blank">HPG 2011</a> =
+(Submitted: 64 =C2=A0=C2=A0=C2=A0 Accepted: 21 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 33%)</li>
+							<li><a href=3D"hpg2010Papers.htm" target=3D"_blank">HPG 2010</a> =
+(Submitted: 60 =C2=A0=C2=A0=C2=A0 Accepted: 19 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 32%)</li>
+							<li><a href=3D"hpg2009Papers.htm" target=3D"_blank">HPG 2009</a> =
+(Submitted: 72 =C2=A0=C2=A0=C2=A0 Accepted: 21 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 29%)</li><ul>
+							<li>This conference is the synthesis of two highly-successful con=
+ference series: <b>Graphics Hardware</b> and <b>Interactive Ray Tracing<=
+/b><br></li></ul></ul>
+						<h3>IEEE/EG Symposium on Interactive Ray Tracing</h3><ul>
+							<li><a href=3D"rt2008Papers.htm" target=3D"_blank">RT 2008</a> (S=
+ubmitted: 46 =C2=A0=C2=A0=C2=A0 Accepted: 24 =C2=A0=C2=A0=C2=A0 Acceptan=
+ce Rate: 52%) <br></li>
+							<li><a href=3D"rt2007Papers.htm" target=3D"_blank">RT 2007</a> (S=
+ubmitted: 43 =C2=A0=C2=A0=C2=A0 Accepted: 23 =C2=A0=C2=A0=C2=A0 Acceptan=
+ce Rate: 53%)</li>
+							<li><a href=3D"rt2006Papers.htm" target=3D"_blank">RT 2006</a> (S=
+ubmitted: 41 =C2=A0=C2=A0=C2=A0 Accepted: 22 =C2=A0=C2=A0=C2=A0 Acceptan=
+ce Rate: 54%) <br></li></ul>
+						<h3>Eurographics Workshop on 3D Object Retrieval</h3><ul>
+							<li><a href=3D"3dor2008Papers.htm" target=3D"_blank">3DOR 2008</a=
+> (Submitted:=C2=A0 19 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0 10 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate: 53%)</li></ul>
+						<h3>Eurographics Workshop on Sketch-Based Interfaces and Modeling<=
+/h3><ul>
+							<li>Page maintained by <a href=3D"http://sites.google.com/site/wu=
+xiaomao/">Xiaomao Wu</a></li><ul>
+							<li><a href=3D"http://sites.google.com/site/wuxiaomao/sbim08" tar=
+get=3D"_blank">SBIM 2008</a> (Submitted:=C2=A0 ? =C2=A0=C2=A0=C2=A0 Acce=
+pted:=C2=A0 ? =C2=A0=C2=A0=C2=A0 Acceptance Rate: ?%)</li></ul></ul>
+						<h3>Symposium on Applied Perception in Graphics and Visualization<=
+/h3><ul>
+							<li>Page maintained by <a href=3D"http://kesen.huang.googlepages.=
+com/"></a><a href=3D"http://roy.walmsley.googlepages.com/home">Roy Walms=
+ley</a><br></li><ul>
+							<li><a href=3D"http://roy.walmsley.googlepages.com/apgv2008papers=
+.htm">APGV 2008</a>=C2=A0 (Submitted: ? =C2=A0=C2=A0=C2=A0 Accepted: ? =C2=
+=A0=C2=A0=C2=A0 Acceptance Rate: ?%)</li></ul>
+							<li>Page maintained by <a href=3D"http://kesen.huang.googlepages.=
+com/">Ke-Sen Huang</a> and <a href=3D"http://roy.walmsley.googlepages.co=
+m/home">Roy Walmsley</a><br></li><ul>
+							<li><a href=3D"apgv2007Papers.htm" target=3D"_blank">APGV 2007</a=
+> (Submitted: 39 =C2=A0=C2=A0=C2=A0 Accepted: 14 =C2=A0=C2=A0=C2=A0 Acce=
+ptance Rate: 36%)</li>
+							<li><a href=3D"apgv2006Papers.htm" target=3D"_blank">APGV 2006</a=
+> (Submitted: 45 =C2=A0=C2=A0=C2=A0 Accepted: 20 =C2=A0=C2=A0=C2=A0 Acce=
+ptance Rate: 44%)</li></ul>
+							<li>Page maintained by <a href=3D"http://kesen.huang.googlepages.=
+com/">Ke-Sen Huang</a><br></li><ul>
+							<li><a href=3D"apgv2005Papers.htm" target=3D"_blank">APGV 2005</a=
+> (Submitted: 43 =C2=A0=C2=A0=C2=A0 Accepted: 21 =C2=A0=C2=A0=C2=A0 Acce=
+ptance Rate: 49%)</li>
+							<li><a href=3D"apgv2004Papers.htm" target=3D"_blank">APGV 2004</a=
+> (Submitted: 38 =C2=A0=C2=A0=C2=A0 Accepted: 21 =C2=A0=C2=A0=C2=A0 Acce=
+ptance Rate: 55%) <br></li></ul></ul>
+						<h3>Non-Photorealistic Animation and Rendering</h3><ul>
+							<li><a href=3D"npar2012Papers.htm" target=3D"_blank">NPAR 2012</a=
+> (Submitted: ?? =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0=C2=A0?? =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate: ??%)<img style=3D"" src=3D"new.gif"></li>
+							<li><a href=3D"npar2011Papers.htm" target=3D"_blank">NPAR 2011</a=
+> (Submitted: 37 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0=C2=A018 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate: 49%)</li>
+							<li><a href=3D"npar2010Papers.htm" target=3D"_blank">NPAR 2010</a=
+> (Submitted: 45 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0=C2=A019 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate: 42%)</li>
+							<li><a href=3D"npar2009Papers.htm" target=3D"_blank">NPAR 2009</a=
+> (Submitted: 21 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0=C2=A0 7 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate: 33%)</li>
+							<li><a href=3D"npar2008Papers.htm" target=3D"_blank">NPAR 2008</a=
+> (Submitted: 27 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0 11=C2=A0=C2=A0 =C2=A0=
+ Acceptance Rate: 41%)</li>
+							<li><a href=3D"npar2007Papers.htm" target=3D"_blank">NPAR 2007</a=
+> (Submitted: 34=C2=A0=C2=A0=C2=A0=C2=A0 Accepted:  16=C2=A0=C2=A0=C2=A0=
+=C2=A0 Acceptance Rate: 47%)</li>
+							<li><a href=3D"npar2006Papers.htm" target=3D"_blank">NPAR 2006</a=
+> (Submitted: 43 =C2=A0=C2=A0=C2=A0 Accepted:  17 =C2=A0=C2=A0=C2=A0 Acc=
+eptance Rate: 40%)</li>
+							<li><a href=3D"npar2004Papers.htm" target=3D"_blank">NPAR 2004</a=
+> (Submitted: 63 =C2=A0=C2=A0=C2=A0 Accepted:  14 =C2=A0=C2=A0=C2=A0 Acc=
+eptance Rate: 22%)</li></ul>
+						<h3>Pacific Graphics</h3><ul>
+							<li><a href=3D"pg2012Papers.htm" target=3D"_blank">PG 2012</a> (S=
+ubmitted:=C2=A0 153=C2=A0=C2=A0=C2=A0  Accepted:=C2=A0 30 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate:=C2=A0 20%)<img style=3D"" src=3D"new.gif"></li>
+							<li><a href=3D"pg2011Papers.htm" target=3D"_blank">PG 2011</a> (S=
+ubmitted:=C2=A0 168=C2=A0=C2=A0=C2=A0  Accepted:=C2=A0 27 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate:=C2=A0 16%)</li>
+							<li><a href=3D"pg2010Papers.htm" target=3D"_blank">PG 2010</a> (S=
+ubmitted:=C2=A0 180=C2=A0=C2=A0=C2=A0  Accepted:=C2=A0 31 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate:=C2=A0 17%)</li>
+							<li><a href=3D"pg2009Papers.htm" target=3D"_blank">PG 2009</a> (S=
+ubmitted:=C2=A0 177 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0 31 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate:=C2=A0 18%)</li>
+							<li><a href=3D"pg2008Papers.htm" target=3D"_blank">PG 2008</a> (S=
+ubmitted:=C2=A0 186 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0 34 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate:=C2=A0 18%)</li>
+							<li><a href=3D"pg2007Papers.htm" target=3D"_blank">PG 2007</a> (S=
+ubmitted:=C2=A0 179 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0 39 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate:=C2=A0 22%)</li>
+							<li><a href=3D"pg2006Papers.htm" target=3D"_blank">PG 2006</a> (S=
+ubmitted:=C2=A0 206 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0 35 =C2=A0=C2=A0  =
+Acceptance Rate:=C2=A0 17%)</li>
+							<li><a href=3D"pg2005Papers.htm" target=3D"_blank">PG 2005</a> (S=
+ubmitted:=C2=A0 267 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0 37 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate:=C2=A0 14%)</li>
+							<li><a href=3D"pg2004Papers.htm" target=3D"_blank">PG 2004</a> (S=
+ubmitted:=C2=A0 164 =C2=A0=C2=A0  Accepted: =C2=A041 =C2=A0=C2=A0=C2=A0 =
+Acceptance Rate:=C2=A0 25%)</li>
+							<li><a href=3D"pg2003Papers.htm" target=3D"_blank">PG 2003</a> (S=
+ubmitted:=C2=A0 182 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0 35 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate:=C2=A0 19%)</li>
+							<li>PG 2001 (Submitted:=C2=A0 112 =C2=A0=C2=A0=C2=A0 Accepted:=C2=
+=A0 41 =C2=A0=C2=A0=C2=A0 Acceptance Rate:=C2=A0 37%)</li>
+							<li>PG 2000 (Submitted: 121 =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0 40=
+ =C2=A0=C2=A0=C2=A0 Acceptance Rate:=C2=A0 33%)</li></ul>
+						<h3>International Conference on Computational Photography</h3><ul>=
+
+							<li><a href=3D"iccp2009.html">ICCP 2009</a> (Submitted: ? =C2=A0=C2=
+=A0=C2=A0 Accepted: ? =C2=A0=C2=A0=C2=A0 Acceptance Rate: ?%) <img src=3D=
+"new.gif"></li></ul>
+						<h3>=C2=A0Shape Modeling International</h3><ul>
+							<li>Page maintained by <a href=3D"http://kesen.huang.googlepages.=
+com/">Ke-Sen Huang</a></li><ul>
+							<li><a href=3D"smi2009Papers.htm">SMI 2009</a> (Submitted: 105 =C2=
+=A0=C2=A0=C2=A0 Accepted:=C2=A0 26 =C2=A0=C2=A0 Acceptance Rate: 25%) <i=
+mg src=3D"new.gif"></li></ul>
+							<li>Page maintained by <a href=3D"http://roy.walmsley.googlepages=
+.com/home">Roy Walmsley</a></li><ul>
+							<li><a href=3D"http://roy.walmsley.googlepages.com/smi2008papers.=
+htm">SMI 2008</a> (Submitted: ? =C2=A0=C2=A0=C2=A0 Accepted: 24 =C2=A0=C2=
+=A0=C2=A0 Acceptance Rate: ?%)</li></ul>
+							<li>Page maintained by <a href=3D"http://kesen.huang.googlepages.=
+com/">Ke-Sen Huang</a> and <a href=3D"http://roy.walmsley.googlepages.co=
+m/home">Roy Walmsley</a><br></li><ul>
+							<li><a href=3D"smi2007Papers.htm" target=3D"_blank">SMI 2007</a> =
+(Submitted: 62 =C2=A0=C2=A0=C2=A0 Accepted: 23 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 37%)</li></ul>
+							<li>Page maintained by <a href=3D"http://kesen.huang.googlepages.=
+com/">Ke-Sen Huang</a><br></li><ul>
+							<li><a href=3D"smi2006Papers.htm" target=3D"_blank">SIM 2006</a> =
+(Submitted: 58 =C2=A0=C2=A0=C2=A0 Accepted: 20 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 34%)</li>
+							<li><a href=3D"smi2005Papers.htm" target=3D"_blank">SMI 2005</a> =
+(Submitted: 80 =C2=A0=C2=A0=C2=A0 Accepted: 30 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 38%) </li>
+							<li><a href=3D"smi2004Papers.htm" target=3D"_blank">SMI 2004</a> =
+(Submitted: 79 =C2=A0=C2=A0=C2=A0 Accepted: 29 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 37%) <br></li></ul></ul>
+						<h3>Computer Animation and Social Agents</h3><ul>
+							<li>Page maintained by <a href=3D"http://roy.walmsley.googlepages=
+.com/home">Roy Walmsley</a><br></li><ul>
+							<li><a href=3D"http://roy.walmsley.googlepages.com/casa2008papers=
+.htm">CASA 2008</a></li>
+							<li><a href=3D"http://roy.walmsley.googlepages.com/casa2007papers=
+.htm" target=3D"_blank">CASA 2007</a><a href=3D"http://roy.walmsley.goog=
+lepages.com/home"></a></li></ul>
+							<li>Page maintained by <a href=3D"http://kesen.huang.googlepages.=
+com/">Ke-Sen Huang</a><br></li><ul>
+							<li><a href=3D"casa2004Papers.htm" target=3D"_blank">CASA 2004</a=
+></li>
+							<li><a href=3D"casa2003Papers.htm" target=3D"_blank">CASA 2003</a=
+></li></ul></ul>
+						<h3>Computer Graphics International</h3><ul>
+							<li>Page maintained by <a href=3D"http://roy.walmsley.googlepages=
+.com/">Roy Walmsley</a></li><ul>
+							<li><a href=3D"http://roy.walmsley.googlepages.com/cgi2008papers.=
+htm" target=3D"_blank">CGI 2008</a> (Submitted: ? =C2=A0=C2=A0=C2=A0 Acc=
+epted: ? =C2=A0=C2=A0=C2=A0 Acceptance Rate: ?%)=C2=A0 <br></li></ul><ul=
+>
+							<li><a href=3D"http://roy.walmsley.googlepages.com/cgi2007Papers.=
+htm" target=3D"_blank">CGI 2007</a> (Submitted: ? =C2=A0=C2=A0=C2=A0 Acc=
+epted: ? =C2=A0=C2=A0=C2=A0 Acceptance Rate: ?%)</li>
+							<li><a href=3D"http://roy.walmsley.googlepages.com/cgi2006papers.=
+htm" target=3D"_blank">CGI 2006</a> (Submitted: ? =C2=A0=C2=A0=C2=A0 Acc=
+epted: ? =C2=A0=C2=A0=C2=A0 Acceptance Rate: ?%) =C2=A0 <br></li></ul>
+							<li>Page maintained by <a href=3D"http://sites.google.com/site/wu=
+xiaomao/">Xiaomao Wu</a><br></li><ul>
+							<li><a href=3D"http://sites.google.com/site/wuxiaomao/cgi2005pape=
+rs" target=3D"_blank">CGI 2005</a> (Submitted: 111 =C2=A0=C2=A0=C2=A0 Ac=
+cepted: 36 =C2=A0=C2=A0=C2=A0 Acceptance Rate: 32%)</li>
+							<li><a href=3D"http://sites.google.com/site/wuxiaomao/cgi2004" ta=
+rget=3D"_blank">CGI 2004</a> (Submitted: 172 =C2=A0=C2=A0=C2=A0 Accepted=
+: 60 =C2=A0=C2=A0=C2=A0 Acceptance Rate: 35%)</li></ul>
+							<li>Page maintained by <a href=3D"http://kesen.huang.googlepages.=
+com/">Ke-Sen Huang</a><br></li><ul>
+							<li><a href=3D"cgi2003Papers.htm" target=3D"_blank">CGI 2003</a> =
+(Submitted: ? =C2=A0=C2=A0=C2=A0 Accepted: ? =C2=A0=C2=A0=C2=A0 Acceptan=
+ce Rate: ?%) <br></li></ul></ul>
+						<h3>Eurographics/SIGGRAPH Graphics Hardware</h3><ul>
+							<li>Page maintained by <a href=3D"http://roy.walmsley.googlepages=
+.com/">Roy Walmsley</a></li><ul>
+							<li><a href=3D"http://roy.walmsley.googlepages.com/gh2008papers.h=
+tm">GH 2008</a> (Submitted: 32 =C2=A0=C2=A0=C2=A0 Accepted: 11 =C2=A0=C2=
+=A0 Acceptance Rate: 32%)</li></ul>
+							<li>=C2=A0Page maintained by <a href=3D"http://trowley.org/">Tim =
+Rowley</a></li><ul>
+							<li><a href=3D"http://trowley.org/gh2007.html" target=3D"_blank">=
+GH 2007</a> (Submitted: 30 =C2=A0=C2=A0=C2=A0 Accepted: 12 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 40%)</li></ul><ul>
+							<li><a href=3D"http://trowley.org/gh2006.html" target=3D"_blank">=
+GH 2006</a> (Submitted: 45 =C2=A0=C2=A0=C2=A0 Accepted: 14 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 31%)</li></ul><ul>
+							<li><a href=3D"http://trowley.org/gh2005.html" target=3D"_blank">=
+GH 2005</a> (Submitted: 32 =C2=A0=C2=A0=C2=A0 Accepted: 13 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 41%)</li></ul><ul>
+							<li><a href=3D"http://trowley.org/gh2004.html" target=3D"_blank">=
+GH 2004</a> (Submitted: 43 =C2=A0=C2=A0=C2=A0 Accepted: 14 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 33%)</li></ul><ul>
+							<li><a href=3D"http://trowley.org/hwws2003.html" target=3D"_blank=
+">GH 2003</a> (Submitted: 39 =C2=A0=C2=A0=C2=A0 Accepted: 13 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate: 33%)</li></ul><ul>
+							<li><a href=3D"http://trowley.org/hwws2002.html" target=3D"_blank=
+">GH 2002</a> (Submitted: 32 =C2=A0=C2=A0=C2=A0 Accepted: 14 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate: 44%)</li></ul><ul>
+							<li><a href=3D"http://trowley.org/hwws2001.html" target=3D"_blank=
+">GH 2001</a> (Submitted:=C2=A0=C2=A0 ? =C2=A0=C2=A0=C2=A0 Accepted:=C2=A0=
+=C2=A0 ? =C2=A0=C2=A0=C2=A0 Acceptance Rate:=C2=A0=C2=A0=C2=A0 ?%)</li><=
+/ul><ul>
+							<li><a href=3D"http://trowley.org/hwws2000.html" target=3D"_blank=
+">GH 2000</a> (Submitted: 31 =C2=A0=C2=A0=C2=A0 Accepted: 14 =C2=A0=C2=A0=
+=C2=A0 Acceptance Rate: 45%) <br></li></ul></ul>
+						<h3>IEEE Visualization</h3><ul>
+							<li>Page maintained by <a href=3D"http://sites.google.com/site/wu=
+yingcai/home">Yingcai Wu</a><br></li><ul>
+							<li><a href=3D"http://sites.google.com/site/wuyingcai/vispapers/v=
+is09" target=3D"_blank">IEEE Visualization 2009</a> (Submitted: 202, Acc=
+epted: 54, Acceptance rate: 27%) <img src=3D"new.gif"></li>
+							<li><a href=3D"http://www.cse.ust.hk/%7Ewuyc/Vis08.htm" target=3D=
+"_blank">2008</a>, <a href=3D"http://www.cse.ust.hk/%7Ewuyc/Vis07.htm" t=
+arget=3D"_blank">2007</a>, <a href=3D"http://www.cse.ust.hk/%7Ewuyc/Vis0=
+6.htm" target=3D"_blank">2006</a>, <a href=3D"http://www.cs.ust.hk/%7Ewu=
+yc/Vis05_2.htm" target=3D"_blank">2005</a></li></ul>
+							<li>Page maintained by <a href=3D"http://www.cg.tuwien.ac.at/%7Em=
+sh/">Markus Hadwiger</a><br></li><ul>
+							<li><a href=3D"http://old.vrvis.at/via/resources/vis-paper-links/=
+vis2004.html" target=3D"_blank">2004</a>, <a href=3D"http://old.vrvis.at=
+/via/resources/vis-paper-links/vis2003.html" target=3D"_blank">2003</a><=
+/li></ul></ul>
+						<h3>IEEE Information Visualization</h3><ul>
+							<li>=C2=A0Page maintained by <a href=3D"http://sites.google.com/s=
+ite/wuyingcai/home">Yingcai Wu</a><a href=3D"http://www.cse.ust.hk/%7Ezh=
+ouhong/"></a><ul>
+							<li><a href=3D"http://sites.google.com/site/wuyingcai/vispapers/i=
+nfovis09">IEEE InfoVis 2009</a> (Submitted:=C2=A0=C2=A0 ? =C2=A0=C2=A0=C2=
+=A0 Accepted:=C2=A0=C2=A0 ? =C2=A0=C2=A0=C2=A0 Acceptance Rate:=C2=A0=C2=
+=A0=C2=A0 ?%)=C2=A0 <img src=3D"new.gif">=C2=A0 </li></ul></li>
+							<li> Page maintained by <a href=3D"http://www.cse.ust.hk/%7Ezhouh=
+ong/">Hong Zhou</a><ul>
+							<li><a href=3D"http://www.cse.ust.hk/%7Ezhouhong/InfoVis08_paper.=
+html">IEEE InfoVis 2008</a> (Submitted: ? Accepted: ? Acceptance Rate: ?=
+%) </li>
+							<li><a href=3D"http://www.cse.ust.hk/%7Ezhouhong/InfoVis07_paper.=
+html">IEEE InfoVis 2007</a> (Submitted: 116 Accepted: 27 Acceptance Rate=
+: 23%) <br></li>
+							<li><a href=3D"http://www.cse.ust.hk/%7Ezhouhong/InfoVis06_paper.=
+html">IEEE InfoVis 2006</a> (Submitted: 104 Accepted: 24 Acceptance Rate=
+: 23%) </li></ul></li></ul>
+						<h3>Eurographics/IEEE symposium on Visualization (EuroVis) (Page m=
+aintained by <a href=3D"http://www.alumni.ust.hk/~cs_cwyag/">Wing-Yi Cha=
+n</a>)</h3><ul>
+							<li><p><a href=3D"http://www.cse.ust.hk/~wallacem/winchan/eurovis=
+/eurovis2008.html" target=3D"_blank">2008</a>, <a href=3D"http://www.cse=
+.ust.hk/~wallacem/winchan/eurovis/eurovis2007.html" target=3D"_blank">20=
+07</a>, <a href=3D"http://www.cse.ust.hk/~wallacem/winchan/eurovis/eurov=
+is2006.html" target=3D"_blank">2006</a>, <a href=3D"http://www.cse.ust.h=
+k/~wallacem/winchan/eurovis/eurovis2005.html" target=3D"_blank">2005</a>=
+</p></li></ul>
+						<h3>ACM Symposium on Solid and Physical Modeling</h3><ul>
+							<li><a href=3D"spm2008Papers.htm" target=3D"_blank">SPM 2008</a> =
+(Submitted: 79 =C2=A0=C2=A0=C2=A0 Accepted: 25 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 32%) <br></li>
+							<li><a href=3D"spm2007Papers.htm" target=3D"_blank">SPM 2007</a> =
+(Submitted: 94 =C2=A0=C2=A0=C2=A0 Accepted: 25 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 27%)</li>
+							<li><a href=3D"spm2006Papers.htm" target=3D"_blank">SPM 2006</a> =
+(Submitted: 56 =C2=A0=C2=A0=C2=A0 Accepted: 21 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 38%)</li>
+							<li><a href=3D"spm2005Papers.htm" target=3D"_blank">SPM 2005</a> =
+(Submitted: 60 =C2=A0=C2=A0=C2=A0 Accepted: 22 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 37%)=C2=A0 <br></li></ul>
+						<h3>Graphics Interface</h3><ul>
+							<li><a href=3D"gi2012Papers.htm" target=3D"_blank">GI 2012</a> (S=
+ubmitted:=C2=A0=C2=A0 57 =C2=A0=C2=A0=C2=A0 Accepted: 25 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 44%)<img src=3D"new.gif"></li>
+							<li><a href=3D"gi2011Papers.htm" target=3D"_blank">GI 2011</a> (S=
+ubmitted:=C2=A0=C2=A0 74 =C2=A0=C2=A0=C2=A0 Accepted: 29 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 39%)</li>
+							<li><a href=3D"gi2010Papers.htm" target=3D"_blank">GI 2010</a> (S=
+ubmitted:=C2=A0=C2=A0 88 =C2=A0=C2=A0=C2=A0 Accepted: 33 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 38%)</li>
+							<li><a href=3D"gi2009Papers.htm" target=3D"_blank">GI 2009</a> (S=
+ubmitted:=C2=A0=C2=A0 77 =C2=A0=C2=A0=C2=A0 Accepted: 28 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 36%)</li>
+							<li><a href=3D"gi2008Papers.htm" target=3D"_blank">GI 2008</a> (S=
+ubmitted:=C2=A0=C2=A0 85 =C2=A0=C2=A0=C2=A0 Accepted: 34 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 40%)</li>
+							<li><a href=3D"gi2007Papers.htm" target=3D"_blank">GI 2007</a> (S=
+ubmitted:=C2=A0=C2=A0 89 =C2=A0=C2=A0=C2=A0 Accepted: 43 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 48%)</li>
+							<li><a href=3D"gi2006Papers.htm" target=3D"_blank">GI 2006</a> (S=
+ubmitted:=C2=A0=C2=A0 94 =C2=A0=C2=A0=C2=A0 Accepted: 31 =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: 33%)</li>
+							<li><a href=3D"gi2005Papers.htm" target=3D"_blank">GI 2005</a> (S=
+ubmitted:  104 =C2=A0=C2=A0=C2=A0 Accepted: 30 =C2=A0=C2=A0=C2=A0 Accept=
+ance Rate: 29%)</li></ul>
+						<h3>Winter School of Computer Graphics (WSCG)<br></h3><ul>
+							<li><a href=3D"http://wscg.zcu.cz/DL/wscg_DL.htm">Journal of WSCG=
+ <img src=3D"new.gif"></a></li>
+							<li><a href=3D"http://wscg.zcu.cz/DL/wscg_DL.htm">WSCG Proceeding=
+s <img src=3D"new.gif"></a></li></ul>
+						<h3>ACM Multimedia</h3><ul>
+							<li>Page maintained by <a href=3D"http://mpac.ee.ntu.edu.tw/%7Eyi=
+hsuan/">Yi-Hsuan Yang</a> and <a href=3D"http://mpac.ee.ntu.edu.tw/peopl=
+e/chiakai/">Chia-Kai Liang</a></li><ul>
+							<li><a href=3D"http://mpac.ee.ntu.edu.tw/multimediaconf/acmmm2008=
+.html">MM 2008</a> (Submitted: ? =C2=A0=C2=A0 Accepted: ? =C2=A0=C2=A0=C2=
+=A0 Acceptance Rate: ?%) </li></ul></ul>
+						<h3>IASTED Computer Graphics and Imaging (Page maintained by <a hr=
+ef=3D"http://roy.walmsley.googlepages.com/">Roy Walmsley</a>)</h3><ul>
+							<li><a href=3D"http://roy.walmsley.googlepages.com/cgim2008papers=
+.htm" target=3D"_blank">2008</a>, <a href=3D"http://roy.walmsley.googlep=
+ages.com/cgim2007papers.htm" target=3D"_blank">2007</a></li></ul>
+						<h3>IEEE VGTC Pacific Visualization Symposium (PacificVis) (Page m=
+aintained by <a href=3D"http://roy.walmsley.googlepages.com/">Roy Walmsl=
+ey</a>)</h3><ul>
+							<li><a href=3D"http://roy.walmsley.googlepages.com/pacificvis2008=
+papers.htm" target=3D"_blank">PacificVis 2008</a><img style=3D"" src=3D"=
+new.gif"></li>
+							<li><a href=3D"http://roy.walmsley.googlepages.com/apvis2007paper=
+s.htm" target=3D"_blank">Asian-Pacific Symposium on Information Visualiz=
+ation (APVIS) 2007</a></li></ul>
+						<h3>Computer Vision Resource (Page maintained by <a href=3D"http:/=
+/www.cvpapers.com/">Gilles Mazars</a>)</h3><ul>
+							<li>European Conference on Computer Vision (ECCV)</li><ul>
+							<li><a href=3D"http://www.cvpapers.com/eccv2008.html">ECCV 2008</=
+a> (<a href=3D"http://www.cvpapers.com/rss/rss_builder.php?feed=3Drss_ec=
+cv2008.xml">rss</a>)</li>
+							<li><a href=3D"http://www.cvpapers.com/eccv2006.html">ECCV 2006</=
+a><br></li></ul>
+							<li>Asian Conference on Computer Vision (ACCV)=C2=A0</li><ul>
+							<li><a href=3D"http://www.cvpapers.com/accv2007.html">ACCV 2007</=
+a> (<a href=3D"http://www.cvpapers.com/rss/rss_builder.php?feed=3Drss_ac=
+cv2007.xml">rss</a>) <br></li></ul>
+							<li>IEEE International Conference on Computer Vision (ICCV)=C2=A0=
+</li><ul>
+							<li><a href=3D"http://gmazars.info/conf/iccv2007.html" target=3D"=
+_blank">ICCV 2007</a></li></ul>
+							<li>IEEE Conference on Computer Vision and Pattern Recognition (C=
+VPR)=C2=A0</li><ul>
+							<li><a href=3D"http://www.cvpapers.com/cvpr2010.html" target=3D"_=
+blank">CVPR 2010</a> (<a href=3D"http://www.cvpapers.com/rss/rss_builder=
+.php?feed=3Drss_cvpr2010.xml">RSS</a>)<img src=3D"new.gif"></li>
+							<li><a href=3D"http://www.cvpapers.com/cvpr2009.html" target=3D"_=
+blank">CVPR 2009</a> (<a href=3D"http://www.cvpapers.com/rss/rss_builder=
+.php?feed=3Drss_cvpr2009.xml">RSS</a>)</li>
+							<li><a href=3D"http://gmazars.info/conf/cvpr2008.html" target=3D"=
+_blank">CVPR 2008</a> (<a href=3D"http://www.cvpapers.com/rss/rss_builde=
+r.php?feed=3Drss_cvpr2008.xml">RSS</a>)=C2=A0 <br></li>
+							<li><a href=3D"http://www.cvpapers.com/cvpr2007.html" target=3D"_=
+blank">CVPR 2007</a> (<a href=3D"http://www.cvpapers.com/rss/rss_cvpr200=
+7.xml">RSS</a>)</li></ul></ul>
+						<h3>Acceptance Rates</h3><ul>
+							<li><a href=3D"http://web.cs.wpi.edu/%7Egogo/hive/AcceptanceRates=
+/" target=3D"_blank">Acceptance Rates for Publications in Virtual Realit=
+y / Graphics / HCI / Visualization / Vision</a></li>
+							<li><a href=3D"http://www.cs.ucsb.edu/%7Ealmeroth/conf/stats/">Ne=
+tworking Conferences Statistics</a></li>
+							<li><a href=3D"http://people.engr.ncsu.edu/txie/seconferences.htm=
+">Software Engineering Conferences Statistics</a></li>
+							<li><a href=3D"http://wwwhome.cs.utwente.nl/%7Eapers/rates.html">=
+Database Conferences Statistics</a></li></ul>
+						<h3>Central European Seminar on Computer Graphics for students</h3=
+><ul>
+							<li><a href=3D"http://www.cescg.org/CESCG-2012/index.php">2012</a=
+><img src=3D"new.gif">, <a href=3D"http://www.cescg.org/CESCG-2011/index=
+.php">2011</a>, <a href=3D"http://www.cescg.org/CESCG-2010/index.php">20=
+10</a>, <a href=3D"http://www.cescg.org/CESCG-2009/index.html">2009</a>,=
+ <a href=3D"http://www.cescg.org/CESCG-2008/index.html">2008</a>, <a hre=
+f=3D"http://www.cescg.org/CESCG-2007/index.html" target=3D"_blank">2007<=
+/a>, <a href=3D"http://www.cescg.org/CESCG-2006/index.html" target=3D"_b=
+lank">2006</a>, <a href=3D"http://www.cescg.org/CESCG-2005/index.html" t=
+arget=3D"_blank">2005</a>, <a href=3D"http://www.cescg.org/CESCG-2004/in=
+dex.html" target=3D"_blank">2004</a>, <a href=3D"http://www.cescg.org/CE=
+SCG-2003/index.html" target=3D"_blank">2003</a>, <a href=3D"http://www.c=
+escg.org/CESCG-2002/index.html" target=3D"_blank">2002</a>, <a href=3D"h=
+ttp://www.cescg.org/CESCG-2001/index.html" target=3D"_blank">2001</a>, <=
+a href=3D"http://www.cescg.org/CESCG-2000/index.html" target=3D"_blank">=
+2000</a>, <a href=3D"http://www.cescg.org/CESCG99/index.html" target=3D"=
+_blank">1999</a>, <a href=3D"http://www.cescg.org/CESCG98/index.html" ta=
+rget=3D"_blank">1998</a>, <a href=3D"http://www.cescg.org/CESCG97/index.=
+html" target=3D"_blank">1997</a></li></ul></div></div>
+          <div style=3D"clear: both"></div>
+        </div>
+      </div>
+      <!-- /wrapper --><!-- /main-content -->
+      <div id=3D"footer"><div class=3D"wrapper">
+        <hr />
+        <p><div id=3D'g_footer'><p></p><a class=3D"blue-small" href=3D"h=
+ttp://www.cloudflare.com/email-protection#3e555b4d5b5010564b5f50597e5953=
+5f5752105d5153"><font color=3D"#0000ff" size=3D"2"><span class=3D"__cf_e=
+mail__" data-cfemail=3D"62090711070c4c0a17030c0522050f030b0e4c010d0f">[e=
+mail&nbsp;protected]</span><script type=3D"text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=3Ddocument.getElementsByTagName("scr=
+ipt");l=3Db[b.length-1].previousSibling;a=3Dl.getAttribute('data-cfemail=
+');if(a){s=3D'';r=3DparseInt(a.substr(0,2),16);for(j=3D2;a.length-j;j+=3D=
+2){c=3DparseInt(a.substr(j,2),16)^r;s+=3DString.fromCharCode(c);}s=3Ddoc=
+ument.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();=
+
+/* ]]> */
+</script></font></a></div></p>
+        <div style=3D"clear: both"></div>
+      </div></div>
+      <!-- /wrapper --><!-- /footer -->
+    </div>
+  </div>
+<!-- /wrapper --><!-- /container -->
+
+<div id=3D"extraDiv1"><span></span></div><div id=3D"extraDiv2"><span></s=
+pan></div>
+<div id=3D"extraDiv3"><span></span></div><div id=3D"extraDiv4"><span></s=
+pan></div>
+<div id=3D"extraDiv5"><span></span></div><div id=3D"extraDiv6"><span></s=
+pan></div>
+
+<script type=3D"text/javascript">
+
+  var _gaq =3D _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1845250-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga =3D document.createElement('script'); ga.type =3D 'text/javas=
+cript'; ga.async =3D true;
+    ga.src =3D ('https:' =3D=3D document.location.protocol ? 'https://ss=
+l' : 'http://www') + '.google-analytics.com/ga.js';
+    var s =3D document.getElementsByTagName('script')[0]; s.parentNode.i=
+nsertBefore(ga, s);
+  })();
+
+</script>
+
+<script type=3D"text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=3Ddocument.getElementsByTagName("a"),t=
+=3Ddocument.createElement("textarea");for(i=3D0;l.length-i;i++){try{a=3D=
+l[i].getAttribute("href");if(a&&"www.cloudflare.com/email-protection"=3D=
+=3Da.substr(7 ,35)){s=3D'';j=3D43;r=3DparseInt(a.substr(j,2),16);for(j+=3D=
+2;a.length-j&&a.substr(j,1)!=3D'X';j+=3D2){c=3DparseInt(a.substr(j,2),16=
+)^r;s+=3DString.fromCharCode(c);}j+=3D1;s+=3Da.substr(j,a.length-j);t.in=
+nerHTML=3Ds.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute(=
+"href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>
+
+------------dlPxf5dKvAf43zi2yDXdY7
+Content-Disposition: inline; filename=new.gif
+Content-Type: image/gif; name=new.gif
+Content-Location: http://kesen.realtimerendering.com/new.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhIAAQAPcAAAAAAIAAAACAAICAAAAAgIAAgACAgMDAwMDcwKbK8EAgAGAg
+AIAgAKAgAMAgAOAgAABAACBAAEBAAGBAAIBAAKBAAMBAAOBAAABgACBgAEBgAGBg
+AIBgAKBgAMBgAOBgAACAACCAAECAAGCAAICAAKCAAMCAAOCAAACgACCgAECgAGCg
+AICgAKCgAMCgAOCgAADAACDAAEDAAGDAAIDAAKDAAMDAAODAAADgACDgAEDgAGDg
+AIDgAKDgAMDgAODgAAAAQCAAQEAAQGAAQIAAQKAAQMAAQOAAQAAgQCAgQEAgQGAg
+QIAgQKAgQMAgQOAgQABAQCBAQEBAQGBAQIBAQKBAQMBAQOBAQABgQCBgQEBgQGBg
+QIBgQKBgQMBgQOBgQACAQCCAQECAQGCAQICAQKCAQMCAQOCAQACgQCCgQECgQGCg
+QICgQKCgQMCgQOCgQADAQCDAQEDAQGDAQIDAQKDAQMDAQODAQADgQCDgQEDgQGDg
+QIDgQKDgQMDgQODgQAAAgCAAgEAAgGAAgIAAgKAAgMAAgOAAgAAggCAggEAggGAg
+gIAggKAggMAggOAggABAgCBAgEBAgGBAgIBAgKBAgMBAgOBAgABggCBggEBggGBg
+gIBggKBggMBggOBggACAgCCAgECAgGCAgICAgKCAgMCAgOCAgACggCCggECggGCg
+gICggKCggMCggOCggADAgCDAgEDAgGDAgIDAgKDAgMDAgODAgADggCDggEDggGDg
+gIDggKDggMDggODggAAAwCAAwEAAwGAAwIAAwKAAwMAAwOAAwAAgwCAgwEAgwGAg
+wIAgwKAgwMAgwOAgwABAwCBAwEBAwGBAwIBAwKBAwMBAwOBAwABgwCBgwEBgwGBg
+wIBgwKBgwMBgwOBgwACAwCCAwECAwGCAwICAwKCAwMCAwOCAwACgwCCgwECgwGCg
+wICgwKCgwMCgwOCgwADAwCDAwEDAwGDAwIDAwKDAwP/78KCgpICAgP8AAAD/AP//
+AAAA//8A/wD//////yH5BAEAAAAALAAAAAAgABAAAAiNAP8JHEgQAMGD/wwiRAig
+4UAA+RQ6fBixoMKC+SpC1JhRYsaKCUEe3Lix48eIJTuSXJjypMuXHy8yNGmyYcOI
+J1cyLHkTZ8qfMUe6hEgUJUmUOINajKkyqUqbJGVidFo0J02pU6kaPUqVJcyvYLFG
+HfoTqEiBRD12RLs2JMezEynKjBtSIt2FCfEWxBsQADs=
+
+------------dlPxf5dKvAf43zi2yDXdY7--

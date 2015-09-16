@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="4" />
+	<Project>
+		<Option title="HeightProcess" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="HeightProc.exe" />
+				<Option object_output=".\obj" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="0" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Debug">
+				<Option output="HeightProc.exe" />
+				<Option object_output=".\obj" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="collage_height.jpg" />
+				<Option projectResourceIncludeDirsRelation="0" />
+				<Compiler>
+					<Add option="-O" />
+					<Add option="-pg" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg -lgmon" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-march=i686" />
+			<Add option="-Wall" />
+			<Add option="-ffast-math" />
+		</Compiler>
+		<Linker>
+			<Add library="corona" />
+		</Linker>
+		<Unit filename="htproc.cpp">
+			<Option compilerVar="CPP" />
+			<Option target="Release" />
+			<Option target="Debug" />
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

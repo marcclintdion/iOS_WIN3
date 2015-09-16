@@ -1,0 +1,15 @@
+body{font-family:Georgia,Times,serif;line-height:1.5;color:#000;background:none;font-size:11pt}a:link,a:visited{background:transparent;font-weight:bold;text-decoration:underline}.avatar,.image{float:left;margin:0
+10px 10px}#sitefilter,
+#profiler,
+#searchbox,
+#header ul.tabs,
+#subheader,
+#footer,
+div.sidecolumn,
+div.mediabox,
+div.imagebox,
+div.rotator,
+div.headerbox div.menu,span.options,form.filter,div.pagination,div.tableform,.previous,.next,.action{display:none}#header
+h1{text-indent:0}div.headerbox{background-image:none}div.headerbox
+ul.menu{list-style:none}div.headerbox ul.menu
+li{display:inline}div.column{clear:both}span.heading{font-size:1.2em}

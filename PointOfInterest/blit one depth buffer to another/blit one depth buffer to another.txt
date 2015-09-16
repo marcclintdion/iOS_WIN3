@@ -1,0 +1,6 @@
+ glBindFramebuffer(GL_DRAW_FRAMEBUFFER, my_FBO);
+    glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
+    glBlitFramebuffer(0, 0, m_CanvasWidth, m_CanvasHeight,
+                            0, 0, m_CanvasWidth, m_CanvasHeight,
+                            GL_DEPTH_BUFFER_BIT, GL_NEAREST);
+    glBindFramebuffer(GL_FRAMEBUFFER, my_FBO);

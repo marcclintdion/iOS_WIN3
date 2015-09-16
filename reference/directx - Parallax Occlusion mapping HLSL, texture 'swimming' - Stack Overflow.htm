@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <title>directx - Parallax Occlusion mapping HLSL, texture "swimming" - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">
+    <link rel="apple-touch-icon" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+
+    
+    <script kabl="89517" style="display: none !important" src="directx%20-%20Parallax%20Occlusion%20mapping%20HLSL,%20texture%20%27swimming%27%20-%20Stack%20Overflow_files/adzerk1_2_4_43adzerk2_2_17_45.js" async="" type="text/javascript"></script><script kabl="89517" style="display: none !important" src="directx%20-%20Parallax%20Occlusion%20mapping%20HLSL,%20texture%20%27swimming%27%20-%20Stack%20Overflow_files/ga.js" async="" type="text/javascript"></script><script kabl="89517" style="display: none !important" src="directx%20-%20Parallax%20Occlusion%20mapping%20HLSL,%20texture%20%27swimming%27%20-%20Stack%20Overflow_files/quant.js" async="" type="text/javascript"></script><script type="text/javascript" src="directx%20-%20Parallax%20Occlusion%20mapping%20HLSL,%20texture%20%27swimming%27%20-%20Stack%20Overflow_files/jquery.js"></script>
+    <script type="text/javascript" src="directx%20-%20Parallax%20Occlusion%20mapping%20HLSL,%20texture%20%27swimming%27%20-%20Stack%20Overflow_files/stub.js"></script>
+    <link rel="stylesheet" type="text/css" href="directx%20-%20Parallax%20Occlusion%20mapping%20HLSL,%20texture%20%27swimming%27%20-%20Stack%20Overflow_files/all.css">
+    
+    <meta name="relativepagescore" content="0">
+    <link rel="canonical" href="http://stackoverflow.com/questions/9520658/parallax-occlusion-mapping-hlsl-texture-swimming">
+    <link rel="alternate" type="application/atom+xml" title="Feed for question 'Parallax Occlusion mapping HLSL, texture &quot;swimming&quot;'" href="http://stackoverflow.com/feeds/question/9520658">
+    <script type="text/javascript">
+        
+        StackExchange.ready(function () {
+            
+            StackExchange.question.init({showAnswerHelp:true,totalCommentCount:1,shownCommentCount:1,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:9520658});
+
+            styleCode();
+
+                StackExchange.realtime.subscribeToQuestion('1', '9520658');
+            
+                
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        StackExchange.init({"stackAuthUrl":"https://stackauth.com","serverTime":1360319775,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","enableSocialMediaInSharePopup":true},"user":{"fkey":"e8f398a53d8c7069e9f9ab577d3b8a9a","isAnonymous":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.js":"c862bf93b3ec","js/moderator.js":"53a4fbf22d01","js/full-anon.js":"95688231e4a8","js/full.js":"0164dcbf576f","js/wmd.js":"fd5b31f81840","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/mobile.js":"6eb68240242f","js/help.js":"fc9fb0517db2","js/tageditor.js":"450c9e8426fc","js/tageditornew.js":"f12653fbfd29","js/inline-tag-editing.js":"30f72b99548b","js/revisions.js":"7273bb714bba","js/review.js":"7f234e0aa04f","js/tagsuggestions.js":"c019341b234d"});
+        
+    </script>
+
+
+    <script type="text/javascript">
+        StackExchange.using(
+            "gps",
+            function () {
+                StackExchange.gps.init(false);
+            }
+        );
+    </script>
+
+<script src="directx%20-%20Parallax%20Occlusion%20mapping%20HLSL,%20texture%20%27swimming%27%20-%20Stack%20Overflow_files/full-anon.js" type="text/javascript" async=""></script></head>
+<body class="question-page">
+    <noscript><div id="noscript-padding"></div></noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+    <div class="container">
+        <div id="header">
+            <div id="portalLink">
+                <a class="genu" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
+            </div>
+            <div id="topbar">
+                <div id="hlinks">
+                    
+
+
+
+
+
+
+
+
+
+<span id="hlinks-user">
+
+</span>
+<span id="hlinks-nav">
+                   <a href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f9520658%2fparallax-occlusion-mapping-hlsl-texture-swimming">log in</a>
+
+ <span class="lsep">|</span>
+                    <a href="http://careers.stackoverflow.com/">careers 2.0</a>
+
+ <span class="lsep">|</span>
+
+</span>
+<span id="hlinks-custom">
+        <a href="http://chat.stackoverflow.com/">chat</a>
+
+ <span class="lsep">|</span>
+            <a href="http://meta.stackoverflow.com/">meta</a>
+
+ <span class="lsep">|</span>
+        <a href="http://stackoverflow.com/about">about</a>
+
+ <span class="lsep">|</span>
+    <a href="http://stackoverflow.com/faq">faq</a>
+
+</span>
+                </div>
+                <div id="hsearch">
+                    <form id="search" action="/search" method="get" autocomplete="off">
+                    <div>
+                        <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" maxlength="240" size="28" type="text">
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">Stack Overflow</a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+        <div id="content">
+            
+
+<div itemscope="" itemtype="http://schema.org/Article">
+<link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+<div id="question-header">
+    <h1 itemprop="name"><a href="http://stackoverflow.com/questions/9520658/parallax-occlusion-mapping-hlsl-texture-swimming" class="question-hyperlink" "="">Parallax Occlusion mapping HLSL, texture “swimming”</a></h1>
+</div>
+<div id="mainbar">
+
+
+
+<div class="question" data-questionid="9520658" id="question">
+    
+            <div class="everyonelovesstackoverflow" id="adzerk1">
+        </div>
+
+
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input value="9520658" type="hidden">
+    <a class="vote-up-off" title="This question shows research effort; it is useful and clear (click again to undo)">up vote</a>
+    <span class="vote-count-post ">0</span>
+    <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful (click again to undo)">down vote</a>
+    
+    <a class="star-off" href="#" title="This is a favorite question (click again to undo)">favorite</a>
+    <div class="favoritecount"><b></b></div>   
+
+ 
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="description">
+        
+        <p>I'm currently trying to implement Parallax Occlusion Mapping 
+in my graphics engine and have hit kind of a snag at the moment. I'm 
+currently texturing a cube which I can rotate freely in 3D. At certain 
+rotations, the textures get flipped around and start "swimming" across 
+the surface. I'm following the example which can be found in the D3D 
+sample browser and it looks right as far as I can tell.</p>
+
+<p>Here are some images:
+  <a href="http://imageshack.us/g/9/darkvelocity20120301173.png/" rel="nofollow">http://imageshack.us/g/9/darkvelocity20120301173.png/</a></p>
+
+<p>And a video:
+<a href="http://www.youtube.com/watch?v=jwGvQ5kGZg4&amp;feature=youtu.be" rel="nofollow">Youtube clip</a></p>
+
+<p>As you can see, lots of weird stuff going on.</p>
+
+<p>Here's the shader code.</p>
+
+<pre><code>static const float SHADOW_EPSILON = 0.01f;
+static const float SMAP_SIZE = 4096.0f;
+static const float SMAP_DX = 1.0f / SMAP_SIZE;
+static const float PI = 3.14159265f;
+//Globals
+float4x4 mWorld;
+float4x4 mView;
+float4x4 mProj;
+float4x4 mWVP;
+float4x4 mInvView;
+float4x4 mLightWVP;
+
+Texture2D g_Diffuse;
+Texture2D g_Specular;
+Texture2D g_Normal;
+Texture2D g_ShadowMap;
+Texture2D g_HeightMap;
+
+DirectionalLight DLight1;
+float4 mEyePos;
+static const float heightMapScale = 0.2f;
+int DLightCount = 1;
+
+PointLight PLight1;
+
+int PLightCount = 1;
+
+SamplerState gTriLinearSam
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Wrap;
+    AddressV = Wrap;
+};
+
+SamplerState gShadowSam
+{
+    Filter = MIN_MAG_MIP_POINT;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};  
+
+SamplerComparisonState cmpSampler
+{
+    Filter = COMPARISON_MIN_MAG_MIP_LINEAR;
+    AddressU = MIRROR;
+    AddressV = MIRROR;
+
+    ComparisonFunc = LESS_EQUAL;
+};
+
+struct VS_IN
+{
+    float4 Pos          : POSITION;
+    float2 TexCoord     : TEXCOORD0;
+    float4 Normal       : NORMAL;
+    float4 tangent      : TANGENT0;
+    float4 bitangent    : TANGENT1;
+
+    row_major float4x4 mTrans : mTransform;
+
+};
+
+struct PS_IN
+{
+    float4 Pos              : SV_POSITION;
+    float4 PosW             : POSITION;
+    float4 Normal           : NORMAL;
+    float2 TexCoord         : TEXCOORD0;
+    float4 tangent          : TANGENT0;
+    float4 bitangent        : TANGENT1;
+    float4 posL             : TANGENT2;
+    float3 viewDirectionTS  : TANGENT3;
+    float3 lightDirectionTS : TANGENT4;
+    float3 lightDirectionWS : TANGENT5;
+    float3 viewDirectionWS  : TANGENT6;
+    float2 parallaxOffset   :TEXCOORD1;
+};
+
+
+float2 texOffset( int u, int v )
+{
+    return float2( u * SMAP_DX, v * SMAP_DX );
+}
+
+float CalcShadowFactor(float4 projTexC)
+{
+    float4 ShadowCoord = projTexC;
+    // Complete projection by doing division by w.
+    projTexC.xyz /= projTexC.w;
+
+    // Points outside the light volume are NOT in shadow.
+    if( projTexC.x &lt; -1.0f || projTexC.x &gt; 1.0f || 
+        projTexC.y &lt; -1.0f || projTexC.y &gt; 1.0f ||
+        projTexC.z &lt; 0.0f )
+        return 1.0f;
+
+    // Transform from NDC space to texture space.
+    projTexC.x = +0.5f*projTexC.x + 0.5f;
+    projTexC.y = -0.5f*projTexC.y + 0.5f;
+    float factor;
+    float sum = 0;
+    float x, y;
+    //perform PCF filtering on a 4 x 4 texel neighborhood
+    for (y = -1.5; y &lt;= 1.5; y += 1.0)
+    {
+        for (x = -1.5; x &lt;= 1.5; x += 1.0)
+        {
+            sum += g_ShadowMap.SampleCmpLevelZero( cmpSampler, projTexC.xy + texOffset(x,y), projTexC.z );
+        }
+    }
+    factor = sum / 16.0;
+    return factor;
+}
+
+PS_IN VS(VS_IN input)
+{
+    PS_IN output;
+
+    //Transform inputpos with model matrix
+    float4 instancePos = mul(input.Pos, input.mTrans);
+    output.PosW = instancePos;
+
+    //transform instancepos to clip space
+    output.Pos = mul(instancePos, mWVP);
+
+    //Set UV
+    output.TexCoord     = input.TexCoord;
+    output.posL         = mul(instancePos, mLightWVP);
+    output.Normal       = normalize(mul(input.Normal, input.mTrans));
+    output.tangent      = normalize(mul(input.tangent, input.mTrans));
+    output.bitangent    = normalize(mul(input.bitangent, input.mTrans));
+
+    //world -&gt; tangent space matrix
+    float3x3 TBN = float3x3(output.tangent.xyz, output.bitangent.xyz, output.Normal.xyz);
+
+    //TBN = det(TBN) / transpose(TBN);
+    //calc view direction vector in world space
+    float3 eyeVector =  mEyePos.xyz - output.PosW;
+    output.viewDirectionWS = eyeVector;
+
+    //calc view direction vector in tangent space
+    eyeVector = mul(eyeVector, TBN);
+    output.viewDirectionTS = (eyeVector);
+
+    //set light direction in world space
+    float3 lightDir = DLight1.position.xyz - output.PosW;
+    output.lightDirectionWS = lightDir;
+
+    //calc light  direction in tangent space
+    lightDir = mul(TBN, lightDir);
+    output.lightDirectionTS = lightDir;
+
+    //Calc ray direction for intersecting heightfield profile with current view direction
+
+    //Initial parallax displacement
+    float2 parallaxDirection = normalize(output.viewDirectionTS.xy);
+
+
+    //length of this vector determines furthest amount of displacement
+    float dirLength         = length(output.viewDirectionTS);
+    float parallaxLength    = sqrt (dirLength * dirLength - output.viewDirectionTS.z * output.viewDirectionTS.z) / output.viewDirectionTS.z;
+
+    //compute displacement vector
+    output.parallaxOffset = parallaxDirection * parallaxLength;
+
+    //5.0f is the heightmap scale, should be editable from outside of shader
+    output.parallaxOffset *= heightMapScale;
+
+    return output;
+}
+float4 PS(PS_IN input) : SV_TARGET
+{
+    SurfaceInfo si;
+    float3x3 TBN = float3x3(normalize(input.tangent.xyz), normalize(input.bitangent.xyz), normalize(input.Normal.xyz));
+
+    float3 viewDirectionTS  = normalize(input.viewDirectionTS);
+    float3 viewDirectionWS  = normalize(input.viewDirectionWS);
+    float3 lightDirectionTS = normalize(input.lightDirectionTS);
+    float3 normalWS         = normalize(input.Normal);
+
+    // Compute the current gradients:
+    //Example has fTexCoordsPerSize = input.TexCoord * g_TextureDimension
+    //but never sets, WAT
+    float2 fTexCoordsPerSize = input.TexCoord;
+
+    // Compute all 4 derivatives in x and y in a single instruction to optimize:
+    float2 dxSize, dySize;
+    float2 dx, dy;
+
+    float4( dxSize, dx ) = ddx( float4( fTexCoordsPerSize, input.TexCoord ) );
+    float4( dySize, dy ) = ddy( float4( fTexCoordsPerSize, input.TexCoord ) );
+
+    float  fMipLevel;      
+    float  fMipLevelInt;    // mip level integer portion
+    float  fMipLevelFrac;   // mip level fractional amount for blending in between levels
+
+    float  fMinTexCoordDelta;
+    float2 dTexCoords;
+
+    // Find min of change in u and v across quad: compute du and dv magnitude across quad
+    dTexCoords = dxSize * dxSize + dySize * dySize;
+
+    // Standard mipmapping uses max here
+    fMinTexCoordDelta = max( dTexCoords.x, dTexCoords.y );
+
+    // Compute the current mip level  (* 0.5 is effectively computing a square root before )
+    fMipLevel = max( 0.5 * log2( fMinTexCoordDelta ), 0 );
+
+    // Start the current sample located at the input texture coordinate, which would correspond
+    // to computing a bump mapping result:
+    float2 texSample = input.TexCoord;
+
+    float fOcclusionShadow = 1.0;  
+
+    //Offset computation using dynamic flow control
+    //if MipLevel is too big, skip parallax and do only normal mapping
+
+    if ( fMipLevel &lt;= 3.0f)
+    {
+        // lerp(maxSamples, minSamples, dot(viewWS, normalWS)
+        //maxSamples and minSamples should be possible to set from outside shader
+        int nNumSteps = (int) lerp( 100, 10, dot( viewDirectionWS, normalWS ));
+
+        float fCurrHeight = 0.0;
+        float fStepSize   = 1.0 / (float) nNumSteps;
+        float fPrevHeight = 1.0;
+        float fNextHeight = 0.0;
+
+        int    nStepIndex = 0;
+        bool   bCondition = true;
+
+        float2 vTexOffsetPerStep = fStepSize * input.parallaxOffset;
+        float2 vTexCurrentOffset = input.TexCoord;
+        float  fCurrentBound     = 1.0;
+        float  fParallaxAmount   = 0.0;
+
+        float2 pt1 = 0;
+        float2 pt2 = 0;
+
+        float2 texOffset2 = 0;
+
+        while ( nStepIndex &lt; nNumSteps ) 
+        {
+            vTexCurrentOffset -= vTexOffsetPerStep;
+
+            // Sample height map through alpha
+            fCurrHeight = g_HeightMap.SampleGrad(gTriLinearSam, vTexCurrentOffset, dx, dy ).r;
+
+            fCurrentBound -= fStepSize;
+
+            if ( fCurrHeight &gt; fCurrentBound ) 
+            {   
+                pt1 = float2( fCurrentBound, fCurrHeight );
+                pt2 = float2( fCurrentBound + fStepSize, fPrevHeight );
+
+                texOffset2 = vTexCurrentOffset - vTexOffsetPerStep;
+
+                nStepIndex = nNumSteps + 1;
+                fPrevHeight = fCurrHeight;
+            }
+            else
+            {
+                nStepIndex++;
+                fPrevHeight = fCurrHeight;
+            }
+        }  
+
+        float fDelta2 = pt2.x - pt2.y;
+        float fDelta1 = pt1.x - pt1.y;
+
+        float fDenominator = fDelta2 - fDelta1;
+
+        // check for divide by zero
+        if ( fDenominator == 0.0f )
+        {
+            fParallaxAmount = 0.0f;
+        }
+        else
+        {
+            fParallaxAmount = (pt1.x * fDelta2 - pt2.x * fDelta1 ) / fDenominator;
+        } 
+
+        float2 parallaxOffset = input.parallaxOffset * (1- fParallaxAmount );
+
+        // The computed texture offset for the displaced point on the pseudo-extruded surface:
+        float2 texSampleBase = input.TexCoord - parallaxOffset;
+        texSample = texSampleBase;
+
+        if (fMipLevel &gt; 2.0f)
+        {
+            // Lerp based on the fractional part:
+             fMipLevelFrac = modf( fMipLevel, fMipLevelInt );
+
+             // Lerp the texture coordinate from parallax occlusion mapped coordinate to bump mapping
+             // smoothly based on the current mip level:
+             texSample = lerp( texSampleBase, input.TexCoord, fMipLevelFrac );
+        }
+
+        //Calc occlusion factor
+        //10.0f should be global heightmap scale
+        float2 vLightRayTS = normalize(-lightDirectionTS.xy * heightMapScale);
+
+
+        // Compute the soft blurry shadows taking into account self-occlusion for 
+        // features of the height field:
+        //0.58f should be a global shadow softening variable, settable from outside shader
+        float sh0 =  g_HeightMap.SampleGrad(gTriLinearSam, texSampleBase, dx, dy ).r;
+        float shA = (g_HeightMap.SampleGrad(gTriLinearSam, texSampleBase + vLightRayTS * 0.88, dx, dy ).r - sh0 - 0.88 ) *  1 * 0.58f;
+        float sh9 = (g_HeightMap.SampleGrad(gTriLinearSam, texSampleBase + vLightRayTS * 0.77, dx, dy ).r - sh0 - 0.77 ) *  2 * 0.58f;
+        float sh8 = (g_HeightMap.SampleGrad(gTriLinearSam, texSampleBase + vLightRayTS * 0.66, dx, dy ).r - sh0 - 0.66 ) *  4 * 0.58f;
+        float sh7 = (g_HeightMap.SampleGrad(gTriLinearSam, texSampleBase + vLightRayTS * 0.55, dx, dy ).r - sh0 - 0.55 ) *  6 * 0.58f;
+        float sh6 = (g_HeightMap.SampleGrad(gTriLinearSam, texSampleBase + vLightRayTS * 0.44, dx, dy ).r - sh0 - 0.44 ) *  8 * 0.58f;
+        float sh5 = (g_HeightMap.SampleGrad(gTriLinearSam, texSampleBase + vLightRayTS * 0.33, dx, dy ).r - sh0 - 0.33 ) * 10 * 0.58f;
+        float sh4 = (g_HeightMap.SampleGrad(gTriLinearSam, texSampleBase + vLightRayTS * 0.22, dx, dy ).r - sh0 - 0.22 ) * 12 * 0.58f;
+
+        // Compute the actual shadow strength:
+        fOcclusionShadow = 1 - max( max( max( max( max( max( shA, sh9 ), sh8 ), sh7 ), sh6 ), sh5 ), sh4 );
+
+        // The previous computation overbrightens the image, let's adjust for that:
+        fOcclusionShadow = fOcclusionShadow * 0.6 + 0.4;         
+    }
+
+    float4 spec;
+    spec = g_Specular.Sample(gTriLinearSam, texSample);
+    spec.a *= 256.0f;
+
+    //sample diffuse
+    float4 diffuse;
+    diffuse = g_Diffuse.Sample(gTriLinearSam, texSample);
+
+    // Kill transparent pixels.
+    clip(diffuse.a - 0.15f);
+
+    //sample normal
+    float3 normal;
+    normal = g_Normal.Sample(gTriLinearSam, texSample);
+    normal = 2.0f * normal - 1.0f;
+
+    // Transform from tangent space to world space.
+    float3 n = float3(normal.x, normal.y, normal.z);
+    float3 bumpedNormal = normalize(mul(n, TBN));
+
+    float shadowFactor = CalcShadowFactor(input.posL) * 2;
+
+
+    si.pos = input.PosW;
+    si.normal = float4(bumpedNormal,0.0f);
+    si.diffuse = diffuse;
+    si.specular = spec;
+
+    float4 litColor = DirectionalLightCalc(si, DLight1, mEyePos, shadowFactor) * fOcclusionShadow; 
+    return litColor;
+}
+
+RasterizerState FrontCull
+{
+    CullMode = Front;
+};
+
+RasterizerState BackCull
+{
+    CullMode = Back;
+};
+
+technique10 RenderTech
+{
+    pass P0
+    {
+        SetVertexShader(CompileShader(vs_4_0, VS()));
+        SetGeometryShader (NULL);
+        SetPixelShader(CompileShader(ps_4_0, PS()));
+        SetRasterizerState(FrontCull);
+    }
+}
+</code></pre>
+
+<p>Normal mapping seems to work fine, so I'm assuming the tangent and 
+binormal are ok. Other than that, I'm not really sure what to do 
+anymore. I'm thinking it might be something going on with my parallax 
+offset vector, maybe that it flips over when it hits a certain value for
+ some reason.</p>
+
+<p>Great many thanks for anyone who can offer some help.</p>
+
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/mapping" class="post-tag" title="show questions tagged 'mapping'" rel="tag">mapping</a> <a href="http://stackoverflow.com/questions/tagged/directx" class="post-tag" title="show questions tagged 'directx'" rel="tag">directx</a> <a href="http://stackoverflow.com/questions/tagged/hlsl" class="post-tag" title="show questions tagged 'hlsl'" rel="tag">hlsl</a> <a href="http://stackoverflow.com/questions/tagged/parallax" class="post-tag" title="show questions tagged 'parallax'" rel="tag">parallax</a> <a href="http://stackoverflow.com/questions/tagged/occlusion" class="post-tag" title="show questions tagged 'occlusion'" rel="tag">occlusion</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/q/9520658" title="short permalink to this question" class="short-link" id="link-post-9520658">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/9520658/edit" class="suggest-edit-post" title="">improve this question</a></div>            </td>
+    <td class="post-signature owner">
+        
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                                    asked
+ <span title="2012-03-01 17:07:24Z" class="relativetime">Mar 1 '12 at 17:07</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/1185694/mr-dudeface"><div class=""><img src="directx%20-%20Parallax%20Occlusion%20mapping%20HLSL,%20texture%20%27swimming%27%20-%20Stack%20Overflow_files/8958045d968a5b0bfc1c6a4a0d76f106.png" alt="" height="32" width="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/1185694/mr-dudeface">Mr Dudeface</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">11</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-9520658" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-12170977" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">How 
+about stripping your code to find the error? "I'm thinking it might be 
+something going on with my parallax offset vector" Does your parallax 
+bump/normal mapping works without occlusion?</span> –&nbsp;<a href="http://stackoverflow.com/users/1085958/djmj" title="1058 reputation" class="comment-user">djmj</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(12170977, 0)" href="#comment12170977_9520658"><span title="2012-03-07 03:56:56Z" class="relativetime-clean">Mar 7 '12 at 3:56</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+    
+    <div style="color: rgb(136, 136, 136);" class="was-this-helpful">
+        feedback
+    </div>
+    
+</td>
+</tr>            </tbody></table>    
+</div>
+
+
+    
+
+
+<div id="answers" class="no-answers">
+
+    <a name="tab-top"></a>
+    <div id="answers-header">
+        <div class="subheader answers-subheader">
+            <h2>
+            </h2>
+            <div id="tabs" style="display:none;">
+                <a href="http://stackoverflow.com/questions/9520658/parallax-occlusion-mapping-hlsl-texture-swimming?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+<a href="http://stackoverflow.com/questions/9520658/parallax-occlusion-mapping-hlsl-texture-swimming?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+<a class="youarehere" href="http://stackoverflow.com/questions/9520658/parallax-occlusion-mapping-hlsl-texture-swimming?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+
+            </div>
+        </div>    
+    </div>    
+
+
+
+        <h2 class="bottom-notice" style="padding-top:8px; margin-bottom:-8px;">
+            Know someone who can answer? 
+            Share a <a href="http://stackoverflow.com/q/9520658">link</a> to this question via 
+            <a href="mailto:?subject=Stack%20Overflow%20Question&amp;body=Parallax%20Occlusion%20mapping%20HLSL%2c%20texture%20%22swimming%22%0Ahttp%3a%2f%2fstackoverflow.com%2fq%2f9520658%3fsem%3d2">email</a>, 
+            <a href="https://plus.google.com/share?url=http%3a%2f%2fstackoverflow.com%2fq%2f9520658%3fsgp%3d2">Google+</a>,
+            <a href="http://twitter.com/share?url=http%3a%2f%2fstackoverflow.com%2fq%2f9520658%3fstw%3d2&amp;text=Parallax%20Occlusion%20mapping%20HLSL%2c%20texture%20%22swimming%22">Twitter</a>, or
+            <a href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fstackoverflow.com%2fq%2f9520658%3fsfb%3d2&amp;t=Parallax%20Occlusion%20mapping%20HLSL%2c%20texture%20%22swimming%22">Facebook</a>.
+        </h2>
+    <a name="new-answer"></a>
+    <form id="post-form" action="/questions/9520658/answer/submit" method="post" class="post-form">
+        <h2 class="space">Your Answer</h2>
+
+
+
+
+<script type="text/javascript">
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+         
+        prepareEditor({
+            heartbeatType: 'answer',
+            bindNavPrevention: true,
+            postfix: "",
+            onDemand: true,
+            discardSelector: ".discard-answer"
+            ,immediatelyShowMarkdownHelp:true
+        });
+        
+
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor">  
+
+    
+    <div class="wmd-container">
+        <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li style="left: 0px;" class="wmd-button" id="wmd-bold-button"><span style="background-position: 0px -20px;"></span></li><li style="left: 25px;" class="wmd-button" id="wmd-italic-button"><span style="background-position: -20px -20px;"></span></li><li style="left: 50px;" class="wmd-spacer" id="wmd-spacer1"><span style="background-position: -40px -20px;"></span></li><li style="left: 75px;" class="wmd-button" id="wmd-link-button"><span style="background-position: -40px -20px;"></span></li><li style="left: 100px;" class="wmd-button" id="wmd-quote-button"><span style="background-position: -60px -20px;"></span></li><li style="left: 125px;" class="wmd-button" id="wmd-code-button"><span style="background-position: -80px -20px;"></span></li><li style="left: 150px;" class="wmd-button" id="wmd-image-button"><span style="background-position: -100px -20px;"></span></li><li style="left: 175px;" class="wmd-spacer" id="wmd-spacer2"><span style="background-position: -120px -20px;"></span></li><li style="left: 200px;" class="wmd-button" id="wmd-olist-button"><span style="background-position: -120px -20px;"></span></li><li style="left: 225px;" class="wmd-button" id="wmd-ulist-button"><span style="background-position: -140px -20px;"></span></li><li style="left: 250px;" class="wmd-button" id="wmd-heading-button"><span style="background-position: -160px -20px;"></span></li><li style="left: 275px;" class="wmd-button" id="wmd-hr-button"><span style="background-position: -180px -20px;"></span></li><li style="left: 300px;" class="wmd-spacer" id="wmd-spacer3"><span style="background-position: -200px -20px;"></span></li><li style="left: 325px;" class="wmd-button" id="wmd-undo-button"><span style="background-position: -200px -20px;"></span></li><li style="left: 350px;" class="wmd-button" id="wmd-redo-button"><span style="background-position: -220px -20px;"></span></li></ul></div>
+        <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101"></textarea>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" value="e8f398a53d8c7069e9f9ab577d3b8a9a" type="hidden">
+        <input id="author" name="author" type="text">
+    </div>
+</div>            <div class="form-item">
+        <table>
+        <tbody><tr>
+                <td class="vm open-id-login">
+                    <a id="login-link" style="font-size: 200%; margin-left: 30px;" href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f9520658%2fparallax-occlusion-mapping-hlsl-texture-swimming">log in</a>
+                    <script type="text/javascript">
+                        StackExchange.ready(function () {
+                            StackExchange.helpers.onClickDraftSave('#login-link');
+                        });
+                    </script>
+                </td>
+                    <script type="text/javascript">
+                StackExchange.ready(function () {
+                    StackExchange.helpers.bindHelpOverlayEvents($('.vm input'));
+                });
+            </script>
+                <td class="orcell">
+                    <div class="orword">or</div>
+                    <div class="orline"></div>
+                </td>
+            <td class="vm">
+                    <div>
+                        <label for="display-name">Name</label>
+                        <input disabled="disabled" class="actual-edit-overlay" style="opacity: 1; position: absolute; background-color: white; color: black; width: 232px; height: 16px; line-height: 16px; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 12.8px; text-align: start; border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-style: solid; border-color: rgb(153, 153, 153); border-width: 1px;" size="30" maxlength="30" tabindex="105" type="text"><input class="edit-field-overlayed" style="opacity: 0.4; z-index: 1; position: relative;" id="display-name" name="display-name" size="30" maxlength="30" tabindex="105" type="text">
+                    </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input disabled="disabled" class="actual-edit-overlay" style="opacity: 1; position: absolute; background-color: white; color: black; width: 302px; height: 16px; line-height: 16px; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 12.8px; text-align: start; border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-style: solid; border-color: rgb(153, 153, 153); border-width: 1px;" size="40" maxlength="100" value="required, but never shown" tabindex="106" type="text"><input class="edit-field-overlayed" style="opacity: 0.4; z-index: 1; position: relative;" id="m-address" name="m-address" size="40" maxlength="100" tabindex="106" type="text">
+                    <span class="edit-field-overlay">required, but never shown</span>
+                </div>
+                    <div>
+                        <label for="home-page">Home Page</label>
+                        <input disabled="disabled" class="actual-edit-overlay" style="opacity: 1; position: absolute; background-color: white; color: black; width: 302px; height: 16px; line-height: 16px; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 12.8px; text-align: start; border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-style: solid; border-color: rgb(153, 153, 153); border-width: 1px;" size="40" maxlength="200" tabindex="107" type="text"><input class="edit-field-overlayed" style="opacity: 0.4; z-index: 1; position: relative;" id="home-page" name="home-page" size="40" maxlength="200" tabindex="107" type="text">
+                    </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+           
+            <div class="form-submit cbt">
+            <input id="submit-button" value="Post Your Answer" tabindex="110" type="submit">
+            <a href="#" class="discard-answer dno">discard</a>
+    <p class="privacy-policy-agreement">
+        By posting your answer, you agree to the 
+        <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and 
+        <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.
+    </p>
+    <input name="legalLinksShown" value="1" type="hidden">
+        </div>
+    </form>
+
+
+
+        <h2 class="bottom-notice">
+            Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/mapping" class="post-tag" title="show questions tagged 'mapping'" rel="tag">mapping</a> <a href="http://stackoverflow.com/questions/tagged/directx" class="post-tag" title="show questions tagged 'directx'" rel="tag">directx</a> <a href="http://stackoverflow.com/questions/tagged/hlsl" class="post-tag" title="show questions tagged 'hlsl'" rel="tag">hlsl</a> <a href="http://stackoverflow.com/questions/tagged/parallax" class="post-tag" title="show questions tagged 'parallax'" rel="tag">parallax</a> <a href="http://stackoverflow.com/questions/tagged/occlusion" class="post-tag" title="show questions tagged 'occlusion'" rel="tag">occlusion</a> 
+                or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.
+        </h2>
+</div>
+</div>
+<div id="sidebar">
+
+
+
+     <script type="text/javascript">
+        window.showNewUser = true;
+
+            
+                (function(){
+                    var cs = window.sessionStorage && window.sessionStorage['tNewsletter'];
+                    var m = /:\/\/([^\/]*)/.exec(document.referrer);
+                    var h = {'www.reddit.com':1,'news.ycombinator.com':1};
+                    if(window.sessionStorage && (cs || (m && m.length == 2 && h[m[1]]))){
+                        showNewUser = false;
+                        StackExchange.ready(function(){
+                            StackExchange.newsletterAd.loader(m[1], cs);
+                        });
+                    }
+                    if (window.localStorage && showNewUser){
+                        var c = parseInt(localStorage['nuCounter'],10); 
+                        c = isNaN(c) ? 1 : c+1;
+                        window.localStorage['nuCounter'] = c; 
+                        showNewUser = c < 10;
+                    }
+                })()
+            
+     </script>
+    <div class="module newuser newuser-greeting" id="newuser-box" style="">
+        <h4>Hello World!</h4>
+        <div>
+            <p>This is a collaboratively edited question and answer site for <b>professional and enthusiast programmers</b>. It's 100% free, no registration required.</p>
+            <p class="ar">
+                    <a href="http://stackoverflow.com/about?mnu=1">about »</a>&nbsp;&nbsp;&nbsp;
+                <a href="http://stackoverflow.com/faq?mnu=1">faq »</a>
+            </p>
+        </div>
+    </div>
+     <script type="text/javascript">
+        if (showNewUser) {
+            document.getElementById('newuser-box').style.display = '';
+        }
+     </script>
+        <div class="module question-stats">
+        <p class="label-key">tagged</p>
+        <div class="tagged"><a href="http://stackoverflow.com/questions/tagged/mapping" class="post-tag" title="" rel="tag">mapping</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">2540</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/directx" class="post-tag" title="show questions tagged 'directx'" rel="tag">directx</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">2279</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/hlsl" class="post-tag" title="show questions tagged 'hlsl'" rel="tag">hlsl</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">410</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/parallax" class="post-tag" title="show questions tagged 'parallax'" rel="tag">parallax</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">275</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/occlusion" class="post-tag" title="show questions tagged 'occlusion'" rel="tag">occlusion</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">18</span></span><br>
+</div>
+        <table id="qinfo">
+            <tbody><tr>
+                <td><p class="label-key">asked</p></td>
+                <td style="padding-left:10px"><p class="label-key" title="2012-03-01 17:07:24Z"><b>11 months ago</b></p></td>
+            </tr>
+            <tr>
+                <td><p class="label-key">viewed</p></td>
+
+                <td style="padding-left:10px">
+                    <p class="label-key">
+                        <b>528 times</b>
+                    </p>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    
+<div class="module community-bulletin" data-tracker="cb=1">
+    <h4>Community Bulletin</h4>
+    <div class="related">
+        <div class="spacer">
+            <div class="bulletin-item-type"><a href="http://blog.stackoverflow.com/?cb=1" class="event-date" target="_blank">blog</a></div>
+            <div class="bulletin-item-content">
+                <a href="http://blog.stackoverflow.com/2013/02/podcast-42-2/?cb=1" class="question-hyperlink" target="_blank">Podcast #42 – It’s The Exception That Proves The Rule</a>
+            </div>
+            <br class="cbt">
+        </div>
+    </div>
+</div>    
+                <script type="text/javascript">
+                var scriptSrc = "http://engine.adzerk.net/z/8277/adzerk1_2_4_43,adzerk2_2_17_45?keywords=mapping,directx,hlsl,parallax,occlusion";
+                if (document.referrer) {
+                    if (/\?/.test(scriptSrc))
+                        scriptSrc += "&";
+                    else
+                        scriptSrc += "?";
+                    scriptSrc += "xReferrer=" + document.referrer;
+                }
+                StackExchange.ready(function () {
+                    var z = document.createElement("script");
+                    z.type = "text/javascript";
+                    z.async = "true";
+                    z.src = scriptSrc;
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(z, s);
+                });
+            </script>
+        <div class="everyonelovesstackoverflow" id="adzerk2">
+        </div>
+    <div id="hireme">
+        <script type="text/javascript">
+            var careers_adurl="http://careers.stackoverflow.com/gethired/js",careers_cssurl="//careerscdn.sstatic.net/careers/gethired/sidebar.css?fffffffff879eaa0",careers_leaderboardcssurl="//careerscdn.sstatic.net/careers/gethired/ninja.min.css?3a487f",careers_companycssurl="//careerscdn.sstatic.net/careers/gethired/company",careers_adselector="div.hireme, div#hireme";StackExchange.ready(function(){$.ajax({url:"//careerscdn.sstatic.net/careers/gethired/loader.min.js?3a487f",dataType:"script",cache:!0})})
+        </script>
+    </div>
+
+
+
+      
+    
+    <div class="module sidebar-related">
+        <h4 id="h-related">Related</h4>
+        <div class="related" data-tracker="rq=1">
+            <div class="spacer">
+<a href="http://stackoverflow.com/questions/1960798/shadow-maps-unable-to-properly-project-shadows-in-some-situations?rq=1" class="question-hyperlink" "="">Shadow maps unable to properly project shadows in some situations?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/3080824/hlsl-empty-fx-file-x3000-unexpected-token?rq=1" class="question-hyperlink" "="">HLSL: Empty fx file: X3000: unexpected token '{'</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/3946902/rendering-depth-in-hlsl?rq=1" class="question-hyperlink" "="">Rendering depth in HLSL</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/4159867/parallax-shader?rq=1" class="question-hyperlink" "="">Parallax shader</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/4614515/dropdown-ui-widget-for-fx-hlsl-shader?rq=1" class="question-hyperlink" "="">Dropdown UI widget for fx/hlsl shader</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/4868544/directx-9-hlsl-texture-sampling-issues?rq=1" class="question-hyperlink" "="">DirectX 9 HLSL Texture Sampling Issues</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/5425357/directx-hlsl-what-are-input-and-output-semantics-for?rq=1" class="question-hyperlink" "="">directx/HLSL what are input and output semantics for?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/5506138/uniform-keyword-in-hlsl?rq=1" class="question-hyperlink" "="">uniform keyword in HLSL</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/5516768/directx-hlsl-error-ps2-0?rq=1" class="question-hyperlink" "="">DirectX/HLSL error PS2.0</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/7266715/problem-generating-perlin-noise-using-hlsl-shader?rq=1" class="question-hyperlink" "="">Problem generating perlin noise using HLSL shader</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/7542209/texture-transform-matrix-in-a-constantbuffer-not-working-properly?rq=1" class="question-hyperlink" "="">Texture transform matrix in a constantbuffer not working properly</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/8137199/c-shader-hlsl-how-to-send-to-the-shader-the-texture-sampler2d?rq=1" class="question-hyperlink" "="">C++ shader, HLSL , how to send to the shader , the texture? “sampler2d”?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/10199915/isosurface-texturing-issue?rq=1" class="question-hyperlink" "="">Isosurface Texturing Issue</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/10856727/efficient-way-to-render-a-bunch-of-layered-textures?rq=1" class="question-hyperlink" "="">Efficient way to render a bunch of layered textures?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/11169195/hlsl-shader-phong-w-normal-map?rq=1" class="question-hyperlink" "="">HLSL Shader (Phong /w normal map)</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/11308585/the-vertex-structure-of-a-mesh-vs-the-vertex-structure-of-the-vertex-shader?rq=1" class="question-hyperlink" "="">The vertex structure of a mesh vs the vertex structure of the vertex shader</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/12041358/hlsl-point-sprite-texture-coordinates-work-on-ati-not-nvidia?rq=1" class="question-hyperlink" "="">HLSL point sprite texture coordinates work on ATI not NVIDIA</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/12162408/hlsl-invalid-ps-2-0-input-semantic-position0?rq=1" class="question-hyperlink" "="">HLSL invalid ps_2_0 input semantic POSITION0</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13006486/hlsl-getting-values-from-texture-position?rq=1" class="question-hyperlink" "="">HLSL getting values from texture position</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13388952/directx-shader-not-working-right?rq=1" class="question-hyperlink" "="">DirectX Shader not working right?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13665691/hlsl-slot-indices-shared-or-separate-between-different-resource-types?rq=1" class="question-hyperlink" "="">HLSL slot indices shared or separate between different resource types?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13781764/geometry-shader-distortion?rq=1" class="question-hyperlink" "="">Geometry Shader distortion</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13981361/do-you-use-multiple-samplerstates-for-multiple-textures?rq=1" class="question-hyperlink" "="">Do you use multiple SamplerStates for multiple Textures</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/14204364/calculating-screen-texture-coordinates-in-cg-hlsl?rq=1" class="question-hyperlink" "="">Calculating screen texture coordinates in CG/HLSL</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/14418470/simple-hlsl-file-doesnt-work?rq=1" class="question-hyperlink" "="">Simple HLSL file doesn't work?</a>
+</div>
+
+        </div>
+    </div>
+</div>
+
+<div id="feed-link">
+    <div id="feed-link-text"><a href="http://stackoverflow.com/feeds/question/9520658" title="feed of this question and its answers"><span class="feed-icon"></span>question feed</a></div>
+</div>
+<script type="text/javascript">
+StackExchange.ready(function(){$.get('/posts/9520658/ivc/021b');});
+</script>
+<noscript>
+    <div><img src="/posts/9520658/ivc/021b" class="dno" alt="" width="0" height="0"></div>
+</noscript><div style="display:none" id="prettify-lang"></div></div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                    <a href="http://stackoverflow.com/about">about</a> |
+                <a href="http://stackoverflow.com/faq">faq</a> |
+                <a href="http://blog.stackexchange.com/?blb=1">blog</a> |
+                    <a href="http://chat.stackoverflow.com/">chat</a> |
+                <a href="http://data.stackexchange.com/">data</a> |
+                <a href="http://stackexchange.com/legal">legal</a> |
+                <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> |
+                <a href="http://stackexchange.com/about/hiring">jobs</a> |
+                <a href="http://engine.adzerk.net/redirect/0/2776/2751/0/4de3c60f719c4dfcb1a57531c7050090/0">advertising info</a> |
+
+                <a onclick="StackExchange.switchMobile('on', '/questions/9520658/parallax-occlusion-mapping-hlsl-texture-swimming')">mobile</a> |
+
+                <b><a href="http://stackoverflow.com/help">contact us</a></b>
+                  | <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                <div id="footer-sites">
+                    
+                        <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://stackoverflow.com/">stackoverflow.com</a>&nbsp; 
+                        <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://stackapps.com/">api/apps</a>&nbsp; 
+                        <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://careers.stackoverflow.com/">careers 2.0</a>&nbsp; 
+                        <span style="color:#E8272C;font-size:140%">■</span>&nbsp;<a href="http://serverfault.com/">serverfault.com</a>&nbsp; 
+                        <span style="color:#00AFEF;font-size:140%">■</span>&nbsp;<a href="http://superuser.com/">superuser.com</a>&nbsp; 
+                        <span style="color:#969696;font-size:140%">■</span>&nbsp;<a href="http://meta.stackoverflow.com/">meta</a>&nbsp; 
+                        <span style="color:#46937D;font-size:140%">■</span>&nbsp;<a href="http://area51.stackexchange.com/">area&nbsp;51</a>&nbsp; 
+                        <span style="color:#C0D0DC;font-size:140%">■</span>&nbsp;<a href="http://webapps.stackexchange.com/">webapps</a>&nbsp; 
+                        <span style="color:#000000;font-size:140%">■</span>&nbsp;<a href="http://gaming.stackexchange.com/">gaming</a>&nbsp; 
+                        <span style="color:#dd4814;font-size:140%">■</span>&nbsp;<a href="http://askubuntu.com/">ubuntu</a>&nbsp; 
+                        <span style="color:#9ce4fe;font-size:140%">■</span>&nbsp;<a href="http://webmasters.stackexchange.com/">webmasters</a>&nbsp; 
+                        <span style="color:#cf4d3f;font-size:140%">■</span>&nbsp;<a href="http://cooking.stackexchange.com/">cooking</a>&nbsp; 
+                        <span style="color:#f4f28d;font-size:140%">■</span>&nbsp;<a href="http://gamedev.stackexchange.com/">game development</a>&nbsp; 
+                        <span style="color:#0f3559;font-size:140%">■</span>&nbsp;<a href="http://math.stackexchange.com/">math</a>&nbsp; 
+                        <span style="color:#f2f2f2;font-size:140%">■</span>&nbsp;<a href="http://photo.stackexchange.com/">photography</a>&nbsp; 
+                        <span style="color:#037187;font-size:140%">■</span>&nbsp;<a href="http://stats.stackexchange.com/">stats</a>&nbsp; 
+                        <span style="color:#f1e7cc;font-size:140%">■</span>&nbsp;<a href="http://tex.stackexchange.com/">tex</a>&nbsp; 
+                        <span style="color:#e1cdae;font-size:140%">■</span>&nbsp;<a href="http://english.stackexchange.com/">english</a>&nbsp; 
+                        <span style="color:#a2d9f6;font-size:140%">■</span>&nbsp;<a href="http://cstheory.stackexchange.com/">theoretical cs</a>&nbsp; 
+                        <span style="color:#1b3e6c;font-size:140%">■</span>&nbsp;<a href="http://programmers.stackexchange.com/">programmers</a>&nbsp; 
+                        <span style="color:#293a5d;font-size:140%">■</span>&nbsp;<a href="http://unix.stackexchange.com/">unix</a>&nbsp;
+                        <span style="color:#bec0cb;font-size:140%">■</span>&nbsp;<a href="http://apple.stackexchange.com/">apple</a>&nbsp;
+                        <span style="color:#939185;font-size:140%">■</span>&nbsp;<a href="http://wordpress.stackexchange.com/">wordpress</a>&nbsp;
+                        <span style="color:#ebf5f5;font-size:140%">■</span>&nbsp;<a href="http://physics.stackexchange.com/">physics</a>&nbsp;
+                        <span style="color:#4176ab;font-size:140%">■</span>&nbsp;<a href="http://diy.stackexchange.com/">home&nbsp;improvement</a>&nbsp;
+                        <span style="color:#d1d8d7;font-size:140%">■</span>&nbsp;<a href="http://gis.stackexchange.com/">gis</a>&nbsp;
+                        <span style="color:#e5e2d3;font-size:140%">■</span>&nbsp;<a href="http://electronics.stackexchange.com/">electrical&nbsp;engineering</a>&nbsp;
+                        <span style="color:#a4c639;font-size:140%">■</span>&nbsp;<a href="http://android.stackexchange.com/">android</a>&nbsp;
+                        <span style="color:#2e4e60;font-size:140%">■</span>&nbsp;<a href="http://security.stackexchange.com/">security</a>&nbsp;
+                        <span style="color:#45bcb5;font-size:140%">■</span>&nbsp;<a href="http://bicycles.stackexchange.com/">bicycles</a>&nbsp;
+                        <span style="color:#00adee;font-size:140%">■</span>&nbsp;<a href="http://dba.stackexchange.com/">dba</a>&nbsp;
+                        <span style="color:#2edaf0;font-size:140%">■</span>&nbsp;<a href="http://drupal.stackexchange.com/">drupal</a>&nbsp;
+                        <span style="color:#213951;font-size:140%">■</span>&nbsp;<a href="http://sharepoint.stackexchange.com/">sharepoint</a>&nbsp;
+                        <span style="color:#73abb3;font-size:140%">■</span>&nbsp;<a href="http://scifi.stackexchange.com/">scifi&nbsp;&amp;&nbsp;fantasy</a>&nbsp;
+                        <span style="color:#23629F;font-size:140%">■</span>&nbsp;<a href="http://ux.stackexchange.com/">user&nbsp;experience</a>&nbsp;
+                        <span style="color:#faff72;font-size:140%">■</span>&nbsp;<a href="http://skeptics.stackexchange.com/">skeptics</a>&nbsp;
+                        <span style="color:#623121;font-size:140%">■</span>&nbsp;<a href="http://rpg.stackexchange.com/">rpg</a>&nbsp;
+                        <span style="color:#e4be88;font-size:140%">■</span>&nbsp;<a href="http://judaism.stackexchange.com/">judaism</a>&nbsp;
+                        <span style="color:#ffecb1;font-size:140%">■</span>&nbsp;<a href="http://mathematica.stackexchange.com/">mathematica</a>&nbsp;
+                        <span style="color:#1b8598;font-size:140%">■</span>&nbsp;<a href="http://travel.stackexchange.com/">travel</a>&nbsp;
+                </div>
+            </div>
+            <div id="footer-flair">
+                <a class="peer1" href="http://www.peer1.com/stackoverflow"></a>  
+	            <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                <div id="svnrev">rev 2013.2.8.1401</div>
+                        </div>
+            <div id="copyright">
+                site design / logo © 2013 stack exchange inc; 
+                user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            
+
+        </div>
+    </div>
+    
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-1']);
+        _gaq.push(['_setCustomVar', 1, 'tags', '|mapping|directx|hlsl|parallax|occlusion|']); 
+_gaq.push(['_trackPageview']);
+    var _qevents = _qevents || [];
+    (function(){
+        var s=document.getElementsByTagName('script')[0];
+        var ga=document.createElement('script');
+        ga.type='text/javascript';
+        ga.async=true;
+        ga.src='http://www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(ga,s);
+        var sc=document.createElement('script');
+        sc.type='text/javascript';
+        sc.async=true;
+        sc.src='http://edge.quantserve.com/quant.js'; 
+        s.parentNode.insertBefore(sc,s);
+    })();
+    </script>
+    <script type="text/javascript">
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>    
+    
+
+</body></html>

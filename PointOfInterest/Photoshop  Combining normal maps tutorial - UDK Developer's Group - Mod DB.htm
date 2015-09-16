@@ -1,0 +1,886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><head>
+	<title>Photoshop: Combining normal maps tutorial - UDK Developer's Group - Mod DB</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	 
+	<meta name="keywords" content="udk developers group, photoshop combining normal maps, articles, information, data, gossip, feature, read, view, discuss">
+	<meta name="description" content="In this tutorial I will show you two methods in photoshop for merging together two normal maps into one. The first one - the lazy method - is the most famous one, but sadly also quite bad because it destroys color information. So the second method shows...">
+	<meta property="og:title" content="Photoshop: Combining normal maps tutorial - UDK Developer's Group">
+	<meta property="og:description" content="In this tutorial I will show you two methods in photoshop for merging together two normal maps into one. The first one - the lazy method - is the most famous one, but sadly also quite bad because it destroys color information. So the second method shows...">
+	<meta property="og:site_name" content="Mod DB">
+	<meta property="fb:app_id" content="210134345672070">
+	<meta property="og:type" content="article"> 
+	<meta property="og:url" content="http://www.moddb.com/groups/udk-developers-group/tutorials/photoshop-combining-normal-maps"> 
+	<meta property="og:image" content="http://media.moddb.com/images/articles/1/89/88853/preview.jpg"> 
+	 
+	<link rel="stylesheet" type="text/css" media="screen, projection" href="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/index.css">
+	<link rel="stylesheet" type="text/css" media="screen, projection" id="theme" href="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/screen_default.css"> 
+	<link rel="stylesheet" type="text/css" media="print" href="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/index_002.css">
+	<link rel="icon" href="http://www.moddb.com/favicon.ico" type="image/x-icon">
+	<link rel="alternate" href="http://rss.moddb.com/groups/udk-developers-group/tutorials/feed/rss.xml" type="application/rss+xml" title="Photoshop: Combining normal maps tutorial - UDK Developer's Group feed"> 
+	<script kabl="89517" style="display: none !important" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/ga.js" async="" type="text/javascript"></script><script kabl="89517" style="display: none !important" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/beacon.js" async=""></script><script type="text/javascript" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/index.js"></script>
+	
+	<script type="text/javascript" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/triggertag.js"></script>
+<script type="text/javascript">getTrigger('6328');</script><script src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/gn_tracking.js" type="text/javascript"></script><script src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/geo.php" type="text/javascript"></script><script src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/6328_CA.htm" type="text/javascript"></script> 
+	<script>var _comscore = _comscore || [];_comscore.push({ c1: "2", c2: "6036161" });(function() {var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";el.parentNode.insertBefore(s, el);})();</script><noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=6036161&cv=2.0&cj=1" /></noscript> 
+</head>
+<body><div style="display: none;" id="cboxOverlay"></div><div style="padding-bottom: 20px; padding-right: 0px; display: none;" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div class="" style="width: 0px; height: 0px;" id="cboxLoadedContent"></div><div class="" id="cboxLoadingOverlay"></div><div class="" id="cboxLoadingGraphic"></div><div class="" id="cboxTitle"></div><div class="" id="cboxCurrent"></div><div class="" id="cboxSlideshow"></div><div class="" id="cboxNext"></div><div class="" id="cboxPrevious"></div><div class="" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position:absolute; top:0; left:0; width:9999px; height:0;"></div></div>
+
+<script type="text/javascript">
+if ((typeof(f366184)=='undefined' || f366184 > 0) ) {
+if(typeof(gnm_ord)=='undefined') gnm_ord=Math.random()*10000000000000000; if(typeof(gnm_tile) == 'undefined') gnm_tile=1;
+document.write('<scr'+'ipt src="http://n4403ad.doubleclick.net/adj/gn.moddb.com/;sect=;sz=47x47;tile='+(gnm_tile++)+';ord='+gnm_ord+'?" type="text/javascript"></scr'+'ipt>');
+}
+</script> 
+<div id="body">
+<div class="container">
+	<div id="header">
+		<div id="searchbox">
+			 
+			<span>Hello guest <a href="http://www.moddb.com/members/register">register</a> or <a href="https://secure.moddb.com/members/login" id="togglelogin">sign in</a></span><span class="arrow">&nbsp;</span>
+			<form action="/search" id="cse-search-box" class="search" method="get"><input name="cx" value="008031850949085947773:d7wlp9z9x4y" type="hidden"><input name="cof" value="FORID:11" type="hidden"><input name="ie" value="UTF-8" type="hidden"><input autocomplete="off" name="q" value="Search ..." maxlength="500" size="50" id="sitesearch" class="text swapvalue swapvaluesmart" alt="Search ..." type="text"><input name="sa" value="Search" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/btn_search_box.png" class="button" alt="Search Mod DB" title="Search Mod DB" type="image"></form>			 
+			<form action="https://secure.moddb.com/members/login" method="post" name="memberform" class="login"><input name="referer" value="groups/udk-developers-group/tutorials/photoshop-combining-normal-maps/" type="hidden"><input name="rememberme" value="1" type="hidden"><input name="members" value="1" type="hidden"><input name="username" value="username" maxlength="500" size="50" alt="username" class="text swapvalue" type="text"><input name="password" value="" maxlength="30" size="50" alt="password" class="text password swapvalue" type="password"><input name="members" value="GO" class="button" alt="Sign In" title="Sign In" type="submit"></form>			<span class="login" style="display: none;">or with: <a href="https://secure.moddb.com/members/loginext/steam" class="steamiconsml" style="float: right; margin: 3px 1px 0 4px;" title="Click to connect via Steam"></a><a href="https://secure.moddb.com/members/loginext/google" class="googleiconsml" style="float: right; margin: 3px 1px 0 4px;" title="Click to connect via Google"></a><a href="https://secure.moddb.com/members/loginext/twitter" class="twittericonsml" style="float: right; margin: 3px 1px 0 4px;" title="Click to connect via Twitter"></a><a href="https://secure.moddb.com/members/loginext/facebook" class="facebookiconsml" style="float: right; margin: 3px 1px 0 4px;" title="Click to connect via Facebook"></a></span>
+			 
+		<ul class="suggest_search"></ul></div>
+
+		<h1>Photoshop: Combining normal maps tutorial - UDK Developer's Group</h1>
+		<a href="http://www.moddb.com/" class="logo" title="Mod DB Home"></a>
+
+		 
+		<ul class="tabs">
+			<li class="on"><a href="http://www.moddb.com/" title="All platforms">HOME</a></li>
+			 
+			<li><a href="http://www.moddb.com/platforms/set/iphone">iPhone</a></li>
+			 
+			<li><a href="http://www.moddb.com/platforms/set/x360">X360</a></li>
+			 
+			<li><a href="http://www.moddb.com/platforms/set/wii">Wii</a></li>
+			 
+			<li><a href="http://www.moddb.com/platforms/set/ps3">PS3</a></li>
+			 
+			<li><a href="http://www.moddb.com/platforms/set/psp">PSP</a></li>
+			 
+			<li><a href="http://www.moddb.com/platforms/set/ds">DS</a></li>
+			 
+			<li class="none"><a href="http://www.moddb.com/platforms/selection" rel="iframe=true;innerHeight=480;innerWidth=670" class="thickbox" title="Choose any platform">»</a></li>
+		</ul>
+	</div>
+
+	<div id="subheader">
+		<ul class="tabs">
+			<li class="firsttab"><a href="http://www.moddb.com/games">games</a>
+				<ul>
+					<li><a href="http://www.moddb.com/games/top">Top 100</a></li>
+					<li><a href="http://www.moddb.com/games/rated">Top Rated</a></li>
+					<li><a href="http://www.moddb.com/games/add">Add Game</a></li>
+					<li><a href="http://www.desura.com/games" title="Games Digital Distribution">Desura</a></li>
+					<li><a href="http://www.indiedb.com/">Indies</a></li>
+					<li><a href="http://www.slidedb.com/">Mobiles</a></li>
+					<li><a href="http://www.indieroyale.com/">Bundles</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.moddb.com/mods">mods</a>
+				<ul>
+					<li><a href="http://www.moddb.com/mods/top">Top 100</a></li>
+					<li><a href="http://www.moddb.com/mods/rated">Top Rated</a></li>
+					<li><a href="http://www.moddb.com/mods/add">Add Mod</a></li>
+					<li><a href="http://www.desura.com/mods" title="Mods Digital Distribution">Desura</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.moddb.com/addons">addons</a></li>
+			<li><a href="http://www.moddb.com/downloads">downloads</a></li>
+			<li><a href="http://www.moddb.com/videos">videos</a>
+				<ul>
+					<li><a href="http://www.moddb.com/audio">audio</a></li>
+					<li><a href="http://www.moddb.com/images">images</a></li>
+					<li><a href="http://youtube.com/gamedevtv" rel="nofollow" target="_blank">youtube</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.moddb.com/news">news</a>
+				<ul>
+					<li><a href="http://www.moddb.com/reviews">reviews</a></li>
+					<li><a href="http://www.moddb.com/features">features</a></li>
+					<li><a href="http://www.moddb.com/events">events</a></li>
+					<li><a href="http://www.moddb.com/headlines">headlines</a></li>
+					<li><a href="http://www.moddb.com/blog">official blog</a></li>
+					<li><a href="http://www.moddb.com/blogs">blogs</a></li>
+					<li><a href="http://www.moddb.com/topsites">topsites</a></li>
+					<li><a href="http://www.modhof.com/">hall of fame</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.moddb.com/tutorials">tutorials</a></li>
+			<li><a href="http://www.moddb.com/engines">engines</a>
+				<ul>
+					<li><a href="http://www.moddb.com/engines/top">Top 100</a></li>
+					<li><a href="http://www.moddb.com/engines/rated">Top Rated</a></li>
+					<li><a href="http://www.moddb.com/engines/add">Add Engine</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.moddb.com/company">developers</a>
+				<ul>
+					<li><a href="http://www.moddb.com/company/top">Top 100</a></li>
+					<li><a href="http://www.moddb.com/company/add">Add Dev</a></li>
+				</ul>
+			</li>
+			<li class="on"><a href="http://www.moddb.com/groups">groups</a>
+				<ul>
+					<li><a href="http://www.moddb.com/groups/top">Top 100</a></li>
+					<li><a href="http://www.moddb.com/company/add">Add Group</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.moddb.com/forum">forums</a></li>
+			<li><a href="http://www.splitreason.com/moddb" rel="nofollow" target="_blank">store <img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/store.png" alt="Store" title="Mod DB Merchandise"></a>
+				<ul>
+					<li><a href="http://twitter.com/moddb" rel="nofollow" target="_blank">twitter</a></li>
+					<li><a href="http://www.facebook.com/moddb" rel="nofollow" target="_blank">facebook</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.moddb.com/jobs" style="font-weight: bold;">jobs!</a></li>
+		</ul>
+	</div>
+
+	 
+	 
+	 
+
+	 
+
+	 
+	<div class="column span-all">
+		<div class="headerbox" style="background-image: url(http://media.moddb.com/images/groups/1/3/2322/UDK_header.jpg);">
+			<div class="headercorner">
+				<div class="title">
+					<h2><a href="http://www.moddb.com/groups/udk-developers-group">UDK Developer's Group</a></h2>
+					<h3>Hardware &amp; Tech</h3>
+					<span class="bg"></span>
+				</div>
+				<ul class="menu">
+					 
+					<li class="firsttab"><a href="http://www.moddb.com/groups/udk-developers-group">summary</a></li> 
+					<li class=""><a href="http://www.moddb.com/groups/udk-developers-group/members">members</a></li> 
+					<li class=""><a href="http://www.moddb.com/groups/udk-developers-group/news">news</a></li> 
+					<li class=""><a href="http://www.moddb.com/groups/udk-developers-group/features">features</a></li> 
+					<li class="on "><a href="http://www.moddb.com/groups/udk-developers-group/tutorials">tutorials</a></li> 
+					<li class=""><a href="http://www.moddb.com/groups/udk-developers-group/downloads">downloads</a></li> 
+					<li class=""><a href="http://www.moddb.com/groups/udk-developers-group/addons">addons</a></li> 
+					<li class=""><a href="http://www.moddb.com/groups/udk-developers-group/videos">videos</a></li> 
+					<li class=""><a href="http://www.moddb.com/groups/udk-developers-group/images">images</a></li> 
+					<li class=""><a href="http://www.moddb.com/groups/udk-developers-group/forum">forum</a></li> 
+					 
+				</ul>
+			</div>
+		</div>
+		<div class="headernormalbox normalbox">
+			<div class="inner">
+				<div class="body clear">
+					 
+					<div class="tooltip"></div>
+										<p>This is a group for all developers using the Unreal Developer's Kit.
+Open for all commercial, non-commercial and personal projects!</p> 
+				</div>
+			</div>
+		</div>
+		 
+
+		 
+	</div>
+
+	 
+	<div class="column span-300-alt first">
+		 
+		 
+	 
+		 
+		<div class="normalbox adminbox" id="readarticle">
+			<div class="normalcorner">
+				 
+<span class="sidesocial sidesocialnorm">
+	<div class="addthis_toolbox addthis_default_style" addthis:url="http://www.moddb.com/groups/udk-developers-group/tutorials/photoshop-combining-normal-maps" addthis:title="Photoshop: Combining normal maps tutorial - UDK Developer's Group"><a class="addthis_button_twitter" tw:via="ModDB" tw:related="Desura,Indie DB,Indie Royale,Slide DB" style="margin-bottom: 5px;"></a><a class="addthis_button_facebook" style="margin-bottom: 5px;"></a><a class="addthis_button_reddit" style="margin-bottom: 5px;"></a><a class="addthis_button_preferred_1" style="margin-bottom: 5px;"></a><a class="addthis_button_preferred_2" style="margin-bottom: 5px;"></a><a class="addthis_button_preferred_3" style="margin-bottom: 5px;"></a><a class="addthis_counter addthis_bubble_style" id="promosocialnorm96"></a></div><style type="text/css">#promosocialnorm96 { width: 16px !important; }</style> 
+</span>
+ 				<div class="title">
+					<span class="options">
+												<a href="http://www.moddb.com/groups/udk-developers-group/tutorials/feed" class="rssicon" title="RSS Feed">RSS Feed</a>
+ 					</span>
+					<span class="heading">Photoshop: Combining normal maps</span>
+				</div>
+			</div>
+			<div class="inner">
+				<div class="body bodyarticle clear">
+					 
+					<div class="tooltip"></div>
+										<p class="introductiontext">In this tutorial I will show you 
+two methods in photoshop for merging together two normal maps into one. 
+The first one - the lazy method - is the most famous one, but sadly also
+ quite bad because it destroys color information. So the second method 
+shows you how to properly merge normal maps together so that you get a 
+map with the same quality that CrazyBump or any other 3rd party software
+ would give you. If made into an action, you can merge your normal maps 
+together in just one second.</p> 
+					<p class="introduction clear">
+						Posted by <a href="http://www.moddb.com/members/niteshade">Niteshade</a> on Oct 6th, 2011						 
+						<br><em>Advanced Textures.</em> 
+					</p>
+					<div id="articlecontent"><p><strong>.: Intro :.</strong></p>
+<p>This is an advanced tutorial: you should be very familiar with 
+photoshop and 3D modelling (texturing) in general. It is also strongly 
+recommended that you know how to create an action inside photoshop, so 
+you can create a macro for merging NM's instead of Photoshop. It would 
+also help if you know the theory and technology behind normal mapping.<br>
+&nbsp;</p>
+<p>&nbsp;<strong>.: The lazy method :.</strong></p>
+<p>Start out by opening your two normal maps inside photoshop. Move one 
+of them over to the other, or take two equal-sized cuts from both of 
+them and paste into a new picture. Rename the top normal map "NM 1" and 
+the bottom one "NM 2".</p>
+<p>Here's my two normal maps:</p>
+<p><img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/pic1jk.jpg" alt="" height="350" width="600"></p>
+<p><img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/pic2iq.jpg" alt="" height="350" width="600"></p>
+<p>The easy and lazy method for combining them is to just set the blend 
+mode of the top layer to: "Overlay"I say "lazy" method because once you 
+know the proper method, and have made a macro/action for it: there is no
+ need to use this first method. Also, <strong>this method destroys color information in the blue channel</strong>, and I'll show you why that's bad. But before I move on to the proper method, lets go through some normal map basics:<br>
+&nbsp;</p>
+<p>&nbsp;<strong>.: Theory :.</strong><br>
+A typical tangent space normal map has three channels:<br>
+R - Red: Which represents the X values of the normal in a -1 to +1 range<br>
+G - Green: Which represents the Y values of the normal in a -1 to +1 range<br>
+B - Blue: Which represents the Z values of the normal in a 0 to +1 range</p>
+<p>What does this mean?<br>
+To explain this better, we must be clear about what a surface normal is:
+ A surface normal to a flat surface is a vector that is perpendicular 
+(90 deg) to that surface. On a non-corrupt model, the surface normals 
+are pointing outwards from the mesh, kinda like the spines of a 
+hedgehog. In computer graphics, normal vectors are attached to both 
+vertices and polygons.<br>
+The normal is used to determine what orientation a surface has toward a 
+light source (flat shading), or the orientation of each of the vertices 
+in order to fake a curved surface (phong shading). In other words: the 
+normal determines how the light will bounce off the surface.&nbsp;So 
+with normal mapping we can shift pixels to fake geometry that doesn't 
+actually exist on the mesh.</p>
+<p>On a height map (aka Bumpmap) - which only has one channel with a 0 
+to +1 range - the channel (color) value only determines a displacement 
+along the existing, unchanged, normal vector of the face. This means 
+that heightmaps only store height intensity in direct relation to the 
+viewpoint of the camera. The 0 to 255 color range is a representation of
+ the 0 to +1 normal vector range (Z).</p>
+<p>A normal map on the other hand, has three channels. One for 
+manipulating the normal vector along X (red), one along Y (green) and 
+one with the same functionality as a heightmap (blue).So yeah basically:
+ since not all three channels are storing data in the same way we need 
+to make sure we handle each channel independently when merging. But even
+ more important though is that the red and green channels has values in 
+both the negative and positive range (-1 to 1 - represented as channel 
+color values 0 to 255) unlike the blue channel. Therefore they need to 
+be - like I said - treated differently. </p>
+<p>To make things more clear:&nbsp;A base normal has the value 0 0 1 - 
+it's perpendicular (90deg) to the surface it originates from. If we 
+represent 0 0 1 as a color on a normal map, then our value would be 127 
+127 255. Remember that red and green have both positive and negative 
+values, so 0 here is either 127 or 128 (both are in the middle of the 
+0-255 range).Now, you might not understand all this (or maybe you do?) 
+but at least we can agree on one thing: a normal map is complex, and to 
+just use one blendmode for all colors would be reckless and plain 
+stupid. But "why is overlay so BAD?" is still a good question. The 
+answer is that it does not properly merge the blue channel - in fact, 
+it's not even CLOSE. Try it yourself:</p>
+<p>Make a document with both your normal maps in them. Then under the 
+channels window you turn on "Blue" instead of RGB and then you change 
+the blend mode of the top normal map to "Overlay". The result will be a 
+lot of white - a loss of color information. It's destroyed, and the 
+result of this is displayed in the bottom pic of this tutorial.<br>
+&nbsp;</p>
+<p>&nbsp;<strong>.: The proper method :.</strong></p>
+<p>Inside your document (where you have both your normal maps ofc), 
+rename the top normal map to "NM 1" and the bottom one to "NM 2".<br>
+Duplicate "NM 1" and rename the copy to "NM 1 ADD"<br>
+Rename "NM 1" to "NM 1 SUB"<br>
+Thats the preparations. Time to get to work!</p>
+<p>Select "NM 1 ADD"Go to Image -&gt; Adjustments -&gt; Levels (yes, no adjustment layer: these changes should be permanent anyway)<br>
+Set the Red input to 128 1 255<br>
+Set the Red output to 128 255<br>
+Set the Green input to 128 1 255<br>
+Set the Green output to 128 255<br>
+and last, set the Blue output to 0 0<br>
+&nbsp;<img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/pic3xd.jpg" alt="" height="350" width="600"></p>
+<p>What did we just do? We removed the negative R and G values from "NM 1
+ ADD" and we removed the blue channel entirely. Now we are going to 
+remove the positive values from "NM 1 SUB"</p>
+<p>Select "NM 1 SUB"<br>
+Go to Image -&gt; Adjustments -&gt; Levels<br>
+Set the Red input to 0 1 127<br>
+Set the Red output to 0 127<br>
+Set the Green input to 0 1 127<br>
+Set the Green output to 0 127<br>
+DON'T touch the Blue channel<br>
+&nbsp;<img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/pic4ci.jpg" alt="" height="350" width="600"></p>
+<p>Now we need to find out how much the ADD and SUB layers deviate from 
+the default normal vector value (127 127 255) and shift the colors of 
+these layers so they match each other. We need to add this value to the 
+SUB layer and subtract it from the ADD layer to get the proper offsets 
+for each layer. So next up - the mystery tool, that not even I 
+understand entirely: The channel mixer</p>
+<p>Select "NM 1 SUB"<br>
+Go to Image -&gt; Adjustments -&gt; Channel Mixer<br>
+Set the red channel to -100% RED, and it's constant to +50%<br>
+Set the green channel to -100% GREEN, and it's constant to +50%<br>
+Set the blue channel to -100% BLUE, and it's constant to 100%<br>
+The channels are now properly shifted/offsetted<br>
+&nbsp;<img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/pic5ey.jpg" alt="" height="350" width="600"></p>
+<p>Now select "NM 1 ADD"<br>
+Go to Image -&gt; Adjustments -&gt; Channel Mixer<br>
+Set the red channel to +100% RED, and it's constant to -50%<br>
+Set the green channel to +100% GREEN, and it's constant to -50%<br>
+Leave the blue channel - it doesn't contain any blue colors anyway 
+(remember that we removed the blue colors entirely from this layer 
+earlier?)<br>
+&nbsp;<img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/pic6ez.jpg" alt="" height="350" width="600"></p>
+<p>As it is now, "NM_1_SUB" contains R,G and B vector information and 
+"NM_1_ADD" contains only R and G vector information. Time to merge them 
+together:<br>
+Select "NM_1_SUB" layer and set the blend mode to "Subtract"<br>
+Select the "NM_1_ADD" layer and set the blend mode to "Linear Dodge: Add"<br>
+&nbsp;<img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/pic7w.jpg" alt="" height="350" width="600"></p>
+<p>Almost done, but there's a problem. If you look on the blue channel 
+you will see that that the color is darker at intersections, meaning 
+that even though the "NM 1" and "NM 2" have the same blue values here, 
+it gets lowered by the blend mode. We can fix this by breaking up the 
+"NM 1 SUB" layer into two parts: one dealing with Red and Green and one 
+dealing with Blue.<br>
+&nbsp;<img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/pic8g.jpg" alt="" height="350" width="600"></p>
+<p>Select "NM 1 SUB" again and set the blend mode back to "Normal".<br>
+Then duplicate the layer and rename the copy "NM 1 SUB RG".<br>
+Rename the original "NM 1 SUB B".<br>
+Select "NM 1 SUB RG" and then select it's Blue channel.<br>
+Press Ctrl+A to select the entire canvas. Then pick a black color and press Shift+F5 to fill this channel.<br>
+Then select "NM 1 SUB B" and select the Red and Green channels (hold Shift to select both).<br>
+Press Shift+F5 and fill those channels with black.<br>
+Now set the blend mode of "NM 1 SUB RG" to "Difference" and the blend mode of "NM 1 SUB B" to "Exclusion"<br>
+Your merged normals might look the same as before, but have a look at the blue channel. Intersections are no longer darker.</p>
+<p>But what about CrazyBump?<br>
+CrazyBump is a great tool because it offers you very good control over 
+what you are doing. So the reason you want to be able to merge normal 
+maps together inside of Photoshop is simple: SPEED. If you make an 
+action out of this - which I strongly recommend - then it's 10 or even 
+20 times faster (if not faster) than opening up CrazyBump, loading your 
+normal map, opening the mixer, loading another map, saving everything...</p>
+<p>Finally, here's my different results (the lazy method, the proper 
+method and merging inside of crazybump) being previewed inside 
+CrazyBump.&nbsp;<br>
+&nbsp;<img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/pic9n.jpg" alt="" height="1050" width="600"></p>
+<p>Notice how the lazy method seem to lack intensity. That's because the blue channel data was destroyed by the Overlay blend mode.</p>
+<p>Here's my Photoshop action:<br>
+<a href="http://www.speedyshare.com/files/30644565/Nightshade_NM_merge.atn" title="DOWNLOAD"><strong><br>
+</strong></a></p><h2><a href="http://www.speedyshare.com/files/30644565/Nightshade_NM_merge.atn" title="DOWNLOAD"><strong>DOWNLOAD LINK</strong></a></h2><a href="http://www.speedyshare.com/files/30644565/Nightshade_NM_merge.atn" title="DOWNLOAD"><strong>
+</strong></a><p><a href="http://www.speedyshare.com/files/30644565/Nightshade_NM_merge.atn" title="DOWNLOAD"><strong></strong></a>(import
+ it in Photoshop and then just rename the TOP normal map layer to "NM 1"
+ without the quotation marks, and the BOTTOM normal map layer to "NM 2" 
+and you are ready to go.</p>
+<p>Hopefully you learned something!<br>
+Cheers!
+</p></div>
+				</div>
+				 
+			</div>
+		</div>
+		 
+	 
+	<div id="comments" class="normalbox adminbox">
+		<div class="normalcorner">
+			<div class="title">
+				<span class="options">
+					<a href="#commentreply" rel="0" title="Post comment" class="addicon">Post comment</a> 
+				</span>
+				<span class="heading">Comments</span>
+				 
+			</div>
+		</div>
+		<div class="inner">
+			<div class="body">
+				<div class="tooltip"></div>
+				<div class="table tablecomments">
+					 
+					<div id="2510012" class="row">
+						 
+						<a href="http://www.moddb.com/members/sydrose" title="sydrose" class="avatar"><img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/Picture_11.jpg" alt="sydrose" height="50" width="50"></a>
+						<div class="content">
+							<span class="heading"><a href="http://www.moddb.com/members/sydrose">sydrose</a> Oct 6 2011, 7:15pm says:</span>
+							 
+							 
+							<div class="comment">
+								 
+								 
+								<p>that is so awesome.
+</p> 
+							</div>
+							 
+							<span class="karma" title="karma">+3 votes</span>
+							 
+							<a href="http://www.moddb.com/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=2510012" class="action bad" title="bury comment">&nbsp;</a>
+							<a href="http://www.moddb.com/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=2510012" class="action good" title="great comment">&nbsp;</a>
+							<a href="#commentreply" class="action reply" rel="2510012" title="reply to comment">reply to comment</a>
+							 
+							 
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					 
+					<div id="2510029" class="row">
+						<div class="clearer"></div> 
+						<a href="http://www.moddb.com/members/devinshadowv" title="DevinShadowV" class="avatar"><img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/New_small_moddb_av.jpg" alt="DevinShadowV" height="50" width="50"></a>
+						<div class="content">
+							<span class="heading"><a href="http://www.moddb.com/members/devinshadowv">DevinShadowV</a> Oct 6 2011, 7:23pm says:</span>
+							 
+							 
+							<div class="comment">
+								 
+								 
+								<p>wow
+</p> 
+							</div>
+							 
+							<span class="karma" title="karma">+3 votes</span>
+							 
+							<a href="http://www.moddb.com/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=2510029" class="action bad" title="bury comment">&nbsp;</a>
+							<a href="http://www.moddb.com/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=2510029" class="action good" title="great comment">&nbsp;</a>
+							<a href="#commentreply" class="action reply" rel="2510029" title="reply to comment">reply to comment</a>
+							 
+							 
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					 
+					<div id="2510657" class="row">
+						<div class="clearer"></div> 
+						<a href="http://www.moddb.com/members/lancer611" title="lancer611" class="avatar"><img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/IMAG0059.jpg" alt="lancer611" height="50" width="50"></a>
+						<div class="content">
+							<span class="heading"><a href="http://www.moddb.com/members/lancer611">lancer611</a> Oct 7 2011, 4:36am says:</span>
+							 
+							 
+							<div class="comment">
+								 
+								 
+								<p>you make it seem so easy, and I'm a programmer xd.  gj
+</p> 
+							</div>
+							 
+							<span class="karma" title="karma">+2 votes</span>
+							 
+							<a href="http://www.moddb.com/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=2510657" class="action bad" title="bury comment">&nbsp;</a>
+							<a href="http://www.moddb.com/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=2510657" class="action good" title="great comment">&nbsp;</a>
+							<a href="#commentreply" class="action reply" rel="2510657" title="reply to comment">reply to comment</a>
+							 
+							 
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					 
+					<div id="2511487" class="row">
+						<div class="clearer"></div> 
+						<a href="http://www.moddb.com/members/cryrid" title="Cryrid" class="avatar"><img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/da_av.gif" alt="Cryrid" height="50" width="50"></a>
+						<div class="content">
+							<span class="heading"><a href="http://www.moddb.com/members/cryrid">Cryrid</a> Oct 7 2011, 1:22pm says:</span>
+							 
+							 
+							<div class="comment">
+								 
+								 
+								<p>For the lazy, a handy action for combining can be downloaded here: <a href="http://www.rodgreen.com/?p=4" rel="nofollow">Rodgreen.com</a>
+</p> 
+							</div>
+							 
+							<span class="karma" title="karma">+1 vote</span>
+							 
+							<a href="http://www.moddb.com/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=2511487" class="action bad" title="bury comment">&nbsp;</a>
+							<a href="http://www.moddb.com/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=2511487" class="action good" title="great comment">&nbsp;</a>
+							<a href="#commentreply" class="action reply" rel="2511487" title="reply to comment">reply to comment</a>
+							 
+							 
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					 
+					<div id="2511511" class="row">
+						<div class="clearer"></div> 
+						<a href="http://www.moddb.com/members/niteshade" title="Niteshade" class="avatar"><img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/autism_avatar.gif" alt="Niteshade" height="50" width="50"></a>
+						<div class="content">
+							<span class="heading"><a href="http://www.moddb.com/members/niteshade">Niteshade</a> Oct 7 2011, 1:32pm says:</span>
+							 
+							 
+							<div class="comment">
+								 
+								 
+								<p>His tutorial/action doesn't ADD the blue channel properly 
+though - you get  the problem that's in the black-and-white picture in 
+my tutorial.<br>
+I'll post a download link to my action though at the bottom of this tutorial.
+</p> 
+							</div>
+							 
+							<span class="karma" title="karma">+1 vote</span>
+							 
+							<a href="http://www.moddb.com/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=2511511" class="action bad" title="bury comment">&nbsp;</a>
+							<a href="http://www.moddb.com/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=2511511" class="action good" title="great comment">&nbsp;</a>
+							<a href="#commentreply" class="action reply" rel="2511511" title="reply to comment">reply to comment</a>
+							 
+							 
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					 
+				</div>
+			</div>
+			 
+		</div>
+	</div>
+	 
+	<div id="commentreply" class="normalbox">
+		<div class="normalcorner">
+			<div class="title">
+				<span class="heading">Post a Comment</span>
+			</div>
+		</div>
+		<div class="inner">
+			 
+ 				 
+				<div class="body bodysimple clear">
+					 
+					<div class="tooltip"></div>
+					 
+
+					<div class="table tableform">
+						<form action="/groups/udk-developers-group/tutorials/photoshop-combining-normal-maps/#commentreply" method="post" name="commentform" id="commentform"><input name="replyid" value="0" type="hidden"><input name="page" value="1" type="hidden"><input name="formhash" value="2e1fbabb53e70ab91cee2ab7bc911335" type="hidden"><input name="commentpost" value="t" type="hidden"> 
+						<div class="rowalt rowpreview" style="display: none;">
+							<h4>Preview:</h4>
+							<div id="commentpreviewarea"></div> 
+						</div>
+						<div class="row">
+							 
+							<div style="float: right; margin-right: 10px; width: 210px; text-align: center; margin-bottom: 1.5em;">
+								 
+								<a href="https://secure.moddb.com/members/loginext/steam" class="steamicon" style="float: right; margin-left: 10px; margin-bottom: 4px;" title="Click to connect via Steam"></a>
+								 
+								<a href="https://secure.moddb.com/members/loginext/google" class="googleicon" style="float: right; margin-left: 10px; margin-bottom: 4px;" title="Click to connect via Google"></a>
+								 
+								<a href="https://secure.moddb.com/members/loginext/twitter" class="twittericon" style="float: right; margin-left: 10px; margin-bottom: 4px;" title="Click to connect via Twitter"></a>
+								 
+								<a href="https://secure.moddb.com/members/loginext/facebook" class="facebookicon" style="float: right; margin-left: 10px; margin-bottom: 4px;" title="Click to connect via Facebook"></a>
+								 
+								<em>click to sign in</em>
+							</div>
+							<p style="margin-bottom: 1.5em;">You are not logged in, your comment will be anonymous unless you <a href="http://www.moddb.com/members/register">join the community</a> today (totally free - or sign in with your social account on the right) which we encourage all contributors to do.</p>
+							 
+							<p class="helper" id="commentsummarycounter">2000 characters limit; HTML formatting and smileys are not supported - text only</p>
+							<textarea name="summary" cols="80" rows="8" id="commentsummary"></textarea> 
+						</div>
+						 
+						<div class="row" style="display: none;">
+							<label for="commentemail">Email</label>
+							<span class="bffdcadfdbformouter"><span><span><span><span class="bffdcadfdbforminner"><input name="IyMxYTVhNGVkMDM4NjQ2YzM1ZDY1ZjAxNzU4YzAwMDA2Yzk5ODQ3NDIzNDZib3RjYXRjaGVy" maxlength="100" size="50" id="commentemail" class="text" autocomplete="off" type="text"><input name="IyMxYTVhNGVkMDM4NjQ2YzM1ZDY1ZjAxNzU4YzAwMDA2YzE4NDMxNzMyOTFqc2ZpZWxk" value="1" type="hidden"></span></span></span></span></span><span class="bffdcadfdbformouter"><span><span><span class="bffdcadfdbforminner"><input name="IyMxYTVhNGVkMDM4NjQ2YzM1ZDY1ZjAxNzU4YzAwMDA2YzI4NTkzODE0Mzlib3RjYXRjaGVy" maxlength="100" size="50" class="text" autocomplete="off" type="text"></span></span></span></span><style type="text/css"> span.bffdcadfdbformouter span span span.bffdcadfdbforminner { display: none; } span.bffdcadfdbformouter span span span span.bffdcadfdbforminner { display: inline; }</style>
+ 
+						</div>
+						 
+						<div class="rowalt buttons">
+							<input name="preview" value="Preview" id="commentpreview" class="previewbtn" type="submit"> <input name="comment" value="Post Comment" id="commentsubmit" type="submit"> 
+						</div>
+						</form> 
+					</div>
+				</div>
+				 
+			</div>
+		</div>
+  
+		 
+	 
+  
+		 
+	</div>
+	
+	<div class="column span-300 last sidecolumn">
+		  
+				 
+		<div style="clear: both;"></div>
+		<div class="normalmediabox">
+			<div style="display: block;" class="media" id="1840660621300x250menu"><div id="ad1840660621300x250menu" style="display: block;"><script type="text/javascript">
+if(typeof(gnm_ord)=='undefined') gnm_ord=Math.random()*10000000000000000; if(typeof(gnm_tile) == 'undefined') gnm_tile=1;
+document.write('<scr'+'ipt src="http://n4403ad.doubleclick.net/adj/gn.moddb.com/;sect=;sz=300x250,300x600;dcopt=ist;type=pop;type=int;tile='+(gnm_tile++)+';ord='+gnm_ord+'?" type="text/javascript"></scr'+'ipt>');
+</script><script kabl="89517" style="display: none !important" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/a_002" type="text/javascript"></script></div></div> 
+		</div>
+		  
+				<div class="normalbox">
+			<div class="normalcorner">
+				<div class="title">
+					<span class="options">
+												<a href="http://www.moddb.com/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2322" class="watchicon" id="groups2322watch" rel="nofollow" title="Track this group">Track this group</a>
+						<a href="http://www.moddb.com/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=2322" class="reporticon" id="groups2322report" rel="nofollow" title="Report group">Report group</a>
+ 					</span>
+
+					<span class="heading">Profile</span>
+				</div>
+			</div>
+			<div class="inner">
+				<div class="body bodysimple">
+					<div class="tooltip"></div>
+					<div class="table tablemenu">
+						 
+						<div class="row clear">
+							<h5>Established</h5>
+							<span class="summary">Nov 16, 2009</span>
+						</div>
+						<div class="rowalt clear">
+							<h5>Privacy</h5>
+							<span class="summary">Public</span>
+						</div>
+						<div class="row clear">
+							<h5>Subscription</h5>
+							<span class="summary">Open to all members</span>
+						</div>
+						 
+						<div class="rowalt clear">
+							<h5>Homepage</h5>
+							<span class="summary"><a href="http://www.udk.com/" target="_blank">Udk.com</a></span>
+						</div>
+						 
+						<div class="row clear">
+							<h5>Contact</h5>
+							<span class="summary"><a href="http://www.moddb.com/messages/compose?to=group2322#compose" title="Send a Private Message">Send Message</a></span>
+						</div>
+						<div class="rowalt clear">
+							<h5>Email</h5>
+							<span class="summary"><a href="http://www.moddb.com/members/register">Members Only</a></span>
+						</div>
+						 
+						<div class="row clear">
+							<h5>Membership</h5>
+							<span class="summary"><a href="http://www.moddb.com/groups/ajax/members/change/2322" class="addicon" id="addtoggle" rel="nofollow">Join this group</a></span>
+						</div>
+						 
+						<div class="rowalt clear">
+							<h5>Group Watch</h5>
+							<span class="summary"><a href="http://www.moddb.com/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2322" class="watchicon" id="watchtoggle" rel="nofollow">Track this group</a></span>
+						</div>
+						 
+					</div>
+				</div>
+			</div>
+		</div> 
+		 
+		  
+		 
+		<div class="normalbox adminbox">
+			<div class="normalcorner">
+				<div class="title">
+					<span class="heading">Tutorial</span>
+				</div>
+			</div>
+			<div class="inner">
+				<div class="body bodysimple">
+					<div class="tooltip"></div>
+					<div class="table tablemenu">
+						<div class="row clear">
+							<h5>Browse</h5>
+							<span class="summary"><a href="http://www.moddb.com/groups/udk-developers-group/tutorials">Tutorials</a></span>
+						</div>
+												<div class="rowalt clear">
+							<h5>New</h5>
+							<span class="summary"><a href="http://www.moddb.com/members/register">Members only</a></span>
+						</div>
+						 
+						<div class="row clear">
+							<h5>Views</h5>
+							<span class="summary"><a href="http://static.moddb.com/cutoff/html/stats.php?sitearea=articles&amp;siteareaid=88853&amp;title=Photoshop%3A+Combining+normal+maps+Tutorials&amp;embedurl=http%3A%2F%2Fwww.moddb.com%2F&amp;fullurl=http%3A%2F%2Fwww.moddb.com%2Fgroups%2Fudk-developers-group%2Ftutorials%2Fphotoshop-combining-normal-maps" rel="iframe=true;innerHeight=525;innerWidth=830" class="thickbox" title="Photoshop: Combining normal maps Statistics">3,903 (14 today)</a></span>
+						</div>
+						 
+					</div>
+				</div>
+			</div>
+		</div>
+		 
+		 
+				 				 				 				 
+		<div class="normalbox">
+			<div class="normalcorner">
+				<div class="title">
+					<span class="heading">Related Groups</span>
+				</div>
+			</div>
+			<div class="inner">
+				<div class="body bodysimple">
+					<div class="tooltip"></div>
+					<div class="table tablerelated">
+						 
+						<div class="row clear">
+							<a href="http://www.moddb.com/groups/3d-artists-group" title="3D Artists Group" class="image"><img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/3d.png" alt="3D Artists Group"></a>
+							<div class="content">
+								<a href="http://www.moddb.com/groups/3d-artists-group" class="heading">3D Artists Group</a>
+								<span class="summary">Arts &amp; Literature group</span>
+								<span class="summary">with 951 members</span> 
+							</div>
+						</div>
+						 
+						<div class="rowalt clear">
+							<a href="http://www.moddb.com/groups/deviantart" title="deviantART" class="image"><img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/DeviantArt_Logo.gif" alt="deviantART"></a>
+							<div class="content">
+								<a href="http://www.moddb.com/groups/deviantart" class="heading">deviantART</a>
+								<span class="summary">Arts &amp; Literature group</span>
+								<span class="summary">with 227 members</span> 
+							</div>
+						</div>
+						 
+						<div class="row clear">
+							<a href="http://www.moddb.com/groups/udk-developers-group" title="UDK Developer's Group" class="image"><img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/preview_image.jpg" alt="UDK Developer's Group"></a>
+							<div class="content">
+								<a href="http://www.moddb.com/groups/udk-developers-group" class="heading">UDK Developer's Group</a>
+								<span class="summary">Hardware &amp; Tech group</span>
+								<span class="summary">with 595 members</span> 
+							</div>
+						</div>
+						 
+						<div class="rowalt clear">
+							<a href="http://www.moddb.com/groups/global-union-of-arts" title="Global Union of Arts" class="image"><img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/globalunionofarts_groupimage.jpg" alt="Global Union of Arts"></a>
+							<div class="content">
+								<a href="http://www.moddb.com/groups/global-union-of-arts" class="heading">Global Union of Arts</a>
+								<span class="summary">Hobbies &amp; Interests group</span>
+								<span class="summary">with 64 members</span> 
+							</div>
+						</div>
+						 
+					</div>
+				</div>
+			</div>
+		</div>
+		 				 
+		<div style="clear: both;"></div>
+		<div class="normalmediabox">
+			<div style="display: block;" class="media" id="505495391300x250menubtf"><div id="ad505495391300x250menubtf" style="display: block;"><script type="text/javascript" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/a_003"></script><iframe kabl="89517" style="display: none !important" id="5065ccead2547" name="5065ccead2547" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/afr.htm" framespacing="0" frameborder="0" height="250" scrolling="no" width="300">&lt;a
+ 
+href="http://ox-d.pubgears.com/w/1.0/rc?cs=5065ccead2547&amp;cb=INSERT_RANDOM_NUMBER_HERE"
+ &gt;&lt;img 
+src="http://ox-d.pubgears.com/w/1.0/ai?auid=286870&amp;cs=5065ccead2547&amp;cb=INSERT_RANDOM_NUMBER_HERE"
+ border="0" alt=""&gt;&lt;/a&gt;</iframe></div></div> 
+		</div>
+		<div style="display: block;" class="media" id="1017666251300x100menu"><div id="ad1017666251300x100menu" style="display: block;"><script type="text/javascript">
+if ((typeof(f366202)=='undefined' || f366202 > 0) ) {
+if(typeof(gnm_ord)=='undefined') gnm_ord=Math.random()*10000000000000000; if(typeof(gnm_tile) == 'undefined') gnm_tile=1;
+document.write('<div style="clear: both;"></div><div class="smallmediabox"><div class="media"><scr'+'ipt src="http://n4403ad.doubleclick.net/adj/gn.moddb.com/;sect=;sz=300x100;tile='+(gnm_tile++)+';ord='+gnm_ord+'?" type="text/javascript"></scr'+'ipt></div></div>');
+}
+</script></div></div> 
+		  
+  
+  
+	</div>
+	 
+  
+		 
+	<div style="clear: both;"></div>
+	<div class="column span-all mediabox">
+		<div class="headercorner">
+			<div class="inner">
+				<div class="clear">
+					<div style="display: block;" class="media" id="1001519936728x90header"><div id="ad1001519936728x90header" style="display: block;"><script type="text/javascript">
+if(typeof(gnm_ord)=='undefined') gnm_ord=Math.random()*10000000000000000; if(typeof(gnm_tile) == 'undefined') gnm_tile=1;
+document.write('<scr'+'ipt src="http://n4403ad.doubleclick.net/adj/gn.moddb.com/;sect=;sz=728x90;tile='+(gnm_tile++)+';ord='+gnm_ord+'?" type="text/javascript"></scr'+'ipt>');
+</script><script kabl="89517" style="display: none !important" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/a" type="text/javascript"></script></div></div> 
+					<div class="socialbig">
+						<a href="http://www.desura.com/" target="_blank" class="socialbig desura" title="Get games &amp; mods on Desura"></a>
+						<a href="http://www.facebook.com/moddb" target="_blank" rel="nofollow" class="socialbig facebook" title="Fan us on Facebook"></a>
+						<a href="http://www.twitter.com/moddb" target="_blank" rel="nofollow" class="socialbig twitter" title="Follow us on Twitter"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	  
+	<div style="clear: both; height: 1em;"></div><!-- IE6 Hack -->
+</div>
+
+
+<div id="footer">
+	<div class="content">
+		<a href="http://www.desuranet.com/" class="desuranet" target="_blank" title="DesuraNET - Entertainment Euphoria"></a>
+		<span class="terms"><a href="http://www.moddb.com/terms-of-use">Terms of Use</a> | <a href="http://www.moddb.com/privacy-policy" style="padding-right: 0">Privacy Policy</a><br><script src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/cr-branding.js" type="text/javascript"></script><img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/gr_white.png" alt="Crave Online" height="20px" width="194px"></span>
+		<span class="links"><a href="http://www.moddb.com/blog">Blog</a> | <a href="http://www.moddb.com/about">About</a> | <a href="http://www.moddb.com/contact">Contact</a> | <a href="http://www.moddb.com/mods/add">Submit Mod</a> | <a href="http://www.moddb.com/members/register">Join Mod DB</a> | <a href="http://www.moddb.com/sitemap">Site Map</a> | <a href="http://www.moddb.com/mediakit">Media Kit</a> | <a href="http://www.desura.com/" title="Games and Mods Digital Distribution">Desura</a> | <a href="http://www.moddb.com/rss" title="Get game news RSS feeds">RSS <img src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/rss.png" alt="RSS" title="Mod DB RSS feeds"></a></span>
+		<span class="copyright">© 2002 - 2013 <a href="http://www.desuranet.com/" target="_blank">DesuraNET Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a href="http://www.moddb.com/members/online">2230 modders</a>.</span>
+	</div>
+</div></div>
+
+<script type="text/javascript" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/index_003.js"></script>
+<script type="text/javascript" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/index_002.js"></script><script kabl="89517" style="display: none !important" type="text/javascript" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/addthis_widget.js"></script><script type="text/javascript">var addthis_config = {data_track_clickback:false,data_ga_tracker:"UA-104975-2",services_exclude:"print",services_compact:"google,favorites,email,reddit,digg,googlebuzz,n4g,stumbleupon,slashdot,tumblr,live,myspace"};var addthis_share = {templates:{twitter:"{{title}} {{url}} via @ModDB"}};</script>
+
+<script type="text/javascript">moveAd("1840660621300x250menu");</script>
+
+<script type="text/javascript">moveAd("505495391300x250menubtf");</script>
+
+<script type="text/javascript">moveAd("1017666251300x100menu");</script>
+
+<script type="text/javascript">moveAd("1001519936728x90header");</script>
+
+<script type="text/javascript" charset="UTF-8"><!--
+var unixtime = 1360314555;
+$(document).ready(function() { $("#togglelogin").toggle(function() { 
+					$("#searchbox .arrow").html("&nbsp;&#187;");
+					$("#searchbox .search").fadeOut(function() { $("#searchbox .login").show(); });
+					return false;
+				}, function() {
+					$("#searchbox .arrow").html("&nbsp;");
+					$("#searchbox .login").fadeOut(function() { $("#searchbox .search").show(); });
+					return false;
+				});
+$("#sitesearch").suggestClick("http://www.moddb.com/scripts/autocomplete.php?a=search&p=groups",{resultsClass: "suggest_search", positionIn: "#searchbox", limit: 10});
+
+				$(".tablecomments .bad").saveUpdate("karmabad", commentKarma);
+				$(".tablecomments .good").saveUpdate("karmagood", commentKarma);
+
+						deleteAction = function (currentoption, response) {
+							$("#comments div.tooltip").replaceWith("<div class=\"tooltip\"></div>");
+							$("#"+currentoption.attr("rel")+" div.comment").show().html(response["success"] ? "<p>Your comment "+currentoption.html().toLowerCase()+" was successful. When a comment is deleted all replies to the comment will be removed as well. Because you are an admin, you can click the \"view deleted\" link above to view deleted comments in-case you wish to un-delete them in the future. If this was a mistake, click the "+currentoption.html().toLowerCase()+" link again to reverse the change.</p>" : "<p>"+response["text"]+"</p>");
+							currentoption.html(response["labels"]["delete"]);
+						};
+						$(".tablecomments .delete").saveUpdate("delete", deleteAction);
+						$("#commentpreview").click(function() { $(this).formPreview("/profile/ajax/preview/comment", $("#commentpreviewarea"), $("#commentsummary").val()); return false; });
+$("#commentemail").after('<input type="hidden" name="IyMxYTVhNGVkMDM4NjQ2YzM1ZDY1ZjAxNzU4YzAwMDA2YzE4NDMxNzMyOTFqc2ZpZWxk" value="1" />');
+$("#groups2322watch").saveUpdate("watch");
+$("#groups2322report").saveUpdate("report");
+$("#addtoggle").saveUpdate("add");
+$("#watchtoggle").saveUpdate("watch");
+ $("a.thickbox").click(function() { $.fn.colorbox({href:$(this).attr("href"), rel:$(this).attr("rel"), open:true, onOpen:function(){ $(".normalmediabox").hide(); }, onClosed:function(){ $(".normalmediabox").show(); }}); return false; }); });
+//-->
+</script>
+<script type="text/javascript">
+if ((typeof(f366208)=='undefined' || f366208 > 0) ) {
+if(typeof(gnm_ord)=='undefined') gnm_ord=Math.random()*10000000000000000; if(typeof(gnm_tile) == 'undefined') gnm_tile=1;
+document.write('<scr'+'ipt src="http://n4403ad.doubleclick.net/adj/gn.moddb.com/;sect=;sz=1000x1000;tile='+(gnm_tile++)+';ord='+gnm_ord+'?" type="text/javascript"></scr'+'ipt>');
+}
+</script> 
+ 
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-104975-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<div style="display:none;">
+<script type="text/javascript"><!--
+EXref="";top.document.referrer?EXref=top.document.referrer:EXref=document.referrer;//-->
+</script><script type="text/javascript"><!--
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+location.protocol=="https:"?EXprot="https":EXprot="http";
+EXref?EXref=EXref:EXref=EXd.referrer;EXsrc="src";
+EXd.write("<img "+EXsrc+"="+EXprot+"://nht-2.extreme-dm.com",
+"/n2.g?login=moddb&amp;url="+escape(document.URL)+"&amp;pv=&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXref)+" height=1 width=1>");//-->
+</script><img kabl="89517" style="display: none !important" src="Photoshop%20%20Combining%20normal%20maps%20tutorial%20-%20UDK%20Developer%27s%20Group%20-%20Mod%20DB_files/n2.gif" height="1" width="1"><noscript><div id="nneXTReMe"><img height="1" width="1" alt=""
+src="http://nht-2.extreme-dm.com/n2.g?login=moddb&amp;url=nojs&amp;j=n&amp;jv=n&amp;pv=" />
+</div></noscript></div>
+ 
+
+</body></html>

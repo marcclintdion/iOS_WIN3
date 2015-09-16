@@ -1,0 +1,1177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>GPU Gems 3 - Chapter 18. Relaxed Cone Stepping for Relief Mapping</title>
+
+	<meta name="keywords" content="GPU GPGPU NVIDIA OpenGL Open_GL DirectX DX8 DX9 DX10 texture texture_mapping texturemap texture_map shading shader shaders realtime real_time CAD highperformancecomputing hpc gpu_compute tesla quadroplex geforce quadro hair skin cloth motion_blur dof depth_of_field anisotropic image_processing filtering filters volume volume_rendering financial">
+
+	<link type="image/x-icon" href="http://www.nvidia.com/content/images/NVSphere.ico" rel="shortcut icon">
+
+  <!-- <link rel="stylesheet" href="books.css" type="text/css" />	 -->
+
+
+
+<style type="text/css">
+
+
+
+body {
+
+  min-width: 700px;      /* 2x LC width + RC width */
+
+  
+
+  font-family:Verdana, Geneva, Arial, Helvetica, Sans Serif;
+
+  font-size: 11px;
+
+  background-image:url('http://developer.nvidia.com/docs/TEMPLATE/423/developers_1px_bg_alt2.jpg');
+
+  background-repeat: repeat-x;
+
+  margin-left:5px;
+
+  margin-top:0px;
+
+}
+
+#container {
+
+  padding-top:55px;
+
+  padding-left: 200px;   /* LC width */
+
+  padding-right: 280px;  /* RC width */  
+
+}
+
+#container .column {
+
+  position: relative;
+
+  float: left;
+
+}
+
+#center {
+
+  width: 100%;
+
+  padding: 3px;
+
+  background-color: #FFFFFF;
+
+  border: medium solid #cccccc;
+
+  border-width: 1px;
+
+  
+
+/*  borderColor: #dfdfe7;
+
+  borderColorLight: #e9eaed; */
+
+}
+
+#left {
+
+  width: 200px;          /* LC width */
+
+  right: 200px;          /* LC width */  
+
+  margin-left: -100%;
+
+}
+
+
+
+#container > #left {
+
+  left: -200px;
+
+  margin-left: expression(document.all.center.offsetWidth * -1);
+
+}
+
+
+
+
+
+#right {
+
+  width: 280px;          /* RC width */
+
+  margin-right: -280px;  /* RC width */  
+
+}
+
+#footer {
+
+  clear: both;
+
+}
+
+
+
+#header {
+
+height:80px;
+
+background: transparent url(dev_site_header.jpg) no-repeat fixed top left;
+
+clear: both;
+
+}
+
+
+
+
+
+
+
+
+
+#searchbar {
+
+position: absolute;
+
+top: 25px;
+
+right:200px;
+
+}
+
+	
+
+	
+
+A { 
+
+text-decoration:none;
+
+/* color: #008000; */
+
+/* green color: #76b900; */
+
+/*font-weight:bold; */
+
+color: #5B8C00;
+
+}
+
+
+
+A:hover { 
+
+text-decoration:underline;
+
+color: #000000;
+
+}
+
+
+
+A:visited { 
+
+color: #5B8C00;
+
+}	
+
+
+
+input.searchbox {
+
+font-family: Arial, Helvetica, sans-serif;
+
+font-size: 11px;
+
+color: #666666;
+
+text-indent: 3px;
+
+}
+
+
+
+H1 { 
+
+font-size:15px;
+
+color: #000000;
+
+font-weight:bold;
+
+}
+
+H2 { 
+
+font-size:14px;
+
+color: #000000;
+
+font-weight:bold;
+
+}
+
+H3 { 
+
+font-size:14px;
+
+color: #000080;
+
+font-weight:bold;
+
+}
+
+H4 { 
+
+font-size:12px;
+
+color: #000000;
+
+font-weight:bold;
+
+}
+
+H5 { 
+
+font-size:12px;
+
+color: #000080;
+
+font-weight:bold;
+
+}
+
+H6 { 
+
+font-size:10px;
+
+color: #000000;
+
+font-weight:bold;
+
+}
+
+H6 { 
+
+font-size:10px;
+
+color: #000080;
+
+font-weight:bold;
+
+}
+
+
+
+li.comingsoon {
+
+font-size:11px;
+
+color: #cccccc;
+
+}
+
+
+
+table thead td {
+
+	font-weight: bold;
+
+	background: #E1E1E1;
+
+	text-align: center;
+
+	border-bottom: 3px solid black;
+
+}
+
+
+
+td {
+
+border: 1px solid black;
+
+padding-left: 3px;
+
+padding-right: 3px;
+
+}
+
+
+
+table {
+
+border-collapse: collapse;
+
+border: 3px solid black;
+
+padding: 3px;
+
+}
+
+
+
+pre {
+
+   line-height:50%;
+
+}
+
+pre strong {
+
+white-space: normal;
+
+}
+
+</style>
+
+
+
+<script>
+
+function popUp(url) {
+
+    window.open(url,'Gems3Target',''); 
+
+}
+
+
+
+</script>
+
+
+
+<style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style></head><body>
+
+
+
+
+
+<div id="header">
+
+
+
+</div>
+
+
+
+
+
+
+
+<div id="searchbar">
+
+
+
+
+
+
+
+<form method="get" action="http://search.developer.nvidia.com/" name="search">
+
+
+
+
+
+
+
+<input style="font-size:11px;color: #666666;text-indent: 3px;" name="q" size="20" maxlength="50" onfocus="javascript:document.search.q.value = '';" value="Search" type="text">
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div id="container">
+
+  <div id="center" class="column">
+
+		<a href="http://developer.nvidia.com/object/gpu-gems-3.html"><img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/gpu_gems_3_icon.jpg" align="left" border="0" hspace="5"> <h1>GPU Gems 3</h1></a>
+
+		<b>GPU Gems 3</b> is now available for free online! 
+
+<br><br>
+
+Please visit our <a href="http://developer.nvidia.com/object/all_documents.html">Recent Documents</a> page to see all the latest whitepapers and conference presentations that can help you with your projects.	
+
+<br><br>
+
+You can also subscribe to our <a href="http://news.developer.nvidia.com/rss.xml">Developer News Feed</a> to get notifications of new material on the site.		
+
+		
+
+		<br><br><br>
+
+		<hr>
+<h2>Chapter 18. Relaxed Cone Stepping for Relief Mapping</h2>
+<p>
+   <em>Fabio Policarpo <br>Perpetual Entertainment</em>
+</p>
+<p>
+   <em>Manuel M. Oliveira <br>Instituto de Informática—UFRGS</em>
+</p>
+<h2>18.1 Introduction</h2>
+<p>The presence of geometric details on object surfaces dramatically 
+changes the way light interacts with these surfaces. Although 
+synthesizing realistic pictures requires simulating this interaction as 
+faithfully as possible, explicitly modeling all the small details tends 
+to be impractical. To address these issues, an image-based technique 
+called <em>relief mapping</em> has recently been introduced for adding 
+per-fragment details onto arbitrary polygonal models (Policarpo et al. 
+2005). The technique has been further extended to render correct 
+silhouettes (Oliveira and Policarpo 2005) and to handle non-height-field
+ surface details (Policarpo and Oliveira 2006). In all its variations, 
+the ray-height-field intersection is performed using a binary search, 
+which refines the result produced by some linear search procedure. While
+ the binary search converges very fast, the linear search (required to 
+avoid missing large structures) is prone to aliasing, by possibly 
+missing some thin structures, as is evident in <a href="javascript:popUp('elementLinks/18fig01.jpg')">Figure 18-1a</a>.
+ Several space-leaping techniques have since been proposed to accelerate
+ the ray-height-field intersection and to minimize the occurrence of 
+aliasing (Donnelly 2005, Dummer 2006, Baboud and Décoret 2006). <em>Cone step mapping</em>
+ (CSM) (Dummer 2006) provides a clever solution to accelerate the 
+intersection calculation for the average case and avoids skipping 
+height-field structures by using some precomputed data (a cone map). 
+However, because CSM uses a conservative approach, the rays tend to stop
+ before the actual surface, which introduces different kinds of 
+artifacts, highlighted in <a href="javascript:popUp('elementLinks/18fig01.jpg')">Figure 18-1b</a>.
+ Using an extension to CSM that consists of employing four different 
+radii for each fragment (in the directions north, south, east, and 
+west), one can just slightly reduce the occurrence of these artifacts. 
+We call this approach <em>quad-directional cone step mapping</em> (QDCSM). Its results are shown in <a href="javascript:popUp('elementLinks/18fig01.jpg')">Figure 18-1c</a>, which also highlights the technique's artifacts.</p>
+<div class="figure">
+   <a href="javascript:popUp('elementLinks/18fig01.jpg')">
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/18fig01.jpg" alt="18fig01.jpg">
+   </a>
+   <p>
+      <a href="javascript:popUp('elementLinks/18fig01.jpg')">Figure 18-1</a>
+ Comparison of Four Different Ray-Height-Field Intersection Techniques 
+Used to Render a Relief-Mapped Surface from a 256x256 Relief Texture</p>
+</div>
+<p>In this chapter, we describe a new ray-height-field intersection 
+strategy for per-fragment displacement mapping that combines the 
+strengths of both cone step mapping and binary search. We call the new 
+space-leaping algorithm <em>relaxed cone stepping</em> (RCS), as it 
+relaxes the restriction used to define the radii of the cones in CSM. 
+The idea for the ray-height-field intersection is to replace the linear 
+search with an aggressive spaceleaping approach, which is immediately 
+followed by a binary search. While CSM conservatively defines the radii 
+of the cones in such a way that a ray never pierces the surface, RCS 
+allows the rays to pierce the surface at most once. This produces much 
+wider cones, accelerating convergence. Once we know a ray is inside the 
+surface, we can safely apply a binary search to refine the position of 
+the intersection. The combination of RCS and binary search produces 
+renderings of significantly higher quality, as shown in <a href="javascript:popUp('elementLinks/18fig01.jpg')">Figure 18-1d</a>. Note that both the aliasing visible in <a href="javascript:popUp('elementLinks/18fig01.jpg')">Figure 18-1a</a> and the distortions noticeable in <a href="javascript:popUp('elementLinks/18fig01.jpg')">Figures 18-1b</a> and <a href="javascript:popUp('elementLinks/18fig01.jpg')">18-1c</a>
+ have been removed. As a space-leaping technique, RCS can be used with 
+other strategies for refining ray-height-field intersections, such as 
+the one used by <em>interval mapping</em> (Risser et al. 2005).</p>
+<h2>18.2 A Brief Review of Relief Mapping</h2>
+<p>Relief mapping (Policarpo et al. 2005) simulates the appearance of 
+geometric surface details by shading individual fragments in accordance 
+to some depth and surface normal information that is mapped onto 
+polygonal models. A depth map<sup>
+      <a href="javascript:popUp('elementLinks/ch18fn01.html')">
+      [1]
+    </a>
+   </sup> (scaled to the [0,1] range) represents geometric details 
+assumed to be under the polygonal surface. Depth and normal maps can be 
+stored as a single RGBA texture (32-bit per texel) called a <em>relief texture</em>
+ (Oliveira et al. 2000). For better results, we recommend separating the
+ depth and normal components into two different textures. This way 
+texture compression will work better, because a specialized normal 
+compression can be used independent of the depth map compression, 
+resulting in higher compression ratios and fewer artifacts. It also 
+provides better performance because during the relief-mapping 
+iterations, only the depth information is needed and a one-channel 
+texture will be more cache friendly (the normal information will be 
+needed only at the end for lighting). <a href="javascript:popUp('elementLinks/18fig02.jpg')">Figure 18-2</a> shows the normal and depth maps of a relief texture whose cross section is shown in <a href="javascript:popUp('elementLinks/18fig03.jpg')">Figure 18-3</a>.
+ The mapping of relief details to a polygonal model is done in the 
+conventional way, by assigning a pair of texture coordinates to each 
+vertex of the model. During rendering, the depth map can be dynamically 
+rescaled to achieve different effects, and correct occlusion is achieved
+ by properly updating the depth buffer.</p>
+<div class="figure">
+   <a href="javascript:popUp('elementLinks/18fig02.jpg')">
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/18fig02.jpg" alt="18fig02.jpg">
+   </a>
+   <p>
+      <a href="javascript:popUp('elementLinks/18fig02.jpg')">Figure 18-2</a> Example of a Relief Texture</p>
+</div>
+<div class="figure">
+   <a href="javascript:popUp('elementLinks/18fig03.jpg')">
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/18fig03.jpg" alt="18fig03.jpg">
+   </a>
+   <p>
+      <a href="javascript:popUp('elementLinks/18fig03.jpg')">Figure 18-3</a> Relief Rendering</p>
+</div>
+<p>&nbsp;</p>
+<p>Relief rendering is performed entirely on the GPU and can be conceptually divided into three steps. For each fragment <em>f</em> with texture coordinates (<em>s</em>, <em>t</em>), first transform the view direction <em>V</em> to the tangent space of <em>f</em>. Then, find the intersection <em>P</em> of the transformed viewing ray against the depth map. Let (<em>k</em>, <em>l</em>) be the texture coordinates of such intersection point (see <a href="javascript:popUp('elementLinks/18fig03.jpg')">Figure 18-3</a>). Finally, use the corresponding position of <em>P</em>, expressed in camera space, and the normal stored at (<em>k</em>, <em>l</em>) to shade <em>f</em>. Self-shadowing can be applied by checking whether the light ray reaches <em>P</em> before reaching any other point on the relief. <a href="javascript:popUp('elementLinks/18fig03.jpg')">Figure 18-3</a>
+ illustrates the entire process. Proper occlusion among relief-mapped 
+and other scene objects is achieved simply by updating the z-buffer with
+ the <em>z</em> coordinate of <em>P</em> (expressed in camera space and after projection and division by <em>w</em>). This updated z-buffer also supports the combined use of shadow mapping (Williams 1978) with relief-mapped surfaces.</p>
+<p>In practice, finding the intersection point <em>P</em> can be entirely performed in 2D texture space. Thus, let (<em>u</em>, <em>v</em>) be the 2D texture coordinates corresponding to the point where the viewing ray reaches depth = 1.0 (<a href="javascript:popUp('elementLinks/18fig03.jpg')">Figure 18-3</a>). We compute (<em>u</em>, <em>v</em>) based on (<em>s</em>, <em>t</em>), on the transformed viewing direction and on the scaling factor applied to the depth map. We then perform the search for <em>P</em> by sampling the depth map, stepping from (<em>s</em>, <em>t</em>) to (<em>u</em>, <em>v</em>),
+ and checking if the viewing ray has pierced the relief (that is, 
+whether the depth along the viewing ray is bigger than the stored depth)
+ before reaching (<em>u</em>, <em>v</em>). If we have found a place where the viewing ray is under the relief, the intersection <em>P</em> is refined using a binary search.</p>
+<p>Although the binary search quickly converges to the intersection 
+point and takes advantage of texture filtering, it could not be used in 
+the beginning of the search process because it may miss some large 
+structures. This situation is depicted in <a href="javascript:popUp('elementLinks/18fig04.jpg')">Figure 18-4a</a>, where the depth value stored at the texture coordinates halfway from (<em>s</em>, <em>t</em>) and (<em>u</em>, <em>v</em>)
+ is bigger than the depth value along the viewing ray at point 1, even 
+though the ray has already pierced the surface. In this case, the binary
+ search would incorrectly converge to point <em>Q</em>. To minimize such
+ aliasing artifacts, Policarpo et al. (2005) used a linear search to 
+restrict the binary search space. This is illustrated in <a href="javascript:popUp('elementLinks/18fig04.jpg')">Figure 18-4b</a>,
+ where the use of small steps leads to finding point 3 under the 
+surface. Subsequently, points 2 and 3 are used as input to find the 
+desired intersection using a binary search refinement. The linear search
+ itself, however, is also prone to aliasing in the presence of thin 
+structures, as can be seen in <a href="javascript:popUp('elementLinks/18fig01.jpg')">Figure 18-1a</a>.
+ This has motivated some researchers to propose the use of additional 
+preprocessed data to avoid missing such thin structures (Donnelly 2005, 
+Dummer 2006, Baboud and Décoret 2006). The technique described in this 
+chapter was inspired by the cone step mapping work of Dummer, which is 
+briefly described next.</p>
+<div class="figure">
+   <a href="javascript:popUp('elementLinks/18fig04.jpg')">
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/18fig04.jpg" alt="18fig04.jpg">
+   </a>
+   <p>
+      <a href="javascript:popUp('elementLinks/18fig04.jpg')">Figure 18-4</a> Binary Versus Linear Search</p>
+</div>
+<h2>18.3 Cone Step Mapping</h2>
+<p>Dummer's algorithm for computing the intersection between a ray and a
+ height field avoids missing height-field details by using cone maps 
+(Dummer 2006). A cone map associates a circular cone to each texel of 
+the depth texture. The angle of each cone is the maximum angle that 
+would not cause the cone to intersect the height field. This situation 
+is illustrated in <a href="javascript:popUp('elementLinks/18fig05.jpg')">Figure 18-5</a> for the case of three texels at coordinates (<em>s</em>, <em>t</em>), (<em>a</em>, <em>b</em>), and (<em>c</em>, <em>d</em>), whose cones are shown in yellow, blue, and green, respectively.</p>
+<div class="figure">
+   <a href="javascript:popUp('elementLinks/18fig05.jpg')">
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/18fig05.jpg" alt="18fig05.jpg">
+   </a>
+   <p>
+      <a href="javascript:popUp('elementLinks/18fig05.jpg')">Figure 18-5</a> Cone Step Mapping</p>
+</div>
+<p>Starting at fragment <em>f</em>, along the transformed viewing 
+direction, the search for an intersection proceeds as follows: intersect
+ the ray with the cone stored at (<em>s</em>, <em>t</em>), obtaining point 1 with texture coordinates (<em>a</em>, <em>b</em>). Then advance the ray by intersecting it with the cone stored at (<em>a</em>, <em>b</em>), thus obtaining point 2 at texture coordinates (<em>c</em>, <em>d</em>). Next, intersect the ray with the cone stored at (<em>c</em>, <em>d</em>),
+ obtaining point 3, and so on. In the case of this simple example, point
+ 3 coincides with the desired intersection. Although cone step mapping 
+is guaranteed never to miss the first intersection of a ray with a 
+height field, it may require too many steps to converge to the actual 
+intersection. For performance reasons, however, one is often required to
+ specify a maximum number of iterations. As a result, the ray tends to 
+stop before the actual intersection, implying that the returned texture 
+coordinates used to sample the normal and color maps are, in fact, 
+incorrect. Moreover, the 3D position of the returned intersection, <em>P</em>',
+ in camera space, is also incorrect. These errors present themselves as 
+distortion artifacts in the rendered images, as can be seen in <a href="javascript:popUp('elementLinks/18fig01.jpg')">Figures 18-1b</a> and <a href="javascript:popUp('elementLinks/18fig01.jpg')">18-1c</a>.</p>
+<h2>18.4 Relaxed Cone Stepping</h2>
+<p>Cone step mapping, as proposed by Dummer, replaces both the linear 
+and binary search steps described in Policarpo et al. 2005 with a single
+ search based on a cone map. A better and more efficient 
+ray-height-field intersection algorithm is achieved by combining the 
+strengths of both approaches: the space-leaping properties of cone step 
+mapping followed by the better accuracy of the binary search. Because 
+the binary search requires one input point to be under and another point
+ to be over the relief surface, we can relax the constraint that the 
+cones in a cone map cannot pierce the surface. In our new algorithm, 
+instead, we force the cones to actually intersect the surface whenever 
+possible. The idea is to make the radius of each cone as large as 
+possible, observing the following constraint: <em>As a viewing ray travels inside a cone, it cannot pierce the relief more than once</em>. We call the resulting space-leaping algorithm <em>relaxed cone stepping</em>. <a href="javascript:popUp('elementLinks/18fig07.jpg')">Figure 18-7a</a>
+ (in the next subsection) compares the radii of the cones used by the 
+conservative cone stepping (blue) and by relaxed cone stepping (green) 
+for a given fragment in a height field. Note that the radius used by RCS
+ is considerably larger, making the technique converge to the 
+intersection using a smaller number of steps. The use of wider relaxed 
+cones eliminates the need for the linear search and, consequently, its 
+associated artifacts. As the ray pierces the surface once, it is safe to
+ proceed with the fast and more accurate binary search.</p>
+<h4>18.4.1 Computing Relaxed Cone Maps</h4>
+<p>As in CSM, our approach requires that we assign a cone to each texel of the depth map. Each cone is represented by its <em>width/height</em> ratio (ratio <em>w</em>/<em>h</em>, in <a href="javascript:popUp('elementLinks/18fig07.jpg')">Figure 18-7c</a>).
+ Because a cone ratio can be stored in a single texture channel, both a 
+depth and a cone map can be stored using a single luminance-alpha 
+texture. Alternatively, the cone map could be stored in the blue channel
+ of a relief texture (with the first two components of the normal stored
+ in the red and green channels only).</p>
+<p>For each reference texel <em>t<sub>i</sub>
+   </em> on a relaxed cone map, the angle of cone <em>C<sub>i</sub>
+   </em> centered at <em>t<sub>i</sub>
+   </em> is set so that no viewing ray can possibly hit the height field more than once while traveling inside <em>C<sub>i</sub>
+   </em>. <a href="javascript:popUp('elementLinks/18fig07.jpg')">Figure 18-7b</a>
+ illustrates this situation for a set of viewing rays and a given cone 
+shown in green. Note that cone maps can also be used to accelerate the 
+intersection of shadow rays with the height field. <a href="javascript:popUp('elementLinks/18fig06.jpg')">Figure 18-6</a>
+ illustrates the rendering of self-shadowing, comparing the results 
+obtained with three different approaches for rendering perfragment 
+displacement mapping: (a) relief mapping using linear search, (b) cone 
+step mapping, and (c) relief mapping using relaxed cone stepping. Note 
+the shadow artifacts resulting from the linear search (a) and from the 
+early stop of CSM (b).</p>
+<div class="figure">
+   <a href="javascript:popUp('elementLinks/18fig06.jpg')">
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/18fig06.jpg" alt="18fig06.jpg">
+   </a>
+   <p>
+      <a href="javascript:popUp('elementLinks/18fig06.jpg')">Figure 18-6</a> Rendering Self-Shadowing Using Different Approaches</p>
+</div>
+<p>Relaxed cones allow rays to enter a relief surface but never leave it. We create relaxed cone maps offline using an <em>O</em>(<em>n</em>
+   <sup>2</sup>) algorithm described by the pseudocode shown in Listing 18-1. The idea is, for each source texel <tt>ti</tt>, trace a ray through each destination texel <tt>tj</tt>, such that this ray starts at (<tt>ti.texCoord.s</tt>, <tt>ti.texCoord.t</tt>, <tt>0.0</tt>) and points to (<tt>tj.texCoord.s</tt>, <tt>tj.texCoord.t</tt>, <tt>tj.depth</tt>).
+ For each such ray, compute its next (second) intersection with the 
+height field and use this intersection point to compute the cone ratio <tt>cone_ratio(i,j)</tt>. <a href="javascript:popUp('elementLinks/18fig07.jpg')">Figure 18-7c</a> illustrates the situation for a given pair of (<tt>ti, tj</tt>) of source and destination texels. <em>C<sub>i</sub>
+   </em>'s final ratio is given by the smallest of all cone ratios computed for <em>t<sub>i</sub>
+   </em>, which is shown in <a href="javascript:popUp('elementLinks/18fig07.jpg')">Figure 18-7b</a>. The relaxed cone map is obtained after all texels have been processed as source texels.</p>
+<div class="figure">
+   <a href="javascript:popUp('elementLinks/18fig07.jpg')">
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/18fig07.jpg" alt="18fig07.jpg">
+   </a>
+   <p>
+      <a href="javascript:popUp('elementLinks/18fig07.jpg')">Figure 18-7</a> Computing Relaxed Cone Maps</p>
+</div>
+<h4>Example 18-1. Pseudocode for Computing Relaxed Cone Maps</h4>
+<div class="dp-highlighter"><div class="bar"></div><ol class="dp-cpp" start="1"><li class="alt"><span><span class="keyword">for</span><span>&nbsp;each&nbsp;reference&nbsp;texel&nbsp;ti&nbsp;</span><span class="keyword">do</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;radius_cone_C(i)&nbsp;=&nbsp;1;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;source.xyz&nbsp;=&nbsp;(ti.texCoord.s,&nbsp;ti.texCoord.t,&nbsp;0.0);&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;<span class="keyword">for</span><span>&nbsp;each&nbsp;destination&nbsp;texel&nbsp;tj&nbsp;</span><span class="keyword">do</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;destination.xyz&nbsp;=&nbsp;(tj.texCoord.s,&nbsp;tj.texCoord.t,&nbsp;tj.depth);&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;ray.origin&nbsp;=&nbsp;destination;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;ray.direction&nbsp;=&nbsp;destination&nbsp;-&nbsp;source;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;(k,w)&nbsp;=&nbsp;text_cords_next_intersection(tj,&nbsp;ray,&nbsp;depth_map);&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;d&nbsp;=&nbsp;depth_stored_at(k,w);&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;((d&nbsp;&nbsp;-&nbsp;ti.depth)&nbsp;&gt;&nbsp;0.0)&nbsp;&nbsp;</span><span class="comment">//&nbsp;dst&nbsp;has&nbsp;to&nbsp;be&nbsp;above&nbsp;the&nbsp;src</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cone_ratio(i,j)&nbsp;=&nbsp;length(source.xy&nbsp;-&nbsp;destination.xy)&nbsp;/&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(d&nbsp;-&nbsp;tj.depth);&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(radius_cone_C(i)&nbsp;&gt;&nbsp;cone_ratio(i,j))&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;radius_cone_C(i)&nbsp;=&nbsp;cone_ratio(i,j);&nbsp;&nbsp;</span></li></ol></div><pre style="display: none;" name="code" class="cpp:nocontrols">for each reference texel ti do
+  radius_cone_C(i) = 1;
+  source.xyz = (ti.texCoord.s, ti.texCoord.t, 0.0);
+  for each destination texel tj do
+    destination.xyz = (tj.texCoord.s, tj.texCoord.t, tj.depth);
+    ray.origin = destination;
+    ray.direction = destination - source;
+    (k,w) = text_cords_next_intersection(tj, ray, depth_map);
+    d = depth_stored_at(k,w);
+    if ((d  - ti.depth) &gt; 0.0)  // dst has to be above the src
+      cone_ratio(i,j) = length(source.xy - destination.xy) /
+                        (d - tj.depth);
+      if (radius_cone_C(i) &gt; cone_ratio(i,j))
+        radius_cone_C(i) = cone_ratio(i,j);</pre>
+<p>Note that in the pseudocode shown in Listing 18-1, as well as in the 
+actual code shown in Listing 18-2, we have clamped the maximum cone 
+ratio values to 1.0. This is done to store the cone maps using integer 
+textures. Although the use of floating-point textures would allow us to 
+represent larger cone ratios with possible gains in space leaping, in 
+practice we have observed that usually only a small subset of the texels
+ in a cone map would be able to take advantage of that. This is 
+illustrated in the relaxed cone map shown in <a href="javascript:popUp('elementLinks/18fig08.jpg')">Figure 18-8c</a>. Only the saturated (white) texels would be candidates for having cone ratios bigger than 1.0.</p>
+<div class="figure">
+   <a href="javascript:popUp('elementLinks/18fig08.jpg')">
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/18fig08.jpg" alt="18fig08.jpg">
+   </a>
+   <p>
+      <a href="javascript:popUp('elementLinks/18fig08.jpg')">Figure 18-8</a> A Comparison of Different Kinds of Cone Maps Computed for the Depth Map Shown in </p>
+</div>
+<p>Listing 18-2 presents a shader for generating relaxed cone maps. <a href="javascript:popUp('elementLinks/18fig08.jpg')">Figure 18-8</a> compares three different kinds of cone maps for the depth map associated with the relief texture shown in <a href="javascript:popUp('elementLinks/18fig02.jpg')">Figure 18-2</a>. In <a href="javascript:popUp('elementLinks/18fig08.jpg')">Figure 18-8a</a>, one sees a conventional cone map (Dummer 2006) stored using a single texture channel. In <a href="javascript:popUp('elementLinks/18fig08.jpg')">Figure 18-8b</a>,
+ we have a quad-directional cone map, which stores cone ratios for the 
+four major directions into separate texture channels. Notice how 
+different areas in the texture are assigned wider cones for different 
+directions. Red texels indicate cones that are wider to the right, while
+ green ones are wider to the left. Blue texels identify cones that are 
+wider to the bottom, and black ones are wider to the top. <a href="javascript:popUp('elementLinks/18fig08.jpg')">Figure 18-8c</a>
+ shows the corresponding relaxed cone map, also stored using a single 
+texture channel. Note that its texels are much brighter than the 
+corresponding ones in the conventional cone map in <a href="javascript:popUp('elementLinks/18fig08.jpg')">Figure 18-8a</a>, revealing its wider cones.</p>
+<h4>Example 18-2. A Preprocess Shader for Generating Relaxed Cone Maps</h4>
+<div class="dp-highlighter"><div class="bar"></div><ol class="dp-cpp" start="1"><li class="alt"><span><span>&nbsp;&nbsp;&nbsp;float4&nbsp;depth2relaxedcone(&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;in&nbsp;float2&nbsp;TexCoord&nbsp;:&nbsp;TEXCOORD0,&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;in&nbsp;Sampler2D&nbsp;ReliefSampler,&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;in&nbsp;float3&nbsp;Offset&nbsp;)&nbsp;:&nbsp;COLOR&nbsp;&nbsp;</span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;<span class="keyword">const</span><span>&nbsp;</span><span class="datatypes">int</span><span>&nbsp;search_steps&nbsp;=&nbsp;128;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;float3&nbsp;src&nbsp;=&nbsp;float3(TexCoord,0);&nbsp;&nbsp;<span class="comment">//&nbsp;Source&nbsp;texel</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;float3&nbsp;dst&nbsp;=&nbsp;src&nbsp;+&nbsp;Offset;&nbsp;&nbsp;<span class="comment">//&nbsp;Destination&nbsp;texel</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;dst.z&nbsp;=&nbsp;tex2D(ReliefSampler,dst.xy).w;&nbsp;&nbsp;<span class="comment">//&nbsp;Set&nbsp;dest.&nbsp;depth</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;float3&nbsp;vec&nbsp;=&nbsp;dst&nbsp;-&nbsp;src;&nbsp;<span class="comment">//&nbsp;Ray&nbsp;direction</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;vec&nbsp;/=&nbsp;vec.z;&nbsp;&nbsp;<span class="comment">//&nbsp;Scale&nbsp;ray&nbsp;direction&nbsp;so&nbsp;that&nbsp;vec.z&nbsp;=&nbsp;1.0</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;vec&nbsp;*=&nbsp;1.0&nbsp;-&nbsp;dst.z;&nbsp;&nbsp;<span class="comment">//&nbsp;Scale&nbsp;again</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;float3&nbsp;step_fwd&nbsp;=&nbsp;vec/search_steps;&nbsp;&nbsp;<span class="comment">//&nbsp;Length&nbsp;of&nbsp;a&nbsp;forward&nbsp;step</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Search&nbsp;until&nbsp;a&nbsp;new&nbsp;point&nbsp;outside&nbsp;the&nbsp;surface</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;float3&nbsp;ray_pos&nbsp;=&nbsp;dst&nbsp;+&nbsp;step_fwd;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;<span class="keyword">for</span><span>(&nbsp;</span><span class="datatypes">int</span><span>&nbsp;i=1;&nbsp;i&lt;search_steps;&nbsp;i++&nbsp;)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">float</span><span>&nbsp;current_depth&nbsp;=&nbsp;tex2D(ReliefSampler,&nbsp;ray_pos.xy).w;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(&nbsp;current_depth&nbsp;&lt;=&nbsp;ray_pos.z&nbsp;)&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ray_pos&nbsp;+=&nbsp;step_fwd;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;<span class="comment">//&nbsp;Original&nbsp;texel&nbsp;depth</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">float</span><span>&nbsp;src_texel_depth&nbsp;=&nbsp;tex2D(ReliefSampler,TexCoord).w;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;<span class="comment">//&nbsp;Compute&nbsp;the&nbsp;cone&nbsp;ratio</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">float</span><span>&nbsp;cone_ratio&nbsp;=&nbsp;(ray_pos.z&nbsp;&gt;=&nbsp;src_texel_depth)&nbsp;?&nbsp;1.0&nbsp;:&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length(ray_pos.xy&nbsp;-&nbsp;TexCoord)&nbsp;/&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(src_texel_depth&nbsp;-&nbsp;ray_pos.z);&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;<span class="comment">//&nbsp;Check&nbsp;for&nbsp;minimum&nbsp;value&nbsp;with&nbsp;previous&nbsp;pass&nbsp;result</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">float</span><span>&nbsp;best_ratio&nbsp;=&nbsp;tex2D(ResultSampler,&nbsp;TexCoord).x;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(&nbsp;cone_ratio&nbsp;&gt;&nbsp;best_ratio&nbsp;)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;cone_ratio&nbsp;=&nbsp;best_ratio;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;float4(cone_ratio,&nbsp;cone_ratio,&nbsp;cone_ratio,&nbsp;cone_ratio);&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><pre style="display: none;" name="code" class="cpp:nocontrols">   float4 depth2relaxedcone(
+  in float2 TexCoord : TEXCOORD0,
+  in Sampler2D ReliefSampler,
+  in float3 Offset ) : COLOR
+{
+  const int search_steps = 128;
+  float3 src = float3(TexCoord,0);  // Source texel
+   float3 dst = src + Offset;  // Destination texel
+  dst.z = tex2D(ReliefSampler,dst.xy).w;  // Set dest. depth
+   float3 vec = dst - src; // Ray direction
+  vec /= vec.z;  // Scale ray direction so that vec.z = 1.0
+  vec *= 1.0 - dst.z;  // Scale again
+   float3 step_fwd = vec/search_steps;  // Length of a forward step
+   // Search until a new point outside the surface
+   float3 ray_pos = dst + step_fwd;
+  for( int i=1; i&lt;search_steps; i++ )
+  {
+    float current_depth = tex2D(ReliefSampler, ray_pos.xy).w;
+    if ( current_depth &lt;= ray_pos.z )
+      ray_pos += step_fwd;
+  }
+  // Original texel depth
+   float src_texel_depth = tex2D(ReliefSampler,TexCoord).w;
+  // Compute the cone ratio
+   float cone_ratio = (ray_pos.z &gt;= src_texel_depth) ? 1.0 :
+                     length(ray_pos.xy - TexCoord) /
+                     (src_texel_depth - ray_pos.z);
+  // Check for minimum value with previous pass result
+   float best_ratio = tex2D(ResultSampler, TexCoord).x;
+  if ( cone_ratio &gt; best_ratio )
+    cone_ratio = best_ratio;
+  return float4(cone_ratio, cone_ratio, cone_ratio, cone_ratio);
+}</pre>
+<h4>18.4.2 Rendering with Relaxed Cone Maps</h4>
+<p>To shade a fragment, we step along the viewing ray as it travels 
+through the depth texture, using the relaxed cone map for space leaping.
+ We proceed along the ray until we reach a point inside the relief 
+surface. The process is similar to what we described in Section 18.3 for
+ conventional cone maps. <a href="javascript:popUp('elementLinks/18fig09.jpg')">Figure 18-9</a>
+ illustrates how to find the intersection between a transformed viewing 
+ray and a cone. First, we scale the vector representing the ray 
+direction by dividing it by its <em>z</em> component (<em>ray.direction.z</em>), after which, according to <a href="javascript:popUp('elementLinks/18fig09.jpg')">Figure 18-9</a>, one can write</p>
+<p>
+   <strong>
+      Equation 1 </strong>
+</p>
+<p>
+   <a>
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/ch18equ01.jpg" alt="ch18equ01.jpg" border="0" hspace="5">
+   </a>
+</p>
+<br>
+<p>Likewise:</p>
+<p>
+   <strong>
+      Equation 2 </strong>
+</p>
+<p>
+   <a>
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/ch18equ02.jpg" alt="ch18equ02.jpg" border="0" hspace="5">
+   </a>
+</p>
+<br>
+<p>Solving Equations 1 and 2 for <em>d</em> gives the following:</p>
+<p>
+   <strong>
+      Equation 3 </strong>
+</p>
+<p>
+   <a>
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/ch18equ03.jpg" alt="ch18equ03.jpg" border="0" hspace="5">
+   </a>
+</p>
+<br>
+<p>From Equation 3, we compute the intersection point <em>I</em> as this:</p>
+<p>
+   <strong>
+      Equation 4 </strong>
+</p>
+<p>
+   <a>
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/ch18equ04.jpg" alt="ch18equ04.jpg" border="0" hspace="5">
+   </a>
+</p>
+<br>
+<div class="figure">
+   <a href="javascript:popUp('elementLinks/18fig09.jpg')">
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/18fig09.jpg" alt="18fig09.jpg">
+   </a>
+   <p>
+      <a href="javascript:popUp('elementLinks/18fig09.jpg')">Figure 18-9</a> Intersecting the Viewing Ray with a Cone</p>
+</div>
+<p>The code in Listing 18-3 shows the ray-intersection function for 
+relaxed cone stepping. For performance reasons, the first loop iterates 
+through the relaxed cones for a fixed number of steps. Note the use of 
+the <tt>saturate()</tt> function when calculating the distance to move. 
+This guarantees that we stop on the first visited texel for which the 
+viewing ray is under the relief surface. At the end of this process, we 
+assume the ray has pierced the surface once and then start the binary 
+search for refining the coordinates of the intersection point. Given 
+such coordinates, we then shade the fragment as described in Section 
+18.2.</p>
+<h4>Example 18-3. Ray Intersect with Relaxed Cone</h4>
+<div class="dp-highlighter"><div class="bar"></div><ol class="dp-cpp" start="1"><li class="alt"><span><span>&nbsp;</span><span class="comment">//&nbsp;Ray&nbsp;intersect&nbsp;depth&nbsp;map&nbsp;using&nbsp;relaxed&nbsp;cone&nbsp;stepping.</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;<span class="comment">//&nbsp;Depth&nbsp;value&nbsp;stored&nbsp;in&nbsp;alpha&nbsp;channel&nbsp;(black&nbsp;at&nbsp;object&nbsp;surface)</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;<span class="comment">//&nbsp;and&nbsp;relaxed&nbsp;cone&nbsp;ratio&nbsp;stored&nbsp;in&nbsp;blue&nbsp;channel.</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;<span class="keyword">void</span><span>&nbsp;ray_intersect_relaxedcone(&nbsp;&nbsp;</span></span></li><li class="alt"><span>sampler2D&nbsp;relief_map,&nbsp;&nbsp;<span class="comment">//&nbsp;Relaxed&nbsp;cone&nbsp;map</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;inout&nbsp;float3&nbsp;ray_pos,&nbsp;&nbsp;<span class="comment">//&nbsp;Ray&nbsp;position</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;inout&nbsp;float3&nbsp;ray_dir)&nbsp;&nbsp;<span class="comment">//&nbsp;Ray&nbsp;direction</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">const</span><span>&nbsp;</span><span class="datatypes">int</span><span>&nbsp;cone_steps&nbsp;=&nbsp;15;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">const</span><span>&nbsp;</span><span class="datatypes">int</span><span>&nbsp;binary_steps&nbsp;=&nbsp;6;&nbsp;&nbsp;</span></span></li><li class="alt"><span>ray_dir&nbsp;/=&nbsp;ray_dir.z;&nbsp;&nbsp;<span class="comment">//&nbsp;Scale&nbsp;ray_dir</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;<span class="datatypes">float</span><span>&nbsp;ray_ratio&nbsp;=&nbsp;length(ray_dir.xy);&nbsp;&nbsp;</span></span></li><li class="alt"><span>float3&nbsp;pos&nbsp;=&nbsp;ray_pos;&nbsp;&nbsp;</span></li><li class=""><span><span class="keyword">for</span><span>(&nbsp;</span><span class="datatypes">int</span><span>&nbsp;i=0;&nbsp;i&lt;cone_steps;&nbsp;i++)&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;float4&nbsp;tex&nbsp;=&nbsp;tex2D(relief_map,&nbsp;pos.xy);&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;<span class="datatypes">float</span><span>&nbsp;cone_ratio&nbsp;=&nbsp;tex.z;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;<span class="datatypes">float</span><span>&nbsp;height&nbsp;=&nbsp;saturate(tex.w&nbsp;–&nbsp;pos.z);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;<span class="datatypes">float</span><span>&nbsp;d&nbsp;=&nbsp;cone_ratio*height/(ray_ratio&nbsp;+&nbsp;cone_ratio);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;pos&nbsp;+=&nbsp;ray_dir&nbsp;*&nbsp;d;&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li><li class=""><span>&lt;strong&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;em&gt;<span class="comment">//&nbsp;Binary&nbsp;search&nbsp;initial&nbsp;range&nbsp;and&nbsp;initial&nbsp;position&lt;/em&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;em&gt;float3&lt;/em&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&lt;/strong&gt;&nbsp;bs_range&nbsp;=&nbsp;0.5&nbsp;*&nbsp;ray_dir&nbsp;*&nbsp;pos.z;&nbsp;&nbsp;</span></li><li class=""><span>float3&nbsp;bs_position&nbsp;=&nbsp;ray_pos&nbsp;+&nbsp;bs_range;&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">for</span><span>(&nbsp;</span><span class="datatypes">int</span><span>&nbsp;i=0;&nbsp;i&lt;binary_steps;&nbsp;i++&nbsp;)&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;float4&nbsp;tex&nbsp;=&nbsp;tex2D(relief_map,&nbsp;bs_position.xy);&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;bs_range&nbsp;*=&nbsp;0.5;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(bs_position.z&nbsp;&lt;&nbsp;tex.w)&nbsp;&nbsp;</span><span class="comment">//&nbsp;If&nbsp;outside</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;bs_position&nbsp;+=&nbsp;bs_range;&nbsp;&nbsp;<span class="comment">//&nbsp;Move&nbsp;forward</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;<span class="keyword">else</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;bs_position&nbsp;-=&nbsp;bs_range;&nbsp;&nbsp;<span class="comment">//&nbsp;Move&nbsp;backward</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><pre style="display: none;" name="code" class="cpp:nocontrols">   // Ray intersect depth map using relaxed cone stepping.
+   // Depth value stored in alpha channel (black at object surface)
+   // and relaxed cone ratio stored in blue channel.
+   void ray_intersect_relaxedcone(
+  sampler2D relief_map,  // Relaxed cone map
+   inout float3 ray_pos,  // Ray position
+   inout float3 ray_dir)  // Ray direction
+{
+  const int cone_steps = 15;
+  const int binary_steps = 6;
+  ray_dir /= ray_dir.z;  // Scale ray_dir
+   float ray_ratio = length(ray_dir.xy);
+  float3 pos = ray_pos;
+  for( int i=0; i&lt;cone_steps; i++)
+  {
+    float4 tex = tex2D(relief_map, pos.xy);
+    float cone_ratio = tex.z;
+    float height = saturate(tex.w – pos.z);
+    float d = cone_ratio*height/(ray_ratio + cone_ratio);
+    pos += ray_dir * d;
+  }
+  <strong>
+      <em>// Binary search initial range and initial position</em>
+      <em>float3</em>
+   </strong> bs_range = 0.5 * ray_dir * pos.z;
+  float3 bs_position = ray_pos + bs_range;
+  for( int i=0; i&lt;binary_steps; i++ )
+  {
+    float4 tex = tex2D(relief_map, bs_position.xy);
+    bs_range *= 0.5;
+    if (bs_position.z &lt; tex.w)  // If outside
+      bs_position += bs_range;  // Move forward
+   else
+      bs_position -= bs_range;  // Move backward
+  }
+}</pre>
+<p>Let <em>f</em> be the fragment to be shaded and let <em>K</em> be the point where the viewing ray has stopped (that is, just before performing the binary search), as illustrated in <a href="javascript:popUp('elementLinks/18fig10.jpg')">Figure 18-10</a>.
+ If too few steps were used, the ray may have stopped before reaching 
+the surface. Thus, to avoid skipping even thin height-field structures 
+(see the example shown in <a href="javascript:popUp('elementLinks/18fig04.jpg')">Figure 18-4a</a>), we use <em>K</em>
+ as the end point for the binary search. In this case, if the ray has 
+not pierced the surface, the search will converge to point <em>K</em>.</p>
+<div class="figure">
+   <a href="javascript:popUp('elementLinks/18fig10.jpg')">
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/18fig10.jpg" alt="18fig10.jpg">
+   </a>
+   <p>
+      <a href="javascript:popUp('elementLinks/18fig10.jpg')">Figure 18-10</a> The Viewing Ray Through Fragment , with Texture Coordinates ()</p>
+</div>
+<p>Let (<em>m</em>, <em>n</em>) be the texture coordinates associated to <em>K</em> and let <em>d<sub>K</sub>
+   </em> be the depth value stored at (<em>m</em>, <em>n</em>) (see <a href="javascript:popUp('elementLinks/18fig10.jpg')">Figure 18-10</a>). The binary search will then look for an intersection along the line segment ranging from points <em>H</em> to <em>K</em>, which corresponds to texture coordinates ((<em>s</em> + <em>m</em>)/2, (<em>t</em>+<em>n</em>)/2) to (<em>m</em>, <em>n</em>), where (<em>s</em>, <em>t</em>) are the texture coordinates of fragment <em>f</em> (<a href="javascript:popUp('elementLinks/18fig10.jpg')">Figure 18-10</a>). Along this segment, the depth of the viewing ray varies linearly from (<em>d<sub>K</sub>
+   </em>/2) to <em>d<sub>K</sub>
+   </em>. Note that, instead, one could use (<em>m</em>, <em>n</em>) and (<em>q</em>, <em>r</em>) (the texture coordinates of point <em>J</em>,
+ the previously visited point along the ray) as the limits for starting 
+the binary search refinement. However, because we are using a fixed 
+number of iterations for stepping over the relaxed cone map, saving (<em>q</em>, <em>r</em>)
+ would require a conditional statement in the code. According to our 
+experience, this tends to increase the number of registers used in the 
+fragment shader. The graphics hardware has a fixed number of registers 
+and it runs as many threads as it can fit in its register pool. The 
+fewer registers we use, the more threads we will have running at the 
+same time. The latency imposed by the large number of dependent texture 
+reads in relief mapping is hidden when multiple threads are running 
+simultaneously. More-complex code in the loops will increase the number 
+of registers used and thus reduce the number of parallel threads, 
+exposing the latency from the dependent texture reads and reducing the 
+frame rate considerably. So, to keep the shader code shorter, we start 
+the binary search using <em>H</em> and <em>K</em> as limits. Note that 
+after only two iterations of the binary search, one can expect to have 
+reached a search range no bigger than the one defined by the points <em>J</em> and <em>K</em>.</p>
+<p>It should be clear that the use of relaxed cone maps could still 
+potentially lead to some distortion artifacts similar to the ones 
+produced by regular (conservative) cone maps (<a href="javascript:popUp('elementLinks/18fig01.jpg')">Figure 18-1b</a>).
+ In practice, they tend to be significantly less pronounced for the same
+ number of steps, due to the use of wider cones. According to our 
+experience, the use of 15 relaxed cone steps seems to be sufficient to 
+avoid such artifacts in typical height fields.</p>
+<h2>18.5 Conclusion</h2>
+<p>The combined use of relaxed cone stepping and binary search for 
+computing rayheight-field intersection significantly reduces the 
+occurrence of artifacts in images generated with per-fragment 
+displacement mapping. The wider cones lead to more-efficient space 
+leaping, whereas the binary search accounts for more accuracy. If too 
+few cone stepping iterations are used, the final image might present 
+artifacts similar to the ones found in cone step mapping (Dummer 2006). 
+In practice, however, our technique tends to produce significantly 
+better results for the same number of iterations or texture accesses. 
+This is an advantage, especially for the new generations of GPUs, 
+because although both texture sampling and computation performance have 
+been consistently improved, computation performance is scaling faster 
+than bandwidth.</p>
+<p>Relaxed cone stepping integrates itself with relief mapping in a very natural way, preserving all of its original features. <a href="javascript:popUp('elementLinks/18fig11.jpg')">Figure 18-11</a> illustrates the use of RCS in renderings involving depth scaling (<a href="javascript:popUp('elementLinks/18fig11.jpg')">Figures 18-11b</a> and <a href="javascript:popUp('elementLinks/18fig11.jpg')">18-11d</a>) and changes in tiling factors (<a href="javascript:popUp('elementLinks/18fig11.jpg')">Figures 18-11c</a> and <a href="javascript:popUp('elementLinks/18fig11.jpg')">18-11d</a>).
+ Note that these effects are obtained by appropriately adjusting the 
+directions of the viewing rays (Policarpo et al. 2005) and, therefore, 
+not affecting the cone ratios.</p>
+<div class="figure">
+   <a href="javascript:popUp('elementLinks/18fig11.jpg')">
+      <img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/18fig11.jpg" alt="18fig11.jpg">
+   </a>
+   <p>
+      <a href="javascript:popUp('elementLinks/18fig11.jpg')">Figure 18-11</a> Images Showing Changes in Apparent Depth and Tiling Factors</p>
+</div>
+<p>Mipmapping can be safely applied to color and normal maps. 
+Unfortunately, conventional mipmapping should not be applied to cone 
+maps, because the filtered values would lead to incorrect intersections.
+ Instead, one should compute the mipmaps manually, by conservatively 
+taking the minimum value for each group of pixels. Alternatively, one 
+can sample the cone maps using a nearest-neighbors strategy. In this 
+case, when an object is seen from a distance, the properly sampled color
+ texture tends to hide the aliasing artifacts resulting from the 
+sampling of a high-resolution cone map. Thus, in practice, the only 
+drawback of not applying mipmapping to the cone map is the performance 
+penalty for not taking advantage of sampling smaller textures.</p>
+<h4>18.5.1 Further Reading</h4>
+<p>Relief texture mapping was introduced in Oliveira et al. 2000 using a
+ two-pass approach consisting of a prewarp followed by conventional 
+texture mapping. The prewarp, based on the depth map, was implemented on
+ the CPU and the resulting texture sent to the graphics hardware for the
+ final mapping. With the introduction of fragment processors, Policarpo 
+et al. (2005) generalized the technique for arbitrary polygonal models 
+and showed how to efficiently implement it on a GPU. This was achieved 
+by performing the ray-height-field intersection in 2D texture space. 
+Oliveira and Policarpo (2005) also described how to render curved 
+silhouettes by fitting a quadric surface at each vertex of the model. 
+Later, they showed how to render relief details in preexisting 
+applications using a minimally invasive approach (Policarpo and Oliveira
+ 2006a). They have also generalized the technique to map 
+non-height-field structures onto polygonal models and introduced a new 
+class of impostors (Policarpo and Oliveira 2006b). More recently, 
+Oliveira and Brauwers (2007) have shown how to use a 2D texture approach
+ to intersect rays against depth maps generated under perspective 
+projection and how to use these results to render real-time refractions 
+of distant environments through deforming objects.</p>
+<h2>18.6 References</h2>
+
+<p>
+   Baboud, Lionel, and Xavier Décoret. 2006. "Rendering Geometry with Relief Textures." In <em>Proceedings of Graphics Interface 2006</em>.</p>
+<p>
+   Donnelly, William. 2005. "Per-Pixel Displacement Mapping with Distance Functions." In <em>GPU Gems 2</em>, edited by Matt Pharr, pp. 123–136. Addison-Wesley.</p>
+<p>
+   Dummer, Jonathan. 2006. "Cone Step Mapping: An Iterative Ray-Heightfield Intersection Algorithm." Available online at <a onclick="newwindow(this)" href="http://www.lonesock.net/files/ConeStepMapping.pdf">http://www.lonesock.net/files/ConeStepMapping.pdf</a>.</p>
+<p>
+   Oliveira, Manuel M., Gary Bishop, and David McAllister. 2000. "Relief Texture Mapping." In <em>Proceedings of SIGGRAPH 2000</em>, pp. 359–368.</p>
+<p>
+   Oliveira, Manuel M., and Fabio Policarpo. 2005. "An Efficient 
+Representation for Surface Details." UFRGS Technical Report RP-351. 
+Available online at <a onclick="newwindow(this)" href="http://www.inf.ufrgs.br/%7Eoliveira/pubs_files/Oliveira_Policarpo_RP-351_Jan_2005.pdf">http://www.inf.ufrgs.br/~oliveira/pubs_files/Oliveira_Policarpo_RP-351_Jan_2005.pdf</a>.</p>
+<p>
+   Oliveira, Manuel M., and Maicon Brauwers. 2007. "Real-Time Refraction Through Deformable Objects." In <em>Proceedings of the 2007 Symposium on Interactive 3D Graphics and Games</em>, pp. 89–96.</p>
+<p>
+   Policarpo, Fabio, Manuel M. Oliveira, and João Comba. 2005. "Real-Time Relief Mapping on Arbitrary Polygonal Surfaces." In <em>Proceedings of the 2005 Symposium on Interactive 3D Graphics and Games</em>, pp. 155–162.</p>
+<p>
+   Policarpo, Fabio, and Manuel M. Oliveira. 2006a. "Rendering Surface 
+Details in Games with Relief Mapping Using a Minimally Invasive 
+Approach." In <em>SHADER X4: Advance Rendering Techniques</em>, edited by Wolfgang Engel, pp. 109–119. Charles River Media, Inc.</p>
+<p>
+   Policarpo, Fabio, and Manuel M. Oliveira. 2006b. "Relief Mapping of Non-Height-Field Surface Details." In <em>Proceedings of the 2006 Symposium on Interactive 3D Graphics and Games</em>, pp. 55–62.</p>
+<p>
+   Risser, Eric, Musawir Shah, and Sumanta Pattanaik. 2005. "Interval 
+Mapping." University of Central Florida Technical Report. Available 
+online at <a onclick="newwindow(this)" href="http://graphics.cs.ucf.edu/IntervalMapping/images/IntervalMapping.pdf">http://graphics.cs.ucf.edu/IntervalMapping/images/IntervalMapping.pdf</a>.</p>
+<p>
+   Williams, Lance. 1978. "Casting Curved Shadows on Curved Surfaces." In <em>Computer Graphics (Proceedings of SIGGRAPH 1978)</em> 12(3), pp. 270–274.</p>
+
+
+		<!-- generated html end -->
+
+
+
+<!-- <div align="right" style=" color:#999999;">Last Update: 12:39 07/17/2009</div> -->
+
+  </div>
+
+  
+
+  <div id="left" class="column">		
+
+    <a href="http://developer.nvidia.com/">Developer Site Homepage</a><br><br>
+
+		<a href="http://news.developer.nvidia.com/">Developer News Homepage</a><br><br>
+
+
+
+		<img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/divider.htm" alt="" align="" border="0"><br><br>
+
+
+
+		<a href="https://nvdeveloper.nvidia.com/">Developer Login</a><br><br>
+
+		<a href="http://developer.nvidia.com/page/registered_developer_program.html">Become a<br>Registered Developer</a><br><br>
+
+
+
+		<img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/divider.htm" alt="" align="" border="0"><br><br>
+
+
+
+		<a href="http://developer.nvidia.com/page/tools.html">Developer Tools</a><br><br>
+
+		<a href="http://developer.nvidia.com/page/documentation.html">Documentation</a><br><br>
+
+		<a href="http://developer.nvidia.com/page/directx.html">DirectX</a><br><br>
+
+		<a href="http://developer.nvidia.com/page/opengl.html">OpenGL</a><br><br>
+
+		<a href="http://developer.nvidia.com/object/cuda.html">GPU Computing</a><br><br>
+
+		<a href="http://developer.nvidia.com/page/handheld.html">Handheld</a><br><br>
+
+		<a href="http://developer.nvidia.com/page/event_calendar.html">Events Calendar</a><br><br>
+
+
+
+		<img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/divider.htm" alt="" align="" border="0"><br><br>
+
+
+
+		<a href="http://developer.nvidia.com/object/newsletter_signup.html">Newsletter Sign-Up</a><br><br>
+
+		<a href="http://developer.nvidia.com/object/downloading_drivers.html">Drivers</a><br><br>
+
+		<a href="http://developer.nvidia.com/page/jobs.html">Jobs (1)</a><br><br>
+
+		<a href="http://developer.nvidia.com/object/contact_us.html">Contact</a><br><br>
+
+		<a href="http://developer.nvidia.com/object/legal_info.html">Legal Information</a><br><br>
+
+
+
+		<img src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/divider.htm" alt="" align="" border="0"><br><br>
+
+		<a href="http://surveys.nvidia.com/index.jsp?pi=c1655cd3f4d0fb4bfdee853f141f9a75">Site Feedback</a>		
+
+	</div>
+
+	
+
+  <div id="right" class="column"><ul><li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_pref01.html">Foreword</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_pref02.html">Preface</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_pref03.html">Contributors</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_copyrightpg.html">Copyright</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_part01.html"><i>Part I: Geometry</i></a></li>
+<ul>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch01.html">Chapter 1. Generating Complex Procedural Terrains Using the GPU</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch02.html">Chapter 2. Animated Crowd Rendering</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch03.html">Chapter 3. DirectX 10 Blend Shapes: Breaking the Limits</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch04.html">Chapter 4. Next-Generation SpeedTree Rendering</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch05.html">Chapter 5. Generic Adaptive Mesh Refinement</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch06.html">Chapter 6. GPU-Generated Procedural Wind Animations for Trees</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch07.html">Chapter 7. Point-Based Visualization of Metaballs on a GPU</a></li>
+</ul><li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_part02.html"><i>Part II: Light and Shadows</i></a></li>
+<ul>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch08.html">Chapter 8. Summed-Area Variance Shadow Maps</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch09.html">Chapter 9. Interactive Cinematic Relighting with Global Illumination</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch10.html">Chapter 10. Parallel-Split Shadow Maps on Programmable GPUs</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch11.html">Chapter 11. Efficient and Robust Shadow Volumes Using Hierarchical Occlusion Culling and Geometry Shaders</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch12.html">Chapter 12. High-Quality Ambient Occlusion</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch13.html">Chapter 13. Volumetric Light Scattering as a Post-Process</a></li>
+</ul><li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_part03.html"><i>Part III: Rendering</i></a></li>
+<ul>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch14.html">Chapter 14. Advanced Techniques for Realistic Real-Time Skin Rendering</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch15.html">Chapter 15. Playable Universal Capture</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch16.html">Chapter 16. Vegetation Procedural Animation and Shading in Crysis</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch17.html">Chapter 17. Robust Multiple Specular Reflections and Refractions</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch18.html"><font color="#45b900;"><b><i>Chapter 18. Relaxed Cone Stepping for Relief Mapping</i></b></font></a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch19.html">Chapter 19. Deferred Shading in Tabula Rasa</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch20.html">Chapter 20. GPU-Based Importance Sampling</a></li>
+</ul><li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_part04.html"><i>Part IV: Image Effects</i></a></li>
+<ul>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch21.html">Chapter 21. True Impostors</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch22.html">Chapter 22. Baking Normal Maps on the GPU</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch23.html">Chapter 23. High-Speed, Off-Screen Particles</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch24.html">Chapter 24. The Importance of Being Linear</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch25.html">Chapter 25. Rendering Vector Art on the GPU</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch26.html">Chapter 26. Object Detection by Color: Using the GPU for Real-Time Video Image Processing</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch27.html">Chapter 27. Motion Blur as a Post-Processing Effect</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch28.html">Chapter 28. Practical Post-Process Depth of Field</a></li>
+</ul><li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_part05.html"><i>Part V: Physics Simulation</i></a></li>
+<ul>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch29.html">Chapter 29. Real-Time Rigid Body Simulation on GPUs</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch30.html">Chapter 30. Real-Time Simulation and Rendering of 3D Fluids</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch31.html">Chapter 31. Fast N-Body Simulation with CUDA</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch32.html">Chapter 32. Broad-Phase Collision Detection with CUDA</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch33.html">Chapter 33. LCP Algorithms for Collision Detection Using CUDA</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch34.html">Chapter 34. Signed Distance Fields Using Single-Pass GPU Scan Conversion of Tetrahedra</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch35.html">Chapter 35. Fast Virus Signature Matching on the GPU</a></li>
+</ul><li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_part06.html"><i>Part VI: GPU Computing</i></a></li>
+<ul>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch36.html">Chapter 36. AES Encryption and Decryption on the GPU</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch37.html">Chapter 37. Efficient Random Number Generation and Application Using CUDA</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch38.html">Chapter 38. Imaging Earth's Subsurface Using CUDA</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch39.html">Chapter 39. Parallel Prefix Sum (Scan) with CUDA</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch40.html">Chapter 40. Incremental Computation of the Gaussian</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch41.html">Chapter 41. Using the Geometry Shader for Compact and Variable-Length GPU Feedback</a></li>
+</ul>
+</ul></div>
+
+</div>
+
+
+
+<div id="footer"></div>
+
+
+
+
+
+<!--WEBSIDESTORY CODE HBX1.0 (Universal)-->
+
+<!--COPYRIGHT 1997-2005 WEBSIDESTORY,INC. ALL RIGHTS RESERVED. U.S.PATENT No. 6,393,479B1. MORE INFO:http://websidestory.com/privacy-->
+
+<script language="javascript">
+
+var _hbEC=0,_hbE=new Array;function _hbEvent(a,b){b=_hbE[_hbEC++]=new Object();b._N=a;b._C=0;return b;}
+
+var hbx=_hbEvent("pv");hbx.vpc="HBX0100u";hbx.gn="a.nvidia.com";
+
+hbx.acct="DM55061879AA96EN3";//developer
+
+hbx.pn="PUT+PAGE+NAME+HERE";
+
+hbx.mlc="CONTENT+CATEGORY";
+
+hbx.pndef="home.html";
+
+hbx.ctdef="full";
+
+hbx.lt="auto";
+
+hbx.dlf=".run,.8bi,.asx,.bat,.cg,.chm,.cpp,.db,.dds,.dll,.dsp,.dsw,.fp,.fx,.fxcomposer,.fxproj,.h,.hdr,.hpp,.ico,.img,.inf,.ini,.key,.lib,.lst,.msi,.ncb,.opt,.P3D,.plg,.exr,.rc,.res,.sh,.sln,.spc,.str,.tga,.txt,.vcproj,.xml";
+
+</script><script language="javascript1.1" defer="defer" src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/hbx.htm"></script>
+
+<!--END WEBSIDESTORY CODE-->
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/SyntaxHighlighter.css">
+
+<script language="javascript" src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/shCore.js"></script>
+
+<script language="javascript" src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/shBrushCpp.js"></script>
+
+<script language="javascript">
+
+dp.SyntaxHighlighter.ClipboardSwf = 'dp.SyntaxHighlighter/Scripts/clipboard.swf';
+
+dp.SyntaxHighlighter.HighlightAll('code');
+
+</script>
+
+
+
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script><script kabl="89517" style="display: none !important" src="GPU%20Gems%203%20-%20Chapter%2018.%20Relaxed%20Cone%20Stepping%20for%20Relief%20Mapping_files/ga.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+var pageTracker = _gat._getTracker("UA-4670658-1");
+
+pageTracker._initData();
+
+pageTracker._trackPageview();
+
+</script>
+
+
+
+
+
+
+</body></html>

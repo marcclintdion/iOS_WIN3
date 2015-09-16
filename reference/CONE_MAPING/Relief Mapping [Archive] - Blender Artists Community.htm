@@ -1,0 +1,962 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="keywords" content="program, light, glsl, light_index, pass, number, sources, depends, level, select, language, python, relief, mapping">
+<meta name="description" content="Hello, 
+As promised - here is Relief mapping.  
+It is really hard to judge framerate impact compared with parallax mapping on my computer.. I have 30 fps cap in Blender, i dont know why. Ill have to reinstall OS i guess.  
+ 
+This is very similar to steep parallax mapping, but i think it looks better.. and also could be slower :).  
+ 
+3 pretty screenshots: 
+ 
+http://img218.imageshack.us/img218/8605/relief2.jpg">
+<title> Relief Mapping [Archive] - Blender Artists Community</title>
+<link rel="stylesheet" type="text/css" href="Relief%20Mapping%20%5BArchive%5D%20-%20Blender%20Artists%20Community_files/archive.css">
+</head>
+<body>
+<div class="pagebody">
+<div id="navbar"><a href="http://blenderartists.org/forum/archive/index.php">Blender Artists Community</a> &gt; <a href="http://blenderartists.org/forum/archive/index.php/f-34.html">Game Engine</a> &gt; <a href="http://blenderartists.org/forum/archive/index.php/f-36.html">Game Engine Resources</a> &gt; Relief Mapping</div>
+<hr>
+<div class="pda"><a href="http://blenderartists.org/forum/archive/index.php/t-156062.html?pda=1" rel="nofollow">PDA</a></div>
+<p class="largefont">View Full Version : <a href="http://blenderartists.org/forum/showthread.php?156062-Relief-Mapping">Relief Mapping</a></p>
+<hr>
+<div class="floatcontainer"> </div><br>
+<div class="post"><div class="posttop"><div class="username">martinsh</div><div class="date">14-May-09, 11:41</div></div><div class="posttext">Hello,<br>
+As promised - here is Relief mapping. <br>
+It is really hard to judge framerate impact compared with parallax 
+mapping on my computer.. I have 30 fps cap in Blender, i dont know why. 
+Ill have to reinstall OS i guess. <br>
+<br>
+This is very similar to steep parallax mapping, but i think it looks better.. and also could be slower :). <br>
+<br>
+3 pretty screenshots:<br>
+<br>
+http://img218.imageshack.us/img218/8605/relief2.jpg<br>
+<br>
+http://img218.imageshack.us/img218/9785/relief1.jpg<br>
+<br>
+http://img218.imageshack.us/img218/1757/relief3.jpg<br>
+<br>
+and a blend file: (RMB-click on link and Save As..)<br>
+<br>
+http://dl.dropbox.com/u/11542084/relief_mapping.blend<br>
+(sorry too big for attachment, as this blend contains 2 tga textures with alpha channels)<br>
+<br>
+Controls:<br>
+<br>
+Mouse/WASD - look/move;<br>
+left mouse button+ mouse move - move the light;<br>
+<br>
+arrowkeys:<br>
+up/down - displacement amount;<br>
+left/right - texture tiling; <br>
+<br>
+1 - ssao (currently experimenting to get it work with relief and parallax mapping)<br>
+<br>
+Done as part of Twilight22 project.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Ace Dragon</div><div class="date">14-May-09, 11:52</div></div><div class="posttext">Like
+ I said before, this really should be hardcoded into Blender so it's 
+very accessable to artists because they won't need python and can just 
+use the Blender materials, plus then you can see it in the GLSL view. I 
+tried the earlier version and found you need GLSL knowledge to control 
+displacement amount and texture scale<br>
+<br>
+Also, if you do that, this would also be a very nice feature for the 
+Blender Internal renderer as it provides a good alternative to 
+micropolygons. Just think of Blender having the same advanced shading 
+techniques in the renderer, the 3D view, and the BGE.<br>
+<br>
+All this really needs is to affect spot-lamp shadows in the BGE, then it
+ will be perfect for hardcoding into Blender, and then it can be done to
+ affect ray shadows just for the Internal renderer.:D<br>
+<br>
+I know I may sound like a broken-record but I'm looking at making sure the Twilight22 shader devs. know of this.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Jorgie</div><div class="date">14-May-09, 11:54</div></div><div class="posttext">Amazing!!!!</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">kay_Eva</div><div class="date">14-May-09, 12:00</div></div><div class="posttext">this isn't even technology anymore; this is magick... with a k - that means it's the good stuff<br>
+<br>
+I'm just stunned. I've never seen relief mapping before.<br>
+<br>
+I think we had similiar rigs you'res being a bit faster, on my computer 
+it's running at 120fps fullscreen with like 6 copies of the plane on 
+screen at once. that's spectacular<br>
+<br>
+the further I move away from the planes the faster it goes<br>
+<br>
+so at a distance == 220fps<br>
+medium == 120fps<br>
+super duper close == 60fps<br>
+<br>
+i'm using Jorgie's optimized build of course so it's probably a bit faster than on other builds</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">martinsh</div><div class="date">14-May-09, 12:16</div></div><div class="posttext">...<br>
+the further I move away from the planes the faster it goes<br>
+<br>
+so at a distance == 220fps<br>
+medium == 120fps<br>
+super duper close == 60fps<br>
+...<br>
+<br>
+great!<br>
+looks like the framerate changes according the texture size - when 
+mipmapping kicks in - the texture size gets reduced by half so the 
+shader has less to calculate.<br>
+Thanks</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">endi</div><div class="date">14-May-09, 12:39</div></div><div class="posttext">incredible!</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Sim88</div><div class="date">14-May-09, 13:02</div></div><div class="posttext">If you have trouble, turn off the SSAO, then it worked like a charm. Framerate down to a 1/4 the usual though. Looks amazing!</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">PhantasmicNova</div><div class="date">14-May-09, 13:32</div></div><div class="posttext">This is stunning work!</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">greatrel</div><div class="date">14-May-09, 13:37</div></div><div class="posttext">Quite
+ awesome martin. Just figured out how to remove the frame rate cap. I 
+had to "Force off" my vertical sync in the NVidia control panel, and 
+"Enable All Frames" to remove cap on frame rate. My framerates scale 
+identically to kay_Eva's.<br>
+<br>
+You've got me worried now, because framerates on this are comparable to 
+the iterative parallax mapping I did. I'll have to throw this script at 
+my walls and get a good comparison, I might have some major optimizing 
+to do. Please let me know if you get the SSAO working with the shader! 
+Then I can add it to the parallax methods. I'm afraid I'll have to leave
+ it to you for now though, I've got some other assignments for the time 
+being.<br>
+<br>
+I like your control mechanism and light icon, might have to steal it for future demos. That is if you don't mind. :)</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">dusty ghost</div><div class="date">14-May-09, 14:12</div></div><div class="posttext">incredible!<br>
+Seconded!!!! <br>
+<br>
+One thing I'm getting though, these weird lines when I get close. Could 
+this be down to my graphic cards? I'm using two SLi enabled Nvidia 
+GForce 8800 GTs. They have the latest drivers.<br>
+<br>
+http://i291.photobucket.com/albums/ll281/dustbin1_uk/straffing.jpg</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">dusty ghost</div><div class="date">14-May-09, 14:18</div></div><div class="posttext">Ah! just realised! I'm not using the latest build you guys created. Idiot! Sorry.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">zednanreh.c</div><div class="date">14-May-09, 14:19</div></div><div class="posttext">Seconded!!!! <br>
+<br>
+One thing I'm getting though, these weird lines when I get close. Could 
+this be down to my graphic cards? I'm using two SLi enabled Nvidia 
+GForce 8800 GTs. They have the latest drivers.<br>
+<br>
+http://i291.photobucket.com/albums/ll281/dustbin1_uk/straffing.jpg<br>
+<br>
+i get the same thing on my macbook's NVIDIA GeForce 9400M :confused:</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Felix_Kütt</div><div class="date">14-May-09, 14:37</div></div><div class="posttext">Martin,
+ check to see if you have VSync ennabled in your video drivers, this 
+could be whats 'capping' the frame rate by keeping it synced with your 
+monitors refresh rate.<br>
+<br>
+hope this might help. :)<br>
+<br>
+edit:<br>
+argh didn't notice, greatrel already pointed this out! :)</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">martinsh</div><div class="date">14-May-09, 15:05</div></div><div class="posttext">Hey, thanks guys!<br>
+<br>
+@greatrel<br>
+Thanks!<br>
+Well strange things are happening lately with my PC.. looks like Nvidia 
+control panel isnt affecting any application now.. and i am sure my 
+monitor`s refresh rate is 60Hz not 30 :).. <br>
+Anyway, it is recommended to reinstall OS once in a year.<br>
+<br>
+<br>
+@dusty ghost<br>
+<br>
+Yes, you are right! <br>
+I havent find a way to get rid of those lines. I took those screenshots 
+with Mipmapping disabled. Looks like it is a texture filtering problem 
+at vertex edges.<br>
+<br>
+Edit:<br>
+Hey and by the way, you can play with the values in the bottom of "relief.py"<br>
+<br>
+<br>
+<br>
+amount of samples for displacement - shader.setUniform1i('linear_search_steps', 15) <br>
+amount of subsamples for each sample for displacement - shader.setUniform1i('binary_search_steps', 5) <br>
+change transparency of the shadow - shader.setUniform4f('ambient', 0.4, 0.4, 0.4, 1)</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Felix_Kütt</div><div class="date">14-May-09, 15:59</div></div><div class="posttext">and i am sure my monitor`s refresh rate is 60Hz not 30 :).. <br>
+<br>
+IIRC,<br>
+60Hz = ~30FPS<br>
+and<br>
+65 = ~32FPS<br>
+<br>
+:)<br>
+<br>
+<br>
+Anyway, it is recommended to reinstall OS once in a year.<br>
+<br>
+no, its recommended to re-install windows once a year at least[6 months is more optimal,<br>
+and I know guy's that reinstall almost weekly]). ;) :D<br>
+<br>
+(in linux's case, a new kernel release happens every 6 month's...)<br>
+<br>
+edit:<br>
+Have you tried anisotropic filtering(its supposed to make mip-mapping 
+sharper) maybe it could fix the problem with the lines(not sure, just a 
+guess from an artists...)</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">martinsh</div><div class="date">14-May-09, 16:03</div></div><div class="posttext">...<br>
+no, its recommended to re-install windows once a year. ;) :D<br>
+<br>
+(in linux's case, a new kernel release happens every 6 month's...)<br>
+<br>
+Hehe, true. <br>
+I don`t recall when i re-installed OS on my iMac, maybe 3 years ago..</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Onklheinrich</div><div class="date">14-May-09, 16:30</div></div><div class="posttext">Awesome!
+ Simply stunning! Works perfectly om my computer. Runs on 60FPS from 
+long distance to super close (60FPS Cap). When one enter a 
+martinsh-created topic you know that you are in for extreme eyecandy!</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">kamaro</div><div class="date">14-May-09, 22:27</div></div><div class="posttext">Please can someone give me the link with the recent build with which I can test this blend.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Jorgie</div><div class="date">14-May-09, 23:58</div></div><div class="posttext">Please can someone give me the link with the recent build with which I can test this blend. <br>
+<br>
+Here´s a very recent optimized Win 32 build with soft shadows that I builded<br>
+http://graphicall.org/builds/builds/showbuild.php?action=show&amp;id=965
+ 
+(http://graphicall.org/builds/builds/showbuild.php?action=show&amp;id=965)</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">FunkyWyrm</div><div class="date">15-May-09, 00:12</div></div><div class="posttext">This is simply stunning. :eek:<br>
+<br>
+I get 7fps, so I guess it's finally time to get a new computer. My 
+laptop is over 3 years old, but at least I can see it working. Thanks a 
+lot martinsh. :)<br>
+<br>
+System:<br>
+Laptop<br>
+Vista 32 bit<br>
+1.66GHz centrino duo<br>
+NVIDIA GeForce Go 7600<br>
+2Gb RAM<br>
+<br>
+Edit: Official 2.48a build... will this work faster with a new build?</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">dusty ghost</div><div class="date">15-May-09, 00:34</div></div><div class="posttext">Ah! Ok, I hadn't got the latest build yet, thought I was being dumb, but hey, it's still progress!! Hope you nail that soon.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Jorgie</div><div class="date">15-May-09, 00:35</div></div><div class="posttext">Edit: Official 2.48a build... will this work faster with a new build? <br>
+<br>
+<br>
+It should on the optimized build I made,<br>
+http://graphicall.org/builds/builds/showbuild.php?action=show&amp;id=965
+ 
+(http://graphicall.org/builds/builds/showbuild.php?action=show&amp;id=965)
+ <br>
+thought I don´t think it will on a unoptimized build.<br>
+Haven´t really tried thought and www.blender.org 
+(http://www.blender.org) seems to be down at the moment so I can´t 
+really try to download 2.49 RC2 and compare.<br>
+<br>
+hope this helps</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">qv51</div><div class="date">15-May-09, 01:23</div></div><div class="posttext">It works perfectly for me, except for the SSAO :( Maybe because I use ATI Graphics card :(</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">psychotron</div><div class="date">15-May-09, 01:59</div></div><div class="posttext">can't believe my eyes :D<br>
+first steep parallax mapping, then tweaked common parallax... then great
+ iterative parallax mapping and now you brings relief mapping to 
+blender... hats off :D<br>
+thank you<br>
+<br>
+results here are beatiful, sometimes I see dotted lines too (onboard nvidia 9400 here)<br>
+but when I press 1 it shows me only SSAO without textures... where can be problem?<br>
+<br>
+would it work properly with more lights than just one?<br>
+you didn't need grayscale height map for this relief mapping? all is done only from one normal map?? :confused:<br>
+(edit: oh I see.. height map is in alpha channel of normalmap image)<br>
+<br>
+anyway great job as always :spin:<br>
+<br>
+I hope your relief mapping and greatrel's iterative parallax mapping 
+would be hardcoded to blender for easy of use and tuning parameters</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">martinsh</div><div class="date">15-May-09, 03:22</div></div><div class="posttext">Hey ,<br>
+Yes SSAO is there added without textures. It is there just for experimentation.. <br>
+<br>
+Well technically it should work with multiple lights, but it could 
+significantly slow down the shader, as it has to calculate normals, 
+depth, UVmap and shadows from each of the lights.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">psychotron</div><div class="date">15-May-09, 04:43</div></div><div class="posttext">ah more lights less performance... ok<br>
+so what is common usage then? you never have scene lit only by one light.. <br>
+hmm but you have always one main light - can you then somehow specify which light from scene be taken to compute relief map?</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Ace Dragon</div><div class="date">15-May-09, 10:51</div></div><div class="posttext">Hey ,<br>
+Yes SSAO is there added without textures. It is there just for experimentation.. <br>
+<br>
+Well technically it should work with multiple lights, but it could 
+significantly slow down the shader, as it has to calculate normals, 
+depth, UVmap and shadows from each of the lights.<br>
+If this was hardcoded into Blender to be available for artists use in 
+the Blender Internal Renderer then you won't need it to be realtime as 
+BI isn't a realtime engine.<br>
+<br>
+It may be too slow for use in games with a complex setup but it would be great for the renderer.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">MCHammond</div><div class="date">15-May-09, 11:07</div></div><div class="posttext">OMG!<br>
+<br>
+I remember reading a paper on this about a year ago and said that its likely to be in games in about 3 years LOL <br>
+<br>
+I think its amazing that all this work is being done on the BGE Its just Nutz.<br>
+<br>
+I used to think the future of the BGE was a bit questionable "pre 
+apricot", but now I think the Sky's the Limit! I just wish I had 
+something like this when I was kid!<br>
+<br>
+I remember buying a game starter kit book when i was a kid and it just 
+recommended loads of expensive software and then whent on about 
+programing in Direct X, total waist of time!</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">dusty ghost</div><div class="date">15-May-09, 11:12</div></div><div class="posttext">I just wish I had something like this when I was kid!Seconded!!!</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Alberstadt</div><div class="date">15-May-09, 11:24</div></div><div class="posttext">I
+ apologize beforehand for my ignorance but can I humbly ask what is the 
+difference between relief mapping and displacement mapping?</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">psychotron</div><div class="date">15-May-09, 14:21</div></div><div class="posttext">I
+ apologize beforehand for my ignorance but can I humbly ask what is the 
+difference between relief mapping and displacement mapping?<br>
+<br>
+relief (also parallax) mapping is virtual displacement in realtime engines</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">kay_Eva</div><div class="date">15-May-09, 18:46</div></div><div class="posttext">I thought this was kind of funny. Thanks guys. It's true too.<br>
+<br>
+Is it called a Vistabar? s start menu? Whatever I don't pay much attention to the name of it :cool:</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">gomer</div><div class="date">15-May-09, 19:34</div></div><div class="posttext">Works great on my Imac, with an ATI card. This shader seems perfect Martinsh, good job.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Manti</div><div class="date">16-May-09, 15:57</div></div><div class="posttext">I tested your file extensively and found several bugs for you to fix. :evilgrin:<br>
+<br>
+First is the thing with the odd lines. I noticed that thy follow edges. No edges, no lines.<br>
+<br>
+Second, your script hates triangles! I think this might be related to the edge problem.<br>
+Image:<br>
+http://i203.photobucket.com/albums/aa280/SupComlaze/ReliefMapingTriangleProblem.jpg
+ 
+(http://i203.photobucket.com/albums/aa280/SupComlazer/ReliefMapingTriangleProblem.jpg)<br>
+<br>
+Third, at UV splits in curved objects you can make the object appear to tear.<br>
+Image:<br>
+http://i203.photobucket.com/albums/aa280/SupComlazer/ReliefMapingUVCut.jpg<br>
+<br>
+Fourth, In certain situations the top is "cut" off.<br>
+Image:<br>
+http://i203.photobucket.com/albums/aa280/SupComlazer/ReliefMapingCutoffProblem.jpg<br>
+<br>
+Fifth, you said it should work with multiple lights, whether you were 
+talking about the script or the implementation I am not sure, but it 
+does not work in your .blend (uses the last light created).<br>
+<br>
+Also, in your scene if all layers with objects in them are not selected 
+the script does not work and if an object is deleted your script does 
+not work.<br>
+<br>
+Thank you for all your amazing work and hope this helps!</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">martinsh</div><div class="date">17-May-09, 12:16</div></div><div class="posttext">ah more lights less performance... ok<br>
+so what is common usage then? you never have scene lit only by one light.. <br>
+hmm but you have always one main light - can you then somehow specify which light from scene be taken to compute relief map?<br>
+<br>
+<br>
+Common usage? ..actually i have never seen any game or anything using relief mapping.. :D<br>
+Well ill add few lights to shader, see how it will behave. <br>
+Also the shader uses camera and object`s normals to specify relief map. It works really well also without lighting at all. <br>
+<br>
+<br>
+If this was hardcoded into Blender to be available for artists use in 
+the Blender Internal Renderer then you won't need it to be realtime as 
+BI isn't a realtime engine.<br>
+<br>
+It may be too slow for use in games with a complex setup but it would be great for the renderer.<br>
+<br>
+Im not really sure how to get GLSL working with Internal Renderer.. as i
+ am not familiar with raytracing rendering.. actually im not a coder 
+either, im just an artist who learns GLSL :D, so i cant really help with
+ hardcoding stuff inside Blender. But i totally agree about creating 
+shaders like these to be more artist friendly. <br>
+I believe the easiest way - to be available to do stuff with nodes, like
+ for Internal Renderer. Not sure how to deal with Vertex shader though..<br>
+<br>
+<br>
+I apologize beforehand for my ignorance but can I humbly ask what is the
+ difference between relief mapping and displacement mapping?<br>
+<br>
+displacement mapping uses actual geometry to do the displacement, relief
+ and parallax mapping just fakes this effect on a flat surface, so it is
+ much more suitable for realtime applications than real displacement 
+mapping (yet ;), who knows.. maybe a polycount won`t be a problem in the
+ future) <br>
+<br>
+@Manti<br>
+<br>
+1. Yup i know.. disabling mipmaps kinda fixes that one<br>
+2. Nice find, i think i know where to look to fix this. <br>
+3. Yeah i know :).. dunno how to fix that<br>
+4. Yup<br>
+5. Well it requires to modify the script.. <br>
+Also part:<br>
+not sure what you mean.. <br>
+Well you must add any shader object to the shader if you delete the 
+plane, named "stonebump", or just rename your new object to "stonebump"<br>
+<br>
+<br>
+ShaderObjects = [objlist['OBstonebump'] ] <br>
+<br>
+PS<br>
+Artist friendly Graphic coding would be something really great. <br>
+I imagine doing it on node editor and same time seeing code change in 
+separate window (for example: if you add a blur filter in node window - 
+it adds blur script lines in GLSL shader). Something like in Adobe 
+Dreamweaver when making homepages.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">kay_Eva</div><div class="date">17-May-09, 13:41</div></div><div class="posttext">Hey I was just wondering if there would be any benefit to deferred rendering techniques in BGE - cuz honestly I wouldn't know.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Blendiac</div><div class="date">17-May-09, 13:52</div></div><div class="posttext">Utterly brain-bending!<br>
+<br>
+Looks amazing, although when the camera is moved right up close and on 
+an extreme angle it looks like this on my Kubuntu Jaunty AMD 64 machine 
+with an ATI HD4850+FGLRX.<br>
+<br>
+3d viewport is on the left / game engine is on the right:</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">c++user</div><div class="date">19-May-09, 08:49</div></div><div class="posttext">I
+ have ported a technique from GPU Gems 3 
+(http://http.developer.nvidia.com/GPUGems3/gpugems3_ch18.html) to glsl 
+which builds upon Relief Mapping. It is called relaxed cone step mapping
+ and uses a relaxed cone stepping + binary search to adress several 
+problem of relief mapping.<br>
+<br>
+A comparing screenshot:<br>
+http://blenderartists.org/forum/attachment.php?attachmentid=72549&amp;stc=1&amp;d=1242747888<br>
+<br>
+Disadvanteges:<br>
+<br>
+-slower<br>
+-a precomputed relaxed cone map is needed<br>
+<br>
+I used martinsh blend file as a base. <br>
+<br>
+Just one important difference:<br>
+<br>
+With 'E' you change between Relaxed Cone Mapping (default) and Relief Mapping.<br>
+<br>
+And remember to disable Mip Mapping.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">RH2</div><div class="date">31-May-09, 22:02</div></div><div class="posttext">works great here :)<br>
+<br>
+very nice!</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">rennurb3000</div><div class="date">01-Jun-09, 01:50</div></div><div class="posttext">omg framerate does not drop anymore :)<br>
+i am interested in using it in my new gameproject !!!! <br>
+how are the textures made??? doesn`t look like normal mapping<br>
+king regards B</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Deloince JP</div><div class="date">01-Jun-09, 04:42</div></div><div class="posttext">martinsh,<br>
+Incroyable, vous me remontez le morale concernant l'avenir de blender, c'est vrai en ce <br>
+moment parfois je doute...:spin: (pardonnez mes paroles impies, oh dieux BartTon! AH ah Ah!).:D<br>
+Je suis là, devant vos screenshots, choqué et heureux de vos résultats étonnants.<br>
+Bravo, vous êtes un vrai magicien des temps modernes...:yes:<br>
+- - - - - <br>
+martinsh, <br>
+Incredible, you cheer on the future of blender, it's true in this sometimes <br>
+when I doubt ...:spin: (forgive my words wicked, oh gods BartTon! ah ah ah!).:D<br>
+I am here, in front of your screenshots, shocked and happy for your amazing results.<br>
+Congratulations, you are a true magician of modern times ...:yes:</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">martinsh</div><div class="date">01-Jun-09, 05:14</div></div><div class="posttext">@c++user<br>
+<br>
+whoa! amazing, and I have consistent (400 - 500 fps) framerate unlike my relief mapping.<br>
+Really great demo, thanks. This should be in 2.49 graphic demos. <br>
+<br>
+@Deloince JP<br>
+<br>
+thanks, words like these really cheers me up,and gives a strong motivation continuing my work :)</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">yournamehere</div><div class="date">01-Jun-09, 15:53</div></div><div class="posttext">wowzers, I think I just wet my pants.<br>
+<br>
+peace,<br>
+-nick</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Ace Dragon</div><div class="date">01-Jun-09, 19:35</div></div><div class="posttext">The cone mapping is pretty good, but not quite ready for prime-time use in games, here's why.<br>
+<br>
+1). Has quite a bit of banding when really up close, though not broken.<br>
+2). The required maps seem like they would be difficult to make because 
+they're not typical normal/height maps and there's no program to make 
+them with (by way of a height map converter), so making cone maps takes a
+ bit more time and work than usual.<br>
+3). You can't put the camera so you're looking at the cone mapping 
+within the range of the relief, it would be cool if it was like true 
+displacement and you could put the camera inside the relief area.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">c++user</div><div class="date">02-Jun-09, 13:09</div></div><div class="posttext">There
+ is a preprocess tool that takes a height + normal map and generates a 
+relaxed cone map. It can also generate other cone map types like quad 
+directional cone map or a "normal" cone map. <br>
+The preprocess shader is included in the GPU-Gems3 book (which is freely available).</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">rennurb3000</div><div class="date">06-Jun-09, 03:11</div></div><div class="posttext">just found a prog, which can generate relaxed cone maps:<br>
+http://www.xnormal.net/1.aspx<br>
+in the tool box is a height to cone map option<br>
+but i havent tested it</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">kamaro</div><div class="date">11-Jun-09, 02:06</div></div><div class="posttext">What"s wrong with my parallax mapping?<br>
+<br>
+http://rapidshare.com/files/243282224/DISPL.blend.html</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">dusty ghost</div><div class="date">11-Jun-09, 02:17</div></div><div class="posttext">Kamaro, <br>
+<br>
+You already posted this on the "Iterative Parallax Mapping" thread. <br>
+<br>
+Rather than just saying "What"s wrong with my parallax mapping?" and 
+then expecting us to download the file and instantly tell you what's 
+wrong, perhaps you should specify the problem with some screenshots? 
+Possibly start a thread in the Game Engine Resources forum.<br>
+<br>
+The more info you supply in your post, the more it will allow people to help you.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">kamaro</div><div class="date">11-Jun-09, 03:55</div></div><div class="posttext">I
+ think the blend explain more because I don't know where is the problem,
+ cause that I try to replicate those blend with parallax mapping or 
+simillar with the three script available ( 
+iterative_parallax.py,stone-GLSL.py,steep_parallax.py) it doesn't work. 
+Is this steps enough to achieve parallax maping in blender?<br>
+<br>
+1. A tangent normal map, height map,diffuse map<br>
+2. An empty with one of those script, and a property if needed<br>
+3. The object name as in the script</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">martinsh</div><div class="date">11-Jun-09, 05:10</div></div><div class="posttext">it works for me, kamaro. <br>
+Though the effect isnt that noticable in your file. <br>
+<br>
+take a look at this - i replaced blue texture with UV Grid, notice the deformation? It works :)<br>
+<br>
+74984<br>
+<br>
+you may also want to change the displacement value "float v = height * 0.04 - 0.02;"<br>
+first value changes the depth, second height, as i remember..</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">kamaro</div><div class="date">11-Jun-09, 06:02</div></div><div class="posttext">Martinsh,
+ thanks. It work, Just need a little tweeking with the displacement 
+value. I will try the other script to see if it work.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">TAMcCullough</div><div class="date">11-Jun-09, 07:59</div></div><div class="posttext">XNormal is a great tool and free to use both for personal and for commercial.<br>
+Polycount has a good sticky thread about it - starting way back to current development.<br>
+http://boards.polycount.net/showthread.php?t=41776<br>
+It has several nifty tools. Blender bake to normal is good, but this tool gives you much more control.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">moffboffjoe</div><div class="date">11-Jun-09, 09:37</div></div><div class="posttext">if
+ no one has already pointed this out press the down arrow key untill 
+OBFX.hight is at 0 and it gives the effect that the lions head is 
+folowing you</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">david_h72</div><div class="date">12-Jun-09, 08:22</div></div><div class="posttext">Way cool, though not very portable, with the object list coded in.<br>
+<br>
+I'm getting minor artifacts (some doubled-up pixels) and only 45 FPS, 
+but it could be ATI's fault. Also using standard 64-bit build.<br>
+<br>
+<br>
+It works perfectly for me, except for the SSAO :( Maybe because I use ATI Graphics card :(<br>
+<br>
+EDIT<br>
+Changing the last line to "gl_FragColor = vec4 (1-ao)" works (although 
+it's just the AO so far). ATI doesn't like implicit casting I guess.<br>
+<br>
+EDIT<br>
+Tried the cone-mapping, it has less artifacts, same framerate and works 
+fine here with mipmapping. It has more artifacts at the bottom where the
+ shapes connect to the plane. I don't suppose there's any way to get the
+ best of both?<br>
+<br>
+Gotta test this on my current project, looking down a road at an angle 
+where normal-mapped asphalt just doesn't cut it, and bazillions of polys
+ is too much for the computer but not enough to look good.. It's for 
+render not BGE, so it doesn't matter about the framerate, or how well it
+ works in a long perspective view, though I'm curious about that.<br>
+<br>
+Refill the coffee and back to Blending,<br>
+<br>
+Dave Heinemann</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">kacper00100</div><div class="date">26-Jun-09, 11:37</div></div><div class="posttext">Would this be better for performance than actually modelling the lion's head or whatever?</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">kay_Eva</div><div class="date">26-Jun-09, 14:36</div></div><div class="posttext">Would this be better for performance than actually modelling the lion's head or whatever?<br>
+<br>
+probably not, but it would be better on performance than rendering a ton
+ of bricks or something like that or a big floor or wall that repeats 
+often</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Joe_Stevens</div><div class="date">27-Jun-09, 12:49</div></div><div class="posttext">Can
+ someone re upload the file on a different site? For some reason the 
+original site just gives me a bunch of gibberish letters and symbols, 
+and the nearly crashes my computer.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Excalaberr</div><div class="date">27-Jun-09, 13:02</div></div><div class="posttext">Right click on the link and select save link as. ;)</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Joe_Stevens</div><div class="date">27-Jun-09, 14:25</div></div><div class="posttext">Thnx, never would have thought of that, I will next time though :yes:</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">blendernesia</div><div class="date">23-Aug-09, 11:57</div></div><div class="posttext">Hi Martinsh, I like the work you've done. I am so impressed.<br>
+I would like to download the .blend file but the link you put up does show some weird text instead of giving me the file.<br>
+<br>
+http://www.twilight22.com/blenderartists/relief_mapping.blend<br>
+<br>
+Is there any way you could upload it again or send it through my email please.<br>
+<br>
+I would appreciate your work man.<br>
+<br>
+All the best Martinsh :)</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">ThornWinters</div><div class="date">08-Mar-10, 13:40</div></div><div class="posttext">If you want the relief map he is a link to the file <br>
+<br>
+http://www.pasteall.org/blend/2087<br>
+<br>
+One question I have is does anyone have a version of this or of the cone
+ mapping that will adapt to multiple lights sources. The current 
+versions can only react to one light and that's it.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">martinsh</div><div class="date">08-Mar-10, 15:19</div></div><div class="posttext">hmm,
+ yeah. true, though relief mapping is also casting shadows, it could 
+cause quite a slowdown for multiple light sources. But I could try 
+adapting cone mapping for it.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">ThornWinters</div><div class="date">08-Mar-10, 21:33</div></div><div class="posttext">The
+ reason I asking is I tend to use the three point lighting technique 
+which I would love to use with this but I can't. Also I think of what it
+ would look like with a touch and other animated lights with ambient 
+lights and I love to dream as I kill my computer. <br>
+<br>
+One idea you can do is make a prop variable hold the number of light 
+sources it will take, (0 being all) which gives the user the option of 
+increasing the decreasing in game which can adjust frame rate.<br>
+<br>
+I'm not asking without trying myself I looked at the code and found 
+myself lost in C++, I thought to myself I know C++ and quickly found out
+ I was way in over my head. I would still like to learn though. But if 
+you want to help please do.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">BlendingBGE</div><div class="date">08-Mar-10, 22:25</div></div><div class="posttext">the link doesent work!</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">ThornWinters</div><div class="date">08-Mar-10, 22:34</div></div><div class="posttext">You
+ want the blend file then read and do. If you don't do then nothing will
+ happen you will only see odd text if you look up at the URL it will say
+ this.<br>
+<br>
+http://www.twilight22.com/blenderartists/relief_mapping.blend<br>
+<br>
+note the relief_mapping.blend at the last part that means IT IS the blend file so save it don't read it.<br>
+<br>
+RIGHT CLICK THIS then click save as. Then Save it anywhere on your 
+computer then it should work. it's the relief_mapping.blend file 
+(http://www.twilight22.com/blenderartists/relief_mapping.blend)</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Juan K</div><div class="date">11-Mar-10, 14:41</div></div><div class="posttext">I
+ dont really know much about relief mapping, it seems that its usually 
+use for walls and that kind of stuff. But, can relief mapping be used in
+ organic models, like humans or accesories idk?</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">leonnn</div><div class="date">13-Mar-10, 18:39</div></div><div class="posttext">amazing, really amazing, I got 60fps here.<br>
+thanks</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">leonnn</div><div class="date">19-Mar-10, 10:06</div></div><div class="posttext">Martinsh,
+ can you please explain me how you made that Alpha image, you just 
+decrease the opacity of the image or use some kind of filter?<br>
+Well thanks for this, its really great.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">3Duaun</div><div class="date">08-Jun-10, 01:11</div></div><div class="posttext">WHOA!!! very very impressive</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">skykooler</div><div class="date">22-Jun-10, 20:54</div></div><div class="posttext">Nice, but I think your parallax mapping looks nicer. I like the shadows here though.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">aristocrata</div><div class="date">15-Dec-10, 14:11</div></div><div class="posttext">The link does not work.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Josip Kladaric</div><div class="date">15-Dec-10, 15:23</div></div><div class="posttext">Hey is the alpha layer in the normal map a displacement map?</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">mpan3</div><div class="date">15-Dec-10, 15:41</div></div><div class="posttext">Hey is the alpha layer in the normal map a displacement map?<br>
+<br>
+Yes. The texture (RGBA) consists of a normal map (Stored in RGB channel) and a height map (stored in A channel)</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Josip Kladaric</div><div class="date">15-Dec-10, 16:01</div></div><div class="posttext">Thank
+ you very much. There is one thing I noticed. Height map is not the same
+ thing as displacement map that we can bake in Blender. When we bake 
+displacement maps , we get values from black to white, where black is 
+depth of 0.5 and white is height of 0.5.<br>
+In height maps black is 0 and white is 1.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">aristocrata</div><div class="date">20-Dec-10, 06:43</div></div><div class="posttext">Could someone send me the correct link please?</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">aristocrata</div><div class="date">28-Dec-10, 04:57</div></div><div class="posttext">All links are broken. I can not access the file.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">flopoloco</div><div class="date">11-Jan-11, 04:46</div></div><div class="posttext">Ask martin in PM, he is very polite. :)</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">martinsh</div><div class="date">11-Jan-11, 11:29</div></div><div class="posttext">here you go.<br>
+http://dl.dropbox.com/u/11542084/relief_mapping.blend</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">aristocrata</div><div class="date">14-Jan-11, 12:17</div></div><div class="posttext">Thanks, guy! It`s incredible, but unfortunately runs very slow in my computer. Something around 9 fps.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">AniCator</div><div class="date">17-Mar-11, 07:39</div></div><div class="posttext">2.5 version of the shader:<br>
+<br>
+from bge import logic as g<br>
+objlist = g.getCurrentScene().objects<br>
+# -------------------------------------<br>
+ShaderObjects = [objlist['stonebump'] ]<br>
+MaterialIndexList = [0]<br>
+# -------------------------------------<br>
+cont = g.getCurrentController()<br>
+own = cont.owner<br>
+<br>
+tile = own['tile']<br>
+height = own['height']<br>
+<br>
+VertexShader = """<br>
+<br>
+attribute vec4 Tangent;<br>
+<br>
+<br>
+/*uniform mat4 matWorldViewInverseTranspose;<br>
+uniform mat4 matWorldView;<br>
+uniform mat4 matView;<br>
+uniform mat4 matWorldViewProjection;*/<br>
+<br>
+varying vec2 texCoord;<br>
+varying vec3 eyeSpaceVert;<br>
+varying vec3 eyeSpaceTangent;<br>
+varying vec3 eyeSpaceBinormal;<br>
+varying vec3 eyeSpaceNormal;<br>
+varying vec3 eyeSpaceLight;<br>
+<br>
+varying vec3 tangent;<br>
+varying vec3 binormal;<br>
+<br>
+varying vec4 vcol;<br>
+<br>
+void main(void)<br>
+{ <br>
+eyeSpaceVert = (gl_ModelViewMatrix * gl_Vertex).xyz;<br>
+//eyeSpaceLight = (gl_ModelViewMatrix * vec4(gl_LightSource[0].position.xyz,1.0)).xyz;<br>
+eyeSpaceLight = vec4(gl_LightSource[0].position.xyz,1.0).xyz;<br>
+<br>
+<br>
+tangent = (Tangent.xyz);<br>
+binormal = cross(gl_Normal, Tangent.xyz)*Tangent.w;<br>
+<br>
+eyeSpaceTangent = gl_NormalMatrix * tangent;<br>
+eyeSpaceBinormal = gl_NormalMatrix * binormal;<br>
+eyeSpaceNormal = gl_NormalMatrix * gl_Normal;<br>
+<br>
+texCoord = gl_MultiTexCoord0.xy;<br>
+<br>
+gl_Position = ftransform();<br>
+<br>
+vcol =gl_Color;<br>
+}<br>
+<br>
+<br>
+"""<br>
+<br>
+FragmentShader = """<br>
+uniform vec4 ambient;<br>
+uniform vec4 specular;<br>
+uniform vec4 diffuse;<br>
+uniform float shine;<br>
+uniform float depth;<br>
+uniform float tile;<br>
+uniform int linear_search_steps;<br>
+uniform int binary_search_steps;<br>
+<br>
+varying vec4 vcol;<br>
+<br>
+varying vec2 texCoord;<br>
+varying vec3 eyeSpaceVert;<br>
+varying vec3 eyeSpaceTangent;<br>
+varying vec3 eyeSpaceBinormal;<br>
+varying vec3 eyeSpaceNormal;<br>
+varying vec3 eyeSpaceLight;<br>
+<br>
+uniform sampler2D reliefmap;<br>
+uniform sampler2D texmap;<br>
+uniform sampler2D gloss;<br>
+<br>
+float ray_intersect_rm(in vec2 dp,in vec2 ds);<br>
+<br>
+void main(void)<br>
+{<br>
+vec4 t,c;<br>
+vec3 p,v,l,s;<br>
+vec2 dp,ds,uv,dd, uvc;<br>
+float d,a;<br>
+<br>
+// ray intersect in view direction<br>
+p = eyeSpaceVert;<br>
+v = normalize(p);<br>
+a = dot(eyeSpaceNormal,-v);<br>
+s = normalize(vec3(dot(v,eyeSpaceTangent),dot(v,eyeSpa ceBinormal),a));<br>
+s *= depth/a;<br>
+dp = texCoord*tile;<br>
+ds = s.xy;<br>
+d = ray_intersect_rm(dp,ds);<br>
+<br>
+<br>
+// get rm and color texture points<br>
+uv=dp+ds*d;<br>
+uvc=dp+ds*d*2.0;<br>
+<br>
+if (uvc.x &lt; 0.0) discard;<br>
+if (uvc.x &gt; tile) discard;<br>
+if (uvc.y &lt; 0.0) discard;<br>
+if (uvc.y &gt; tile) discard;<br>
+<br>
+t=texture2D(reliefmap,uv);<br>
+c=texture2D(texmap,uv);<br>
+<br>
+// expand normal from normal map in local polygon space<br>
+t.xy=t.xy*2.0-1.0;<br>
+t.z=sqrt(1.0-dot(t.xy,t.xy));<br>
+t.xyz=normalize(t.x*eyeSpaceTangent+t.y*eyeSpaceBi normal+t.z*eyeSpaceNormal);<br>
+<br>
+// compute light direction<br>
+p += v*d*a;<br>
+l=normalize(p-eyeSpaceLight.xyz);<br>
+<br>
+// ray intersect in light direction<br>
+dp+= ds*d;<br>
+a = dot(eyeSpaceNormal,-l);<br>
+s = normalize(vec3(dot(l,eyeSpaceTangent),dot(l,eyeSpa ceBinormal),a));<br>
+s *= depth/a;<br>
+ds = s.xy;<br>
+dp-= ds*d;<br>
+<br>
+float dl = ray_intersect_rm(dp,s.xy);<br>
+float shadow = 1.0;<br>
+vec3 specular_shadow=gl_FrontMaterial.specular.rgb;<br>
+<br>
+if (dl&lt;d-0.05) // if pixel in shadow<br>
+{<br>
+shadow=dot(ambient.xyz,vec3(1.0))*0.333333;<br>
+specular_shadow=vec3(0.0);<br>
+}<br>
+<br>
+<br>
+<br>
+// compute final color<br>
+vec4 finalcolor;<br>
+<br>
+vec4 diffuse_color = vcol*gl_LightSource[0].diffuse;<br>
+vec4 specular_color = gl_FrontMaterial.specular;<br>
+<br>
+<br>
+// compute diffuse and specular terms<br>
+<br>
+float diff=shadow*max(0.0,dot(-l,t.xyz));<br>
+float spec=pow(max(dot(reflect(v, t.xyz), -l),0.0), gl_FrontMaterial.shininess); <br>
+<br>
+vec3 spec_pass = specular_shadow*spec*(texture2D(texmap, uv).w)*specular_color.rgb;<br>
+<br>
+vec3 diff_pass = c.rgb*(diff*diffuse_color).rgb;<br>
+<br>
+finalcolor.rgb =spec_pass + diff_pass;<br>
+<br>
+gl_FragColor = vec4(finalcolor.rgb,1.0);<br>
+<br>
+}<br>
+<br>
+float ray_intersect_rm(in vec2 dp, in vec2 ds)<br>
+{<br>
+//const int linear_search_steps=20;<br>
+//const int binary_search_steps=5;<br>
+float depth_step=1.0/float(linear_search_steps);<br>
+<br>
+// current size of search window<br>
+float size=depth_step;<br>
+// current depth position<br>
+float depth=0.0;<br>
+// best match found (starts with last position 1.0)<br>
+float best_depth=1.0;<br>
+<br>
+// search front to back for first point inside object<br>
+for( int i=0;i&lt;linear_search_steps-1;i++ )<br>
+{<br>
+depth+=size;<br>
+vec4 t=texture2D(reliefmap,dp+ds*depth);<br>
+<br>
+if (best_depth&gt;0.996) // if no depth found yet<br>
+if (depth&gt;=t.w)<br>
+best_depth=depth; // store best depth<br>
+}<br>
+depth=best_depth;<br>
+<br>
+// recurse around first point (depth) for closest match<br>
+for( int i=0;i&lt;binary_search_steps;i++ )<br>
+{<br>
+size*=0.5;<br>
+vec4 t=texture2D(reliefmap,dp+ds*depth);<br>
+if (depth&gt;=t.w)<br>
+{<br>
+best_depth=depth;<br>
+depth-=2.0*size;<br>
+}<br>
+depth+=size;<br>
+}<br>
+<br>
+return best_depth;<br>
+}<br>
+<br>
+"""<br>
+<br>
+<br>
+def MainLoop ():<br>
+# for each object<br>
+for obj in ShaderObjects:<br>
+<br>
+mesh_index = 0<br>
+mesh = obj.meshes[mesh_index]<br>
+<br>
+while mesh != None:<br>
+<br>
+for mat in mesh.materials:<br>
+<br>
+# regular TexFace materials do NOT have this function<br>
+if not hasattr(mat, "getMaterialIndex"):<br>
+return<br>
+<br>
+mat_index = mat.getMaterialIndex()<br>
+<br>
+# find an index <br>
+found = 0<br>
+for i in range(len(MaterialIndexList)):<br>
+if mat_index == MaterialIndexList[i]:<br>
+found=1<br>
+break<br>
+if not found: continue<br>
+<br>
+shader = mat.getShader()<br>
+if shader != None:<br>
+if not shader.isValid():<br>
+shader.setSource(VertexShader, FragmentShader,1)<br>
+<br>
+shader.setAttrib(g.SHD_TANGENT)<br>
+shader.setUniform1f('depth', height)<br>
+shader.setUniform1f('tile', tile) <br>
+shader.setUniform1i('linear_search_steps', 15) <br>
+shader.setUniform1i('binary_search_steps', 5) <br>
+<br>
+shader.setUniform4f('ambient', 0.4, 0.4, 0.4, 1) <br>
+<br>
+shader.setSampler('texmap', 0)<br>
+shader.setSampler('reliefmap', 1)<br>
+mesh_index += 1<br>
+mesh = obj.getMesh(mesh_index)<br>
+<br>
+# -------------------------------------<br>
+MainLoop()<br>
+# -------------------------------------<br>
+<br>
+Kind regards.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">3Duaun</div><div class="date">21-Mar-11, 07:40</div></div><div class="posttext">NICE!!!!!! Thanks for sharing the 2.5 version of the shader. I've been hoping for this one for some time. Thanks again :-)</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Wouter</div><div class="date">21-Mar-11, 08:08</div></div><div class="posttext">Edit: Nevermind, problem solved.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Scrible</div><div class="date">10-Jul-11, 03:41</div></div><div class="posttext">Very impressive! Keep up the good work, martinsh. It's always a pleasure to see what you have been working on.<br>
+Cheers.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">KelynC</div><div class="date">16-Jul-11, 10:19</div></div><div class="posttext">this script is good, but it runs very slowly. perhaps just having a mesh there would be better?</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">The Red Hand</div><div class="date">16-Jul-11, 20:45</div></div><div class="posttext">This
+ is more useful if you have oodles of detail that just can't be modeled 
+like that. The bricks for example. Waayy too many resources. You could 
+use a culled version of relief mapping to do this more effectively, and 
+you could also use this technique for things like far-off landscapes.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">KelynC</div><div class="date">16-Jul-11, 20:54</div></div><div class="posttext">or you could just use normal maps.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Joe_Stevens</div><div class="date">24-Jul-11, 22:05</div></div><div class="posttext">normal
+ maps are good for slight bumps and dips. But relief and parallax 
+mapping really give it the extra depth. A normal map can quickly become 
+apparent that it is simple a flat surface with a fancy effect, whereas a
+ relief map requires a much closer to parallel angle to really notice 
+it. This makes it great for large bumps in high detail mapping, or far 
+off landscapes as you loose the effect of a normal map at distances like
+ that.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">ST150</div><div class="date">25-Jul-11, 11:42</div></div><div class="posttext">Trying to port this into 2.58 but it's giving the error:<br>
+<br>
+<br>
+AttributeError: 'KX_GameObject' object has no attribute 'getMesh'<br>
+<br>
+Seems to still be a valid function according to the API so not sure where it's going wrong.<br>
+<br>
+Any guide on including this in your own projects for those of us not 
+fluent in shading languages? I'm just getting the above error and the 
+object turns black (though specularity of the normal map can still be 
+seen) or partially disappears.<br>
+<br>
+More hard coded shaders please :(</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">HG1</div><div class="date">26-Jul-11, 10:22</div></div><div class="posttext">I have changed martinsh Relief Mapping file to Blender 2.49b and to Blender 2.5x.<br>
+http://blenderartists.org/forum/showthread.php?225936-Relief-Mapping-Blender-2.5x&amp;p=1910085#post1910085</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Scrible</div><div class="date">08-Sep-11, 15:53</div></div><div class="posttext">Any
+ chances of getting c++user's Cone Step Mapping to 2.5? Generating the 
+necessary "relaxed cone maps" seems to be possible with XNormals (option
+ available).<br>
+Many greetings.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Excalaberr</div><div class="date">08-Sep-11, 19:05</div></div><div class="posttext">Cone Step Mapping converted to 2.5. - I might have named the blend wrong ;)<br>
+<br>
+http://www.pasteall.org/blend/8758 (http://www.pasteall.org/blend/8757)<br>
+Ex.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Scrible</div><div class="date">09-Sep-11, 02:40</div></div><div class="posttext">Awesome Excalaberr, I will try it a bit later. Thanks.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">C.A.ligári</div><div class="date">09-Sep-11, 04:12</div></div><div class="posttext">@ Excalaberr:<br>
+So, there can be only one Light affecting the Shader? But how does the 
+Shader choose which Light shall affect it? It is not the Nearest, as I 
+can see.<br>
+<br>
+Post Skriptum:<br>
+Âh, the Code looks like you can set the affecting Light by setting a 
+Number, though in a World of potential dynamic Lights this might be hard
+ to control -- would it be possible then to set a particular Name 
+instead of a Number?<br>
+Just a thought.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">c++user</div><div class="date">10-Sep-11, 08:36</div></div><div class="posttext">Glsl
+ is a low level language to program the gpu. You will have to select the
+ appropriate light in python if you want to use a name. You could then 
+pass the associated LIGHT_INDEX to the glsl program.<br>
+<br>
+The number of light sources you can use depends on your gpu.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">Drcrazy</div><div class="date">29-Sep-11, 14:23</div></div><div class="posttext">the height map script does not seem to work for some reason any help or suggestions?</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">aonegamer</div><div class="date">30-Sep-11, 04:21</div></div><div class="posttext">What I can say for this Marvel. Superb A1. Thanx for sharing.</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">martin.hedin</div><div class="date">09-Dec-12, 06:04</div></div><div class="posttext">Does anyone have a 2.5x/2.6x version of this? :eyebrowlift2:</div></div><hr>
+<div class="post"><div class="posttop"><div class="username">HG1</div><div class="date">09-Dec-12, 11:06</div></div><div class="posttext">Look at post #89</div></div><hr>
+<div id="ad_archive_below_content"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-1946409017900747";
+/* BA_BelowForum */
+google_ad_slot = "1480636853";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script kabl="89517" style="display: none !important" type="text/javascript" src="Relief%20Mapping%20%5BArchive%5D%20-%20Blender%20Artists%20Community_files/show_ads.js">
+</script></div>
+<div id="copyright">Powered by vBulletin® Version 4.2.0 Copyright © 2013 vBulletin Solutions, Inc. All rights reserved.</div>
+</div>
+
+</body></html>

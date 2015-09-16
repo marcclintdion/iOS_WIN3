@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2D500B9A0D5A79CF00DBA0E3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D500B990D5A79CF00DBA0E3 /* QuartzCore.framework */; };
+		BA240AC20FEFE77A00DE852D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA240AC10FEFE77A00DE852D /* OpenGLES.framework */; };
+		F812461A1015DE7B003F1905 /* libOGLES2Tools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F80B21C91015CA1600A93BE2 /* libOGLES2Tools.a */; };
+		F864940310F75E5100F46F54 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = F864940210F75E5100F46F54 /* Entitlements.plist */; };
+		F8205A8B130408E100253AE7 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A82130408E100253AE7 /* Default-Portrait.png */; };
+		F8205A8C130408E100253AE7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A83130408E100253AE7 /* Default.png */; };
+		F8205A8D130408E100253AE7 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A84130408E100253AE7 /* Icon-72.png */; };
+		F8205A8E130408E100253AE7 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A85130408E100253AE7 /* Icon-Small-50.png */; };
+		F8205A8F130408E100253AE7 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A86130408E100253AE7 /* Icon-Small.png */; };
+		F8205A90130408E100253AE7 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A87130408E100253AE7 /* Icon-Small@2x.png */; };
+		F8205A91130408E100253AE7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A88130408E100253AE7 /* Icon.png */; };
+		F8205A92130408E100253AE7 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A89130408E100253AE7 /* Icon@2x.png */; };
+		F8205A93130408E100253AE7 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = F8205A8A130408E100253AE7 /* iTunesArtwork */; };
+		F8B111672E99D215E2CF7518 /* OGLES2Coverflow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F83C828BC6123F78007859CE /* OGLES2Coverflow.cpp */; };
+		F8630E83E2409C83D56FBEC7 /* PVRShell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F86806AB073BCF43114182F8 /* PVRShell.cpp */; };
+		F8BC0A26D1DFE7D24AF67727 /* PVRShellAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8685712661BB8886AD7514E /* PVRShellAPI.cpp */; };
+		F8411F7FA35ADD4338A91C4F /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F83A86645DDC3D69B5253277 /* EAGLView.mm */; };
+		F8DD445EC802A113BADECABE /* PVRShellOS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F80E48ED567B8029CD035DCC /* PVRShellOS.cpp */; };
+		F8511E325A14C7B1512D37CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B085DF517D53BDEC57548B /* main.m */; };
+		F869BEBD44384AC2147622A7 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F812B82B586D7AEF8F327E60 /* AppController.mm */; };
+		F8A34BDCD375DF71C7332F52 /* Album1.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8F4AF1428EC7BC8514F4C0E /* Album1.pvr */; };
+		F8CC0AA8C404DFECB7293218 /* Album2.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F87F756CD9A864D28A5A6EA3 /* Album2.pvr */; };
+		F8CCB6C33290A339289C6BB7 /* Album3.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F86A03D20C70D2324055A24D /* Album3.pvr */; };
+		F88FE814BB41DA8560278553 /* Album4.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8D9CB99D49CCDA44F7BD210 /* Album4.pvr */; };
+		F8CCF34095731FD18EA318E9 /* Album5.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8B62F4FDFDCE3A2547F5A3A /* Album5.pvr */; };
+		F801E2EA52715B399E0EB984 /* Album6.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F89AB6544947EC88CDF05237 /* Album6.pvr */; };
+		F875589F0ACAF980779D07AB /* Album7.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F84555450C154EC0FB8CC35B /* Album7.pvr */; };
+		F8380829634858F02702F3EB /* Album8.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8534AB36D7D81E716D2C75E /* Album8.pvr */; };
+		F8F5A465725951E1910748B6 /* Album9.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F823568C82BC77C23447C36D /* Album9.pvr */; };
+		F8FB4987B56F94EED225C3C5 /* Album10.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8314C51358364215B1B4106 /* Album10.pvr */; };
+		F829EA831BE6991D64D00F63 /* Album11.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8621BBC162BD240018099AF /* Album11.pvr */; };
+		F8EFF8E198DC88D47F210473 /* Album12.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F83EFC038E616CFC26F6F427 /* Album12.pvr */; };
+		F8E7E6A31625EE3A587A8592 /* Album13.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8CF8FFC76E07B24666251E3 /* Album13.pvr */; };
+		F894D60392057CD7C0A6C023 /* Album14.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8E7C4A085898C3767F42DEF /* Album14.pvr */; };
+		F85D05AA5483696E079E1C0F /* Album15.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F81BADE130E7816BC37E3CD6 /* Album15.pvr */; };
+		F813E4FCE4375263945E7ED5 /* Album16.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8A0498F0257A8CCEDC423C0 /* Album16.pvr */; };
+		F870BBA9895779E0AE68561F /* FragShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F895137C16F9AE9B63DD3558 /* FragShader.fsh */; };
+		F85F986B3B1E3DC98D9FAA9A /* VertShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F81BCA31C4499C36ACCE89C4 /* VertShader.vsh */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F80B21C81015CA1600A93BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = F8748A3A0FF221480052D400;
+			remoteInfo = OGLES2Tools;
+		};
+		F80B21CA1015CA2B00A93BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */;
+			proxyType = 1;
+			remoteGlobalIDString = F8748A390FF221480052D400;
+			remoteInfo = OGLES2Tools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BA909F0A0FF0EADD00A4C97C /* data */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = data;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA909F0B0FF0EADD00A4C97C /* textures */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data/textures;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = textures;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA909F1C0FF0EB3200A4C97C /* shaders */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data/shaders;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = shaders;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* OGLES2Coverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OGLES2Coverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2D500B990D5A79CF00DBA0E3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		BA240AC10FEFE77A00DE852D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OGLES2Tools.xcode; path = ../../../../../Tools/OGLES2/Build/iPhone/OGLES2Tools.xcode; sourceTree = SOURCE_ROOT; };
+		F8205A82130408E100253AE7 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "../../../../../Builds/iPhone/Media/Default-Portrait.png"; sourceTree = SOURCE_ROOT; };
+		F8205A83130408E100253AE7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../../../Builds/iPhone/Media/Default.png; sourceTree = SOURCE_ROOT; };
+		F8205A84130408E100253AE7 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../../../../../Builds/iPhone/Media/Icon-72.png"; sourceTree = SOURCE_ROOT; };
+		F8205A85130408E100253AE7 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "../../../../../Builds/iPhone/Media/Icon-Small-50.png"; sourceTree = SOURCE_ROOT; };
+		F8205A86130408E100253AE7 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "../../../../../Builds/iPhone/Media/Icon-Small.png"; sourceTree = SOURCE_ROOT; };
+		F8205A87130408E100253AE7 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "../../../../../Builds/iPhone/Media/Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
+		F8205A88130408E100253AE7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../../../../Builds/iPhone/Media/Icon.png; sourceTree = SOURCE_ROOT; };
+		F8205A89130408E100253AE7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../../../../Builds/iPhone/Media/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		F8205A8A130408E100253AE7 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = ../../../../../Builds/iPhone/Media/iTunesArtwork; sourceTree = SOURCE_ROOT; };
+		F864940210F75E5100F46F54 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		F83C828BC6123F78007859CE /* OGLES2Coverflow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OGLES2Coverflow.cpp; path = ../../OGLES2Coverflow.cpp; sourceTree = SOURCE_ROOT; };
+		F86806AB073BCF43114182F8 /* PVRShell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PVRShell.cpp; path = ../../../../../Shell/PVRShell.cpp; sourceTree = SOURCE_ROOT; };
+		F8685712661BB8886AD7514E /* PVRShellAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PVRShellAPI.cpp; path = ../../../../../Shell/API/EAGL/PVRShellAPI.cpp; sourceTree = SOURCE_ROOT; };
+		F83A86645DDC3D69B5253277 /* EAGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = EAGLView.mm; path = ../../../../../Shell/API/EAGL/OpenGLSupport/EAGLView.mm; sourceTree = SOURCE_ROOT; };
+		F80E48ED567B8029CD035DCC /* PVRShellOS.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PVRShellOS.cpp; path = ../../../../../Shell/OS/iPhone/PVRShellOS.cpp; sourceTree = SOURCE_ROOT; };
+		F8B085DF517D53BDEC57548B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../../../../Shell/OS/iPhone/main.m; sourceTree = SOURCE_ROOT; };
+		F812B82B586D7AEF8F327E60 /* AppController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppController.mm; path = ../../../../../Shell/OS/iPhone/AppController.mm; sourceTree = SOURCE_ROOT; };
+		F83A1F5C3CD9301907D06259 /* PVRShell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRShell.h; path = ../../../../../Shell/PVRShell.h; sourceTree = SOURCE_ROOT; };
+		F8BFC2A67A761E2BC1E22F6E /* PVRShellImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRShellImpl.h; path = ../../../../../Shell/PVRShellImpl.h; sourceTree = SOURCE_ROOT; };
+		F8D0DF10578798846BCDB085 /* PVRShellAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRShellAPI.h; path = ../../../../../Shell/API/EAGL/PVRShellAPI.h; sourceTree = SOURCE_ROOT; };
+		F8BA1F04D4B2171A86ABBC82 /* EAGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EAGLView.h; path = ../../../../../Shell/API/EAGL/OpenGLSupport/EAGLView.h; sourceTree = SOURCE_ROOT; };
+		F81ED8D2EC0F22F741D90292 /* PVRShellOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRShellOS.h; path = ../../../../../Shell/OS/iPhone/PVRShellOS.h; sourceTree = SOURCE_ROOT; };
+		F88E0D816D169BDC9A632C46 /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ../../../../../Shell/OS/iPhone/AppController.h; sourceTree = SOURCE_ROOT; };
+		F84549C526CBEE2CF9F4ADAB /* Album1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album1.png; path = ../../../Media/Album1.png; sourceTree = SOURCE_ROOT; };
+		F8EFE2EEB31BED6F0D77F84E /* Album2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album2.png; path = ../../../Media/Album2.png; sourceTree = SOURCE_ROOT; };
+		F8EAB6BD4412F8F086116A89 /* Album3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album3.png; path = ../../../Media/Album3.png; sourceTree = SOURCE_ROOT; };
+		F82DCB36D7C0D89D28A40EFF /* Album4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album4.png; path = ../../../Media/Album4.png; sourceTree = SOURCE_ROOT; };
+		F8DEE3DE646DD8CD32625B21 /* Album5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album5.png; path = ../../../Media/Album5.png; sourceTree = SOURCE_ROOT; };
+		F8E6253960661C79C5D747EA /* Album6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album6.png; path = ../../../Media/Album6.png; sourceTree = SOURCE_ROOT; };
+		F899D981A0083F146761D096 /* Album7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album7.png; path = ../../../Media/Album7.png; sourceTree = SOURCE_ROOT; };
+		F8695CC4656AE705E3FBDD49 /* Album8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album8.png; path = ../../../Media/Album8.png; sourceTree = SOURCE_ROOT; };
+		F86CA117562861DAD621EA15 /* Album9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album9.png; path = ../../../Media/Album9.png; sourceTree = SOURCE_ROOT; };
+		F8DD18018B5C857F0454A8B1 /* Album10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album10.png; path = ../../../Media/Album10.png; sourceTree = SOURCE_ROOT; };
+		F8245C2260EF1464E323ACF2 /* Album11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album11.png; path = ../../../Media/Album11.png; sourceTree = SOURCE_ROOT; };
+		F899D61F6DB91B1E129B6DF9 /* Album12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album12.png; path = ../../../Media/Album12.png; sourceTree = SOURCE_ROOT; };
+		F8D25753B3EFB6E13F96105A /* Album13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album13.png; path = ../../../Media/Album13.png; sourceTree = SOURCE_ROOT; };
+		F830415A683DACC119B6F445 /* Album14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album14.png; path = ../../../Media/Album14.png; sourceTree = SOURCE_ROOT; };
+		F84107B83757EC6861E53699 /* Album15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album15.png; path = ../../../Media/Album15.png; sourceTree = SOURCE_ROOT; };
+		F85990962B40B03A9733F94C /* Album16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Album16.png; path = ../../../Media/Album16.png; sourceTree = SOURCE_ROOT; };
+		F8F4AF1428EC7BC8514F4C0E /* Album1.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album1.pvr; path = ../../Album1.pvr; sourceTree = SOURCE_ROOT; };
+		F87F756CD9A864D28A5A6EA3 /* Album2.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album2.pvr; path = ../../Album2.pvr; sourceTree = SOURCE_ROOT; };
+		F86A03D20C70D2324055A24D /* Album3.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album3.pvr; path = ../../Album3.pvr; sourceTree = SOURCE_ROOT; };
+		F8D9CB99D49CCDA44F7BD210 /* Album4.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album4.pvr; path = ../../Album4.pvr; sourceTree = SOURCE_ROOT; };
+		F8B62F4FDFDCE3A2547F5A3A /* Album5.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album5.pvr; path = ../../Album5.pvr; sourceTree = SOURCE_ROOT; };
+		F89AB6544947EC88CDF05237 /* Album6.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album6.pvr; path = ../../Album6.pvr; sourceTree = SOURCE_ROOT; };
+		F84555450C154EC0FB8CC35B /* Album7.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album7.pvr; path = ../../Album7.pvr; sourceTree = SOURCE_ROOT; };
+		F8534AB36D7D81E716D2C75E /* Album8.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album8.pvr; path = ../../Album8.pvr; sourceTree = SOURCE_ROOT; };
+		F823568C82BC77C23447C36D /* Album9.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album9.pvr; path = ../../Album9.pvr; sourceTree = SOURCE_ROOT; };
+		F8314C51358364215B1B4106 /* Album10.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album10.pvr; path = ../../Album10.pvr; sourceTree = SOURCE_ROOT; };
+		F8621BBC162BD240018099AF /* Album11.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album11.pvr; path = ../../Album11.pvr; sourceTree = SOURCE_ROOT; };
+		F83EFC038E616CFC26F6F427 /* Album12.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album12.pvr; path = ../../Album12.pvr; sourceTree = SOURCE_ROOT; };
+		F8CF8FFC76E07B24666251E3 /* Album13.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album13.pvr; path = ../../Album13.pvr; sourceTree = SOURCE_ROOT; };
+		F8E7C4A085898C3767F42DEF /* Album14.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album14.pvr; path = ../../Album14.pvr; sourceTree = SOURCE_ROOT; };
+		F81BADE130E7816BC37E3CD6 /* Album15.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album15.pvr; path = ../../Album15.pvr; sourceTree = SOURCE_ROOT; };
+		F8A0498F0257A8CCEDC423C0 /* Album16.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Album16.pvr; path = ../../Album16.pvr; sourceTree = SOURCE_ROOT; };
+		F895137C16F9AE9B63DD3558 /* FragShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = FragShader.fsh; path = ../../FragShader.fsh; sourceTree = SOURCE_ROOT; };
+		F81BCA31C4499C36ACCE89C4 /* VertShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = VertShader.vsh; path = ../../VertShader.vsh; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F812461A1015DE7B003F1905 /* libOGLES2Tools.a in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */,
+				2D500B9A0D5A79CF00DBA0E3 /* QuartzCore.framework in Frameworks */,
+				BA240AC20FEFE77A00DE852D /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* OGLES2Coverflow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */,
+				F85E2B260DD21E3F00CA9BEB /* PVRDemo */,
+				F8DAC1360DD2069F008D2EBD /* PVRShell */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				F8E27FF71004EDC30006BBB4 /* Shaders */,
+				F82C4A6F10298C9800FF3CC6 /* Effects */,
+				F8E27FF61004EDBD0006BBB4 /* Textures */,
+				F8E27FF51004EDB10006BBB4 /* Models */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				F864940210F75E5100F46F54 /* Entitlements.plist */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8205A82130408E100253AE7 /* Default-Portrait.png */,
+				F8205A83130408E100253AE7 /* Default.png */,
+				F8205A84130408E100253AE7 /* Icon-72.png */,
+				F8205A85130408E100253AE7 /* Icon-Small-50.png */,
+				F8205A86130408E100253AE7 /* Icon-Small.png */,
+				F8205A87130408E100253AE7 /* Icon-Small@2x.png */,
+				F8205A88130408E100253AE7 /* Icon.png */,
+				F8205A89130408E100253AE7 /* Icon@2x.png */,
+				F8205A8A130408E100253AE7 /* iTunesArtwork */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA240AC10FEFE77A00DE852D /* OpenGLES.framework */,
+				1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */,
+				2D500B990D5A79CF00DBA0E3 /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F80B21C11015CA1600A93BE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F80B21C91015CA1600A93BE2 /* libOGLES2Tools.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F82C4A6F10298C9800FF3CC6 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Effects;
+			sourceTree = "<group>";
+		};
+		F85E2B260DD21E3F00CA9BEB /* PVRDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F83C828BC6123F78007859CE /* OGLES2Coverflow.cpp */,
+			);
+			name = PVRDemo;
+			sourceTree = "<group>";
+		};
+		F8DAC1360DD2069F008D2EBD /* PVRShell */ = {
+			isa = PBXGroup;
+			children = (
+				F86806AB073BCF43114182F8 /* PVRShell.cpp */,
+				F8685712661BB8886AD7514E /* PVRShellAPI.cpp */,
+				F83A86645DDC3D69B5253277 /* EAGLView.mm */,
+				F80E48ED567B8029CD035DCC /* PVRShellOS.cpp */,
+				F8B085DF517D53BDEC57548B /* main.m */,
+				F812B82B586D7AEF8F327E60 /* AppController.mm */,
+				F83A1F5C3CD9301907D06259 /* PVRShell.h */,
+				F8BFC2A67A761E2BC1E22F6E /* PVRShellImpl.h */,
+				F8D0DF10578798846BCDB085 /* PVRShellAPI.h */,
+				F8BA1F04D4B2171A86ABBC82 /* EAGLView.h */,
+				F81ED8D2EC0F22F741D90292 /* PVRShellOS.h */,
+				F88E0D816D169BDC9A632C46 /* AppController.h */,
+			);
+			name = PVRShell;
+			sourceTree = "<group>";
+		};
+		F8E27FF51004EDB10006BBB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F8E27FF61004EDBD0006BBB4 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				F84549C526CBEE2CF9F4ADAB /* Album1.png */,
+				F8EFE2EEB31BED6F0D77F84E /* Album2.png */,
+				F8EAB6BD4412F8F086116A89 /* Album3.png */,
+				F82DCB36D7C0D89D28A40EFF /* Album4.png */,
+				F8DEE3DE646DD8CD32625B21 /* Album5.png */,
+				F8E6253960661C79C5D747EA /* Album6.png */,
+				F899D981A0083F146761D096 /* Album7.png */,
+				F8695CC4656AE705E3FBDD49 /* Album8.png */,
+				F86CA117562861DAD621EA15 /* Album9.png */,
+				F8DD18018B5C857F0454A8B1 /* Album10.png */,
+				F8245C2260EF1464E323ACF2 /* Album11.png */,
+				F899D61F6DB91B1E129B6DF9 /* Album12.png */,
+				F8D25753B3EFB6E13F96105A /* Album13.png */,
+				F830415A683DACC119B6F445 /* Album14.png */,
+				F84107B83757EC6861E53699 /* Album15.png */,
+				F85990962B40B03A9733F94C /* Album16.png */,
+				F8F4AF1428EC7BC8514F4C0E /* Album1.pvr */,
+				F87F756CD9A864D28A5A6EA3 /* Album2.pvr */,
+				F86A03D20C70D2324055A24D /* Album3.pvr */,
+				F8D9CB99D49CCDA44F7BD210 /* Album4.pvr */,
+				F8B62F4FDFDCE3A2547F5A3A /* Album5.pvr */,
+				F89AB6544947EC88CDF05237 /* Album6.pvr */,
+				F84555450C154EC0FB8CC35B /* Album7.pvr */,
+				F8534AB36D7D81E716D2C75E /* Album8.pvr */,
+				F823568C82BC77C23447C36D /* Album9.pvr */,
+				F8314C51358364215B1B4106 /* Album10.pvr */,
+				F8621BBC162BD240018099AF /* Album11.pvr */,
+				F83EFC038E616CFC26F6F427 /* Album12.pvr */,
+				F8CF8FFC76E07B24666251E3 /* Album13.pvr */,
+				F8E7C4A085898C3767F42DEF /* Album14.pvr */,
+				F81BADE130E7816BC37E3CD6 /* Album15.pvr */,
+				F8A0498F0257A8CCEDC423C0 /* Album16.pvr */,
+			);
+			name = Textures;
+			sourceTree = "<group>";
+		};
+		F8E27FF71004EDC30006BBB4 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				F895137C16F9AE9B63DD3558 /* FragShader.fsh */,
+				F81BCA31C4499C36ACCE89C4 /* VertShader.vsh */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* OGLES2Coverflow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "OGLES2Coverflow" */;
+			buildPhases = (
+				F823D6BD1028C4B200D01178 /* ShellScript */,
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				BA909F0A0FF0EADD00A4C97C /* data */,
+				BA909F0B0FF0EADD00A4C97C /* textures */,
+				BA909F1C0FF0EB3200A4C97C /* shaders */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F80B21CB1015CA2B00A93BE2 /* PBXTargetDependency */,
+			);
+			name = OGLES2Coverflow;
+			productName = foo;
+			productReference = 1D6058910D05DD3D006BFB54 /* OGLES2Coverflow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OGLES2Coverflow" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F80B21C11015CA1600A93BE2 /* Products */;
+					ProjectRef = F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* OGLES2Coverflow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F80B21C91015CA1600A93BE2 /* libOGLES2Tools.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOGLES2Tools.a;
+			remoteRef = F80B21C81015CA1600A93BE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F864940310F75E5100F46F54 /* Entitlements.plist in Resources */,
+				F8205A8B130408E100253AE7 /* Default-Portrait.png in Resources */,
+				F8205A8C130408E100253AE7 /* Default.png in Resources */,
+				F8205A8D130408E100253AE7 /* Icon-72.png in Resources */,
+				F8205A8E130408E100253AE7 /* Icon-Small-50.png in Resources */,
+				F8205A8F130408E100253AE7 /* Icon-Small.png in Resources */,
+				F8205A90130408E100253AE7 /* Icon-Small@2x.png in Resources */,
+				F8205A91130408E100253AE7 /* Icon.png in Resources */,
+				F8205A92130408E100253AE7 /* Icon@2x.png in Resources */,
+				F8205A93130408E100253AE7 /* iTunesArtwork in Resources */,
+				F8A34BDCD375DF71C7332F52 /* Album1.pvr in Resources */,
+				F8CC0AA8C404DFECB7293218 /* Album2.pvr in Resources */,
+				F8CCB6C33290A339289C6BB7 /* Album3.pvr in Resources */,
+				F88FE814BB41DA8560278553 /* Album4.pvr in Resources */,
+				F8CCF34095731FD18EA318E9 /* Album5.pvr in Resources */,
+				F801E2EA52715B399E0EB984 /* Album6.pvr in Resources */,
+				F875589F0ACAF980779D07AB /* Album7.pvr in Resources */,
+				F8380829634858F02702F3EB /* Album8.pvr in Resources */,
+				F8F5A465725951E1910748B6 /* Album9.pvr in Resources */,
+				F8FB4987B56F94EED225C3C5 /* Album10.pvr in Resources */,
+				F829EA831BE6991D64D00F63 /* Album11.pvr in Resources */,
+				F8EFF8E198DC88D47F210473 /* Album12.pvr in Resources */,
+				F8E7E6A31625EE3A587A8592 /* Album13.pvr in Resources */,
+				F894D60392057CD7C0A6C023 /* Album14.pvr in Resources */,
+				F85D05AA5483696E079E1C0F /* Album15.pvr in Resources */,
+				F813E4FCE4375263945E7ED5 /* Album16.pvr in Resources */,
+				F870BBA9895779E0AE68561F /* FragShader.fsh in Resources */,
+				F85F986B3B1E3DC98D9FAA9A /* VertShader.vsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F823D6BD1028C4B200D01178 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ../../ && test -f content.mak \\\n&& make -f content.mak textures PVRTEXTOOL=../../../Utilities/PVRTexTool/PVRTexToolCL/MacOS_x86/PVRTexTool || true";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B111672E99D215E2CF7518 /* OGLES2Coverflow.cpp in Sources */,
+				F8630E83E2409C83D56FBEC7 /* PVRShell.cpp in Sources */,
+				F8BC0A26D1DFE7D24AF67727 /* PVRShellAPI.cpp in Sources */,
+				F8411F7FA35ADD4338A91C4F /* EAGLView.mm in Sources */,
+				F8DD445EC802A113BADECABE /* PVRShellOS.cpp in Sources */,
+				F8511E325A14C7B1512D37CC /* main.m in Sources */,
+				F869BEBD44384AC2147622A7 /* AppController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F80B21CB1015CA2B00A93BE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OGLES2Tools;
+			targetProxy = F80B21CA1015CA2B00A93BE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = ( _DEBUG, BUILD_OGLES2 );
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/c++/4.2.1/armv6-apple-darwin9";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				PRODUCT_NAME = OGLES2Coverflow;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../../../Builds/OGLES2/Include ../../../../../Tools/OGLES2 ../../../../../Tools";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = stabs;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = BUILD_OGLES2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/c++/4.2.1/armv6-apple-darwin9";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PREBINDING = NO;
+				PRODUCT_NAME = OGLES2Coverflow;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../../../Builds/OGLES2/Include ../../../../../Tools/OGLES2 ../../../../../Tools";
+			};
+			name = Release;
+		};
+		F864940010F75E0600F46F54 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = BUILD_OGLES2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/c++/4.2.1/armv6-apple-darwin9";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PREBINDING = NO;
+				PRODUCT_NAME = OGLES2Coverflow;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../../../Builds/OGLES2/Include ../../../../../Tools/OGLES2 ../../../../../Tools";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		F864940110F75E0600F46F54 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Distribution;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "OGLES2Coverflow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				F864940110F75E0600F46F54 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OGLES2Coverflow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				F864940010F75E0600F46F54 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

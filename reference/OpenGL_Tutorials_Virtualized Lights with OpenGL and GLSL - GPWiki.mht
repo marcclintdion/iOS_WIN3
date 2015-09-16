@@ -1,0 +1,2166 @@
+Content-Type: multipart/related; start=<op.mhtml.1361957858481.528e4c3b7504bcd6@184.66.148.196>; boundary=----------hpdfrZrjwVBsyfwwssXCal
+Content-Location: http://content.gpwiki.org/index.php/OpenGL:Tutorials:Virtualized_Lights_with_OpenGL_and_GLSL
+Subject: =?utf-8?Q?OpenGL:Tutorials:Virtualized=20Lights=20with=20OpenGL=20and=20GLSL=20-=20GPWiki?=
+MIME-Version: 1.0
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline; filename=Virtualized_Lights_with_OpenGL_and_GLSL.htm
+Content-Type: text/html; charset=utf-8; name=Virtualized_Lights_with_OpenGL_and_GLSL.htm
+Content-ID: <op.mhtml.1361957858481.528e4c3b7504bcd6@184.66.148.196>
+Content-Location: http://content.gpwiki.org/index.php/OpenGL:Tutorials:Virtualized_Lights_with_OpenGL_and_GLSL
+Content-Transfer-Encoding: Quoted-Printable
+
+<!DOCTYPE html>
+<html lang=3D"en-gb" dir=3D"ltr">
+<head>
+<meta charset=3D"utf-8" />
+<title>OpenGL:Tutorials:Virtualized Lights with OpenGL and GLSL - GPWiki=
+</title>
+<meta name=3D"generator" content=3D"MediaWiki 1.17.0" />
+<link rel=3D"shortcut icon" href=3D"http://content.gpwiki.org/favicon.ic=
+o" />
+<link rel=3D"search" type=3D"application/opensearchdescription+xml" href=
+=3D"/opensearch_desc.php" title=3D"GPWiki (en-gb)" />
+<link rel=3D"EditURI" type=3D"application/rsd+xml" href=3D"http://conten=
+t.gpwiki.org/api.php?action=3Drsd" />
+<link rel=3D"copyright" href=3D"http://www.gnu.org/licenses/old-licenses=
+/fdl-1.2.txt" />
+<link rel=3D"alternate" type=3D"application/atom+xml" title=3D"GPWiki At=
+om feed" href=3D"/index.php?title=3DSpecial:RecentChanges&amp;feed=3Dato=
+m" />
+<link rel=3D"stylesheet" href=3D"/load.php?debug=3Dfalse&amp;lang=3Den-g=
+b&amp;modules=3Dmediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp=
+;only=3Dstyles&amp;skin=3Dvector&amp;*" />
+<meta name=3D"ResourceLoaderDynamicStyles" content=3D"" />
+<style type=3D"text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: =
+
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monosp=
+ace; margin:0; padding:0; background:none; vertical-align:top;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:to=
+p;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;verti=
+cal-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {b=
+ackground-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type=3D"text/css">/*<![CDATA[*/
+@import "/index.php?title=3DMediaWiki:Geshi.css&usemsgcache=3Dyes&action=
+=3Draw&ctype=3Dtext/css&smaxage=3D18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type=3D"text/css">body{behavior:url("/sk=
+ins/vector/csshover.min.htc")}</style><![endif]-->
+<script type=3D"text/javascript">
+ var _gaq =3D _gaq || [];
+ _gaq.push(['_setAccount', 'UA-32686658-1']);
+ _gaq.push(['_setDomainName', 'gpwiki.org']);
+ _gaq.push(['_trackPageview']);
+ (function() {
+   var ga =3D document.createElement('script'); ga.type =3D 'text/javasc=
+ript'; ga.async =3D true;
+   ga.src =3D ('https:' =3D=3D document.location.protocol ? 'https://ssl=
+' : 'http://www') + '.google-analytics.com/ga.js';
+   var s =3D document.getElementsByTagName('script')[0]; s.parentNode.in=
+sertBefore(ga, s);
+ })();
+ </script>
+</head>
+<body class=3D"mediawiki ltr ns-0 ns-subject page-OpenGL_Tutorials_Virtu=
+alized_Lights_with_OpenGL_and_GLSL skin-vector">
+
+<!-- Place this render call where appropriate -->
+<script type=3D"text/javascript">
+  window.___gcfg =3D {lang: 'en-GB'};
+
+  (function() {
+    var po =3D document.createElement('script'); po.type =3D 'text/javas=
+cript'; po.async =3D true;
+    po.src =3D 'https://apis.google.com/js/plusone.js';
+    var s =3D document.getElementsByTagName('script')[0]; s.parentNode.i=
+nsertBefore(po, s);
+  })();
+</script>
+
+		<div id=3D"mw-page-base" class=3D"noprint"></div>
+		<div id=3D"mw-head-base" class=3D"noprint"></div>
+		<!-- content -->
+		<div id=3D"content">
+			<a id=3D"top"></a>
+			<div id=3D"mw-js-message" style=3D"display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id=3D"firstHeading" class=3D"firstHeading">OpenGL:Tutorials:Virtu=
+alized Lights with OpenGL and GLSL <g:plusone size=3D"medium"></g:pluson=
+e></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id=3D"bodyContent">
+				<!-- tagline -->
+				<div id=3D"siteSub">From GPWiki</div>
+				<!-- /tagline -->
+				<!-- subtitle -->
+				<div id=3D"contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id=3D"jump-to-nav">
+					Jump to: <a href=3D"#mw-head">navigation</a>,
+					<a href=3D"#p-search">search</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodytext -->
+				<table id=3D"toc" class=3D"toc"><tr><td><div id=3D"toctitle"><h2>Con=
+tents</h2></div>
+<ul>
+<li class=3D"toclevel-1 tocsection-1"><a href=3D"#Before_You_Begin"><spa=
+n class=3D"tocnumber">1</span> <span class=3D"toctext">Before You Begin<=
+/span></a></li>
+<li class=3D"toclevel-1 tocsection-2"><a href=3D"#Introduction"><span cl=
+ass=3D"tocnumber">2</span> <span class=3D"toctext">Introduction</span></=
+a></li>
+<li class=3D"toclevel-1 tocsection-3"><a href=3D"#Creating_The_Lighting_=
+Class"><span class=3D"tocnumber">3</span> <span class=3D"toctext">Creati=
+ng The Lighting Class</span></a></li>
+<li class=3D"toclevel-1 tocsection-4"><a href=3D"#Coding_The_Functions">=
+<span class=3D"tocnumber">4</span> <span class=3D"toctext">Coding The Fu=
+nctions</span></a></li>
+<li class=3D"toclevel-1 tocsection-5"><a href=3D"#Creating_The_GLSL_Shad=
+ers"><span class=3D"tocnumber">5</span> <span class=3D"toctext">Creating=
+ The GLSL Shaders</span></a></li>
+<li class=3D"toclevel-1 tocsection-6"><a href=3D"#Putting_It_All_Togethe=
+r"><span class=3D"tocnumber">6</span> <span class=3D"toctext">Putting It=
+ All Together</span></a></li>
+<li class=3D"toclevel-1 tocsection-7"><a href=3D"#Build_On_It"><span cla=
+ss=3D"tocnumber">7</span> <span class=3D"toctext">Build On It</span></a>=
+</li>
+<li class=3D"toclevel-1 tocsection-8"><a href=3D"#External_Links"><span =
+class=3D"tocnumber">8</span> <span class=3D"toctext">External Links</spa=
+n></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class=3D"mw-headline" id=3D"Before_You_Begin"> Before You Beg=
+in </span></h2>
+<p>It is important to know that this tutorial assumes basic understandin=
+g of C++, OpenGL, GLSL, shaders, as well as the math used to calculate L=
+ambertian-based lighting! It is also assumed that you have already creat=
+ed functions for calling shaders, and dealing with uniform variables.
+</p><p><br />
+</p>
+<h2> <span class=3D"mw-headline" id=3D"Introduction"> Introduction </spa=
+n></h2>
+<p>	OpenGL provides the user with eight available enumerated lights, eac=
+h with its own properties such as position, diffuse contribution, and at=
+tenuation values. On today=E2=80=99s advanced hardware, the maximum numb=
+er of lights the GPU can process in hardware often stretches beyond one =
+thousand (the actual number can be determined by querying the graphics a=
+dapter to return <b>GL_MAX_LIGHTS</b>). When playing a game such as Half=
+-Life, you can easily see that there are more than eight lights being di=
+splayed on the screen. To take advantage of the power of modern GPU=E2=80=
+=99s, OpenGL=E2=80=99s lights must be virtualized, rendering eight at a =
+time, creating the illusion of thousands of lights being rendered at onc=
+e.
+</p><p><br />
+</p>
+<h2> <span class=3D"mw-headline" id=3D"Creating_The_Lighting_Class"> Cre=
+ating The Lighting Class </span></h2>
+<p>	Before getting into the actual lighting aspect of all this, we first=
+ must create a base class, to manage the virtualized lights.<br />
+lighting.h:
+</p>
+<div dir=3D"ltr" class=3D"mw-geshi" style=3D"text-align: left;"><div cla=
+ss=3D"c source-c"><pre class=3D"de1">  <span class=3D"co2">#define MAX_L=
+IGHTS 1000</span>
+&#160;
+  <span class=3D"kw4">typedef</span> <span class=3D"kw4">struct</span>
+  <span class=3D"br0">&#123;</span>
+    	  <span class=3D"kw4">float</span> pos<span class=3D"br0">&#91;</sp=
+an><span class=3D"nu0">4</span><span class=3D"br0">&#93;</span><span cla=
+ss=3D"sy0">;</span>
+&#160;
+    	  <span class=3D"kw4">float</span> diffuse<span class=3D"br0">&#91;=
+</span><span class=3D"nu0">4</span><span class=3D"br0">&#93;</span><span=
+ class=3D"sy0">;</span>
+    	  <span class=3D"kw4">float</span> ambient<span class=3D"br0">&#91;=
+</span><span class=3D"nu0">4</span><span class=3D"br0">&#93;</span><span=
+ class=3D"sy0">;</span>
+&#160;
+    	  <span class=3D"kw4">float</span> constantAttenuation<span class=3D=
+"sy0">;</span>
+    	  <span class=3D"kw4">float</span> linearAttenuation<span class=3D"=
+sy0">;</span>
+    	  <span class=3D"kw4">float</span> quadraticAttenuation<span class=3D=
+"sy0">;</span>
+&#160;
+     	  <span class=3D"kw4">float</span> brightness<span class=3D"sy0">;=
+</span>
+  <span class=3D"br0">&#125;</span> lightdata<span class=3D"sy0">,</span=
+> <span class=3D"sy0">*</span>ld<span class=3D"sy0">;</span>
+&#160;
+  class lighting
+  <span class=3D"br0">&#123;</span>
+  public<span class=3D"sy0">:</span>
+  	  lighting<span class=3D"br0">&#40;</span><span class=3D"br0">&#41;</=
+span><span class=3D"sy0">;</span>
+  	  virtual ~lighting<span class=3D"br0">&#40;</span><span class=3D"br0=
+">&#41;</span><span class=3D"sy0">;</span>
+&#160;
+  	  <span class=3D"kw4">char</span> createlight<span class=3D"br0">&#40=
+;</span><span class=3D"kw4">float</span> x<span class=3D"sy0">,</span> <=
+span class=3D"kw4">float</span> y<span class=3D"sy0">,</span> <span clas=
+s=3D"kw4">float</span> z<span class=3D"sy0">,</span>
+  		           <span class=3D"kw4">float</span> Dr<span class=3D"sy0">,<=
+/span> <span class=3D"kw4">float</span> Dg<span class=3D"sy0">,</span> <=
+span class=3D"kw4">float</span> Db<span class=3D"sy0">,</span>
+  		           <span class=3D"kw4">float</span> Ar<span class=3D"sy0">,<=
+/span> <span class=3D"kw4">float</span> Ag<span class=3D"sy0">,</span> <=
+span class=3D"kw4">float</span> Ab<span class=3D"sy0">,</span>
+  		           <span class=3D"kw4">float</span> cA<span class=3D"sy0">,<=
+/span> <span class=3D"kw4">float</span> lA<span class=3D"sy0">,</span> <=
+span class=3D"kw4">float</span> qA<span class=3D"br0">&#41;</span><span =
+class=3D"sy0">;</span>
+  	  <span class=3D"kw4">void</span> dolighting<span class=3D"br0">&#40;=
+</span>obj objectP<span class=3D"br0">&#41;</span><span class=3D"sy0">;<=
+/span>
+  <span class=3D"br0">&#125;</span><span class=3D"sy0">;</span>
+&#160;
+  <span class=3D"kw2">extern</span> lightdata lightP<span class=3D"br0">=
+&#91;</span>MAX_LIGHTS<span class=3D"br0">&#93;</span><span class=3D"sy0=
+">;</span></pre></div></div>
+<p>We first define the maximum number of virtual lights with <b>#define =
+MAX_LIGHTS</b>. Here we set it to 1000, but you can change this to whate=
+ver you want to suit your purpose. Next we create a struct. This will st=
+ore all the information about any given light. If you look closer at the=
+ structure (which I=E2=80=99ve named =E2=80=9C<b>lightdata</b>=E2=80=9D)=
+, there is a floating-point variable called =E2=80=9C<b>brightness</b>=E2=
+=80=9D. This will be used later to store the brightness or priority of t=
+he light, when deciding which lights to render.
+</p><p>The next thing we do is create a class, called =E2=80=9C<b>lighti=
+ng</b>=E2=80=9D. Within the class declaration, function prototypes are c=
+reated and declared as =E2=80=9C<b>public</b>=E2=80=9D. If you look at t=
+he function <b>dolighting()</b> you=E2=80=99ll see that it takes an argu=
+ment of type =E2=80=9C<b>obj</b>=E2=80=9D. <b>obj</b> is a structure I u=
+se in my own engine that holds information about objects, the same way o=
+ur structure holds information about lights. You can replace this argume=
+nt with a pointer to your own object class, or remove it all together.
+</p><p>The last thing we do is define an array called =E2=80=9C<b>lightP=
+</b>=E2=80=9D with our light struct. The array=E2=80=99s size is that of=
+ <b>MAX_LIGHTS</b>.
+</p><p><br />
+</p>
+<h2> <span class=3D"mw-headline" id=3D"Coding_The_Functions"> Coding The=
+ Functions </span></h2>
+<p>lighting.cpp
+</p>
+<div dir=3D"ltr" class=3D"mw-geshi" style=3D"text-align: left;"><div cla=
+ss=3D"c source-c"><pre class=3D"de1">lightdata lightP<span class=3D"br0"=
+>&#91;</span>MAX_LIGHTS<span class=3D"br0">&#93;</span><span class=3D"sy=
+0">;</span>
+<span class=3D"kw4">int</span> num_lights <span class=3D"sy0">=3D</span>=
+ <span class=3D"nu0">0</span><span class=3D"sy0">;</span>
+&#160;
+<span class=3D"kw4">int</span> lightBrightnessCompare<span class=3D"br0"=
+>&#40;</span><span class=3D"kw4">const</span> <span class=3D"kw4">void</=
+span> <span class=3D"sy0">*</span>a<span class=3D"sy0">,</span> <span cl=
+ass=3D"kw4">const</span> <span class=3D"kw4">void</span> <span class=3D"=
+sy0">*</span>b<span class=3D"br0">&#41;</span>
+<span class=3D"br0">&#123;</span>
+lightdata <span class=3D"sy0">*</span>ld1 <span class=3D"sy0">=3D</span>=
+ <span class=3D"br0">&#40;</span>lightdata <span class=3D"sy0">*</span><=
+span class=3D"br0">&#41;</span> a<span class=3D"sy0">;</span>
+lightdata <span class=3D"sy0">*</span>ld2 <span class=3D"sy0">=3D</span>=
+ <span class=3D"br0">&#40;</span>lightdata <span class=3D"sy0">*</span><=
+span class=3D"br0">&#41;</span> b<span class=3D"sy0">;</span>
+GLfloat diff<span class=3D"sy0">;</span>
+&#160;
+<span class=3D"coMULTI">/* The brighter lights get sorted close to top o=
+f the list. */</span>
+diff <span class=3D"sy0">=3D</span> ld2<span class=3D"sy0">-&gt;</span>b=
+rightness <span class=3D"sy0">-</span> ld1<span class=3D"sy0">-&gt;</spa=
+n>brightness<span class=3D"sy0">;</span>
+&#160;
+<span class=3D"kw1">if</span> <span class=3D"br0">&#40;</span>diff <span=
+ class=3D"sy0">&gt;</span> <span class=3D"nu0">0</span><span class=3D"br=
+0">&#41;</span>
+  <span class=3D"kw1">return</span> <span class=3D"nu0">1</span><span cl=
+ass=3D"sy0">;</span>
+<span class=3D"kw1">if</span> <span class=3D"br0">&#40;</span>diff <span=
+ class=3D"sy0">&lt;</span> <span class=3D"nu0">0</span><span class=3D"br=
+0">&#41;</span>
+  <span class=3D"kw1">return</span> <span class=3D"sy0">-</span><span cl=
+ass=3D"nu0">1</span><span class=3D"sy0">;</span>
+<span class=3D"kw1">return</span> <span class=3D"nu0">0</span><span clas=
+s=3D"sy0">;</span>
+<span class=3D"br0">&#125;</span>
+&#160;
+<span class=3D"kw4">char</span> lighting<span class=3D"sy0">::</span><sp=
+an class=3D"me2">createlight</span><span class=3D"br0">&#40;</span><span=
+ class=3D"kw4">float</span> x<span class=3D"sy0">,</span> <span class=3D=
+"kw4">float</span> y<span class=3D"sy0">,</span> <span class=3D"kw4">flo=
+at</span> z<span class=3D"sy0">,</span>
+		<span class=3D"kw4">float</span> Dr<span class=3D"sy0">,</span> <span =
+class=3D"kw4">float</span> Dg<span class=3D"sy0">,</span> <span class=3D=
+"kw4">float</span> Db<span class=3D"sy0">,</span>
+		<span class=3D"kw4">float</span> Ar<span class=3D"sy0">,</span> <span =
+class=3D"kw4">float</span> Ag<span class=3D"sy0">,</span> <span class=3D=
+"kw4">float</span> Ab<span class=3D"sy0">,</span>
+		<span class=3D"kw4">float</span> cA<span class=3D"sy0">,</span> <span =
+class=3D"kw4">float</span> lA<span class=3D"sy0">,</span> <span class=3D=
+"kw4">float</span> qA<span class=3D"br0">&#41;</span>
+<span class=3D"br0">&#123;</span>
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">pos</span><span class=3D"br0">&#91;</span><=
+span class=3D"nu0">0</span><span class=3D"br0">&#93;</span> <span class=3D=
+"sy0">=3D</span> x<span class=3D"sy0">;</span>
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">pos</span><span class=3D"br0">&#91;</span><=
+span class=3D"nu0">1</span><span class=3D"br0">&#93;</span> <span class=3D=
+"sy0">=3D</span> y<span class=3D"sy0">;</span>
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">pos</span><span class=3D"br0">&#91;</span><=
+span class=3D"nu0">2</span><span class=3D"br0">&#93;</span> <span class=3D=
+"sy0">=3D</span> z<span class=3D"sy0">;</span>
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">pos</span><span class=3D"br0">&#91;</span><=
+span class=3D"nu0">3</span><span class=3D"br0">&#93;</span> <span class=3D=
+"sy0">=3D</span> <span class=3D"nu17">1.0f</span><span class=3D"sy0">;</=
+span>
+&#160;
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">diffuse</span><span class=3D"br0">&#91;</sp=
+an><span class=3D"nu0">0</span><span class=3D"br0">&#93;</span> <span cl=
+ass=3D"sy0">=3D</span> Dr<span class=3D"sy0">;</span>
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">diffuse</span><span class=3D"br0">&#91;</sp=
+an><span class=3D"nu0">1</span><span class=3D"br0">&#93;</span> <span cl=
+ass=3D"sy0">=3D</span> Dg<span class=3D"sy0">;</span>
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">diffuse</span><span class=3D"br0">&#91;</sp=
+an><span class=3D"nu0">2</span><span class=3D"br0">&#93;</span> <span cl=
+ass=3D"sy0">=3D</span> Db<span class=3D"sy0">;</span>
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">diffuse</span><span class=3D"br0">&#91;</sp=
+an><span class=3D"nu0">3</span><span class=3D"br0">&#93;</span> <span cl=
+ass=3D"sy0">=3D</span> <span class=3D"nu17">1.0f</span><span class=3D"sy=
+0">;</span>
+&#160;
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">ambient</span><span class=3D"br0">&#91;</sp=
+an><span class=3D"nu0">0</span><span class=3D"br0">&#93;</span> <span cl=
+ass=3D"sy0">=3D</span> Ar<span class=3D"sy0">;</span>
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">ambient</span><span class=3D"br0">&#91;</sp=
+an><span class=3D"nu0">1</span><span class=3D"br0">&#93;</span> <span cl=
+ass=3D"sy0">=3D</span> Ag<span class=3D"sy0">;</span>
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">ambient</span><span class=3D"br0">&#91;</sp=
+an><span class=3D"nu0">2</span><span class=3D"br0">&#93;</span> <span cl=
+ass=3D"sy0">=3D</span> Ab<span class=3D"sy0">;</span>
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">ambient</span><span class=3D"br0">&#91;</sp=
+an><span class=3D"nu0">3</span><span class=3D"br0">&#93;</span> <span cl=
+ass=3D"sy0">=3D</span> <span class=3D"nu17">1.0f</span><span class=3D"sy=
+0">;</span>
+&#160;
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">constantAttenuation</span> <span class=3D"s=
+y0">=3D</span> cA<span class=3D"sy0">;</span>
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">linearAttenuation</span> <span class=3D"sy0=
+">=3D</span> lA<span class=3D"sy0">;</span>
+lightP<span class=3D"br0">&#91;</span>num_lights<span class=3D"br0">&#93=
+;</span>.<span class=3D"me1">quadraticAttenuation</span> <span class=3D"=
+sy0">=3D</span> qA<span class=3D"sy0">;</span>
+&#160;
+num_lights<span class=3D"sy0">++;</span>
+<span class=3D"kw1">return</span> <span class=3D"br0">&#40;</span><span =
+class=3D"nu0">1</span><span class=3D"br0">&#41;</span><span class=3D"sy0=
+">;</span>
+<span class=3D"br0">&#125;</span>
+&#160;
+<span class=3D"kw4">void</span> lighting<span class=3D"sy0">::</span><sp=
+an class=3D"me2">dolighting</span><span class=3D"br0">&#40;</span>obj ob=
+jectP<span class=3D"br0">&#41;</span>
+<span class=3D"br0">&#123;</span>
+	<span class=3D"co1">// Calculate each lights brightness based on it's p=
+osition, the object position and the eye position.</span>
+	<span class=3D"kw1">for</span><span class=3D"br0">&#40;</span><span cla=
+ss=3D"kw4">int</span> i<span class=3D"sy0">=3D</span><span class=3D"nu0"=
+>0</span><span class=3D"sy0">;</span> i<span class=3D"sy0">&lt;</span>nu=
+m_lights<span class=3D"sy0">;</span> i<span class=3D"sy0">++</span><span=
+ class=3D"br0">&#41;</span>
+	<span class=3D"br0">&#123;</span>
+		<span class=3D"kw4">float</span> dx <span class=3D"sy0">=3D</span> lig=
+htP<span class=3D"br0">&#91;</span>i<span class=3D"br0">&#93;</span>.<sp=
+an class=3D"me1">pos</span><span class=3D"br0">&#91;</span><span class=3D=
+"nu0">0</span><span class=3D"br0">&#93;</span> <span class=3D"sy0">-</sp=
+an> objectP<span class=3D"sy0">-&gt;</span>pos.<span class=3D"me1">x</sp=
+an><span class=3D"sy0">;</span>
+		<span class=3D"kw4">float</span> dy <span class=3D"sy0">=3D</span> lig=
+htP<span class=3D"br0">&#91;</span>i<span class=3D"br0">&#93;</span>.<sp=
+an class=3D"me1">pos</span><span class=3D"br0">&#91;</span><span class=3D=
+"nu0">1</span><span class=3D"br0">&#93;</span> <span class=3D"sy0">-</sp=
+an> objectP<span class=3D"sy0">-&gt;</span>pos.<span class=3D"me1">y</sp=
+an><span class=3D"sy0">;</span>
+		<span class=3D"kw4">float</span> dz <span class=3D"sy0">=3D</span> lig=
+htP<span class=3D"br0">&#91;</span>i<span class=3D"br0">&#93;</span>.<sp=
+an class=3D"me1">pos</span><span class=3D"br0">&#91;</span><span class=3D=
+"nu0">2</span><span class=3D"br0">&#93;</span> <span class=3D"sy0">-</sp=
+an> objectP<span class=3D"sy0">-&gt;</span>pos.<span class=3D"me1">z</sp=
+an><span class=3D"sy0">;</span>
+&#160;
+		<span class=3D"kw4">float</span> quadraticAttenuation <span class=3D"s=
+y0">=3D</span> dx <span class=3D"sy0">*</span> dx <span class=3D"sy0">+<=
+/span> dy <span class=3D"sy0">*</span> dy <span class=3D"sy0">+</span> d=
+z <span class=3D"sy0">*</span> dz<span class=3D"sy0">;</span>
+		<span class=3D"co1">//lightP[i].brightness =3D -quadraticAttenuation;<=
+/span>
+&#160;
+		<span class=3D"co1">// -- DETERMINE LIGHT CONTRIBUTION -- // </span>
+		GLfloat ex<span class=3D"sy0">,</span> ey<span class=3D"sy0">,</span> =
+ez<span class=3D"sy0">;</span>
+		GLfloat nx<span class=3D"sy0">,</span> ny<span class=3D"sy0">,</span> =
+nz<span class=3D"sy0">;</span>
+		GLfloat distance<span class=3D"sy0">;</span>
+		GLfloat diffuseReflection<span class=3D"sy0">;</span>
+&#160;
+		<span class=3D"co1">// Determine eye point location (remember we can r=
+otate by angle).</span>
+		ex <span class=3D"sy0">=3D</span> View.<span class=3D"me1">x</span><sp=
+an class=3D"sy0">;</span>
+		ey <span class=3D"sy0">=3D</span> View.<span class=3D"me1">y</span><sp=
+an class=3D"sy0">;</span>
+		ez <span class=3D"sy0">=3D</span> View.<span class=3D"me1">z</span><sp=
+an class=3D"sy0">;</span>
+&#160;
+		<span class=3D"co1">// Calculated normalized object to eye position di=
+rection (nx,ny,nz).</span>
+		nx <span class=3D"sy0">=3D</span> <span class=3D"br0">&#40;</span>ex <=
+span class=3D"sy0">-</span> objectP<span class=3D"sy0">-&gt;</span>pos.<=
+span class=3D"me1">x</span><span class=3D"br0">&#41;</span><span class=3D=
+"sy0">;</span>
+		ny <span class=3D"sy0">=3D</span> <span class=3D"br0">&#40;</span>ey <=
+span class=3D"sy0">-</span> objectP<span class=3D"sy0">-&gt;</span>pos.<=
+span class=3D"me1">y</span><span class=3D"br0">&#41;</span><span class=3D=
+"sy0">;</span>
+		nz <span class=3D"sy0">=3D</span> <span class=3D"br0">&#40;</span>ez <=
+span class=3D"sy0">-</span> objectP<span class=3D"sy0">-&gt;</span>pos.<=
+span class=3D"me1">z</span><span class=3D"br0">&#41;</span><span class=3D=
+"sy0">;</span>
+		distance <span class=3D"sy0">=3D</span> <span class=3D"kw3">sqrt</span=
+><span class=3D"br0">&#40;</span>nx <span class=3D"sy0">*</span> nx <spa=
+n class=3D"sy0">+</span> ny <span class=3D"sy0">*</span> ny <span class=3D=
+"sy0">+</span> nz <span class=3D"sy0">*</span> nz<span class=3D"br0">&#4=
+1;</span><span class=3D"sy0">;</span>
+		nx <span class=3D"sy0">=3D</span> nx <span class=3D"sy0">/</span> dist=
+ance<span class=3D"sy0">;</span>
+		ny <span class=3D"sy0">=3D</span> ny <span class=3D"sy0">/</span> dist=
+ance<span class=3D"sy0">;</span>
+		nz <span class=3D"sy0">=3D</span> nz <span class=3D"sy0">/</span> dist=
+ance<span class=3D"sy0">;</span>
+&#160;
+		<span class=3D"co1">// True distance needed, take square root.</span>
+		distance <span class=3D"sy0">=3D</span> <span class=3D"kw3">sqrt</span=
+><span class=3D"br0">&#40;</span>quadraticAttenuation<span class=3D"br0"=
+>&#41;</span><span class=3D"sy0">;</span>
+&#160;
+		<span class=3D"co1">// Calculate normalized object to light position d=
+irection (dx,dy,dz)</span>
+		dx <span class=3D"sy0">=3D</span> dx <span class=3D"sy0">/</span> dist=
+ance<span class=3D"sy0">;</span>
+		dy <span class=3D"sy0">=3D</span> dy <span class=3D"sy0">/</span> dist=
+ance<span class=3D"sy0">;</span>
+		dz <span class=3D"sy0">=3D</span> dz <span class=3D"sy0">/</span> dist=
+ance<span class=3D"sy0">;</span>
+&#160;
+		diffuseReflection <span class=3D"sy0">=3D</span> nx <span class=3D"sy0=
+">*</span> dx <span class=3D"sy0">+</span> ny <span class=3D"sy0">*</spa=
+n> dy <span class=3D"sy0">+</span> nz <span class=3D"sy0">*</span> dz<sp=
+an class=3D"sy0">;</span>
+		lightP<span class=3D"br0">&#91;</span>i<span class=3D"br0">&#93;</span=
+>.<span class=3D"me1">brightness</span> <span class=3D"sy0">=3D</span> d=
+iffuseReflection <span class=3D"sy0">/</span> quadraticAttenuation<span =
+class=3D"sy0">;</span>  =
+
+	<span class=3D"br0">&#125;</span>
+	<span class=3D"co1">// -- SORT LIGHTS, AND ASSIGN TO HARDWARE -- //</sp=
+an>
+	<span class=3D"kw3">qsort</span><span class=3D"br0">&#40;</span>lightP<=
+span class=3D"sy0">,</span> num_lights<span class=3D"sy0">,</span> <span=
+ class=3D"kw4">sizeof</span><span class=3D"br0">&#40;</span>lightP<span =
+class=3D"br0">&#91;</span><span class=3D"nu0">0</span><span class=3D"br0=
+">&#93;</span><span class=3D"br0">&#41;</span><span class=3D"sy0">,</spa=
+n> lightBrightnessCompare<span class=3D"br0">&#41;</span><span class=3D"=
+sy0">;</span>  =
+
+&#160;
+	<span class=3D"kw1">for</span><span class=3D"br0">&#40;</span><span cla=
+ss=3D"kw4">int</span> j<span class=3D"sy0">=3D</span><span class=3D"nu0"=
+>0</span><span class=3D"sy0">;</span> j<span class=3D"sy0">&lt;</span><s=
+pan class=3D"nu0">3</span><span class=3D"sy0">;</span> j<span class=3D"s=
+y0">++</span><span class=3D"br0">&#41;</span>
+	<span class=3D"br0">&#123;</span>
+		<span class=3D"kw1">if</span><span class=3D"br0">&#40;</span><span cla=
+ss=3D"sy0">!</span>_ceFrustum.<span class=3D"me1">PointInFrustum</span><=
+span class=3D"br0">&#40;</span>lightP<span class=3D"br0">&#91;</span>j<s=
+pan class=3D"br0">&#93;</span>.<span class=3D"me1">pos</span><span class=
+=3D"br0">&#91;</span><span class=3D"nu0">0</span><span class=3D"br0">&#9=
+3;</span><span class=3D"sy0">,</span> lightP<span class=3D"br0">&#91;</s=
+pan>j<span class=3D"br0">&#93;</span>.<span class=3D"me1">pos</span><spa=
+n class=3D"br0">&#91;</span><span class=3D"nu0">1</span><span class=3D"b=
+r0">&#93;</span><span class=3D"sy0">,</span> lightP<span class=3D"br0">&=
+#91;</span>j<span class=3D"br0">&#93;</span>.<span class=3D"me1">pos</sp=
+an><span class=3D"br0">&#91;</span><span class=3D"nu0">2</span><span cla=
+ss=3D"br0">&#93;</span><span class=3D"br0">&#41;</span><span class=3D"br=
+0">&#41;</span>
+		<span class=3D"br0">&#123;</span>
+			j<span class=3D"sy0">++;</span>
+		<span class=3D"br0">&#125;</span>
+&#160;
+		glLightfv<span class=3D"br0">&#40;</span>GL_LIGHT0<span class=3D"sy0">=
++</span>j<span class=3D"sy0">,</span> GL_POSITION<span class=3D"sy0">,</=
+span> lightP<span class=3D"br0">&#91;</span>j<span class=3D"br0">&#93;</=
+span>.<span class=3D"me1">pos</span><span class=3D"br0">&#41;</span><spa=
+n class=3D"sy0">;</span>
+		glLightfv<span class=3D"br0">&#40;</span>GL_LIGHT0<span class=3D"sy0">=
++</span>j<span class=3D"sy0">,</span> GL_DIFFUSE<span class=3D"sy0">,</s=
+pan> lightP<span class=3D"br0">&#91;</span>j<span class=3D"br0">&#93;</s=
+pan>.<span class=3D"me1">diffuse</span><span class=3D"br0">&#41;</span><=
+span class=3D"sy0">;</span>
+		glLightfv<span class=3D"br0">&#40;</span>GL_LIGHT0<span class=3D"sy0">=
++</span>j<span class=3D"sy0">,</span> GL_AMBIENT<span class=3D"sy0">,</s=
+pan> lightP<span class=3D"br0">&#91;</span>j<span class=3D"br0">&#93;</s=
+pan>.<span class=3D"me1">ambient</span><span class=3D"br0">&#41;</span><=
+span class=3D"sy0">;</span>
+		glLightf<span class=3D"br0">&#40;</span>GL_LIGHT0<span class=3D"sy0">+=
+</span>j<span class=3D"sy0">,</span> GL_CONSTANT_ATTENUATION<span class=3D=
+"sy0">,</span> lightP<span class=3D"br0">&#91;</span>j<span class=3D"br0=
+">&#93;</span>.<span class=3D"me1">constantAttenuation</span><span class=
+=3D"br0">&#41;</span><span class=3D"sy0">;</span>
+		glLightf<span class=3D"br0">&#40;</span>GL_LIGHT0<span class=3D"sy0">+=
+</span>j<span class=3D"sy0">,</span> GL_LINEAR_ATTENUATION<span class=3D=
+"sy0">,</span> lightP<span class=3D"br0">&#91;</span>j<span class=3D"br0=
+">&#93;</span>.<span class=3D"me1">linearAttenuation</span><span class=3D=
+"br0">&#41;</span><span class=3D"sy0">;</span>
+		glLightf<span class=3D"br0">&#40;</span>GL_LIGHT0<span class=3D"sy0">+=
+</span>j<span class=3D"sy0">,</span> GL_QUADRATIC_ATTENUATION<span class=
+=3D"sy0">,</span> lightP<span class=3D"br0">&#91;</span>j<span class=3D"=
+br0">&#93;</span>.<span class=3D"me1">quadraticAttenuation</span><span c=
+lass=3D"br0">&#41;</span><span class=3D"sy0">;</span>
+&#160;
+	<span class=3D"br0">&#125;</span>
+<span class=3D"br0">&#125;</span></pre></div></div>
+<p>	Before getting into any functions, we re-declare =E2=80=9C<b>lightP<=
+/b>=E2=80=9D (it was defined as external in the header), and define =E2=80=
+=9C<b>num_lights</b>=E2=80=9D and set it to zero. This variable will be =
+used to keep track of how many lights, and what lights have been created=
+.
+</p><p>	Our first function, <b>lightBrightnessCompare()</b>, is a functi=
+on used by <b>qsort()</b> to sort our array of lights in order from brig=
+htest to dimmest. The function follows the format usually required by <b=
+>qsort()</b> (do a Google search or search MSDN for examples using the <=
+b>qsort()</b> function).
+</p><p>	The next function we use is called =E2=80=9C<b>createlight()</b>=
+=E2=80=9D. This function sets the variables of a single light, with the =
+arguments specified by the function prototype. The light set is determin=
+ed by the variable set earlier, <b>num_lights</b>. This variable is used=
+ as the array index number for <b>lightP</b>, our pointer to the lightda=
+ta structure. After all the variables have been set, <b>num_lights</b> i=
+s increased by one so that the next time the function is called, <b>ligh=
+tP</b>=E2=80=99s array index number is different.
+</p><p>	The last function used is called =E2=80=9C<b>dolighting()</b>=E2=
+=80=9D. This function contains quite a bit more code than the others. Th=
+e function begins by setting a =E2=80=9Cfor loop=E2=80=9D, that cycles t=
+hrough all the lights, where <b>i</b>&lt;<b>num_lights</b>. The quadrati=
+c attenuation is then calculated with the object to light vector. Next t=
+he diffuse component is calculated. I=E2=80=99m not going to regurgitate=
+ the math for this here. If you=E2=80=99re looking for a tutorial on lig=
+hting math, try doing a Google search. There are literally thousands of =
+resources on 3d math. All you need to know for the scope of this tutoria=
+l, is that brightness =3D diffuseComponant / quadraticAttenuation. After=
+ the brightness of the light is determined, <b>qsort()</b> is then calle=
+d, sorting the lights created so far in order from brightest to dimmest,=
+ using our <b>lightBrightnessCompare()</b> function we created earlier. =
+Finally, we set another for loop in motion, where <b>j</b>&lt;3. This =E2=
+=80=9Cfor loop=E2=80=9D is used to cycle through the virtual lights. The=
+ values for the light are set using <b>glLightfv()</b>. These values wil=
+l be used using built-in lighting functions in the GLSL shader. It is im=
+portant to remember that we do not need to enable the light or lighting =
+with <b>glEnable()</b>, because we are using shaders!
+</p><p><br />
+</p>
+<h2> <span class=3D"mw-headline" id=3D"Creating_The_GLSL_Shaders"> Creat=
+ing The GLSL Shaders </span></h2>
+<p>	There=E2=80=99s only a bit more code to sift through before we=E2=80=
+=99re done. The last thing we need to do is create our shaders. These ar=
+e lambertian.vert and lambertian.frag<br />
+lambertian.vert
+</p>
+<div dir=3D"ltr" class=3D"mw-geshi" style=3D"text-align: left;"><div cla=
+ss=3D"c source-c"><pre class=3D"de1">varying vec3 N<span class=3D"sy0">;=
+</span>
+varying vec3 v<span class=3D"sy0">;</span>
+varying vec2 varTexCoord<span class=3D"sy0">;</span>
+&#160;
+<span class=3D"kw4">void</span> main<span class=3D"br0">&#40;</span><spa=
+n class=3D"kw4">void</span><span class=3D"br0">&#41;</span>
+<span class=3D"br0">&#123;</span>
+ v <span class=3D"sy0">=3D</span> vec3<span class=3D"br0">&#40;</span>gl=
+_ModelViewMatrix <span class=3D"sy0">*</span> gl_Vertex<span class=3D"br=
+0">&#41;</span><span class=3D"sy0">;</span>
+&#160;
+ N <span class=3D"sy0">=3D</span> normalize<span class=3D"br0">&#40;</sp=
+an>gl_NormalMatrix <span class=3D"sy0">*</span> gl_Normal<span class=3D"=
+br0">&#41;</span><span class=3D"sy0">;</span>
+&#160;
+ gl_Position <span class=3D"sy0">=3D</span> gl_ModelViewProjectionMatrix=
+ <span class=3D"sy0">*</span> gl_Vertex<span class=3D"sy0">;</span>
+&#160;
+ varTexCoord <span class=3D"sy0">=3D</span> vec2<span class=3D"br0">&#40=
+;</span>gl_MultiTexCoord0<span class=3D"br0">&#41;</span><span class=3D"=
+sy0">;</span>
+<span class=3D"br0">&#125;</span></pre></div></div>
+<p>	I=E2=80=99m not going to explain what this code does, as it is fairl=
+y straightforward, and I do not intend to teach you GLSL with this tutor=
+ial. All it does is define the view vector, vertex normals, and sets tex=
+ture coordinates.
+</p><p>lambertian.frag
+</p>
+<div dir=3D"ltr" class=3D"mw-geshi" style=3D"text-align: left;"><div cla=
+ss=3D"c source-c"><pre class=3D"de1">uniform sampler2D baseMap<span clas=
+s=3D"sy0">;</span>
+&#160;
+varying vec3 N<span class=3D"sy0">;</span>
+varying vec3 v<span class=3D"sy0">;</span>
+varying vec2 varTexCoord<span class=3D"sy0">;</span>
+&#160;
+vec4 light0 <span class=3D"br0">&#40;</span><span class=3D"br0">&#41;</s=
+pan>
+<span class=3D"br0">&#123;</span>
+vec4 color<span class=3D"sy0">;</span>
+&#160;
+&#160;
+vec3 L <span class=3D"sy0">=3D</span> normalize<span class=3D"br0">&#40;=
+</span>gl_LightSource<span class=3D"br0">&#91;</span><span class=3D"nu0"=
+>0</span><span class=3D"br0">&#93;</span>.<span class=3D"me1">position</=
+span>.<span class=3D"me1">xyz</span> <span class=3D"sy0">-</span> v<span=
+ class=3D"br0">&#41;</span><span class=3D"sy0">;</span> =
+
+vec3 E <span class=3D"sy0">=3D</span> normalize<span class=3D"br0">&#40;=
+</span><span class=3D"sy0">-</span>v<span class=3D"br0">&#41;</span><spa=
+n class=3D"sy0">;</span> <span class=3D"co1">// we are in Eye Coordinate=
+s, so EyePos is (0,0,0)</span>
+vec3 R <span class=3D"sy0">=3D</span> normalize<span class=3D"br0">&#40;=
+</span><span class=3D"sy0">-</span>reflect<span class=3D"br0">&#40;</spa=
+n>L<span class=3D"sy0">,</span>N<span class=3D"br0">&#41;</span><span cl=
+ass=3D"br0">&#41;</span><span class=3D"sy0">;</span> =
+
+&#160;
+<span class=3D"kw4">float</span> dist <span class=3D"sy0">=3D</span> len=
+gth<span class=3D"br0">&#40;</span>L<span class=3D"br0">&#41;</span><spa=
+n class=3D"sy0">;</span>
+&#160;
+<span class=3D"kw4">float</span> atten <span class=3D"sy0">=3D</span> <s=
+pan class=3D"nu16">1.0</span> <span class=3D"sy0">/</span> <span class=3D=
+"br0">&#40;</span>gl_LightSource<span class=3D"br0">&#91;</span><span cl=
+ass=3D"nu0">0</span><span class=3D"br0">&#93;</span>.<span class=3D"me1"=
+>constantAttenuation</span> <span class=3D"sy0">+</span>
+			gl_LightSource<span class=3D"br0">&#91;</span><span class=3D"nu0">0</=
+span><span class=3D"br0">&#93;</span>.<span class=3D"me1">linearAttenuat=
+ion</span> <span class=3D"sy0">*</span> dist <span class=3D"sy0">+</span=
+>
+			gl_LightSource<span class=3D"br0">&#91;</span><span class=3D"nu0">0</=
+span><span class=3D"br0">&#93;</span>.<span class=3D"me1">quadraticAtten=
+uation</span> <span class=3D"sy0">*</span> dist <span class=3D"sy0">*</s=
+pan> dist<span class=3D"br0">&#41;</span><span class=3D"sy0">;</span>
+&#160;
+<span class=3D"co1">//calculate Ambient Term:</span>
+vec4 Iamb <span class=3D"sy0">=3D</span> gl_LightSource<span class=3D"br=
+0">&#91;</span><span class=3D"nu0">0</span><span class=3D"br0">&#93;</sp=
+an>.<span class=3D"me1">ambient</span><span class=3D"sy0">*</span>gl_Fro=
+ntMaterial.<span class=3D"me1">ambient</span><span class=3D"sy0">;</span=
+>
+&#160;
+<span class=3D"co1">//calculate Diffuse Term:</span>
+vec4 Idiff <span class=3D"sy0">=3D</span> <span class=3D"br0">&#40;</spa=
+n>gl_LightSource<span class=3D"br0">&#91;</span><span class=3D"nu0">0</s=
+pan><span class=3D"br0">&#93;</span>.<span class=3D"me1">diffuse</span> =
+<span class=3D"sy0">*</span> max<span class=3D"br0">&#40;</span>dot<span=
+ class=3D"br0">&#40;</span>N<span class=3D"sy0">,</span>L<span class=3D"=
+br0">&#41;</span><span class=3D"sy0">,</span> <span class=3D"nu16">0.0</=
+span><span class=3D"br0">&#41;</span><span class=3D"br0">&#41;</span><sp=
+an class=3D"sy0">*</span>gl_FrontMaterial.<span class=3D"me1">diffuse</s=
+pan><span class=3D"sy0">;</span>
+&#160;
+<span class=3D"co1">// calculate Specular Term:</span>
+vec4 Ispec <span class=3D"sy0">=3D</span> gl_FrontMaterial.<span class=3D=
+"me1">specular</span> <span class=3D"sy0">*</span> <span class=3D"kw3">p=
+ow</span><span class=3D"br0">&#40;</span>max<span class=3D"br0">&#40;</s=
+pan>dot<span class=3D"br0">&#40;</span>R<span class=3D"sy0">,</span>E<sp=
+an class=3D"br0">&#41;</span><span class=3D"sy0">,</span><span class=3D"=
+nu16">0.0</span><span class=3D"br0">&#41;</span><span class=3D"sy0">,</s=
+pan><span class=3D"nu16">0.3</span><span class=3D"sy0">*</span>gl_FrontM=
+aterial.<span class=3D"me1">shininess</span><span class=3D"br0">&#41;</s=
+pan><span class=3D"sy0">;</span>
+&#160;
+color <span class=3D"sy0">=3D</span> gl_FrontMaterial.<span class=3D"me1=
+">emission</span><span class=3D"sy0">+</span>Iamb<span class=3D"sy0">+</=
+span>atten<span class=3D"sy0">*</span><span class=3D"br0">&#40;</span>gl=
+_FrontMaterial.<span class=3D"me1">ambient</span> <span class=3D"sy0">+<=
+/span> Idiff <span class=3D"sy0">+</span> Ispec<span class=3D"br0">&#41;=
+</span><span class=3D"sy0">;</span>
+<span class=3D"kw1">return</span> color<span class=3D"sy0">;</span>
+<span class=3D"br0">&#125;</span>
+&#160;
+vec4 light1 <span class=3D"br0">&#40;</span><span class=3D"br0">&#41;</s=
+pan>
+<span class=3D"br0">&#123;</span>
+vec4 color<span class=3D"sy0">;</span>
+&#160;
+&#160;
+vec3 L <span class=3D"sy0">=3D</span> normalize<span class=3D"br0">&#40;=
+</span>gl_LightSource<span class=3D"br0">&#91;</span><span class=3D"nu0"=
+>1</span><span class=3D"br0">&#93;</span>.<span class=3D"me1">position</=
+span>.<span class=3D"me1">xyz</span> <span class=3D"sy0">-</span> v<span=
+ class=3D"br0">&#41;</span><span class=3D"sy0">;</span> =
+
+vec3 E <span class=3D"sy0">=3D</span> normalize<span class=3D"br0">&#40;=
+</span><span class=3D"sy0">-</span>v<span class=3D"br0">&#41;</span><spa=
+n class=3D"sy0">;</span> <span class=3D"co1">// we are in Eye Coordinate=
+s, so EyePos is (0,0,0)</span>
+vec3 R <span class=3D"sy0">=3D</span> normalize<span class=3D"br0">&#40;=
+</span><span class=3D"sy0">-</span>reflect<span class=3D"br0">&#40;</spa=
+n>L<span class=3D"sy0">,</span>N<span class=3D"br0">&#41;</span><span cl=
+ass=3D"br0">&#41;</span><span class=3D"sy0">;</span> =
+
+&#160;
+<span class=3D"kw4">float</span> dist <span class=3D"sy0">=3D</span> len=
+gth<span class=3D"br0">&#40;</span>L<span class=3D"br0">&#41;</span><spa=
+n class=3D"sy0">;</span>
+&#160;
+<span class=3D"kw4">float</span> atten <span class=3D"sy0">=3D</span> <s=
+pan class=3D"nu16">1.0</span> <span class=3D"sy0">/</span> <span class=3D=
+"br0">&#40;</span>gl_LightSource<span class=3D"br0">&#91;</span><span cl=
+ass=3D"nu0">1</span><span class=3D"br0">&#93;</span>.<span class=3D"me1"=
+>constantAttenuation</span> <span class=3D"sy0">+</span>
+			gl_LightSource<span class=3D"br0">&#91;</span><span class=3D"nu0">1</=
+span><span class=3D"br0">&#93;</span>.<span class=3D"me1">linearAttenuat=
+ion</span> <span class=3D"sy0">*</span> dist <span class=3D"sy0">+</span=
+>
+			gl_LightSource<span class=3D"br0">&#91;</span><span class=3D"nu0">1</=
+span><span class=3D"br0">&#93;</span>.<span class=3D"me1">quadraticAtten=
+uation</span> <span class=3D"sy0">*</span> dist <span class=3D"sy0">*</s=
+pan> dist<span class=3D"br0">&#41;</span><span class=3D"sy0">;</span>
+&#160;
+<span class=3D"co1">//calculate Ambient Term:</span>
+vec4 Iamb <span class=3D"sy0">=3D</span> gl_LightSource<span class=3D"br=
+0">&#91;</span><span class=3D"nu0">1</span><span class=3D"br0">&#93;</sp=
+an>.<span class=3D"me1">ambient</span><span class=3D"sy0">*</span>gl_Fro=
+ntMaterial.<span class=3D"me1">ambient</span><span class=3D"sy0">;</span=
+>
+&#160;
+<span class=3D"co1">//calculate Diffuse Term:</span>
+vec4 Idiff <span class=3D"sy0">=3D</span> <span class=3D"br0">&#40;</spa=
+n>gl_LightSource<span class=3D"br0">&#91;</span><span class=3D"nu0">1</s=
+pan><span class=3D"br0">&#93;</span>.<span class=3D"me1">diffuse</span> =
+<span class=3D"sy0">*</span> max<span class=3D"br0">&#40;</span>dot<span=
+ class=3D"br0">&#40;</span>N<span class=3D"sy0">,</span>L<span class=3D"=
+br0">&#41;</span><span class=3D"sy0">,</span> <span class=3D"nu16">0.0</=
+span><span class=3D"br0">&#41;</span><span class=3D"br0">&#41;</span><sp=
+an class=3D"sy0">*</span>gl_FrontMaterial.<span class=3D"me1">diffuse</s=
+pan><span class=3D"sy0">;</span>
+&#160;
+<span class=3D"co1">// calculate Specular Term:</span>
+vec4 Ispec <span class=3D"sy0">=3D</span> gl_FrontMaterial.<span class=3D=
+"me1">specular</span> <span class=3D"sy0">*</span> <span class=3D"kw3">p=
+ow</span><span class=3D"br0">&#40;</span>max<span class=3D"br0">&#40;</s=
+pan>dot<span class=3D"br0">&#40;</span>R<span class=3D"sy0">,</span>E<sp=
+an class=3D"br0">&#41;</span><span class=3D"sy0">,</span><span class=3D"=
+nu16">0.0</span><span class=3D"br0">&#41;</span><span class=3D"sy0">,</s=
+pan><span class=3D"nu16">0.3</span><span class=3D"sy0">*</span>gl_FrontM=
+aterial.<span class=3D"me1">shininess</span><span class=3D"br0">&#41;</s=
+pan><span class=3D"sy0">;</span>
+&#160;
+color <span class=3D"sy0">=3D</span> gl_FrontMaterial.<span class=3D"me1=
+">emission</span><span class=3D"sy0">+</span>Iamb<span class=3D"sy0">+</=
+span>atten<span class=3D"sy0">*</span><span class=3D"br0">&#40;</span>gl=
+_FrontMaterial.<span class=3D"me1">ambient</span> <span class=3D"sy0">+<=
+/span> Idiff <span class=3D"sy0">+</span> Ispec<span class=3D"br0">&#41;=
+</span><span class=3D"sy0">;</span>
+<span class=3D"kw1">return</span> color<span class=3D"sy0">;</span>
+<span class=3D"br0">&#125;</span>
+&#160;
+vec4 light2 <span class=3D"br0">&#40;</span><span class=3D"br0">&#41;</s=
+pan>
+<span class=3D"br0">&#123;</span>
+vec4 color<span class=3D"sy0">;</span>
+&#160;
+&#160;
+vec3 L <span class=3D"sy0">=3D</span> normalize<span class=3D"br0">&#40;=
+</span>gl_LightSource<span class=3D"br0">&#91;</span><span class=3D"nu0"=
+>2</span><span class=3D"br0">&#93;</span>.<span class=3D"me1">position</=
+span>.<span class=3D"me1">xyz</span> <span class=3D"sy0">-</span> v<span=
+ class=3D"br0">&#41;</span><span class=3D"sy0">;</span> =
+
+vec3 E <span class=3D"sy0">=3D</span> normalize<span class=3D"br0">&#40;=
+</span><span class=3D"sy0">-</span>v<span class=3D"br0">&#41;</span><spa=
+n class=3D"sy0">;</span> <span class=3D"co1">// we are in Eye Coordinate=
+s, so EyePos is (0,0,0)</span>
+vec3 R <span class=3D"sy0">=3D</span> normalize<span class=3D"br0">&#40;=
+</span><span class=3D"sy0">-</span>reflect<span class=3D"br0">&#40;</spa=
+n>L<span class=3D"sy0">,</span>N<span class=3D"br0">&#41;</span><span cl=
+ass=3D"br0">&#41;</span><span class=3D"sy0">;</span> =
+
+&#160;
+<span class=3D"kw4">float</span> dist <span class=3D"sy0">=3D</span> len=
+gth<span class=3D"br0">&#40;</span>L<span class=3D"br0">&#41;</span><spa=
+n class=3D"sy0">;</span>
+&#160;
+<span class=3D"kw4">float</span> atten <span class=3D"sy0">=3D</span> <s=
+pan class=3D"nu16">1.0</span> <span class=3D"sy0">/</span> <span class=3D=
+"br0">&#40;</span>gl_LightSource<span class=3D"br0">&#91;</span><span cl=
+ass=3D"nu0">2</span><span class=3D"br0">&#93;</span>.<span class=3D"me1"=
+>constantAttenuation</span> <span class=3D"sy0">+</span>
+			gl_LightSource<span class=3D"br0">&#91;</span><span class=3D"nu0">2</=
+span><span class=3D"br0">&#93;</span>.<span class=3D"me1">linearAttenuat=
+ion</span> <span class=3D"sy0">*</span> dist <span class=3D"sy0">+</span=
+>
+			gl_LightSource<span class=3D"br0">&#91;</span><span class=3D"nu0">2</=
+span><span class=3D"br0">&#93;</span>.<span class=3D"me1">quadraticAtten=
+uation</span> <span class=3D"sy0">*</span> dist <span class=3D"sy0">*</s=
+pan> dist<span class=3D"br0">&#41;</span><span class=3D"sy0">;</span>
+&#160;
+<span class=3D"co1">//calculate Ambient Term:</span>
+vec4 Iamb <span class=3D"sy0">=3D</span> gl_LightSource<span class=3D"br=
+0">&#91;</span><span class=3D"nu0">2</span><span class=3D"br0">&#93;</sp=
+an>.<span class=3D"me1">ambient</span><span class=3D"sy0">*</span>gl_Fro=
+ntMaterial.<span class=3D"me1">ambient</span><span class=3D"sy0">;</span=
+>
+&#160;
+<span class=3D"co1">//calculate Diffuse Term:</span>
+vec4 Idiff <span class=3D"sy0">=3D</span> <span class=3D"br0">&#40;</spa=
+n>gl_LightSource<span class=3D"br0">&#91;</span><span class=3D"nu0">2</s=
+pan><span class=3D"br0">&#93;</span>.<span class=3D"me1">diffuse</span> =
+<span class=3D"sy0">*</span> max<span class=3D"br0">&#40;</span>dot<span=
+ class=3D"br0">&#40;</span>N<span class=3D"sy0">,</span>L<span class=3D"=
+br0">&#41;</span><span class=3D"sy0">,</span> <span class=3D"nu16">0.0</=
+span><span class=3D"br0">&#41;</span><span class=3D"br0">&#41;</span><sp=
+an class=3D"sy0">*</span>gl_FrontMaterial.<span class=3D"me1">diffuse</s=
+pan><span class=3D"sy0">;</span>
+&#160;
+<span class=3D"co1">// calculate Specular Term:</span>
+vec4 Ispec <span class=3D"sy0">=3D</span> gl_FrontMaterial.<span class=3D=
+"me1">specular</span> <span class=3D"sy0">*</span> <span class=3D"kw3">p=
+ow</span><span class=3D"br0">&#40;</span>max<span class=3D"br0">&#40;</s=
+pan>dot<span class=3D"br0">&#40;</span>R<span class=3D"sy0">,</span>E<sp=
+an class=3D"br0">&#41;</span><span class=3D"sy0">,</span><span class=3D"=
+nu16">0.0</span><span class=3D"br0">&#41;</span><span class=3D"sy0">,</s=
+pan><span class=3D"nu16">0.3</span><span class=3D"sy0">*</span>gl_FrontM=
+aterial.<span class=3D"me1">shininess</span><span class=3D"br0">&#41;</s=
+pan><span class=3D"sy0">;</span>
+&#160;
+color <span class=3D"sy0">=3D</span> gl_FrontMaterial.<span class=3D"me1=
+">emission</span><span class=3D"sy0">+</span>Iamb<span class=3D"sy0">+</=
+span>atten<span class=3D"sy0">*</span><span class=3D"br0">&#40;</span>gl=
+_FrontMaterial.<span class=3D"me1">ambient</span> <span class=3D"sy0">+<=
+/span> Idiff <span class=3D"sy0">+</span> Ispec<span class=3D"br0">&#41;=
+</span><span class=3D"sy0">;</span>
+<span class=3D"kw1">return</span> color<span class=3D"sy0">;</span>
+<span class=3D"br0">&#125;</span>
+&#160;
+<span class=3D"kw4">void</span> main <span class=3D"br0">&#40;</span><sp=
+an class=3D"kw4">void</span><span class=3D"br0">&#41;</span>
+<span class=3D"br0">&#123;</span>
+<span class=3D"co1">// write Total Color:</span>
+gl_FragColor <span class=3D"sy0">=3D</span> <span class=3D"br0">&#40;</s=
+pan>light0<span class=3D"br0">&#40;</span><span class=3D"br0">&#41;</spa=
+n><span class=3D"sy0">+</span>light1<span class=3D"br0">&#40;</span><spa=
+n class=3D"br0">&#41;</span><span class=3D"sy0">+</span>light2<span clas=
+s=3D"br0">&#40;</span><span class=3D"br0">&#41;</span><span class=3D"br0=
+">&#41;</span><span class=3D"sy0">*</span>texture2D<span class=3D"br0">&=
+#40;</span>baseMap<span class=3D"sy0">,</span> varTexCoord<span class=3D=
+"br0">&#41;</span><span class=3D"sy0">;</span>
+<span class=3D"br0">&#125;</span></pre></div></div>
+<p>	You may be wondering why there are three separate lighting functions=
+: <b>light0()</b>, <b>light1()</b>, and <b>light2()</b>. This is done fo=
+r two reasons. One is that current drivers will not let you use a variab=
+le index with <b>gl_LightSource</b> without first declaring with a size.=
+ The second reason is that with current drivers, you can=E2=80=99t decla=
+re <b>gl_LightSource</b>. This means that the lighting index must be har=
+d-coded.
+</p><p>	There is also one other issue. In the introduction, I explained =
+how OpenGL provides <i>eight</i> enumerated lights. You may have noticed=
+ that we only use three in our lighting for loops, and three in our shad=
+er. This is because of the driver issues mentioned above. Theoretically,=
+ you could just add another 5 functions exactly like the three already i=
+ncluded in the shader; however, current hardware (or at least the hardwa=
+re I=E2=80=99ve tested on) only allows three lighting calculation functi=
+ons. Beyond that, it exceeds the allowed number of GPU ALU instructions,=
+ and attempts to run the shaders in software, which is ridiculously slow=
+. While this does seem to present a problem, it isn=E2=80=99t all that b=
+ad, as will be explained below.
+</p><p><br />
+</p>
+<h2> <span class=3D"mw-headline" id=3D"Putting_It_All_Together"> Putting=
+ It All Together </span></h2>
+<p>	Now that you=E2=80=99ve learned about how to create these functions =
+and shaders, you now need to know how to use them properly. To create a =
+light, you simply call <b>createlight()</b>, and set the arguments. The =
+<b>dolighting()</b> function is a little different. This function is cal=
+led on a <i>per-object</i> basis. For example, if you=E2=80=99re looping=
+ through all your objects to draw them, at the end of the loop you would=
+ call <b>dolighting()</b>, since this function requires knowledge of an =
+arbitrary object position. This means that each object can be illuminate=
+d by three lights (or up to eight, once the earlier mentioned driver iss=
+ues are solved).
+</p><p><br />
+</p>
+<h2> <span class=3D"mw-headline" id=3D"Build_On_It"> Build On It </span>=
+</h2>
+<p>	Try and think of ways to improve and expand on the material covered =
+here. One way the method could be improved, is to further cull lights th=
+at can=E2=80=99t be seen (such as a light behind a wall) with occlusion =
+culling. If a light that can=E2=80=99t be seen is rendered, it tends to =
+throw off the lights that should be rendered, creating weird lighting ef=
+fects.
+</p><p><br />
+</p>
+<h2> <span class=3D"mw-headline" id=3D"External_Links"> External Links <=
+/span></h2>
+<p><a href=3D"http://www.clockworkcoders.com/oglsl/tutorial5.htm" class=3D=
+"external free" rel=3D"nofollow">http://www.clockworkcoders.com/oglsl/tu=
+torial5.htm</a> (per-pixel lighting with GLSL)
+</p>
+<!-- =
+
+NewPP limit report
+Preprocessor node count: 66/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key gpw_mw_db-mw_:pcache:idhash:3350-0!*=
+!0!!en-gb!*!edit=3D0 and timestamp 20130227091417 -->
+<div class=3D"printfooter">
+Retrieved from "<a href=3D"http://content.gpwiki.org/index.php/OpenGL:Tu=
+torials:Virtualized_Lights_with_OpenGL_and_GLSL">http://content.gpwiki.o=
+rg/index.php/OpenGL:Tutorials:Virtualized_Lights_with_OpenGL_and_GLSL</a=
+>"</div>
+				<!-- /bodytext -->
+								<!-- catlinks -->
+				<div id=3D'catlinks' class=3D'catlinks'><div id=3D"mw-normal-catlink=
+s"><a href=3D"/index.php/Special:Categories" title=3D"Special:Categories=
+">Category</a>: <span dir=3D'ltr'><a href=3D"/index.php/Category:OpenGL"=
+ title=3D"Category:OpenGL">OpenGL</a></span></div></div>				<!-- /catlin=
+ks -->
+												<div class=3D"visualClear"></div>
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id=3D"mw-head" class=3D"noprint">
+			=
+
+<!-- 0 -->
+<div id=3D"p-personal" class=3D"">
+	<h5>Personal tools</h5>
+	<ul>
+					<li  id=3D"pt-login"><a href=3D"/index.php?title=3DSpecial:UserLogi=
+n&amp;returnto=3DOpenGL:Tutorials:Virtualized_Lights_with_OpenGL_and_GLS=
+L" title=3D"You are encouraged to log in; however, it is not mandatory [=
+o]" accesskey=3D"o">Log in</a></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+			<div id=3D"left-navigation">
+				=
+
+<!-- 0 -->
+<div id=3D"p-namespaces" class=3D"vectorTabs">
+	<h5>Namespaces</h5>
+	<ul>
+					<li  id=3D"ca-nstab-main" class=3D"selected"><span><a href=3D"/inde=
+x.php/OpenGL:Tutorials:Virtualized_Lights_with_OpenGL_and_GLSL"  title=3D=
+"View the content page [c]" accesskey=3D"c">Page</a></span></li>
+					<li  id=3D"ca-talk" class=3D"new"><span><a href=3D"/index.php?title=
+=3DTalk:OpenGL:Tutorials:Virtualized_Lights_with_OpenGL_and_GLSL&amp;act=
+ion=3Dedit&amp;redlink=3D1"  title=3D"Discussion about the content page =
+[t]" accesskey=3D"t">Discussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id=3D"p-variants" class=3D"vectorMenu emptyPortlet">
+		<h5><span>Variants</span><a href=3D"#"></a></h5>
+	<div class=3D"menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id=3D"right-navigation">
+				=
+
+<!-- 0 -->
+<div id=3D"p-views" class=3D"vectorTabs">
+	<h5>Views</h5>
+	<ul>
+					<li id=3D"ca-view" class=3D"selected"><span><a href=3D"/index.php/O=
+penGL:Tutorials:Virtualized_Lights_with_OpenGL_and_GLSL" >Read</a></span=
+></li>
+					<li id=3D"ca-viewsource"><span><a href=3D"/index.php?title=3DOpenGL=
+:Tutorials:Virtualized_Lights_with_OpenGL_and_GLSL&amp;action=3Dedit"  t=
+itle=3D"This page is protected.&#10;You can view its source [e]" accessk=
+ey=3D"e">View source</a></span></li>
+					<li id=3D"ca-history" class=3D"collapsible "><span><a href=3D"/inde=
+x.php?title=3DOpenGL:Tutorials:Virtualized_Lights_with_OpenGL_and_GLSL&a=
+mp;action=3Dhistory"  title=3D"Past revisions of this page [h]" accesske=
+y=3D"h">View history</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id=3D"p-cactions" class=3D"vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href=3D"#"></a></h5>
+	<div class=3D"menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id=3D"p-search">
+	<h5><label for=3D"searchInput">Search</label></h5>
+<form action=3D"http://www.google.com/cse" id=3D"cse-search-box" target=3D=
+"_blank">
+  <div>
+    <input type=3D"hidden" name=3D"cx" value=3D"partner-pub-819933941952=
+6862:1119135372" />
+    <input type=3D"hidden" name=3D"ie" value=3D"UTF-8" />
+    <input type=3D"text" name=3D"q" size=3D"20" />
+    <input type=3D"submit" name=3D"sa" value=3D"Search" />
+  </div>
+</form>
+
+<script type=3D"text/javascript" src=3D"http://www.google.com/coop/cse/b=
+rand?form=3Dcse-search-box&amp;lang=3Den"></script>
+
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id=3D"mw-panel" class=3D"noprint">
+				<!-- logo -->
+					<div id=3D"p-logo"><a style=3D"background-image: url(/images/gpwiki=
+logo.png);" href=3D"/index.php/Main_Page"  title=3D"Visit the main page"=
+></a></div>
+				<!-- /logo -->
+				=
+
+<!-- navigation -->
+<div class=3D"portal" id=3D'p-navigation'>
+	<h5>Navigation</h5>
+	<div class=3D"body">
+				<ul>
+					<li id=3D"n-Site-Homepage"><a href=3D"http://www.gpwiki.org">Site H=
+omepage</a></li>
+					<li id=3D"n-Wiki-Main-Page"><a href=3D"http://content.gpwiki.org">W=
+iki Main Page</a></li>
+					<li id=3D"n-Message-Board"><a href=3D"http://forum.gpwiki.org/">Mes=
+sage Board</a></li>
+					<li id=3D"n-Featured-Image"><a href=3D"http://www.gpwiki.org/iotd">=
+Featured Image</a></li>
+					<li id=3D"n-currentevents"><a href=3D"/index.php/GPWiki:Current_eve=
+nts" title=3D"Find background information on current events">Current eve=
+nts</a></li>
+					<li id=3D"n-recentchanges"><a href=3D"/index.php/Special:RecentChan=
+ges" title=3D"The list of recent changes in the wiki [r]" accesskey=3D"r=
+">Recent changes</a></li>
+					<li id=3D"n-randompage"><a href=3D"/index.php/Special:Random" title=
+=3D"Load a random page [x]" accesskey=3D"x">Random page</a></li>
+					<li id=3D"n-help"><a href=3D"/index.php/Help:Contents" title=3D"The=
+ place to find out">Help</a></li>
+				</ul>
+			</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- TOOLBOX -->
+<div class=3D"portal" id=3D"p-tb">
+	<h5>Toolbox</h5>
+	<div class=3D"body">
+		<ul>
+					<li id=3D"t-whatlinkshere"><a href=3D"/index.php/Special:WhatLinksH=
+ere/OpenGL:Tutorials:Virtualized_Lights_with_OpenGL_and_GLSL" title=3D"L=
+ist of all wiki pages that link here [j]" accesskey=3D"j">What links her=
+e</a></li>
+						<li id=3D"t-recentchangeslinked"><a href=3D"/index.php/Special:Rec=
+entChangesLinked/OpenGL:Tutorials:Virtualized_Lights_with_OpenGL_and_GLS=
+L" title=3D"Recent changes in pages linked from this page [k]" accesskey=
+=3D"k">Related changes</a></li>
+																																										<li id=3D"t-specialpages"><a h=
+ref=3D"/index.php/Special:SpecialPages" title=3D"List of all special pag=
+es [q]" accesskey=3D"q">Special pages</a></li>
+									<li id=3D"t-print"><a href=3D"/index.php?title=3DOpenGL:Tutoria=
+ls:Virtualized_Lights_with_OpenGL_and_GLSL&amp;printable=3Dyes" rel=3D"a=
+lternate" title=3D"Printable version of this page [p]" accesskey=3D"p">P=
+rintable version</a></li>
+						<li id=3D"t-permalink"><a href=3D"/index.php?title=3DOpenGL:Tutori=
+als:Virtualized_Lights_with_OpenGL_and_GLSL&amp;oldid=3D31760" title=3D"=
+Permanent link to this revision of the page">Permanent link</a></li>
+						</ul>
+	</div>
+
+ <center>
+ &nbsp;<br/>
+  <script type=3D"text/javascript"><!--
+  google_ad_client =3D "ca-pub-8199339419526862";
+  /* GPWiki Menu Sidebar */
+  google_ad_slot =3D "4458594054";
+  google_ad_width =3D 120;
+  google_ad_height =3D 600;
+  //-->
+  </script>
+  <script type=3D"text/javascript"
+   src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script>
+</center>
+
+
+</div>
+
+
+<!-- /TOOLBOX -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id=3D"footer">
+											<ul id=3D"footer-info">
+																	<li id=3D"footer-info-lastmod"> This page was last modi=
+fied on 5 November 2012, at 14:29.</li>
+																							<li id=3D"footer-info-viewcount">This page has be=
+en accessed 10,246 times.</li>
+																							<li id=3D"footer-info-copyright">Content is avail=
+able under <a href=3D"http://www.gnu.org/licenses/old-licenses/fdl-1.2.t=
+xt" class=3D"external ">GNU Free Documentation License 1.2</a>.</li>
+															</ul>
+															<ul id=3D"footer-places">
+																	<li id=3D"footer-places-privacy"><a href=3D"/index.php/=
+GPWiki:Privacy_policy" title=3D"GPWiki:Privacy policy">Privacy policy</a=
+></li>
+																							<li id=3D"footer-places-about"><a href=3D"/index.=
+php/GPWiki:About" title=3D"GPWiki:About">About GPWiki</a></li>
+																							<li id=3D"footer-places-disclaimer"><a href=3D"/i=
+ndex.php/GPWiki:General_disclaimer" title=3D"GPWiki:General disclaimer">=
+Disclaimers</a></li>
+															</ul>
+											<ul id=3D"footer-icons" class=3D"noprint">
+					<li id=3D"footer-copyrightico">
+						<a href=3D"http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt"><=
+img src=3D"/skins/common/images/gnu-fdl.png" alt=3D"GNU Free Documentati=
+on License 1.2" width=3D"88" height=3D"31" /></a>
+					</li>
+					<li id=3D"footer-poweredbyico">
+						<a href=3D"http://www.mediawiki.org/"><img src=3D"/skins/common/im=
+ages/poweredby_mediawiki_88x31.png" alt=3D"Powered by MediaWiki" width=3D=
+"88" height=3D"31" /></a>
+					</li>
+				</ul>
+						<div style=3D"clear:both"></div>
+		</div>
+		<!-- /footer -->
+		=
+
+<script src=3D"/load.php?debug=3Dfalse&amp;lang=3Den-gb&amp;modules=3Dst=
+artup&amp;only=3Dscripts&amp;skin=3Dvector&amp;*"></script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPa=
+geName": false, "wgNamespaceNumber": 0, "wgPageName": "OpenGL:Tutorials:=
+Virtualized_Lights_with_OpenGL_and_GLSL", "wgTitle": "OpenGL:Tutorials:V=
+irtualized Lights with OpenGL and GLSL", "wgAction": "view", "wgArticleI=
+d": 3350, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"]=
+, "wgCurRevisionId": 31760, "wgCategories": ["OpenGL"], "wgBreakFrames":=
+ false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "=
+mediawiki.legacy.ajax"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script>if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":5=
+0,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disabl=
+esuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"edi=
+tsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enoti=
+fusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"external=
+diff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"u=
+nknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":=
+2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocac=
+he":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewon=
+first":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"remember=
+password":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks=
+":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector",=
+"stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenew=
+rc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchli=
+sthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidep=
+atrolled":0,"watchmoves":0,"wllimit":250,"variant":"en-gb","language":"e=
+n-gb","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":f=
+alse,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":f=
+alse,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11"=
+:false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchN=
+s15":false,"searchNs510":false,"searchNs511":false});;mediaWiki.loader.s=
+tate({"user.options":"ready"});
+}
+</script>		<!-- fixalpha -->
+		<script type=3D"text/javascript"> if ( window.isMSIE55 ) fixalpha(); <=
+/script>
+		<!-- /fixalpha -->
+		<!-- Served in 0.213 secs. -->			</body>
+</html>
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline; filename=favicon.ico
+Content-Type: image/x-icon; name=favicon.ico
+Content-Location: http://content.gpwiki.org/favicon.ico
+Content-Transfer-Encoding: Base64
+
+AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAwAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICA
+gAAAAP8AAP8AAAD//wD/AAAA/wD/AP//AAD///8AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAkAmQmQCQAACQmQAJkJAAAJCZmZmQkAAAmZmZmZmQAAAJ
+kJmQmQAAAACZmZmQAAAAAAkACQAAAAAAkAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA2TcAANOXAADQFwAAwAcAAORP
+AADwHwAA+78AAPffAAD//wAA//8AAP//AAD//wAA
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABRJREFUeF4FwTEBAAAAwJD1D+weGQD4APc0a6VeAAAAAElFTkSuQmCC
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABRJREFUeF4FwTEBAAAAwJD1D+weGQD4
+APc0a6VeAAAAAElFTkSuQmCC
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUeF4FwTEBAAAAgjD7FzESWfjYdgwEoAJ4lTsaxgAAAABJRU5ErkJggg==
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUeF4FwTEBAAAAgjD7FzESWfjY
+dgwEoAJ4lTsaxgAAAABJRU5ErkJggg==
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAsCAIAAAArRUU2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADpJREFUeF5VjUkOAEAIwoD//7lzGJd4MJHGSoBImkFETP67CdLldUd7KC6f8fv3+psd8znbtU5x354HaWQjOx76v7MAAAAASUVORK5CYII=
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAsCAIAAAArRUU2AAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADpJREFUeF5VjUkOAEAIwoD//7lzGJd4
+MJHGSoBImkFETP67CdLldUd7KC6f8fv3+psd8znbtU5x354HaWQjOx76v7MAAAAA
+SUVORK5CYII=
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAERJREFUeF5lTtEKgEAMMv//j/O0IxlH9CA6N2WURAA/OHl5GeWAwUUHBcKV795FtTePxpmV3t9uv8Z3/cmvM88vzbbrAV/dQdX+eas3AAAAAElFTkSuQmCC
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAERJREFUeF5lTtEKgEAMMv//j/O0IxlH
+9CA6N2WURAA/OHl5GeWAwUUHBcKV795FtTePxpmV3t9uv8Z3/cmvM88vzbbrAV/d
+QdX+eas3AAAAAElFTkSuQmCC
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADxJREFUeF7litsRACAMwrD77+Q0rtGoV98r+MEFchhgkr4NnZyb3bk/LM/yMCjiH4wots/++hYR3iXLJVWUBS1AtOi2fwAAAABJRU5ErkJggg==
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADxJREFUeF7litsRACAMwrD77+Q0rtGo
+V98r+MEFchhgkr4NnZyb3bk/LM/yMCjiH4wots/++hYR3iXLJVWUBS1AtOi2fwAA
+AABJRU5ErkJggg==
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkAQAAAABvV2fNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABVJREFUeF7dwQEBAAAAQCDTTfdD4WOJ5TIB3ib9EgAAAABJRU5ErkJggg==
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAABkAQAAAABvV2fNAAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABVJREFUeF7dwQEBAAAAQCDTTfdD4WOJ
+5TIB3ib9EgAAAABJRU5ErkJggg==
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAABCAAAAAAphRnkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeF61yMEJACAQxMCN/Xfr/yIsaAfOJxC2UTPWS6f5gABhUTedBz7fGPSonIP/AAAAAElFTkSuQmCC
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAIwAAAABCAAAAAAphRnkAAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeF61yMEJACAQxMCN/Xfr/yIs
+aAfOJxC2UTPWS6f5gABhUTedBz7fGPSonIP/AAAAAElFTkSuQmCC
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeF59z4EJADEIQ1F36k7u5E7ZKXeUQPACJ3wK7UNokVxVk9kHnQH7bY9hbDyDhNXgjpRLqFlo4M2GgfyJHhjq8V4agfrgPQX3JtJQGbofmCHgA/nAKks+JAjFAAAAAElFTkSuQmCC
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeF59z4EJADEIQ1F36k7u5E7Z
+KXeUQPACJ3wK7UNokVxVk9kHnQH7bY9hbDyDhNXgjpRLqFlo4M2GgfyJHhjq8V4a
+gfrgPQX3JtJQGbofmCHgA/nAKks+JAjFAAAAAElFTkSuQmCC
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAMAAABxsOwqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGBQTFRF////R2uZMmGd5rp2boqvMFyS9unUTXWr5KQ/N2mn/Pr42Jg14Zstl6a80K93XXiVooVQ57VnpLnW4a1a36ZMr7Cwgpm5PXGw78mO+O/g1t7n5Orxk6zMvMne7/Dw6+zt5K6gdAAAAAF0Uk5TAEDm2GYAAABdSURBVHheHcpFAgMxEANBDZhhmQP//2Uc90V1EICrLuti0YqnyORrbLSrWPHJ/ukn8bkzbrnVD/MwpjQOb+B2hyvbQe7BTiG8ZmYqUOLglA0rCrcJxpiCz049/f4A9ZID96SyhDEAAAAASUVORK5CYII=
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAMAAABxsOwqAAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGBQTFRF////R2uZMmGd5rp2boqvMFyS
+9unUTXWr5KQ/N2mn/Pr42Jg14Zstl6a80K93XXiVooVQ57VnpLnW4a1a36ZMr7Cw
+gpm5PXGw78mO+O/g1t7n5Orxk6zMvMne7/Dw6+zt5K6gdAAAAAF0Uk5TAEDm2GYA
+AABdSURBVHheHcpFAgMxEANBDZhhmQP//2Uc90V1EICrLuti0YqnyORrbLSrWPHJ
+/ukn8bkzbrnVD/MwpjQOb+B2hyvbQe7BTiG8ZmYqUOLglA0rCrcJxpiCz049/f4A
+9ZID96SyhDEAAAAASUVORK5CYII=
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline; filename=load.css
+Content-Type: text/css; charset=utf-8; name=load.css
+Content-Location: http://content.gpwiki.org/load.php?debug=false&lang=en-gb&modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&only=styles&skin=vector&*
+Content-Transfer-Encoding: 8bit
+
+@media print{  a.stub,a.new{color:#ba0000;text-decoration:none}#toc{border:1px solid #aaaaaa;background-color:#f9f9f9;padding:5px}.tocindent{margin-left:2em}.tocline{margin-bottom:0px} div.floatright{float:right;clear:right;position:relative;margin:0.5em 0 0.8em 1.4em}div.floatright p{font-style:italic}div.floatleft{float:left;clear:left;position:relative;margin:0.5em 1.4em 0.8em 0}div.floatleft p{font-style:italic}div.center{text-align:center} div.thumb{border:none;width:auto;margin-top:0.5em;margin-bottom:0.8em;background-color:transparent}div.thumbinner{border:1px solid #cccccc;padding:3px !important;background-color:White;font-size:94%;text-align:center;overflow:hidden}html .thumbimage{border:1px solid #cccccc}html .thumbcaption{border:none;text-align:left;line-height:1.4em;padding:3px !important;font-size:94%}div.magnify{display:none}div.tright{float:right;clear:right;margin:0.5em 0 0.8em 1.4em}div.tleft{float:left;clear:left;margin:0.5em 1.4em 0.8em 0}img.thumbborder{border:1px solid #dddddd} table.rimage{float:right;width:1pt;position:relative;margin-left:1em;margin-bottom:1em;text-align:center}body{background:White; color:Black;margin:0;padding:0}.noprint,div#jump-to-nav,div.top,div#column-one,#colophon,.editsection,.toctoggle,.tochidden,div#f-poweredbyico,div#f-copyrightico,li#viewcount,li#about,li#disclaimer,li#privacy,#footer-places,#mw-hidden-catlinks{ display:none}ul{list-style-type:square}#content{background:none;border:none ! important;padding:0 ! important;margin:0 ! important}#footer{background :white;color :black;border-top:1px solid black}h1,h2,h3,h4,h5,h6{font-weight:bold}p,.documentDescription{margin:1em 0 ! important;line-height:1.2em}.tocindent p{margin:0 0 0 0 ! important}pre{border:1pt dashed black;white-space:pre;font-size:8pt;overflow:auto;padding:1em 0;background:white;color:black}table.listing,table.listing td{border:1pt solid black;border-collapse:collapse}a{color:Black !important;background:none !important;padding:0 !important}a:link,a:visited{color:#520;background:transparent;text-decoration:underline}#content a.external.text:after,#content a.external.autonumber:after{ content:" (" attr(href) ") "}#globalWrapper{width:100% !important;min-width:0 !important}#content{background:white;color:black}#column-content{margin:0 !important}#column-content #content{padding:1em;margin:0 !important} a,a.external,a.new,a.stub{color:black ! important;text-decoration:none ! important} a,a.external,a.new,a.stub{color:inherit ! important;text-decoration:inherit ! important}img{border:none;vertical-align:middle} span.texhtml{font-family:serif}#siteNotice{display:none} li.gallerybox{vertical-align:top;background-color:#f9f9f9;border:solid 2px white;display:-moz-inline-box;display:inline-block}ul.gallery,li.gallerybox{zoom:1;*display:inline}ul.gallery{margin:2px;padding:2px;display:block}li.gallerycaption{font-weight:bold;text-align:center;display:block;word-wrap:break-word}li.gallerybox div.thumb{text-align:center;border:1px solid #ccc;margin:2px}div.gallerytext{overflow:hidden;font-size:94%;padding:2px 4px;word-wrap:break-word} table.diff{background:white}td.diff-otitle{background:#ffffff}td.diff-ntitle{background:#ffffff}td.diff-addedline{background:#ccffcc;font-size:smaller;border:solid 2px black}td.diff-deletedline{background:#ffffaa;font-size:smaller;border:dotted 2px black}td.diff-context{background:#eeeeee;font-size:smaller}.diffchange{color:silver;font-weight:bold;text-decoration:underline} table.wikitable{margin:1em 1em 1em 0;border:1px #aaa solid;background:white;border-collapse:collapse}.wikitable th,.wikitable td{border:1px #aaa solid;padding:0.2em}.wikitable th{text-align:center;background:white;font-weight:bold}.wikitable caption{font-weight:bold}a.sortheader{margin:0px 0.3em} .wikitable,.thumb,img{page-break-inside:avoid}h2,h3,h4,h5,h6,h7{page-break-after:avoid}p{widows:3;orphans:3}}@media screen{  abbr,acronym,.explain{border-bottom:1px dotted black;cursor:help} .mw-plusminus-pos{color:#006400} .mw-plusminus-neg{color:#8b0000} .mw-plusminus-null{color:#aaa}  .allpagesredirect,.redirect-in-category,.watchlistredir{font-style:italic} span.comment{font-style:italic}span.changedby{font-size:95%} .texvc{direction:ltr;unicode-bidi:embed}img.tex{vertical-align:middle}span.texhtml{font-family:serif}  #wikiPreview.ontop{margin-bottom:1em} #editform,#toolbar,#wpTextbox1{clear:both}div#mw-js-message{margin:1em 5%;padding:0.5em 2.5%;border:solid 1px #ddd;background-color:#fcfcfc} .editsection{float:right;margin-left:5px} h2#filehistory{clear:both}table.filehistory th,table.filehistory td{vertical-align:top}table.filehistory th{text-align:left}table.filehistory td.mw-imagepage-filesize,table.filehistory th.mw-imagepage-filesize{white-space:nowrap}table.filehistory td.filehistory-selected{font-weight:bold} li span.deleted,span.history-deleted{text-decoration:line-through;color:#888;font-style:italic} .not-patrolled{background-color:#ffa}.unpatrolled{font-weight:bold;color:red}div.patrollink{font-size:75%;text-align:right} td.mw-label{text-align:right}td.mw-input{text-align:left}td.mw-submit{text-align:left}td.mw-label{vertical-align:top}.prefsection td.mw-label{width:20%}.prefsection table{width:100%}td.mw-submit{white-space:nowrap}table.mw-htmlform-nolabel td.mw-label{width:0 !important}tr.mw-htmlform-vertical-label td.mw-label{text-align:left !important}input#wpSummary{width:80%} .thumbcaption{text-align:left}.magnify{float:right} .mw-hidden-cats-hidden{display:none}.catlinks-allhidden{display:none} p.mw-ipb-conveniencelinks,p.mw-protect-editreasons,p.mw-filedelete-editreasons,p.mw-delete-editreasons,p.mw-revdel-editreasons{font-size:90%;float:right} .searchresults{}.searchresults p{margin-left:0.4em;margin-top:1em;margin-bottom:1.2em}div.searchresult{font-size:95%;width:38em}.mw-search-results{margin-left:0.4em}.mw-search-results li{padding-bottom:1em;list-style:none;list-style-image:none}.mw-search-results li a{font-size:108%}.mw-search-result-data{color:green;font-size:97%}.mw-search-formheader{background-color:#f3f3f3;margin-top:1em;border:1px solid silver}.mw-search-formheader div.search-types{float:left;padding-left:0.25em}.mw-search-formheader div.search-types ul{margin:0 !important;padding:0 !important;list-style:none !important}.mw-search-formheader div.search-types ul li{float:left;margin:0;padding:0}.mw-search-formheader div.search-types ul li a{display:block;padding:0.5em}.mw-search-formheader div.search-types ul li.current a{color:#333333;cursor:default}.mw-search-formheader div.search-types ul li.current a:hover{text-decoration:none}.mw-search-formheader div.results-info{float:right;padding:0.5em;padding-right:0.75em}.mw-search-formheader div.results-info ul{margin:0 !important;padding:0 !important;list-style:none !important}.mw-search-formheader div.results-info ul li{float:right;margin:0;padding:0}fieldset#mw-searchoptions{margin:0;padding-left:0.75em !important;padding-right:0.75em !important;padding-bottom:0.5em !important;padding-top:0.5em !important;border:none;background-color:#f9f9f9;border:1px solid silver !important;border-top-width:0 !important}fieldset#mw-searchoptions legend{display:none}fieldset#mw-searchoptions h4{padding:0;margin:0;float:left}fieldset#mw-searchoptions div#mw-search-togglebox{float:right}fieldset#mw-searchoptions div#mw-search-togglebox label{margin-right:0.25em}fieldset#mw-searchoptions div#mw-search-togglebox input{margin-left:0.25em}fieldset#mw-searchoptions table{float:left;margin-right:3em}fieldset#mw-searchoptions table td{padding-right:1em}fieldset#mw-searchoptions div.divider{clear:both;border-bottom:1px solid #DDDDDD;padding-top:0.5em;margin-bottom:0.5em}td#mw-search-menu{padding-left:6em;font-size:85%}div#mw-search-interwiki{float:right;width:18em;border-style:solid;border-color:#AAAAAA;border-width:1px;margin-top:2ex}div#mw-search-interwiki li{font-size:95%}.mw-search-interwiki-more{float:right;font-size:90%}div#mw-search-interwiki-caption{text-align:center;font-weight:bold;font-size:95%}.mw-search-interwiki-project{font-size:97%;text-align:left;padding-left:0.2em;padding-right:0.15em;padding-bottom:0.2em;padding-top:0.15em;background-color:#ececec;border-top:1px solid #BBBBBB}span.searchalttitle{font-size:95%}div.searchdidyoumean{font-size:127%;margin-top:0.8em; color:#c00}div.searchdidyoumean em{font-weight:bold}.searchmatch{font-weight:bold} td#mw-search-togglebox{text-align:right}table#mw-search-powertable{width:100%}form#powersearch{clear:both} .mw-userrights-disabled{color:#888}table.mw-userrights-groups * td,table.mw-userrights-groups * th{padding-right:1.5em} .os-suggest{overflow:auto;overflow-x:hidden;position:absolute;top:0px;left:0px;width:0px;background-color:white;background-color:Window;border-style:solid;border-color:#AAAAAA;border-width:1px;z-index:99;font-size:95%}table.os-suggest-results{font-size:95%;cursor:pointer;border:0;border-collapse:collapse;width:100%}.os-suggest-result,.os-suggest-result-hl{white-space:nowrap;background-color:white;background-color:Window;color:black;color:WindowText;padding:2px}.os-suggest-result-hl,.os-suggest-result-hl-webkit{background-color:#4C59A6;color:white}.os-suggest-result-hl{ background-color:Highlight;color:HighlightText}.os-suggest-toggle{position:relative;left:1ex;font-size:65%}.os-suggest-toggle-def{position:absolute;top:0px;left:0px;font-size:65%;visibility:hidden}  .autocomment{color:gray}#pagehistory .history-user{margin-left:0.4em;margin-right:0.2em}#pagehistory span.minor{font-weight:bold}#pagehistory li{border:1px solid white}#pagehistory li.selected{background-color:#f9f9f9;border:1px dashed #aaa} .newpage,.minor,.bot{font-weight:bold} .mw-uctop{font-weight:bold} table.mw-listgrouprights-table tr{vertical-align:top}.listgrouprights-revoked{text-decoration:line-through} td.mw-statistics-numbers{text-align:right} h4.mw-specialpagesgroup{background-color:#dcdcdc;padding:2px;margin:.3em 0em 0em 0em}.mw-specialpagerestricted{font-weight:bold}#shared-image-dup,#shared-image-conflict{font-style:italic} table.mw-emailuser-table{width:98%}td#mw-emailuser-sender,td#mw-emailuser-recipient{font-weight:bold} table.mw-allpages-table-form,table.mw-allpages-table-chunk{width:100%}td.mw-allpages-alphaindexline{text-align:right}td.mw-allpages-nav,p.mw-allpages-nav{text-align:right;font-size:smaller;margin-bottom:1em}table.mw-allpages-table-form tr{vertical-align:top} table#mw-prefixindex-list-table,table#mw-prefixindex-nav-table{width:98%}td#mw-prefixindex-nav-form{font-size:smaller;margin-bottom:1em;text-align:right;vertical-align:top} div.mw-warning-with-logexcerpt{padding:3px;margin-bottom:3px;border:2px solid #2F6FAB;clear:both}div.mw-warning-with-logexcerpt ul li{font-size:90%} span.mw-revdelundel-link,strong.mw-revdelundel-link{font-size:90%}span.mw-revdelundel-hidden,input.mw-revdelundel-hidden{visibility:hidden}td.mw-revdel-checkbox,th.mw-revdel-checkbox{padding-right:10px;text-align:center} a.feedlink{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH2AkOCjkSL9xYhAAAAc9JREFUKJE90LFrU1EYQPHzffe+l/iSVkXTmNiANBU7iE5OLrbSVYKIiy5dnARB3FwEB5dOOhQKuthJEEHRsUXBoosO0lKKEYRa29LWQk3S5L53r0PVv+D8OPJlolrrr1ZmI7F1BFEjqBXECGJAjSBCaLddc7u5Mmb7q5U5007rWh5E9rYR/xsTBBXBWMVEglqRpGiGhcE5G6kdyugxcGsGyRdJ15ZwC29IF55jNEWt8K+aFOMhc+dC7Z6SITjC7ga2MkI8cpH41Dhh7RPa20Gt4toZac+IqhFMTpG0hVt8RetJg967SaTvGLnGNKZ0EtfOcB1P5jyqVjCRkIzfpnjtMYXrT2FrCff6JqhFRx/gnCXtZHgXUFHQSGg/u4Gbf4T2lYkvTaFGce8fIgePY09fwXU8Pg3sk2JFu5v4lQ+4FxPge+j5u3Q+v8TvrBKfbZB1PT4LqJh9Uv7yFLmrM2i+gPs4jRyqIaUz7C2+xZZOEA4cJaSgaAhqhbC1DK0N3K9NusvzAHB4GLf+HQBJBsiCD7J6/9zXI2VbVyv/b6Sdv1e6nrTryboB7wVbyjXt1rcfo0Frs4UkqvtUJHMBjyVEAcSjFiQJwRvf3F3/OfYH/dDFWrCooaIAAAAASUVORK5CYII=) center left no-repeat;background:url(http://content.gpwiki.org/skins/common/images/feed-icon.png?2011-08-20T20:55:00Z) center left no-repeat!ie;padding-left:16px} .plainlinks a{background:none !important;padding:0 !important} table.wikitable{margin:1em 1em 1em 0;background:#f9f9f9;border:1px #aaa solid;border-collapse:collapse;color:black}.wikitable th,.wikitable td{border:1px #aaa solid;padding:0.2em}.wikitable th{background:#f2f2f2;text-align:center}.wikitable caption{font-weight:bold} table.collapsed tr.collapsable{display:none} .success{color:green;font-size:larger}.error{color:red;font-size:larger}.errorbox,.successbox{font-size:larger;border:2px solid;padding:.5em 1em;float:left;margin-bottom:2em;color:#000}.errorbox{border-color:red;background-color:#fff2f2}.successbox{border-color:green;background-color:#dfd}.errorbox h2,.successbox h2{font-size:1em;font-weight:bold;display:inline;margin:0 .5em 0 0;border:none} .previewnote{color:#c00;margin-bottom:1em}.previewnote p{text-indent:3em;margin:0.8em 0}.visualClear{clear:both}#mw_trackbacks{border:solid 1px #bbbbff;background-color:#eeeeff;padding:0.2em} .TablePager{min-width:80%;border-collapse:collapse}.TablePager_nav a{text-decoration:none}.TablePager,.TablePager td,.TablePager th{border:1px solid #aaaaaa;padding:0 0.15em 0 0.15em}.TablePager th{background-color:#eeeeff}.TablePager td{background-color:#ffffff}.TablePager tr:hover td{background-color:#eeeeff}.imagelist td,.imagelist th{white-space:nowrap}.imagelist .TablePager_col_links{background-color:#eeeeff}.imagelist .TablePager_col_img_description{white-space:normal}.imagelist th.TablePager_sort{background-color:#ccccff} #mw-allmessagestable .allmessages-customised td.am_default{background-color:#fcffc4}#mw-allmessagestable tr.allmessages-customised:hover td.am_default{background-color:#faff90}#mw-allmessagestable td.am_actual{background-color:#e2ffe2}#mw-allmessagestable tr.allmessages-customised:hover + tr.allmessages-customised td.am_actual{background-color:#b1ffb1} ul#filetoc{text-align:center;border:1px solid #aaaaaa;background-color:#f9f9f9;padding:5px;font-size:95%;margin-bottom:0.5em;margin-left:0;margin-right:0}#filetoc li{display:inline;list-style-type:none;padding-right:2em} table.mw_metadata{font-size:0.8em;margin-left:0.5em;margin-bottom:0.5em;width:300px}table.mw_metadata caption{font-weight:bold}table.mw_metadata th{font-weight:normal}table.mw_metadata td{padding:0.1em}table.mw_metadata{border:none;border-collapse:collapse}table.mw_metadata td,table.mw_metadata th{text-align:center;border:1px solid #aaaaaa;padding-left:0.1em;padding-right:0.1em}table.mw_metadata th{background-color:#f9f9f9}table.mw_metadata td{background-color:#fcfcfc}   li.gallerybox{vertical-align:top;background-color:#f9f9f9;border:solid 2px white;display:-moz-inline-box}ul.gallery,li.gallerybox{display:inline-block;zoom:1;*display:inline}ul.gallery{margin:2px;padding:2px;display:block}li.gallerycaption{font-weight:bold;text-align:center;display:block;word-wrap:break-word}li.gallerybox div.thumb{text-align:center;border:1px solid #ccc;margin:2px}div.gallerytext{overflow:hidden;font-size:94%;padding:2px 4px;word-wrap:break-word}table.mw-enhanced-rc{background:none;border:0;border-spacing:0}td.mw-enhanced-rc{white-space:nowrap;padding:0;vertical-align:top;font-family:monospace }#mw-addcategory-prompt{display:inline;margin-left:1em}#mw-addcategory-prompt input{margin-left:0.5em;margin-right:0.5em}.mw-remove-category{padding:8px;background-image:url(data:image/png;base64,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);background-image:url(http://content.gpwiki.org/skins/common/images/remove.png?2011-08-20T20:55:00Z)!ie;background-position:center center;background-repeat:no-repeat}.mw-ajax-addcategory{padding-left:20px;background-image:url(data:image/png;base64,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);background-image:url(http://content.gpwiki.org/skins/common/images/add.png?2011-08-20T20:55:00Z)!ie;background-position:left center;background-repeat:no-repeat}.mw-ajax-loader{background-image:url(data:image/gif;base64,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);background-image:url(http://content.gpwiki.org/skins/common/images/ajax-loader.gif?2011-08-20T20:55:00Z)!ie;background-position:center center;background-repeat:no-repeat;padding:16px;position:relative;top:-16px}.mw-small-spinner{padding:10px !important;margin-right:0.6em;background-image:url(data:image/gif;base64,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);background-image:url(http://content.gpwiki.org/skins/common/images/spinner.gif?2011-08-20T20:55:00Z)!ie;background-position:center center;background-repeat:no-repeat} a.sortheader{margin:0 0.3em} ol:lang(bcc) li,ol:lang(bqi) li,ol:lang(fa) li,ol:lang(glk) li,ol:lang(kk-arab) li,ol:lang(mzn) li{list-style-type:-moz-persian;list-style-type:persian}ol:lang(ckb) li{list-style-type:-moz-arabic-indic;list-style-type:arabic-indic}ol:lang(bn) li{list-style-type:-moz-bengali;list-style-type:bengali} .mw-help-field-hint{display:none;padding:0px;padding-left:15px;margin-left:2px;margin-bottom:-8px;background-image:url(data:image/gif;base64,R0lGODlhCwALALMAAP///01NTZOTk1lZWefn57i4uJSUlPPz82VlZdDQ0HFxcaysrNvb28TExAAAAAAAACH5BAAAAAAALAAAAAALAAsAAAQrUIRJqQQ455nNNBgHJANBDAwgZsVwqIG2IEQYYwXy2lq/Kg3NqqeSVCqCCAA7);background-image:url(http://content.gpwiki.org/skins/common/images/help-question.gif?2011-08-20T20:55:00Z)!ie;background-position:left center;background-repeat:no-repeat;color:#0645ad;text-decoration:underline;cursor:pointer;font-size:.8em}.mw-help-field-hint:hover{background-image:url(data:image/gif;base64,R0lGODlhCwALALMAAAtop+7z+GCWwpW51oStz8rb6yZzrafF3bnR5Nzn8QBcoD91oABQmf///wAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAyODAxMTc0MDcyMDY4MTE5NkQ0QUQzRjI0NzRCNUQwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjJBN0FFQTQwQjlGQzExREY5RDlBQTRBODQyMkJCMkFDIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjJBN0FFQTNGQjlGQzExREY5RDlBQTRBODQyMkJCMkFDIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkM3RjExNzQwNzIwNjgxMTk1RkVBQ0ZBOEQxNTU5MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDI4MDExNzQwNzIwNjgxMTk2RDRBRDNGMjQ3NEI1RDAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQAAAAAACwAAAAACwALAAAEK3CxSalsOOeZxRQY1yBKkihFI2aDEqiMRgBJGGMD8NpavxoHzaqnklQqiwgAOw==);background-image:url(http://content.gpwiki.org/skins/common/images/help-question-hover.gif?2011-08-20T20:55:00Z)!ie}.mw-help-field-data{display:block;background-color:#d6f3ff;padding:5px 8px 4px 8px;border:1px solid #5dc9f4;margin-left:20px}.tipsy{padding:5px 5px 10px;font-size:12px;position:absolute;z-index:100000;overflow:visible}.tipsy-inner{padding:5px 8px 4px 8px;background-color:#d6f3ff;color:black;border:1px solid #5dc9f4;max-width:300px;text-align:left}.tipsy-arrow{position:absolute;background:url(data:image/gif;base64,R0lGODlhDQANAMQAAPf399bz/9vu9m/O9NXy/8Pm9svp9pfd+YLW943X9LTn++z093XQ9WnM9OLw9p/c9YTU9InY9/T292DK9Jre+afj+rvq/Nzv9rjk9brl9cPt/ZLb+GbL9MLs/ZHb+KLh+iH5BAAAAAAALAAAAAANAA0AAAVK4BGMZBkcg2WW1lBEKxkVAFTFFQQAwkSYhIlgB3hQTJQHEbBodEiaxmIJyHhIGwwVIGEoAgqGZAswIAIIA3mX+CTWOwfHAd9dtiEAOw==) no-repeat top left;background:url(http://content.gpwiki.org/skins/common/images/tipsy-arrow.gif?2011-08-20T20:55:00Z) no-repeat top left!ie;width:13px;height:13px}.tipsy-se .tipsy-arrow{bottom:-2px;right:10px;background-position:0% 100%}}@media screen{  html,body{height:100%;margin:0;padding:0;font-family:sans-serif;font-size:1em}body{background-color:#f3f3f3;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABRJREFUeF4FwTEBAAAAwJD1D+weGQD4APc0a6VeAAAAAElFTkSuQmCC);background-image:url(http://content.gpwiki.org/skins/vector/images/page-base.png?2011-08-20T20:56:40Z)!ie} div#content{margin-left:10em;padding:1em;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUeF4FwTEBAAAAgjD7FzESWfjYdgwEoAJ4lTsaxgAAAABJRU5ErkJggg==);background-image:url(http://content.gpwiki.org/skins/vector/images/border.png?2011-08-20T20:56:40Z)!ie;background-position:top left;background-repeat:repeat-y;background-color:white;color:black;direction:ltr} #mw-page-base{height:5em;background-color:white;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAsCAIAAAArRUU2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADpJREFUeF5VjUkOAEAIwoD//7lzGJd4MJHGSoBImkFETP67CdLldUd7KC6f8fv3+psd8znbtU5x354HaWQjOx76v7MAAAAASUVORK5CYII=);background-image:url(http://content.gpwiki.org/skins/vector/images/page-fade.png?2011-08-20T20:56:40Z)!ie;background-position:bottom left;background-repeat:repeat-x}#mw-head-base{margin-top:-5em;margin-left:10em;height:5em;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUeF4FwTEBAAAAgjD7FzESWfjYdgwEoAJ4lTsaxgAAAABJRU5ErkJggg==);background-image:url(http://content.gpwiki.org/skins/vector/images/border.png?2011-08-20T20:56:40Z)!ie;background-position:bottom left;background-repeat:repeat-x}div#mw-head{position:absolute;top:0;right:0;width:100%}div#mw-head h5{margin:0;padding:0} div.emptyPortlet{display:none} #p-personal{position:absolute;top:0;right:0.75em}#p-personal h5{display:none}#p-personal ul{list-style:none;margin:0;padding-left:10em; } #p-personal li{line-height:1.125em;float:left} #p-personal li{margin-left:0.75em;margin-top:0.5em;font-size:0.75em;white-space:nowrap} #left-navigation{position:absolute;left:10em;top:2.5em}#right-navigation{float:right;margin-top:2.5em} div.vectorTabs h5,div.vectorMenu h5 span{display:none}  div.vectorTabs{float:left;height:2.5em}div.vectorTabs{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAERJREFUeF5lTtEKgEAMMv//j/O0IxlH9CA6N2WURAA/OHl5GeWAwUUHBcKV795FtTePxpmV3t9uv8Z3/cmvM88vzbbrAV/dQdX+eas3AAAAAElFTkSuQmCC);background-image:url(http://content.gpwiki.org/skins/vector/images/tab-break.png?2011-08-20T20:56:40Z)!ie;background-position:bottom left;background-repeat:no-repeat;padding-left:1px} div.vectorTabs ul{float:left}div.vectorTabs ul{height:100%;list-style:none;margin:0;padding:0} div.vectorTabs ul li{float:left} div.vectorTabs ul li{line-height:1.125em;display:inline-block;height:100%;margin:0;padding:0;background-color:#f3f3f3;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADxJREFUeF7litsRACAMwrD77+Q0rtGoV98r+MEFchhgkr4NnZyb3bk/LM/yMCjiH4wots/++hYR3iXLJVWUBS1AtOi2fwAAAABJRU5ErkJggg==);background-image:url(http://content.gpwiki.org/skins/vector/images/tab-normal-fade.png?2011-08-20T20:56:40Z)!ie;background-position:bottom left;background-repeat:repeat-x;white-space:nowrap} div.vectorTabs ul > li{display:block}div.vectorTabs li.selected{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkAQAAAABvV2fNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABVJREFUeF7dwQEBAAAAQCDTTfdD4WOJ5TIB3ib9EgAAAABJRU5ErkJggg==);background-image:url(http://content.gpwiki.org/skins/vector/images/tab-current-fade.png?2011-08-20T20:56:40Z)!ie} div.vectorTabs li a{display:inline-block;height:1.9em;padding-left:0.5em;padding-right:0.5em;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAERJREFUeF5lTtEKgEAMMv//j/O0IxlH9CA6N2WURAA/OHl5GeWAwUUHBcKV795FtTePxpmV3t9uv8Z3/cmvM88vzbbrAV/dQdX+eas3AAAAAElFTkSuQmCC);background-image:url(http://content.gpwiki.org/skins/vector/images/tab-break.png?2011-08-20T20:56:40Z)!ie;background-position:bottom right;background-repeat:no-repeat;color:#0645ad;cursor:pointer;font-size:0.8em} div.vectorTabs li > a{display:block} div.vectorTabs span a{display:inline-block;padding-top:1.25em}  div.vectorTabs span > a{float:left;display:block}div.vectorTabs li.selected a,div.vectorTabs li.selected a:visited{color:#333333;text-decoration:none}div.vectorTabs li.new a,div.vectorTabs li.new a:visited{color:#a55858}  div.vectorMenu{direction:ltr;float:left;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAMAAAAlM38UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9QTFRFsbGxmpqa3d3deXl58/n79CzHcQAAAAV0Uk5T/////wD7tg5TAAAAMklEQVR42mJgwQoYBkqYiZEZAhiZUFRDxWGicEPA4nBRhNlAcYQokpVMDEwD6kuAAAMAyGMFQVv5ldcAAAAASUVORK5CYII=);background-image:url(http://content.gpwiki.org/skins/vector/images/arrow-down-icon.png?2011-08-20T20:56:40Z)!ie;background-position:100% 60%;background-repeat:no-repeat;cursor:pointer} body.rtl div.vectorMenu{direction:rtl}  div#mw-head div.vectorMenu h5{float:left;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAERJREFUeF5lTtEKgEAMMv//j/O0IxlH9CA6N2WURAA/OHl5GeWAwUUHBcKV795FtTePxpmV3t9uv8Z3/cmvM88vzbbrAV/dQdX+eas3AAAAAElFTkSuQmCC);background-image:url(http://content.gpwiki.org/skins/vector/images/tab-break.png?2011-08-20T20:56:40Z)!ie;background-repeat:no-repeat} div#mw-head div.vectorMenu h5{background-position:bottom left;margin-left:-1px} div#mw-head div.vectorMenu > h5{background-image:none}div#mw-head div.vectorMenu h4{display:inline-block;float:left;font-size:0.8em;padding-left:0.5em;padding-top:1.375em;font-weight:normal;border:none}  div.vectorMenu h5 a{display:inline-block;width:24px;height:2.5em;text-decoration:none;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAERJREFUeF5lTtEKgEAMMv//j/O0IxlH9CA6N2WURAA/OHl5GeWAwUUHBcKV795FtTePxpmV3t9uv8Z3/cmvM88vzbbrAV/dQdX+eas3AAAAAElFTkSuQmCC);background-image:url(http://content.gpwiki.org/skins/vector/images/tab-break.png?2011-08-20T20:56:40Z)!ie;background-repeat:no-repeat} div.vectorMenu h5 a{background-position:bottom right} div.vectorMenu h5 > a{display:block}div.vectorMenu div.menu{position:relative;display:none;clear:both;text-align:left}  body.rtl div.vectorMenu div.menu{margin-left:24px}  body.rtl div.vectorMenu > div.menu{margin-left:auto}   body.rtl div.vectorMenu > div.menu,x:-moz-any-link{margin-left:23px}div.vectorMenu:hover div.menu{display:block}div.vectorMenu ul{position:absolute;background-color:white;border:solid 1px silver;border-top-width:0;list-style:none;list-style-image:none;list-style-type:none;padding:0;margin:0;margin-left:-1px;text-align:left} div.vectorMenu ul,x:-moz-any-link{min-width:5em} div.vectorMenu ul,x:-moz-any-link,x:default{min-width:0}div.vectorMenu li{padding:0;margin:0;text-align:left;line-height:1em} div.vectorMenu li a{display:inline-block;padding:0.5em;white-space:nowrap;color:#0645ad;cursor:pointer;font-size:0.8em} div.vectorMenu li > a{display:block}div.vectorMenu li.selected a,div.vectorMenu li.selected a:visited{color:#333333;text-decoration:none} #p-search h5{display:none} #p-search{float:left}#p-search{margin-right:0.5em;margin-left:0.5em}#p-search form,#p-search input{margin:0;margin-top:0.4em}div#simpleSearch{display:block;width:14em;height:1.4em;margin-top:0.65em;position:relative;min-height:1px; border:solid 1px #AAAAAA;color:black;background-color:white;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAQCAIAAABY/YLgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACZJREFUeF5diqERACAQgID95/3s+cFg4CDQzASkXl4jidvrCPzfA7puAx52W1pnAAAAAElFTkSuQmCC);background-image:url(http://content.gpwiki.org/skins/vector/images/search-fade.png?2011-08-20T20:56:40Z)!ie;background-position:top left;background-repeat:repeat-x}div#simpleSearch label{ font-size:13px;top:0.25em;direction:ltr}div#simpleSearch input{color:black;direction:ltr}div#simpleSearch input:focus{outline:none}div#simpleSearch input.placeholder{color:#999999}div#simpleSearch input::-webkit-input-placeholder{color:#999999}div#simpleSearch input#searchInput{position:absolute;top:0;left:0;width:90%;margin:0;padding:0;padding-left:0.2em;padding-top:0.2em;padding-bottom:0.2em;outline:none;border:none; font-size:13px;background-color:transparent;direction:ltr}div#simpleSearch button#searchButton{position:absolute;width:10%;right:0;top:0;padding:0;padding-top:0.2em;padding-bottom:0.2em;padding-right:0.4em;margin:0;border:none;cursor:pointer;background-color:transparent} div#simpleSearch button#searchButton img{border:none;margin:0;margin-top:-3px;padding:0} div#simpleSearch button#searchButton > img{margin:0} div#mw-panel{position:absolute;top:160px;padding-top:1em;width:10em;left:0}div#mw-panel div.portal{padding-bottom:1.5em;direction:ltr}div#mw-panel div.portal h5{font-weight:normal;color:#444444;padding:0.25em;padding-top:0;padding-left:1.75em;cursor:default;border:none;font-size:0.75em}div#mw-panel div.portal div.body{margin:0;padding-top:0.5em;margin-left:1.25em;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAABCAAAAAAphRnkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeF61yMEJACAQxMCN/Xfr/yIsaAfOJxC2UTPWS6f5gABhUTedBz7fGPSonIP/AAAAAElFTkSuQmCC);background-image:url(http://content.gpwiki.org/skins/vector/images/portal-break.png?2011-08-20T20:56:40Z)!ie;background-repeat:no-repeat;background-position:top left}div#mw-panel div.portal div.body ul{list-style:none;list-style-image:none;list-style-type:none;padding:0;margin:0}div#mw-panel div.portal div.body ul li{line-height:1.125em;padding:0;padding-bottom:0.5em;margin:0;overflow:hidden;font-size:0.75em}div#mw-panel div.portal div.body ul li a{color:#0645ad}div#mw-panel div.portal div.body ul li a:visited{color:#0b0080} div#footer{margin-left:10em;margin-top:0;padding:0.75em;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUeF4FwTEBAAAAgjD7FzESWfjYdgwEoAJ4lTsaxgAAAABJRU5ErkJggg==);background-image:url(http://content.gpwiki.org/skins/vector/images/border.png?2011-08-20T20:56:40Z)!ie;background-position:top left;background-repeat:repeat-x;direction:ltr}div#footer ul{list-style:none;list-style-image:none;list-style-type:none;margin:0;padding:0}div#footer ul li{margin:0;padding:0;padding-top:0.5em;padding-bottom:0.5em;color:#333333;font-size:0.7em}div#footer #footer-icons{float:right} body.ltr div#footer #footer-places{float:left}div#footer #footer-info li{line-height:1.4em}div#footer #footer-icons li{float:left;margin-left:0.5em;line-height:2em}div#footer #footer-places li{float:left;margin-right:1em;line-height:2em} #p-logo{position:absolute;top:-160px;left:0;width:10em;height:160px}#p-logo a{display:block;width:10em;height:160px;background-repeat:no-repeat;background-position:center center;text-decoration:none}  #preftoc{ width:100%;float:left;clear:both;margin:0 !important;padding:0 !important;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAhCAQAAACysAk0AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAABAAAAIQBSEXtPAAAAAmJLR0QA/vCI/CkAAAAmSURBVAjXY2BgYPj3n+k/AwL9g5Fwxl8GJgYGpr+ogmgITQuSgQA1QiAL/go8LAAAACV0RVh0Y3JlYXRlLWRhdGUAMjAwOS0wOC0wOVQxOTowNTo0MSswMDowMCYO2tEAAAAldEVYdG1vZGlmeS1kYXRlADIwMDktMDgtMDlUMTk6MDU6NDErMDA6MDB5v6zlAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAABJRU5ErkJggg==);background-image:url(http://content.gpwiki.org/skins/vector/images/preferences-break.png?2011-08-20T20:56:40Z)!ie;background-position:bottom left;background-repeat:no-repeat}#preftoc li{ float:left;margin:0;padding:0;padding-right:1px;height:2.25em;white-space:nowrap;list-style-type:none;list-style-image:none;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAhCAQAAACysAk0AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAABAAAAIQBSEXtPAAAAAmJLR0QA/vCI/CkAAAAmSURBVAjXY2BgYPj3n+k/AwL9g5Fwxl8GJgYGpr+ogmgITQuSgQA1QiAL/go8LAAAACV0RVh0Y3JlYXRlLWRhdGUAMjAwOS0wOC0wOVQxOTowNTo0MSswMDowMCYO2tEAAAAldEVYdG1vZGlmeS1kYXRlADIwMDktMDgtMDlUMTk6MDU6NDErMDA6MDB5v6zlAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAABJRU5ErkJggg==);background-image:url(http://content.gpwiki.org/skins/vector/images/preferences-break.png?2011-08-20T20:56:40Z)!ie;background-position:bottom right;background-repeat:no-repeat} #preftoc li:first-child{margin-left:1px}#preftoc a,#preftoc a:active{display:inline-block;position:relative;color:#0645ad;padding:0.5em;text-decoration:none;background-image:none;font-size:0.9em}#preftoc a:hover,#preftoc a:focus{text-decoration:underline}#preftoc li.selected a{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAhCAQAAACysAk0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeF5twskJAAAMAjD3H7mXfYogCQiQeun68Z2WPk0SQHDa/pxXAAAAAElFTkSuQmCC);background-image:url(http://content.gpwiki.org/skins/vector/images/preferences-fade.png?2011-08-20T20:56:40Z)!ie;background-position:bottom;background-repeat:repeat-x;color:#333333;text-decoration:none}#preferences{float:left;width:100%;margin:0;margin-top:-2px;clear:both;border:solid 1px #cccccc;background-color:#f9f9f9;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABRJREFUeF4FwTEBAAAAwJD1j+waGQD8APvyfoZlAAAAAElFTkSuQmCC);background-image:url(http://content.gpwiki.org/skins/vector/images/preferences-base.png?2011-08-20T20:56:40Z)!ie}#preferences fieldset.prefsection{border:none;padding:0;margin:1em}#preferences fieldset.prefsection fieldset{border:none;border-top:solid 1px #cccccc}#preferences legend{color:#666666}#preferences fieldset.prefsection legend.mainLegend{display:none}#preferences td{padding-left:0.5em;padding-right:0.5em}#preferences td.htmlform-tip{font-size:x-small;padding:.2em 2em;color:#666666}#preferences div.mw-prefs-buttons{padding:1em}#preferences div.mw-prefs-buttons input{margin-right:0.25em} #userlogin,#userloginForm{border:solid 1px #cccccc;padding:1.2em;margin:.5em;float:left}#userlogin{min-width:20em;max-width:90%;width:40em} div#content{line-height:1.5em}#bodyContent{font-size:0.8em} a{text-decoration:none;color:#0645ad;background:none}a:visited{color:#0b0080}a:active{color:#faa700}a:hover,a:focus{text-decoration:underline}a.stub{color:#772233}a.new,#p-personal a.new{color:#ba0000}a.new:visited,#p-personal a.new:visited{color:#a55858} img{border:none;vertical-align:middle}hr{height:1px;color:#aaa;background-color:#aaa;border:0;margin:.2em 0 .2em 0} h1,h2,h3,h4,h5,h6{color:black;background:none;font-weight:normal;margin:0;overflow:hidden;padding-top:.5em;padding-bottom:.17em;border-bottom:1px solid #aaa;width:auto}h1{font-size:188%}h1 .editsection{font-size:53%}h2{font-size:150%}h2 .editsection{font-size:67%}h3,h4,h5,h6{border-bottom:none;font-weight:bold}h3{font-size:132%}h3 .editsection{font-size:76%;font-weight:normal}h4{font-size:116%}h4 .editsection{font-size:86%;font-weight:normal}h5{font-size:100%}h5 .editsection{font-weight:normal}h6{font-size:80%}h6 .editsection{font-size:125%;font-weight:normal}.editsection{float:right}p{margin:.4em 0 .5em 0;line-height:1.5em}p img{margin:0}q{font-family:Times,"Times New Roman",serif;font-style:italic} pre,code,tt,kbd,samp{ font-family:monospace,"Courier New"}code{background-color:#f9f9f9}pre{padding:1em;border:1px dashed #2f6fab;color:black;background-color:#f9f9f9;line-height:1.1em}ul{line-height:1.5em;list-style-type:square;margin:.3em 0 0 1.5em;padding:0;list-style-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAANCAYAAABhPKSIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACtJREFUeF7NjbEJAAAIw7zRu/w5ouBUBEeHDM2QGiA8kObBULuFcJbSXN8T78SqnpKltAIAAAAASUVORK5CYII=);list-style-image:url(http://content.gpwiki.org/skins/vector/images/bullet-icon.png?2011-08-20T20:56:40Z)!ie}ol{line-height:1.5em;margin:.3em 0 0 3.2em;padding:0;list-style-image:none}li{margin-bottom:.1em}dt{font-weight:bold;margin-bottom:.1em}dl{margin-top:.2em;margin-bottom:.5em}dd{line-height:1.5em;margin-left:2em;margin-bottom:.1em} table{font-size:100%} fieldset{border:1px solid #2f6fab;margin:1em 0 1em 0;padding:0 1em 1em;line-height:1.5em}fieldset.nested{margin:0 0 0.5em 0;padding:0 0.5em 0.5em}legend{padding:.5em;font-size:95%}form{border:none;margin:0}textarea{width:100%;padding:.1em}select{vertical-align:top} #toc,.toc,.mw-warning{border:1px solid #aaa;background-color:#f9f9f9;padding:5px;font-size:95%}#toc h2,.toc h2{display:inline;border:none;padding:0;font-size:100%;font-weight:bold}#toc #toctitle,.toc #toctitle,#toc .toctitle,.toc .toctitle{text-align:center}#toc ul,.toc ul{list-style-type:none;list-style-image:none;margin-left:0;padding-left:0;text-align:left}#toc ul ul,.toc ul ul{margin:0 0 0 2em}#toc .toctoggle,.toc .toctoggle{font-size:94%} div.floatright,table.floatright{clear:right;float:right;position:relative;margin:0 0 .5em .5em;border:0}div.floatright p{font-style:italic}div.floatleft,table.floatleft{float:left;clear:left;position:relative;margin:0 .5em .5em 0;border:0}div.floatleft p{font-style:italic} div.thumb{margin-bottom:.5em;width:auto;background-color:transparent}div.thumbinner{border:1px solid #ccc;padding:3px !important;background-color:#f9f9f9;font-size:94%;text-align:center;overflow:hidden}html .thumbimage{border:1px solid #ccc}html .thumbcaption{border:none;text-align:left;line-height:1.4em;padding:3px !important;font-size:94%}div.magnify{float:right;border:none !important;background:none !important}div.magnify a,div.magnify img{display:block;border:none !important;background:none !important} div.tright{clear:right;float:right;margin:.5em 0 1.3em 1.4em} div.tleft{float:left;clear:left;margin:.5em 1.4em 1.3em 0}img.thumbborder{border:1px solid #dddddd}.hiddenStructure{display:none} .mw-warning{margin-left:50px;margin-right:50px;text-align:center} .usermessage{background-color:#ffce7b;border:1px solid #ffa500;color:black;font-weight:bold;margin:2em 0 1em;padding:.5em 1em;vertical-align:middle} #siteNotice{position:relative;text-align:center;font-size:0.8em;margin:0}#localNotice{margin-bottom:0.9em} .catlinks{border:1px solid #aaa;background-color:#f9f9f9;padding:5px;margin-top:1em;clear:both} #siteSub{display:none}#jump-to-nav{display:none}#contentSub,#contentSub2{font-size:84%;line-height:1.2em;margin:0 0 1.4em 1em;color:#7d7d7d;width:auto}span.subpages{display:block} .center{width:100%;text-align:center}*.center *{margin-left:auto;margin-right:auto} .small,.small *{font-size:94%}table.small{font-size:100%} h1,h2{margin-bottom:.6em}h3,h4,h5{margin-bottom:.3em}#firstHeading{padding-top:0;margin-top:0;padding-top:0;margin-bottom:0.1em;line-height:1.2em;font-size:1.6em;padding-bottom:0}div#content a.external,div#content a[href ^="gopher://"]{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeF59z4EJADEIQ1F36k7u5E7ZKXeUQPACJ3wK7UNokVxVk9kHnQH7bY9hbDyDhNXgjpRLqFlo4M2GgfyJHhjq8V4agfrgPQX3JtJQGbofmCHgA/nAKks+JAjFAAAAAElFTkSuQmCC) center right no-repeat;background:url(http://content.gpwiki.org/skins/vector/images/external-link-ltr-icon.png?2011-08-20T20:56:40Z) center right no-repeat!ie;padding-right:13px}div#content a[href ^="https://"],.link-https{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIVJREFUeF6tjzsKg0AQhi09mimsFJLCzpNYCGKbK3gAtfUIljaCoKCCZIs8MMV2v+yCg8siWlh8zOtjhjEAEFmeIopDQtTrTJNEZIxhWysiNfULJFJjDzGnba/aBt4+wAuBzD+tg6a8SVkXf4GET96xmDxNzP39IvE/PPDtXIyVpYinv14A5F0laJ8oYFgAAAAASUVORK5CYII=) center right no-repeat;background:url(http://content.gpwiki.org/skins/vector/images/lock-icon.png?2011-08-20T20:56:40Z) center right no-repeat!ie;padding-right:13px}div#content a[href ^="mailto:"],.link-mailto{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADBQTFRF////////iIqF9vb26urpycfDvb275eXj2djV+/v4srKy6efio6GcqKejsa6q8fDtVM9qIQAAAAF0Uk5TAEDm2GYAAABOSURBVHheBcExDkAwGIDRL43NpJOt6a9hMdVilP8gklqsHMJmt4qeyeI03oNSNkCrAIU/7YTWbwp0zz4rTXZHxF/9YA15HTG4+4NFRNofUBMMOBBNZngAAAAASUVORK5CYII=) center right no-repeat;background:url(http://content.gpwiki.org/skins/vector/images/mail-icon.png?2011-08-20T20:56:40Z) center right no-repeat!ie;padding-right:13px}div#content a[href ^="news://"]{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHtJREFUeF6NkEEKgCAQRT2w1wiiUxgk0SKiTe6i9oKeQXDhKSZmYAJRKeHh4j//DIp+6OAPJH6cXJRSZqSUQClViBjUKER8zXAbUhev+6Q7hMA0G1msNtIo5zxhrX3xzlNG4ravYMwBMUZsKsBsXjQIABCTHlsfTXuj8wCN3T2QBjtcwQAAAABJRU5ErkJggg==) center right no-repeat;background:url(http://content.gpwiki.org/skins/vector/images/news-icon.png?2011-08-20T20:56:40Z) center right no-repeat!ie;padding-right:13px}div#content a[href ^="ftp://"],.link-ftp{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAExJREFUeF5VyEEKwCAMAMH83o/0LT6kFHqQYqkevG1jIITs3kaQgn+A7A29ujnw5NKrsaPCrTegBBrRMzYeXkbGzsdkZRwsPWMUmEd+CkSgVeVp2OkAAAAASUVORK5CYII=) center right no-repeat;background:url(http://content.gpwiki.org/skins/vector/images/file-icon.png?2011-08-20T20:56:40Z) center right no-repeat!ie;padding-right:13px}div#content a[href ^="irc://"],div#content a.extiw[href ^="irc://"],.link-irc{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHRJREFUeF590E0KgCAQBWAvH0TXigI3ZccQ/8H91ExqKNrAW8j7kFG27SvMyzQM9s8whuBnENdQSllFKdWFWFC01pQQwhASMMaAtXYIMQScc/0dxSXyIaPq1ZzzF6JOsKBTHOC9hxgjoQLbf2tRgekWKka5AShBSepvauUSAAAAAElFTkSuQmCC) center right no-repeat;background:url(http://content.gpwiki.org/skins/vector/images/talk-icon.png?2011-08-20T20:56:40Z) center right no-repeat!ie;padding-right:13px}div#content a.external[href $=".ogg"],div#content a.external[href $=".OGG"],div#content a.external[href $=".mid"],div#content a.external[href $=".MID"],div#content a.external[href $=".midi"],div#content a.external[href $=".MIDI"],div#content a.external[href $=".mp3"],div#content a.external[href $=".MP3"],div#content a.external[href $=".wav"],div#content a.external[href $=".WAV"],div#content a.external[href $=".wma"],div#content a.external[href $=".WMA"],.link-audio{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADBQTFRF////dX8qyNF7eYMzwsxrsr9G8PHrm6Jrt7uakJVmn6OB1duat8NQi5YzhI4ykZR07gQraQAAAAF0Uk5TAEDm2GYAAABJSURBVHheNcSxDUBQFIbR727glxvKl3dHsIHCGESrNIIR7KE1hQ1MoDSCiMhJDixSDWVEhuZbei/sf/Jqbdn28+jxYe4u7CaND+p5C05J6bE1AAAAAElFTkSuQmCC) center right no-repeat;background:url(http://content.gpwiki.org/skins/vector/images/audio-icon.png?2011-08-20T20:56:40Z) center right no-repeat!ie;padding-right:13px}div#content a.external[href $=".ogm"],div#content a.external[href $=".OGM"],div#content a.external[href $=".avi"],div#content a.external[href $=".AVI"],div#content a.external[href $=".mpeg"],div#content a.external[href $=".MPEG"],div#content a.external[href $=".mpg"],div#content a.external[href $=".MPG"],.link-video{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAP9bkSK1AAAAXElEQVR4Xi2NMQoFMQgFvbpgHUj5LvF6K7sFQXKFsOew2G/xuylmGPn62Wb76U+ayHsTbDnrQMNrHdkZRChyi730KvK1QUWVD47gzoCOMBkXPSZrIuumseW/iKU/eKdG9xXBa10AAAAASUVORK5CYII=) center right no-repeat;background:url(http://content.gpwiki.org/skins/vector/images/video-icon.png?2011-08-20T20:56:40Z) center right no-repeat!ie;padding-right:13px}div#content a.external[href $=".pdf"],div#content a.external[href $=".PDF"],div#content a.external[href *=".pdf#"],div#content a.external[href *=".PDF#"],div#content a.external[href *=".pdf?"],div#content a.external[href *=".PDF?"],.link-document{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUeF5lykEKgDAMBdF/+17Es/QkiosiCBURXIzJooZohmweX6gwmkCeI+Oqc2C1FnvnF2ejlQYU0tLK2NjY6f/l8V12Ti7uhFFgDj19b58EwXuqkAAAAABJRU5ErkJggg==) center right no-repeat;background:url(http://content.gpwiki.org/skins/vector/images/document-icon.png?2011-08-20T20:56:40Z) center right no-repeat!ie;padding-right:13px} div#content a.extiw,div#content a.extiw:active{color:#36b;background:none;padding:0}div#content a.external{color:#36b}div#content .printfooter{display:none} #pt-userpage,#pt-anonuserpage,#pt-login{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAMAAABxsOwqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGBQTFRF////R2uZMmGd5rp2boqvMFyS9unUTXWr5KQ/N2mn/Pr42Jg14Zstl6a80K93XXiVooVQ57VnpLnW4a1a36ZMr7Cwgpm5PXGw78mO+O/g1t7n5Orxk6zMvMne7/Dw6+zt5K6gdAAAAAF0Uk5TAEDm2GYAAABdSURBVHheHcpFAgMxEANBDZhhmQP//2Uc90V1EICrLuti0YqnyORrbLSrWPHJ/ukn8bkzbrnVD/MwpjQOb+B2hyvbQe7BTiG8ZmYqUOLglA0rCrcJxpiCz049/f4A9ZID96SyhDEAAAAASUVORK5CYII=) left top no-repeat;background:url(http://content.gpwiki.org/skins/vector/images/user-icon.png?2011-08-20T20:56:40Z) left top no-repeat!ie;padding-left:15px !important;text-transform:none}.toccolours{border:1px solid #aaa;background-color:#f9f9f9;padding:5px;font-size:95%}#bodyContent{position:relative;width:100%}#mw-js-message{font-size:0.8em}div#bodyContent{line-height:1.5em} #ca-unwatch.icon,#ca-watch.icon{margin-right:1px}#ca-unwatch.icon a,#ca-watch.icon a{margin:0;padding:0;outline:none;display:block;width:26px; padding-top:3.1em;margin-top:0; margin-top:-0.8em !ie;height:0;overflow:hidden;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAQCAMAAAClQEgHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAwBQTFRFoNb/+vr52tXLdcP/ltL/ysKt39rPrdz/xtDT8vLwwrJxodr/vqxjzdnr8v7+ntb/uuX/i87/ytTV9fb3zuz+8eOU+fr8zvH/wuX/ecT/hbrnj7XBltb/m9T/h8z/jtH+c8H/vq53lL/Ovq109vb1/v7rx8CuhcT0xLJlot3/2PL/kc//59N3s9//v7KGbL7/mNf//v395NSLmdr//Pz7ccT/wbOIZ7v/ybZk6OzzpNf/icPu0cm2g8n/p9n/9fTzva1ouuL/samQwu3/scfhfrbj8e/q4+bnyLJQ6u3tqtr/irbG7PH5fcz/0d7ww+r/zcuL6Obh9f7/hsv/s8+r+e2rw7J2rb3C+fj2icTy1O7/jrvO1s++vMyUz8zGocna6+rn8vDtlLK8aL3/d8X///vV7fz/vraklMr039nMtNjqp97/o9362ejN4vb/zcN7sN3/vfP/bsD/1dLNhK2+yLeIkrri28drz7tp5N7TiK26grXi3trTccP/vub/rd//+v//qM7fyeHMztmq5PT8u6t0/f3+/P39ksDwk8HQtMTH3fn/kdH/ltLpxb5o0dzsnND6ssXbzun5rdru2+Dh5+vsz9nadrrx1eLz+fLM7/z/w71z//zPgMz/8eWrwtKT9vn8jbPCf7vs1N3pua1terXo1O3tqtfWwOX51cV5dMH/vtmy28p8fLXR4efx9emq///8z9TbzrxowLOP5ea57///nq2xy7xo///5frrnwrSP9PX2+vv7ztzwvd3P2vH5r9z/8/X4nMrlsN//qLq9wa5zh7fikdf/tuL9zbpo3tnQ1u/kx8rL+/z8kq+6+vLGkqKq6f//oMrfxuf8xbVwqLvSh7vq8PP3ltD6d8P/v7Ngx7dqwbFt/PGyk8jv9vf3zLhofqy/wdPqyeTc0vH9//3kxun5i7O/x87X09mr1sRzmK3C3dnQz9XXmLvg///6uc7ozLpq7O7u//zc7evoyfT/+/z+mtf/9e25zcJt7ezowMXGu8nM+Pn5////8/n77InDmQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAJbSURBVHjaYvgPAb+3/ccK4tKxi7+4SkA9A5SWnuyJVSGXDidWcSnN6/jVQw0+s//fBWzqin9scMImvtF/62us6rfwOaEYXPLvXyM2pzn8+7dGBYt4dZ5WhjA29d3i+Sowg/d4TjuX9+9fQwnH1L8oqhIrN5//909VOdPNBEXcZ8Y7CQlHEam9Pt/Q1O/KrXNcdhSsnuFIZ3zWpLR/QMAnkhWvJA1TxVqx0mheKkj883qjVx9LYeIukRkT2P3rCtgPCGTfiLTuQKjPD3iZK1DAzv64OWD27VIG9+h/SOASB0xhwklk8XImmLilOp+IhK6XFQODrCyD+D1euPoHF50FDoPFZWQKfzIx/N/9PAiuP3oKwmOMYU9hwu8tAhHiYteidO34WbRtFZg1d65DVn+6HiJem3MrEBTGZ6taIPqDvN1RwkxxJkRcVeMLivixEwwsgpLmRfKulqjqm/jB4r08vyCp4tMhiAFPOFCj2L4cIh7KhCp+UJ1bjjlZ/6Y8L5r6PmOQuGkIEzS5vV0BMWBWOKrCGlGIeCorqvhieTlm5pRVkgYuaOpj5zLXmiqkLGeFGhwOTBRRl4EmJKEqVJsDdC3Q8B16qOITs4MNegS/B3OXoanf53s8JNbYN0cPanDSPy3vP0JVz/4tRFVo9u+uRcwbZdF/d1DFy8S5Fz3qr5ZxdkVT/3W1Rsyp1vmFS6AGP1TqAolzSK+9j6KQZ5MNiGK64sGIIr7U+gOI4pWaLoaqfjtEPRdIPdDgdiFY5hRCyaWGbDDz2CKQxdv8YOb5LcCtnuE/jQBAgAEAQlFsBT+lqfQAAAAASUVORK5CYII=);background-image:url(http://content.gpwiki.org/skins/vector/images/watch-icons.png?2011-08-20T20:56:40Z)!ie}#ca-unwatch.icon a{background-position:-43px 60%}#ca-watch.icon a{background-position:5px 60%}#ca-unwatch.icon a:hover,#ca-unwatch.icon a:focus{background-position:-67px 60%}#ca-watch.icon a:hover,#ca-watch.icon a:focus{background-position:-19px 60%}#ca-unwatch.icon a.loading,#ca-watch.icon a.loading{background-image:url(data:image/gif;base64,R0lGODlhEAAQAMQfANra2uLi4vDw8PLy8ujo6Ozs7NbW1vj4+Pb29s7Oztzc3NTU1O7u7uDg4NHR0erq6v39/d7e3vz8/Pv7+/7+/tPT09jY2Pr6+tnZ2efn5/X19eXl5ebm5vT09P///////yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJAwAfACwAAAAAEAAQAAAFa+Anjl9QkShacVqabp2XuKjjecHhStrjHDdIgtORiCyWSEZwud0mg0zEUhkYnNhsY/O5OCRZrEEwgvzCkgqZhGiEB1wUgRGeAFKApqcjcJ5QCx4aFQEECX1/JAlJJBsVFRMkEBkXLhyVNJkhACH5BAkDAB8ALAAAAAAQABAAAAV74CeO4hUQZEoGhqGqWzQtEnlYRCYMGSB5BkTKQCgUOBGPkjBIdQDKqBLhaJI4D6l0gylMRg6IVkmhNBIjxWBM8XAwHNFAIdYWDA0SRhNtKy0CJAUVEAcRAQJkFikZDg4EBB0RDR4dGCkIEhAjFBsBDwovKo0BoioFQiMhACH5BAkDAB8ALAAAAAAQABAAAAWB4CeO5HeU33OVl5IIpYEFh/QR1rYNZSMUAYVBwfBYbKRJwwPxFDxQjAbloECvHgMEBUBgPZTApjSxeL+eQGDUsQwkaGhBcUBYinGI5GBIEBwEGhxwVwwLFgoRHQwECgIADRFXBgUfEygfEBEDTmuYIxAJFAYwnyMFABVbpiMYGSghACH5BAkDAB8ALAAAAAAQABAAAAV+4CdKjWieKOJs6De1U5Zhg4YcmaG0kXcElQDtEWkZPMgMBGlofQDIqK9pmhAADClSEDBtAICJROvR7EQGx5LsgQAOogKm0LhQ2IDRQRJRFKIHAh4XAXknEw5REQsRBgAOEigRFBQEERofAgJiKBoZAgsXTicUDgYDoygNXU4hACH5BAUDAB8ALAAAAAAQABAAAAV54Cd+EFBNY6p+hgCssOERGwSP3eZBgUIEG0xhdGFpPMjChjNoRD6XIGBDQVo9FIcogZnsrlbLQNRQfMEewVN0ERAaaE9AoDoECGj76lBBTxQwDlYBEQweGwwqEDIHCwIbBgAAFioUBgUOdCIaBRwrBhUHNykQY6MfIQA7);background-image:url(http://content.gpwiki.org/skins/vector/images/watch-icon-loading.gif?2011-08-20T20:56:40Z)!ie;background-position:5px 60%}#ca-unwatch.icon a span,#ca-watch.icon a span{display:none}div.vectorTabs ul{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAERJREFUeF5lTtEKgEAMMv//j/O0IxlH9CA6N2WURAA/OHl5GeWAwUUHBcKV795FtTePxpmV3t9uv8Z3/cmvM88vzbbrAV/dQdX+eas3AAAAAElFTkSuQmCC);background-image:url(http://content.gpwiki.org/skins/vector/images/tab-break.png?2011-08-20T20:56:40Z)!ie;background-position:right bottom;background-repeat:no-repeat} p.mw-ipb-conveniencelinks,p.mw-protect-editreasons,p.mw-filedelete-editreasons,p.mw-delete-editreasons{float:right} .tipsy{font-size:0.8em}}
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline
+Content-Type: text/css; charset=utf-8
+Content-Location: http://content.gpwiki.org/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000
+Content-Transfer-Encoding: 8bit
+
+/* This css will override styles used by the GeSHi syntax highlighting,
+   such that less awful colors for the highlighting can be chosen. */
+ 
+ 
+/**
+ * Language code: "vb"
+ * 
+ * Overrides colors used for keywords from that horrible gold 
+ * to more tolerable blue. Other colors left as default at present time.
+ */
+.source-vb .kw1 {
+	color: #006 !important;
+}
+ 
+/**
+ * Language code: "cpp"
+ *
+ * Color fix for member variables
+ */
+.source-cpp .me1 { color:#499; }
+.source-cpp .me2 { color:#499; }
+ 
+ 
+/* Reinstating borders */
+body.skin-monobook div.mw-geshi {
+	padding: 1em;
+	border: 1px dashed #2f6fab;
+	color: black;
+	background-color: #f9f9f9;
+	line-height: 1.1em;
+}
+ 
+body.skin-modern div.mw-geshi {
+	border: solid 1px #3c78b5;
+	padding: 0.4em;
+	background-color: #f0f0f0;
+}
+ 
+body.skin-simple div.mw-geshi {
+	margin: 2em;
+	border: solid 1px black;
+}
+ 
+body.skin-chick div.mw-geshi {
+	padding: 1em;
+	border: 1px dashed #2f6fab;
+	color: black;
+	background-color: #f9f9f9;
+	line-height: 1.1em;
+}
+ 
+body.skin-vector div.mw-geshi {
+	padding: 1em;
+	border: 1px dashed #2f6fab;
+	color: black;
+	background-color: #f9f9f9;
+	line-height: 1.1em;
+}
+ 
+ 
+/* Fix so <source> tags, and .css and .js pages, get normal text size 
+   also in some versions of Firefox, Safari, Konqueror, Chrome etc. */
+div.mw-geshi div,
+pre {
+	font-family: monospace, "Courier New" !important;
+}
+ 
+/* Geshi's colourscheme for MySQL is absolutely hideous. */
+.mysql.source-mysql .kw1,
+.mysql.source-mysql .kw2,
+.mysql.source-mysql .kw3,
+.mysql.source-mysql .kw6,
+.mysql.source-mysql .kw10 {
+	color: #993333;
+}
+ 
+.mysql.source-mysql .coMULTI,
+.mysql.source-mysql .sy1 {
+	color: #808080;
+}
+ 
+.mysql.source-mysql .br0 {
+	color: #66cc66;
+}
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline; filename=brand.js
+Content-Type: text/javascript; charset=UTF-8; name=brand.js
+Content-Location: http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en
+Content-Transfer-Encoding: 8bit
+
+
+(function() {
+var f = document.getElementById('cse-search-box');
+if (!f) {
+f = document.getElementById('searchbox_demo');
+}
+if (f && f['q']) {
+var q = f['q'];
+var n = navigator;
+var l = location;
+var du = function(n, v) {
+var u = document.createElement('input');
+u.name = n;
+u.value = v;
+u.type = 'hidden';
+f.appendChild(u);
+return u;
+};
+var su = function (n, t, v, l) {
+if (!encodeURIComponent || !decodeURIComponent) {
+return;
+}
+var regexp = new RegExp('(?:[?&]' + n + '=)([^&#]*)');
+var existing = regexp.exec(t);
+if (existing) {
+v = decodeURIComponent(existing[1]);
+}
+var delimIndex = v.indexOf('://');
+if (delimIndex >= 0) {
+v = v.substring(delimIndex + '://'.length, v.length);
+}
+var v_sub = v.substring(0, l);
+while (encodeURIComponent(v_sub).length > l) {
+v_sub = v_sub.substring(0, v_sub.length - 1);
+}
+du(n, v_sub);
+};
+var pl = function(he) {
+var ti = 0, tsi = 0, tk = 0, pt;
+return function() {
+var ct = (new Date).getTime();
+if (pt) {
+var i = ct - pt;
+ti += i;
+tsi += i*i;
+}
+tk++;
+pt = ct;
+he.value = [ti, tsi, tk].join('j');
+};
+};
+var append = false;
+if (n.appName == 'Microsoft Internet Explorer') {
+var s = f.parentNode.childNodes;
+for (var i = 0; i < s.length; i++) {
+        if (s[i].nodeName == 'SCRIPT' &&
+            s[i].attributes['src'] &&
+            s[i].attributes['src'].nodeValue == unescape('http:\x2F\x2Fwww.google.com\x2Fcoop\x2Fcse\x2Fbrand?form=cse-search-box\x26lang=en')) {
+          append = true;
+          break;
+        }
+      }
+    } else {
+      append = true;
+    }
+    if (append) {
+      
+      var loc = document.location.toString(); var ref = document.referrer;
+      su('siteurl', loc, loc, 250);
+      su('ref', loc, ref, 750);
+
+      
+      
+      if (q.addEventListener) {
+        q.addEventListener('keyup', pl(du('ss', '')), false);
+      } else if (q.attachEvent) {
+        q.attachEvent('onkeyup', pl(du('ss', '')));
+      }
+    }
+
+    
+    if (n.platform == 'Win32') {
+      q.style.cssText = 'border: 1px solid #7e9db9; padding: 2px;';
+    }
+
+    
+    if (window.history.navigationMode) {
+      window.history.navigationMode = 'compatible';
+    }
+
+    var b = function() {
+      if (q.value == '') {
+        q.style.background = '#FFFFFF url(http:\x2F\x2Fwww.google.com\x2Fcse\x2Fintl\x2Fen\x2Fimages\x2Fgoogle_custom_search_watermark.gif) left no-repeat';
+      }
+    };
+
+    var f = function() {
+      q.style.background = '#ffffff';
+    };
+
+    q.onfocus = f;
+    q.onblur = b;
+
+    
+    if (!/[&?]q=[^&]/.test(l.search)) {
+      b();
+    }
+  }
+})();
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://content.gpwiki.org/images/gpwikilogo.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAIYAAABwCAMAAADsbPinAAAC+lBMVEUXFzkcHC8b
+GzgWFkEaGkQbG0knJ0UmJkgqKkQsLEsjI1ImJlsrK1QqKlo8PE0wMFYyMlw6OlQ/
+P1stLWQxMWExMWYxMWs6OmQ7O2s0NHI6OnM8PHtCQltMTFtERGNDQ21MTGJLS2pD
+Q3JDQ3tLS3JLS3xSUmNSUmtYWGtVVXFSUnxdXXRYWH1fX35gYG5gYHBiYnRlZXdk
+ZHtpaXRra3lzc3pERINGRopKSoNJSYtMTJJSUoFTU4tbW4VdXYxTU5RTU5tbW5Nb
+W5tWVqJZWaFZWaVeXqJdXaVcXKlkZIJkZIhqaoVsbI1kZJJjY5tsbJRra5twcIJy
+coZ0dIt6eoV9fYp0dJRwcJpzc512dpt1dZ18fJJ6epxkZKNhYalhYa1mZqhlZa1s
+bKNqaq1jY7FlZbFmZrVra7NsbLtycqRzc616eqJ7e6pzc7Nzc7p6erR7e7xra8Ju
+bsFzc8N1dcl7e8N5ecx8fNN/f919feCBgYqEhJKCgpuKipOMjJqSkpycnJyCgqOB
+gamDg6+Hh6iEhKyMjKKMjKyDg7SDg7uLi7aMjLyWlqORkaicnKKbm66SkrGTk7yb
+m7OZmb2jo6OkpKutra2kpLKnp7mqqrOrq7yzs7O2try6urq5ub28vLyDg8GCgsyN
+jcSMjMyDg9OFhdmLi9KLi9uSksOUlMqcnMKbm8yTk9OSktyamtWbm9qLi+KOjuuT
+k+GSkuuamuSamuyRkfGcnPGlpcOiosyqqsCqqsWtrcGursWrq8uiotSjo9urq9Or
+q9yzs8K0tMq6usS6usq9vc+zs9Ozs9y9vdG7u9yjo+Kjo+yrq+Orq+urq/Kqqvmy
+suOzs+u7u+O5ueyzs/S0tPu6uvS6uvvDw8TExMrKysrCwtPAwNrBwd3FxdrGxtzM
+zNLLy9vS0tLU1Nvd3d3Dw+TCwuvMzOXMzOzDw/PDw/vMzPTMzPvT0+PT0+za2uLY
+2OXd3eLd3eXc3OvU1PPV1fzb2/Pb2/zg4ODg4Ovg4PPg4P0yxjAxAAAAAXRSTlMA
+QObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfU
+CxEOGQU7+oXvAAALz0lEQVR4nO1bC1AV1xk+nSSTqSbR1PgKGhNETVKdSdoKQmlB
+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
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline; filename=show_ads.js
+Content-Type: text/javascript; charset=UTF-8; name=show_ads.js
+Content-Location: http://pagead2.googlesyndication.com/pagead/show_ads.js
+Content-Transfer-Encoding: Quoted-Printable
+
+(function(){var f=3D!0,h=3Dnull,k=3D!1,aa=3Dfunction(a,b,c){return a.cal=
+l.apply(a.bind,arguments)},ba=3Dfunction(a,b,c){if(!a)throw Error();if(2=
+<arguments.length){var e=3DArray.prototype.slice.call(arguments,2);retur=
+n function(){var c=3DArray.prototype.slice.call(arguments);Array.prototy=
+pe.unshift.apply(c,e);return a.apply(b,c)}}return function(){return a.ap=
+ply(b,arguments)}},m=3Dfunction(a,b,c){m=3DFunction.prototype.bind&&-1!=3D=
+Function.prototype.bind.toString().indexOf("native code")?aa:ba;return m=
+.apply(h,arguments)};var n=3D(new Date).getTime();var ca=3Dfunction(a){a=
+=3DparseFloat(a);return isNaN(a)||1<a||0>a?0:a},da=3D/^([\w-]+\.)*([\w-]=
+{2,})(\:[0-9]+)?$/,ea=3Dfunction(a,b){if(!a)return b;var c=3Da.match(da)=
+;return c?c[0]:b};var fa=3Dca("0.0"),ga=3Dca("0.01"),ha=3Dca("0.001");va=
+r ia=3D/^true$/.test("false")?f:k;var ja=3Dfunction(){return ea("","page=
+ad2.googlesyndication.com")};var ka=3D/&/g,la=3D/</g,na=3D/>/g,oa=3D/\"/=
+g,pa=3D{"\x00":"\\0","\b":"\\b","\f":"\\f","\n":"\\n","\r":"\\r","\t":"\=
+\t","\x0B":"\\x0B",'"':'\\"',"\\":"\\\\"},p=3D{"'":"\\'"};var u=3Dwindow=
+,y,qa=3Dh,z=3Ddocument.getElementsByTagName("script");z&&z.length&&(qa=3D=
+z[z.length-1].parentNode);y=3Dqa;ja();var ra=3Dfunction(a){var b=3DA,c;f=
+or(c in b)Object.prototype.hasOwnProperty.call(b,c)&&a.call(h,b[c],c,b)}=
+,B=3Dfunction(a){return!!a&&"function"=3D=3Dtypeof a&&!!a.call},sa=3Dfun=
+ction(a,b){if(!(2>arguments.length))for(var c=3D1,e=3Darguments.length;c=
+<e;++c)a.push(arguments[c])};function ta(a,b){a.addEventListener?a.addEv=
+entListener("load",b,k):a.attachEvent&&a.attachEvent("onload",b)}
+var ua=3Dfunction(a,b){if(!(1E-4>Math.random())){var c=3DMath.random();i=
+f(c<b)return a[Math.floor(c/b*a.length)]}return h},va=3Dfunction(a){try{=
+return!!a.location.href||""=3D=3D=3Da.location.href}catch(b){return k}};=
+var wa=3Dh,xa=3Dfunction(){if(!wa){for(var a=3Dwindow,b=3Da,c=3D0;a!=3Da=
+.parent;)if(a=3Da.parent,c++,va(a))b=3Da;else break;wa=3Db}return wa};va=
+r C,D=3Dfunction(a){this.c=3D[];this.b=3Da||window;this.a=3D0;this.d=3Dh=
+},ya=3Dfunction(a,b){this.l=3Da;this.i=3Db};D.prototype.o=3Dfunction(a,b=
+){0=3D=3Dthis.a&&0=3D=3Dthis.c.length&&(!b||b=3D=3Dwindow)?(this.a=3D2,t=
+his.f(new ya(a,window))):this.g(a,b)};D.prototype.g=3Dfunction(a,b){this=
+.c.push(new ya(a,b||this.b));za(this)};D.prototype.p=3Dfunction(a){this.=
+a=3D1;a&&(this.d=3Dthis.b.setTimeout(m(this.e,this),a))};D.prototype.e=3D=
+function(){1=3D=3Dthis.a&&(this.d!=3Dh&&(this.b.clearTimeout(this.d),thi=
+s.d=3Dh),this.a=3D0);za(this)};D.prototype.q=3Dfunction(){return f};
+D.prototype.nq=3DD.prototype.o;D.prototype.nqa=3DD.prototype.g;D.prototy=
+pe.al=3DD.prototype.p;D.prototype.rl=3DD.prototype.e;D.prototype.sz=3DD.=
+prototype.q;var za=3Dfunction(a){a.b.setTimeout(m(a.m,a),0)};D.prototype=
+.m=3Dfunction(){if(0=3D=3Dthis.a&&this.c.length){var a=3Dthis.c.shift();=
+this.a=3D2;a.i.setTimeout(m(this.f,this,a),0);za(this)}};D.prototype.f=3D=
+function(a){this.a=3D0;a.l()};
+var Aa=3Dfunction(a){try{return a.sz()}catch(b){return k}},Ba=3Dfunction=
+(a){return!!a&&("object"=3D=3Dtypeof a||"function"=3D=3Dtypeof a)&&Aa(a)=
+&&B(a.nq)&&B(a.nqa)&&B(a.al)&&B(a.rl)},Ca=3Dfunction(){if(C&&Aa(C))retur=
+n C;var a=3Dxa(),b=3Da.google_jobrunner;return Ba(b)?C=3Db:a.google_jobr=
+unner=3DC=3Dnew D(a)},Da=3Dfunction(a,b){Ca().nq(a,b)},Ea=3Dfunction(a,b=
+){Ca().nqa(a,b)};var Fa=3D/MSIE [2-7]|PlayStation|Gecko\/20090226/i,Ga=3D=
+/Android|Opera/,Ha=3Dfunction(){var a=3DE,b=3DF.google_ad_width,c=3DF.go=
+ogle_ad_height,e=3D["<iframe"],d;for(d in a)a.hasOwnProperty(d)&&sa(e,d+=
+"=3D"+a[d]);e.push('style=3D"left:0;position:absolute;top:0;"');e.push("=
+></iframe>");b=3D"border:none;height:"+c+"px;margin:0;padding:0;position=
+:relative;visibility:visible;width:"+b+"px";return['<ins style=3D"displa=
+y:inline-table;',b,'"><ins id=3D"',a.id+"_anchor",'" style=3D"display:bl=
+ock;',b,'">',e.join(" "),"</ins></ins>"].join("")};var Ia=3Dfunction(a,b=
+,c){c||(c=3Dia?"https":"http");return[c,"://",a,b].join("")};var Ja=3Dfu=
+nction(){},La=3Dfunction(a,b,c){switch(typeof b){case "string":Ka(b,c);b=
+reak;case "number":c.push(isFinite(b)&&!isNaN(b)?b:"null");break;case "b=
+oolean":c.push(b);break;case "undefined":c.push("null");break;case "obje=
+ct":if(b=3D=3Dh){c.push("null");break}if(b instanceof Array){var e=3Db.l=
+ength;c.push("[");for(var d=3D"",g=3D0;g<e;g++)c.push(d),La(a,b[g],c),d=3D=
+",";c.push("]");break}c.push("{");e=3D"";for(d in b)b.hasOwnProperty(d)&=
+&(g=3Db[d],"function"!=3Dtypeof g&&(c.push(e),Ka(d,c),c.push(":"),La(a,g=
+,c),e=3D
+","));c.push("}");break;case "function":break;default:throw Error("Unkno=
+wn type: "+typeof b);}},Ma=3D{'"':'\\"',"\\":"\\\\","/":"\\/","\b":"\\b"=
+,"\f":"\\f","\n":"\\n","\r":"\\r","\t":"\\t","\x0B":"\\u000b"},Na=3D/\uf=
+fff/.test("\uffff")?/[\\\"\x00-\x1f\x7f-\uffff]/g:/[\\\"\x00-\x1f\x7f-\x=
+ff]/g,Ka=3Dfunction(a,b){b.push('"');b.push(a.replace(Na,function(a){if(=
+a in Ma)return Ma[a];var b=3Da.charCodeAt(0),d=3D"\\u";16>b?d+=3D"000":2=
+56>b?d+=3D"00":4096>b&&(d+=3D"0");return Ma[a]=3Dd+b.toString(16)}));b.p=
+ush('"')};var G=3D"google_ad_block google_ad_channel google_ad_client go=
+ogle_ad_format google_ad_height google_ad_host google_ad_host_channel go=
+ogle_ad_host_tier_id google_ad_output google_ad_override google_ad_regio=
+n google_ad_section google_ad_slot google_ad_type google_ad_width google=
+_adtest google_allow_expandable_ads google_alternate_ad_url google_alter=
+nate_color google_analytics_domain_name google_analytics_uacct google_bi=
+d google_city google_color_bg google_color_border google_color_line goog=
+le_color_link google_color_text google_color_url google_container_id goo=
+gle_contents google_country google_cpm google_ctr_threshold google_cust_=
+age google_cust_ch google_cust_gender google_cust_id google_cust_interes=
+ts google_cust_job google_cust_l google_cust_lh google_cust_u_url google=
+_disable_video_autoplay google_ed google_eids google_enable_ose google_e=
+ncoding google_font_face google_font_size google_frame_id google_gl goog=
+le_hints google_image_size google_kw google_kw_type google_lact google_l=
+anguage google_loeid google_max_num_ads google_max_radlink_len google_mt=
+l google_num_radlinks google_num_radlinks_per_unit google_num_slots_to_r=
+otate google_only_ads_with_video google_only_pyv_ads google_only_usercho=
+ice_ads google_override_format google_page_url google_previous_watch goo=
+gle_previous_searches google_referrer_url google_region google_reuse_col=
+ors google_rl_dest_url google_rl_filtering google_rl_mode google_rt goog=
+le_safe google_sc_id google_scs google_sui google_skip google_tag_info g=
+oogle_targeting google_tdsma google_tfs google_tl google_ui_features goo=
+gle_ui_version google_video_doc_id google_video_product_type google_with=
+_pyv_ads google_yt_pt google_yt_up".split(" ");var Oa=3D/\.((google(|gro=
+ups|mail|images|print))|gmail)\./,Pa=3Dfunction(){var a=3DH,b=3DOa.test(=
+a.location.host);return!(!a.postMessage||!a.localStorage||!a.JSON||b)};v=
+ar Qa=3Dfunction(a){this.b=3Da;a.google_iframe_oncopy||(a.google_iframe_=
+oncopy=3D{handlers:{}});this.j=3Da.google_iframe_oncopy},Ra;var K=3D"var=
+ i=3Dthis.id,s=3Dwindow.google_iframe_oncopy,H=3Ds&&s.handlers,h=3DH&&H[=
+i],w=3Dthis.contentWindow,d;try{d=3Dw.document}catch(e){}if(h&&d&&(!d.bo=
+dy||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.l=
+ocation.replace(h)}}";
+/[&<>\"]/.test(K)&&(-1!=3DK.indexOf("&")&&(K=3DK.replace(ka,"&amp;")),-1=
+!=3DK.indexOf("<")&&(K=3DK.replace(la,"&lt;")),-1!=3DK.indexOf(">")&&(K=3D=
+K.replace(na,"&gt;")),-1!=3DK.indexOf('"')&&(K=3DK.replace(oa,"&quot;"))=
+);Ra=3DK;Qa.prototype.set=3Dfunction(a,b){this.j.handlers[a]=3Db;this.b.=
+addEventListener&&!/MSIE/.test(navigator.userAgent)&&this.b.addEventList=
+ener("load",m(this.k,this,a),k)};Qa.prototype.k=3Dfunction(a){a=3Dthis.b=
+.document.getElementById(a);var b=3Da.contentWindow.document;if(a.onload=
+&&b&&(!b.body||!b.body.firstChild))a.onload()};function Sa(){var a=3DH,b=
+=3DH.document,c=3Da.google_ad_width,e=3Da.google_ad_height,d;a:{try{d=3D=
+a.top.document=3D=3Db;break a}catch(g){}d=3Dk}if(d)return k;d=3Db.docume=
+ntElement;if(c&&e){var l=3D1,q=3D1;a.innerHeight?(l=3Da.innerWidth,q=3Da=
+.innerHeight):d&&d.clientHeight?(l=3Dd.clientWidth,q=3Dd.clientHeight):b=
+.body&&(l=3Db.body.clientWidth,q=3Db.body.clientHeight);if(q>2*e||l>2*c)=
+return k}return f};var Ta=3Dfunction(){var a=3D"script";return["<",a,' s=
+rc=3D"',Ia(ja(),"/pagead/js/r20130221/r20130206/show_ads_impl.js",""),'"=
+></',a,">"].join("")},Ua=3Dfunction(){var a=3D"script";return["<",a,' sr=
+c=3D"',Ia(ja(),"/pagead/expansion_embed.js"),'"></',a,">"].join("")},Va=3D=
+function(a){var b;if(!(b=3D"expt"!=3Da.google_expand_experiment))a:{var =
+c=3Da.document;try{var e;if(!(e=3D
+a.google_allow_expandable_ads=3D=3D=3Dk)){var d;if(!(d=3D!c.body)){var g=
+;if(!(g=3Da.google_ad_output&&"html"!=3Da.google_ad_output)){var l;if(!(=
+l=3DisNaN(a.google_ad_height))){var q;if(!(q=3DisNaN(a.google_ad_width))=
+){var w;if(!(w=3Dc.domain!=3Da.location.hostname)){var v;b:{a=3Dnavigato=
+r;var r=3Da.userAgent,I=3Da.platform;if(/Win|Mac|Linux/.test(I)&&!/^Oper=
+a/.test(r)){var V=3D(/WebKit\/(\d+)/.exec(r)||[0,0])[1],ma=3D(/rv\:(\d+\=
+.\d+)/.exec(r)||[0,0])[1];if(/Win/.test(I)&&/MSIE.*Trident/.test(r)&&7<c=
+.documentMode||!V&&"Gecko"=3D=3D
+a.product&&1.7<ma&&!/rv\:1\.8([^.]|\.0)/.test(r)||524<V){v=3Df;break b}}=
+v=3Dk}w=3D!v}q=3Dw}l=3Dq}g=3Dl}d=3Dg}e=3Dd}if(e){b=3Df;break a}}catch(W)=
+{b=3Df;break a}b=3Dk}return b?k:f},Wa=3Dfunction(a,b,c,e){return functio=
+n(){var d=3Dk;e&&Ca().al(3E4);try{if(va(a.document.getElementById(b).con=
+tentWindow)){var g=3Da.document.getElementById(b).contentWindow,l=3Dg.do=
+cument;if(!l.body||!l.body.firstChild)l.open(),g.google_async_iframe_clo=
+se=3Df,l.write(c)}else{var q=3Da.document.getElementById(b).contentWindo=
+w,w;g=3Dc;g=3DString(g);if(g.quote)w=3D
+g.quote();else{for(var l=3D['"'],v=3D0;v<g.length;v++){var r=3Dg.charAt(=
+v),I=3Dr.charCodeAt(0),V=3Dl,ma=3Dv+1,W;if(!(W=3Dpa[r])){var J;if(31<I&&=
+127>I)J=3Dr;else{var t=3Dr;if(t in p)J=3Dp[t];else if(t in pa)J=3Dp[t]=3D=
+pa[t];else{var s=3Dt,x=3Dt.charCodeAt(0);if(31<x&&127>x)s=3Dt;else{if(25=
+6>x){if(s=3D"\\x",16>x||256<x)s+=3D"0"}else s=3D"\\u",4096>x&&(s+=3D"0")=
+;s+=3Dx.toString(16).toUpperCase()}J=3Dp[t]=3Ds}}W=3DJ}V[ma]=3DW}l.push(=
+'"');w=3Dl.join("")}q.location.replace("javascript:"+w)}d=3Df}catch(Qb){=
+q=3Dxa().google_jobrunner,Ba(q)&&q.rl()}d&&(new Qa(a)).set(b,
+Wa(a,b,c,k))}},Xa=3Dfunction(){var a=3D["<iframe"];ra(function(b,c){a.pu=
+sh(" "+c+'=3D"'+(b=3D=3Dh?"":b)+'"')});a.push("></iframe>");return a.joi=
+n("")},Ya=3Dfunction(a,b){var c=3DH.google_ad_height,e=3Db?'"':"",d=3De+=
+"0"+e;a.width=3De+H.google_ad_width+e;a.height=3De+c+e;a.frameborder=3Dd=
+;a.marginwidth=3Dd;a.marginheight=3Dd;a.vspace=3Dd;a.hspace=3Dd;a.allowt=
+ransparency=3De+"true"+e;a.scrolling=3De+"no"+e},Za=3DMath.floor(1E6*Mat=
+h.random()),$a=3Dfunction(a){for(var b=3Da.data.split("\n"),c=3D{},e=3D0=
+;e<b.length;e++){var d=3Db[e].indexOf("=3D");-1!=3D
+d&&(c[b[e].substr(0,d)]=3Db[e].substr(d+1))}b=3Dc[3];if(c[1]=3D=3DZa&&(w=
+indow.google_top_js_status=3D4,a.source=3D=3Dtop&&0=3D=3Db.indexOf(a.ori=
+gin)&&(window.google_top_url=3Db,window.google_top_js_status=3D5),window=
+.google_top_js_callbacks)){for(a=3D0;a<window.google_top_js_callbacks.le=
+ngth;a++)window.google_top_js_callbacks[a]();window.google_top_js_callba=
+cks.length=3D0}};window.google_loader_used=3Df;(function(a){"google_onlo=
+ad_fired"in a||(a.google_onload_fired=3Dk,ta(a,function(){a.google_onloa=
+d_fired=3Df}))})(window);
+if(!window.google_top_experiment&&(window.google_top_experiment=3Dua(["j=
+p_c","jp_zl","jp_wfpmr"],ga),"jp_zl"=3D=3D=3Dwindow.google_top_experimen=
+t||"jp_wfpmr"=3D=3D=3Dwindow.google_top_experiment)){var ab=3Dwindow,bb=3D=
+2;try{ab.top.document=3D=3Dab.document?bb=3D0:va(ab.top)&&(bb=3D1)}catch=
+(cb){}if(2!=3D=3Dbb)window.google_top_js_status=3D0;else if(top.postMess=
+age){var db;try{db=3Dtop.frames.google_top_static_frame?f:k}catch(eb){db=
+=3Dk}if(db){var L=3Dwindow;L.addEventListener?L.addEventListener("messag=
+e",$a,k):L.attachEvent&&L.attachEvent("onmessage",
+$a);window.google_top_js_status=3D3;var fb=3D{"0":"google_loc_request",1=
+:Za},gb=3D[],hb;for(hb in fb)gb.push(hb+"=3D"+fb[hb]);top.postMessage(gb=
+.join("\n"),"*")}else window.google_top_js_status=3D2}else window.google=
+_top_js_status=3D1}window.google_expand_experiment||(window.google_expan=
+d_experiment=3Dua(["expt","control"],fa)||"none");var ib;
+if(window.google_enable_async=3D=3D=3Dk)ib=3D0;else{var jb=3Dnavigator.u=
+serAgent;ib=3D(Fa.test(jb)||Ga.test(jb)?k:f)&&!window.google_container_i=
+d&&(!window.google_ad_output||"html"=3D=3Dwindow.google_ad_output)}
+if(ib){var kb=3Dwindow;kb.google_unique_id?++kb.google_unique_id:kb.goog=
+le_unique_id=3D1;var H=3Dwindow,E=3D{};Ya(E,f);E.onload=3D'"'+Ra+'"';for=
+(var M,F=3DH,lb=3DF.document,N=3DE.id,mb=3D0;!N||F.document.getElementBy=
+Id(N);)N=3D"aswift_"+mb++;E.id=3DN;E.name=3DN;lb.write(Ha());M=3DN;var n=
+b,O=3DH;O.google_page_url&&(O.google_page_url=3DString(O.google_page_url=
+));for(var ob=3D[],pb=3D0,qb=3DG.length;pb<qb;pb++){var rb=3DG[pb];if(O[=
+rb]!=3Dh){var sb;try{var tb=3D[];La(new Ja,O[rb],tb);sb=3Dtb.join("")}ca=
+tch(ub){}sb&&sa(ob,rb,"=3D",sb,";")}}nb=3Dob.join("");
+var P=3Dwindow,vb=3DP.google_ad_output,Q=3DP.google_ad_format;if(!Q&&("h=
+tml"=3D=3Dvb||vb=3D=3Dh))Q=3DP.google_ad_width+"x"+P.google_ad_height;Q=3D=
+Q&&(!P.google_ad_slot||P.google_override_format)?Q.toLowerCase():"";P.go=
+ogle_ad_format=3DQ;var R,wb=3D[u.google_ad_slot,u.google_ad_format,u.goo=
+gle_ad_type,u.google_ad_width,u.google_ad_height];if(y){var S;if(y){for(=
+var xb=3D[],yb=3D0,T=3Dy;T&&25>yb;T=3DT.parentNode,++yb)xb.push(9!=3DT.n=
+odeType&&T.id||"");S=3Dxb.join()}else S=3D"";S&&wb.push(S)}var zb=3D0;if=
+(wb){var Ab=3Dwb.join(":"),Bb=3DAb.length;
+if(0=3D=3DBb)zb=3D0;else{for(var U=3D305419896,Cb=3D0;Cb<Bb;Cb++)U^=3D(U=
+<<5)+(U>>2)+Ab.charCodeAt(Cb)&4294967295;zb=3D0<U?U:4294967296+U}}R=3Dzb=
+.toString();a:{var X=3Dwindow,Y=3DX.google_async_slots;Y||(Y=3DX.google_=
+async_slots=3D{});var Db=3DX.google_unique_id,Z=3DString("number"=3D=3Dt=
+ypeof Db?Db:0);if(Z in Y&&(Z+=3D"b",Z in Y))break a;Y[Z]=3D{sent:k,w:X.g=
+oogle_ad_width||"",h:X.google_ad_height||"",adk:R,type:X.google_ad_type|=
+|"",slot:X.google_ad_slot||"",fmt:X.google_ad_format||"",cli:X.google_ad=
+_client||"",saw:[]}}var $=3DH.google_ad_handling_experiment||
+(Pa()?ua(["X","XN","S","SN","PC"],ha):""),Eb=3D"";if(Pa()&&"S"!=3D$&&"SN=
+"!=3D$&&"XN"!=3D$){var Fb;Fb=3D"zrt_ads_frame"+H.google_unique_id;var Gb=
+=3DencodeURIComponent(H.google_page_url||Sa()?H.document.referrer:H.docu=
+ment.URL),Hb=3Dh;"PC"=3D=3D$&&(Hb=3D"K-"+(Gb+"/"+R+"/"+H.google_unique_i=
+d));var A=3D{};Ya(A,k);A.style=3D"display:none";var Ib=3DHb;A.id=3DFb;A.=
+name=3DFb;var Jb=3DA,Kb;Kb=3DIa(ea("","googleads.g.doubleclick.net"),["/=
+pagead/html/r20130221/r20130206/zrt_lookup.html",
+Ib?"#"+encodeURIComponent(Ib):""].join(""));Jb.src=3DKb;Eb=3DXa()}for(va=
+r Lb=3DH,Mb=3D0,Nb=3DG.length;Mb<Nb;Mb++)Lb[G[Mb]]=3Dh;var Ob=3D(new Dat=
+e).getTime(),Pb=3DH.google_top_experiment,Rb=3DH.google_expand_experimen=
+t,Sb=3D"";Va(H)&&(Sb=3DUa());var Tb=3D["<!doctype html><html><body>",Eb,=
+"<script>",nb,"google_show_ads_impl=3Dtrue;google_unique_id=3D",H.google=
+_unique_id,';google_async_iframe_id=3D"',M,'";google_ad_unit_key=3D"',R,=
+'";google_start_time=3D',n,";",Pb?'google_top_experiment=3D"'+Pb+'";':""=
+,Rb?'google_expand_experiment=3D"'+
+Rb+'";':"",$?'google_ad_handling_experiment=3D"'+$+'";':"","google_bpp=3D=
+",Ob>n?Ob-n:1,";\x3c/script>",Sb,Ta(),"</body></html>"].join("");(H.docu=
+ment.getElementById(M)?Da:Ea)(Wa(H,M,Tb,f))}else window.google_start_tim=
+e=3Dn,!("object"=3D=3Dtypeof window.n&&"function"=3D=3Dtypeof window.n.c=
+reateIframe)&&Va(window)&&document.write(Ua()),document.write(Ta());})()=
+;
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline; filename=gnu-fdl.png
+Content-Type: image/png; name=gnu-fdl.png
+Content-Location: http://content.gpwiki.org/skins/common/images/gnu-fdl.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAACeVBMVEX+//wAAgD5
++/gCBQFXQiDR09AgIR/6/PlgSy4eHx0hIyD2+PT4+vfXz8jq5OMPEQ2Nj4zw8u/7
+/frx8/BeSSzS1NGvpZhaRSO5rqKAgn9hTC81NzTx7Op7bFHp6+hwXEPZ0crc08z1
+7+4yMzG8sqVfSi2mqKVdSCvNz8tuWkGJe2RHSUa+tKd3Ykn3+faqnYzy9PHh5OAS
+FBEHCQXWzscvMS6Fh4RbXVqnqaawpJKCdV8TFBIcHRvu8O3m6OXm3daPgWpcXlsb
+HBrg2NCytLHFx8Tt7+t2YUi1t7S7vbpcRyrUzMRgYl+VgH3/+vl9aE8rLSp8Z04j
+JCKIemMUFRO9s6YXGBasn45rVTeoqqeDhYKGeGF6a1Dq7OldX1wzNDK6r6NvcW6t
+oI+ipKF/alH38fDc3tu5u7gKDAgVFhTIysfQ0s/e4N2nmonz9fI6Ozk9PzxiTTDV
+19S9v7wYGRc+QD19blOqrKlmUDMMDwtMTktKS0nCxMHY0MlPUU5/gX709/PJy8h2
+Z0x4ene4raGMjot6ZUyUlpMRExDDxcJzX0aHeWJvW0Kom4pkTzF5ZEvGyMVYRCea
+jnxtb2xtVznOxr/IwLkZGxgWGBWam5jRyMGlmIfr5eSKfGVzdXKpnIskJSP07u2Y
+jHqBg4B+gH2uopB/clzLw7yFd2Dd39zn6eY0NjOPkY4aHBlBQ0Gvo5Fsbmuto5Zf
+YV5XWValp6SilYPDuKvGu67r7upxXUSXmZYdHxxGSEV4aU7Hycbo6uekpqMiJCFI
+SUe3rKC7sKSMfmdtWUCWmJVZW1jd1M2mmYjVzcbv6ujX1s18bVKeoJ0OEAyChIFi
+ZGEsAa3TAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1AQLARkvVukrLgAA
+AB10RVh0Q29tbWVudABDcmVhdGVkIHdpdGggVGhlIEdJTVDvZCVuAAADaElEQVR4
+XrXW45MzSxQG8KdnJrbWtm3ztW3btm1f27Zt+/5FtzuTnp7O5s2Hm9pTtTnp/vCr
+U51nehbTx6kwXUtSAw/if5YZrn3K43W5vJ76mxL8Svs+0jwvGyCkjH3of/oHa6yi
+fdP+vWJfwDM9MKpgnYC3dfs6Qju2LGFGayIYvFc41Mtj4NvngEDNE/mlpflVJUXA
+qnQOryCPAHy4SclgdJDqeDhrKpROOz+A0hfcaNkdgxeQVw346K6kcB7xxcHpUzFh
+nWaq2TloSddhQmwGfIyMjoWJsbQRNQ7OwIRKTfvgo/5nZoSG0xZR8V4OSnR4M+lj
+iu7tPJJ84iEZzoWSSxXESrnDfks3DkThQXIRRhhGCAMWkOVYTi6NgQ+SaTJcgE6N
+Vv/13KwpEzMAMHkNCvVUNB0ua3DxQWcx4EmSWXeSIjIcPG31bZDgMyiya6KeBRR6
+GvYiXGAwNrS/oTYPvakbaxlky7Sqm992xcHEd2KPCDaD6zFfM9cDQBptJViY4pPn
+QZUEzwWGo+14irAX+RJ8CFhPWyUeTxF2ISzB6YCNtjBcDBZ3ga8NMC1FkB1n3YDf
+qlr9AIJtTnVedRQ+BbsE3wCKovAMBvM4AbeaAbHkReCuKF6N8ystiqWYys9lb1X6
+RmJHcUWCrwIe2q6hV4Ld7xcnhoHIw7BaAFisQE/E9OPNleBHgcdoq0IBPwqAtTmN
+gGlJBKyoUBW9sy8crkeN2d0OBFiu5yNNmrjBOfl+E1uejk3sBHosBlyLQHk0vwP5
+5fYXXwKCL1PXHsAyCcbGnt6EsFLx2uvwr4wokWw/8HzrFiVvMX+k32IwYrV+KVu9
+Q8Msw3j3vcSpmEM9+B2qk3VbpkN96K5xCdWyZ/lDersFCrdnMXeZgq7U33kZ+PgT
+Tap7OezgZTg2IY+qmH6Jvv3pZ6T7c75rXPR5M83uFzkonHIfmEdVRK/pyyi8aaP7
+q0lA/KvJtiaLs+GFdSikq8Qwj6qAv/4mxLhv1wYZGfcy/Q5o+P6HH8PllUtX9QIZ
+bN7EMI+qyDQGVzCu7qefVzfyXfH6n90iiF+6KJpkYos8MULOMv376CzzxLwm/vqb
+d4fy+x9pf1IyCcyjar5GmgjwV6My+W8znKRkWM8Aj6pIBYB/aP/XQRyL+e54/u82
+TvUf+mHpzRpwK/QAAAAASUVORK5CYII=
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline; filename=poweredby_mediawiki_88x31.png
+Content-Type: image/png; name=poweredby_mediawiki_88x31.png
+Content-Location: http://content.gpwiki.org/skins/common/images/poweredby_mediawiki_88x31.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAYAAABjyArgAAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAADbdJREFUaN7tmgl0k2W6x+MVKVs3WgYE
+BBmvo8PoIOLgcrwouFxAHS/eo+NcvIjKMHYEdIpIuRTKNi0WZBkWWSwIdKH7TilN
+t7RNtzTNnjZL26RpkiZtmjRpSxH93+f9sBEoDJtzzngs5/xP3uX7nuf7ft+7PM9L
+eTz6p9frJ5FOk0wkDOmOZPqe5STGlqfT6R4idTocDly4cAHffffdkO5AjCFjyZiS
+pjPAyV1dXVznxYsXh/QjiLF0Op0MchoD7Pzmm28wpB9fxNbN02q1+Pbbb2/byIV+
+j7dsNhR4y/39vT9ruIwpY+sFzNaO25FBewC9PV2oF4RDVhTAtVl1+9GqS/jhuv6+
+27b/U9WPBrgqfyE08nBISpehQxaEbocWOpEfQbei12NDr/0r77WebtPPD7BGo7kj
+wNLSh2FWj4O6MAB2SQBMkvugLBuBZvV2GAh4h0UJW0s1tNXPokO7Hq4OzU3Zffbz
+DLz3dRE2pNd627o8vTe8z+HuuWZ751Xt3T19sLk8WJMs/GE22p14fmcW/niEj3ih
+7o4BM7YcYLbz9ff335T6+nrQZ/vaW1fWTIK1MRj2en/YasbAVD0CjcIxcOt9YRA/
+SpB3wW2cCHiC0dnw6E37+d+YQpw/34/5e3Mg1Jjx/rESvH+iEPHlesQUN0JqbMdR
+gQJaswN7z6hQoWnDZymVCE2qwL5CGRrMHXh9fx6K1a3YebYeocllCEsQo9PZh5hy
+Jd6nj/fOV3y8fiDvh3cx2am9GIlVWnx4ohzReXR9tweChjbsL5Ld9LMzMaYc4MbG
+Rq5y/vz5K/TSe3s5RR8tJKh9SM6tw9SntiA2ToRNW9+AuyGIRm4SVOWvwaoYA0fN
+KDgFd6Ot9B60lfugo34EHJqx8LQFw9UeBGvTY0jMKcdD0/dBKGpCO42WnTHnMHNR
+JFZtSxzkf8bmZCw/WYJDJXJ8FCdAvswAl6cHi+l5orIlCE+twcu7c7E1uxbrUqq4
++hsHz+JQsRxPRqZjU1YNQmJLkS1uwtPb07n2V/bl4k8nSjgbDgJXqW3j7hnwqbV0
+4rkdmVh6vAibM0TYnS9FolCPtcmV4CsMg57xH4kxZWyvC/jffr0Cc9/5wluPPpKM
+kY+EcLBZvThuBozyAFhrxsMu5KGv/C58V8KDi+QsJNVQWT0SHS1B6LSPh0n+CVo1
+p7E1ei6UiiSv3eCnPsPsNz8f5P/3NPrau7q58vJTJShWmNBLvt88lA+x3oZnojKw
+JbOO+42tbMCOs2IsOVaIhEoNPo6tpA8jw+asWgJjxLxdmUiobsTaFCF2navHW0fO
+wtPbi/rmdvx+X57Xp9xow3sEl8F/dX8uVDSi5+3IwZ9PCG4J7hWAGxoauLCCgbtc
+fk+sxsIl+7my22VAQ92LuGCfBvQFord1JrTlz6MhZxjMBXfBmOMDc8JwmE4FwXCK
+1uL0keivHoae+mHo1PrDrhoLq9wXcPJQmR+IAkGF18+0FzbgRZopV/tfn1blLUua
+bXgnpgBLCeAhvopr21co4YDsyKuHmkC0WT1YGV+GlXFl2JUvQY3ejN0FErh7ehGR
+UYNVCQKsTqyAzdmNwzQrPjhezNlblVDm9dNq78IiGtEfnCjC14IGru0F+jgxpapB
+z3cjMaaM7fUBz/orFiw57K2fzqjEMwvehir/aejyx6CrPAAXy3xwvmQ4KqJ/gdrN
+EyHeFITaz/xQGzUVjcfHw1N4Dzx1PrDU+MAo9oOsbi1449Yg84zca/f+eeF4Yeme
+Gz6wh0BZHa4bXmfudN5UO5sd7p6ea/phH4WVO5xuLKclxU6/tw1YrVZzlV6aMpfL
+d1Yo5r99gCv3WHJRLXwcR48+A7vmSbibgtGj8sVF6T2wxI2FMiIApR8NR9oyf+SF
++KJqpQ+qt/wCHTkj0Fd/FzpVw2GUzIGxpQqL3luAnKJar58BwFf7/1eRnUb87dzH
+mDK21wU8ZtYazF+6iys7HWakJK+h6R4Mj5HAGR6ErXEi3FX+UEQHozZsFE6uDEDM
+xiDEhAUhNSQIdaFj0Jnqj+7aYWipCYBBMhnyqg14+Y/zkZ4vviHgeRQuRWRWX9F2
+sFiKuTszoTHbb/pF+YoWhKdXoa7JjA9pLb/udTIjbYo/9O+lDe64UH5pgNGIDjlV
+ij209DBbCopgVtDGe/n9R2jZWZdaORiwSqXi4rYemi6Xy5eWiPnvHvbWM3MKsDbs
+OZhES9FR+0t4JGPRnBuM4k8CUBwagINhgdjy2XB8uSkQGavHQbZhFEwJgbigHAa7
+dJHXDm9UOJLPiLx1DvC7ewb5H70iBlPWxsLc0cXVu90eLrK4+8MjqNaavNdJmi1o
+ae8cdL+qtR1GmwNJtLnNpY+lpY/CIAz0tzuckBvavbZlBivuXXPSa+uxiFS8tCv7
+ex9WTFsXh2KVAXFCNUro97ebk7y2LB1OnJM1I5b6BtoYU8bWC9jj8VwhDvDSA976
+seM1mPXqu+hufgUeQyC6laNwsdYH4g3+EHwciK9XT8AXH49E/F+CUBbig5qIcTAm
++sMlGoF25XCKKKZBrxOB57sOWeckXrtTvwd8tf8nI1Mxh5KNQyVSrs6XGCncSsN/
+RKejhsIrQ5sLz32ehYc3JuDB8ARspoSEXWem8G/B3mw8sD4ej25KorArA29R5ME+
+ypIYPnfNqXIVB+zhDafJRyae2c5smqichZQaDexdLupLxKytqdz1ewvEXEwtUBto
+ExWgvMGIp7Zf6lt8kELJAhViSpT4hDbSgef3AlYqldcH/IdDXLnbZUN+5nLYlUHo
+awmEpZpi23KKFJSB6OH7Qho2EudC/JC5IhD5H/iiIGQ0xLvGwpQ1Am2VBFg9Cq1S
+SkLkv8KW6N9A27Df62fKnA3XBPy7v6XSlKyn2DWbqy87KqCYtxrz92SjjiKEt7/k
+Y9mxUji73TRlrbg/LB58qQEfHi/HSztz0WTpgLzFiun/l4r/OnAGhYpmzInOgLrV
+hsBVJyhhaUSb3YG/n5WD96cjZLONoo0qhCZUoJBi7rcOn6WIIg8KGuX/c6QAB/gy
+5Ih1WLCHEp/GVry4KwsHzsnxREQm9wzh6ZV4bd+ZKwAztjyFQsFlHm63+wpxmxwB
+5uqWQvDTZiMy6ncw1d5L2dpv0VU/Hl3SKejTjUNP4Wi0HhgOCYEuDx0N1V4/9JUE
+wl0XCFWaP1SC0ehr9YeusQq8ySuQklfs9TNlbjjmvbt7kP/pGxMJRjse35oMEY3Y
+mZtSoaRp/DwlAnkSPaaEncJ/7s6hkXUG/02h1dSwOEpMivD4tiRUEoABO/E0bdmL
+FxHgBZQVHuRfWscv98VmC+uvbDTRspBFiYsQe85KsCGlGttzRXh2ewYaTe1IrW3k
+bNXqTJi89iQmfHoSCr2ds7EhXYhFlBUO2GRMGVueXC6/JuC7pn+Mhcu+8NaPxX+J
+mQvfRJuuAB7NDDQXTYBLMw1d6qnoE48GNKPQfO5BmHIno7dgBLor/eBsuBedlEYr
+8seiofQJiqW3gffvoUiiBGDA7qQ56/D0H6IH+WfT3tXdjZCTpXhqWwa9WO4lGFGp
+KJQ3U388tmXXIF2kQYZIS6NdTBtaEx7ZkoDsOp3Xzj4aoa/SvQzgfBp9JylNfmxr
+4hW+fhORiHypHt00Ep+OTON8V2tMyKlrwi/Xx+HlL7K56xKrLn2sKk0rntiahoU7
+87EuVnxdwIwtTya7lGN308tcrhmvb8Pjb0Qh6vAZOp134WS8CD4TwyDiz0Zu6mJ0
+SCagW3sf3I3j4RDT0tEcCGPlc3AZH4GjguJeWjqczffBWDcFHksQYBuNtIz9GP9Q
+JM6WKGAy27CdbE+Zux6LP40Z5P9eGh3ttMEVSJvBW34Yx4pUXPvDG+O5ER2RIMXs
+qGQUyJpo+kowPTwZzXT+EJ0hxdQ1iUiubsAxWhf9QmKx8O85tAnpMTsyhdZoBx5Y
+m0hnDaXIpSm/hM4jmH1mh9l/62AB7g45DAe9c5PFzvWFUjLC+k7Rx2FLg0DVQoBT
+0UQb58R1x5BY2oQIStXZ8jXw/IwpY8sBZqmdy+W6plpard6yriENFoMIspoYWKQz
+YK2fDGn5OzDLpqHPRMtBxaewSn4FY+ko6CkRsanGwa5/ALr6fejQBdMaPAYaZeE1
+bV+tP58oJhid6Oxy4iMKkVroZVn7J/ECKChyYB89LKWcizRmRyUhW2jw3huZKcIj
+m2kD20FnErSu7qCoRaw3UapcxvVL1B147WAWfk2b3MpYAamUNrlWri9T1IhPaR1m
+ZeZjGaXOxTT6WZ39bqHQUd5sxuokAdeWJzQj5HgZvipS4PPcWu8zMKYcYKlU+g8B
+X0sy4XpYTTKohW9zdavqfnTqR8Nm1qO+YCbqcvwg5Y9Eo+AVuFsn0BlEFhwdFjQr
+k9HZrrslXz9VMaaMLU8ikXAV9p90tyKbuRrNWj5X1lY+Bn2tH1fWKzeigY4tlZWr
+YNHFQy/7Cu26ibds/6cuxpSx5YnF4tsCfLmkdYshqY301oX5L8Fmb4NadYira6Tx
+aLeof3aAGVteXV0ddzjB/ut+SD+eGFPGlicSiYYA/5MAM7a8iooKJ8s8WCP7i5Qh
+3bkYS3YeQWzdPD6fn9bU1MQRZ2vHEKA7E2PIWDKmjC0vKytrOqmTHUyw8OJWD5aH
+dKUYQ8aSMWVsuT8APH369CRSMslCwpDuSJbvWXJ/Xfn/oEJmrvrbR4cAAAAASUVO
+RK5CYII=
+
+------------hpdfrZrjwVBsyfwwssXCal
+Content-Disposition: inline; filename=load.js
+Content-Type: text/javascript; charset=utf-8; name=load.js
+Content-Location: http://content.gpwiki.org/load.php?debug=false&lang=en-gb&modules=startup&only=scripts&skin=vector&*
+Content-Transfer-Encoding: Quoted-Printable
+
+var isCompatible=3Dfunction(){if(navigator.appVersion.indexOf('MSIE')!=3D=
+=3D-1&&parseFloat(navigator.appVersion.split('MSIE')[1])<6){return false=
+;}return true;};var startUp=3Dfunction(){mediaWiki.loader.register([["si=
+te","1333696396",[],"site"],["startup","20120808064351",[],"startup"],["=
+user","1333696396",[],"user"],["user.options","1333696396",[],"private"]=
+,["skins.vector","1333696396",[]],["skins.monobook","1333696396",[]],["s=
+kins.simple","1333696396",[]],["skins.chick","1333696396",[]],["skins.mo=
+dern","1333696396",[]],["skins.cologneblue","1333696396",[]],["skins.nos=
+talgia","1333696396",[]],["skins.standard","1333696396",[]],["jquery","1=
+333696396",[]],["jquery.async","1333696396",[]],["jquery.autoEllipsis","=
+1333696396",["jquery.highlightText"]],["jquery.checkboxShiftClick","1333=
+696396",[]],["jquery.client","1333696396",[]],["jquery.collapsibleTabs",=
+"1333696396",[]],["jquery.color","1333696396",[]],["jquery.cookie","1333=
+696396",[]],["jquery.delayedBind","1333696396",[]],[
+"jquery.expandableField","1333696396",[]],["jquery.highlightText","13336=
+96396",[]],["jquery.placeholder","1333696396",[]],["jquery.localize","13=
+33696396",[]],["jquery.suggestions","1333696396",["jquery.autoEllipsis"]=
+],["jquery.tabIndex","1333696396",[]],["jquery.textSelection","133369639=
+6",[]],["jquery.tipsy","1333696396",[]],["jquery.ui.core","1333696396",[=
+"jquery"]],["jquery.ui.widget","1333696396",[]],["jquery.ui.mouse","1333=
+696396",["jquery.ui.widget"]],["jquery.ui.position","1333696396",[]],["j=
+query.ui.draggable","1333696396",["jquery.ui.core","jquery.ui.mouse","jq=
+uery.ui.widget"]],["jquery.ui.droppable","1333696396",["jquery.ui.core",=
+"jquery.ui.mouse","jquery.ui.widget","jquery.ui.draggable"]],["jquery.ui=
+.resizable","1333696396",["jquery.ui.core","jquery.ui.widget","jquery.ui=
+.mouse"]],["jquery.ui.selectable","1333696396",["jquery.ui.core","jquery=
+.ui.widget","jquery.ui.mouse"]],["jquery.ui.sortable","1333696396",["jqu=
+ery.ui.core","jquery.ui.widget","jquery.ui.mouse"]],[
+"jquery.ui.accordion","1333696396",["jquery.ui.core","jquery.ui.widget"]=
+],["jquery.ui.autocomplete","1333696396",["jquery.ui.core","jquery.ui.wi=
+dget","jquery.ui.position"]],["jquery.ui.button","1333696396",["jquery.u=
+i.core","jquery.ui.widget"]],["jquery.ui.datepicker","1333696396",["jque=
+ry.ui.core"]],["jquery.ui.dialog","1333696396",["jquery.ui.core","jquery=
+.ui.widget","jquery.ui.button","jquery.ui.draggable","jquery.ui.mouse","=
+jquery.ui.position","jquery.ui.resizable"]],["jquery.ui.progressbar","13=
+33696396",["jquery.ui.core","jquery.ui.widget"]],["jquery.ui.slider","13=
+33696396",["jquery.ui.core","jquery.ui.widget","jquery.ui.mouse"]],["jqu=
+ery.ui.tabs","1333696396",["jquery.ui.core","jquery.ui.widget"]],["jquer=
+y.effects.core","1333696396",["jquery"]],["jquery.effects.blind","133369=
+6396",["jquery.effects.core"]],["jquery.effects.bounce","1333696396",["j=
+query.effects.core"]],["jquery.effects.clip","1333696396",["jquery.effec=
+ts.core"]],["jquery.effects.drop","1333696396",[
+"jquery.effects.core"]],["jquery.effects.explode","1333696396",["jquery.=
+effects.core"]],["jquery.effects.fold","1333696396",["jquery.effects.cor=
+e"]],["jquery.effects.highlight","1333696396",["jquery.effects.core"]],[=
+"jquery.effects.pulsate","1333696396",["jquery.effects.core"]],["jquery.=
+effects.scale","1333696396",["jquery.effects.core"]],["jquery.effects.sh=
+ake","1333696396",["jquery.effects.core"]],["jquery.effects.slide","1333=
+696396",["jquery.effects.core"]],["jquery.effects.transfer","1333696396"=
+,["jquery.effects.core"]],["mediawiki","1333696396",[]],["mediawiki.util=
+","1333696396",["jquery.checkboxShiftClick","jquery.client","jquery.plac=
+eholder"]],["mediawiki.action.history","1333696396",["mediawiki.legacy.h=
+istory"]],["mediawiki.action.edit","1333696396",[]],["mediawiki.action.v=
+iew.rightClickEdit","1333696396",[]],["mediawiki.special.preferences","2=
+0120808064351",[]],["mediawiki.special.search","1333696396",[]],["mediaw=
+iki.language","1333696396",[]],["mediawiki.legacy.ajax",
+"20120720105746",["mediawiki.legacy.wikibits"]],["mediawiki.legacy.ajaxw=
+atch","1333696396",["mediawiki.legacy.wikibits"]],["mediawiki.legacy.blo=
+ck","1333696396",["mediawiki.legacy.wikibits"]],["mediawiki.legacy.commo=
+nPrint","1333696396",[]],["mediawiki.legacy.config","1333696396",["media=
+wiki.legacy.wikibits"]],["mediawiki.legacy.diff","1333696396",["mediawik=
+i.legacy.wikibits"],"mediawiki.action.history"],["mediawiki.legacy.edit"=
+,"1333696396",["mediawiki.legacy.wikibits"]],["mediawiki.legacy.enhanced=
+changes","1333696396",["mediawiki.legacy.wikibits"]],["mediawiki.legacy.=
+history","1333696396",["mediawiki.legacy.wikibits"],"mediawiki.action.hi=
+story"],["mediawiki.legacy.htmlform","1333696396",["mediawiki.legacy.wik=
+ibits"]],["mediawiki.legacy.IEFixes","1333696396",["mediawiki.legacy.wik=
+ibits"]],["mediawiki.legacy.metadata","20120722172634",["mediawiki.legac=
+y.wikibits"]],["mediawiki.legacy.mwsuggest","1333696396",["mediawiki.leg=
+acy.wikibits"]],["mediawiki.legacy.prefs","1333696396",[
+"mediawiki.legacy.wikibits","mediawiki.legacy.htmlform"]],["mediawiki.le=
+gacy.preview","1333696396",["mediawiki.legacy.wikibits"]],["mediawiki.le=
+gacy.protect","1333696396",["mediawiki.legacy.wikibits"]],["mediawiki.le=
+gacy.search","1333696396",["mediawiki.legacy.wikibits"]],["mediawiki.leg=
+acy.shared","1333696396",[]],["mediawiki.legacy.oldshared","1333696396",=
+[]],["mediawiki.legacy.upload","1333696396",["mediawiki.legacy.wikibits"=
+]],["mediawiki.legacy.wikibits","20120720105746",["mediawiki.language"]]=
+,["mediawiki.legacy.wikiprintable","1333696396",[]]]);mediaWiki.config.s=
+et({"wgLoadScript":"/load.php","debug":false,"skin":"vector","stylepath"=
+:"/skins","wgUrlProtocols":"http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|ir=
+c\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/=
+\\/|mailto\\:|news\\:|svn\\:\\/\\/|git\\:\\/\\/|mms\\:\\/\\/","wgArticle=
+Path":"/index.php/$1","wgScriptPath":"","wgScriptExtension":".php","wgSc=
+ript":"/index.php","wgVariantArticlePath":false,"wgActionPaths":
+[],"wgServer":"http://content.gpwiki.org","wgUserLanguage":"en-gb","wgCo=
+ntentLanguage":"en-gb","wgVersion":"1.17.0","wgEnableAPI":true,"wgEnable=
+WriteAPI":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTabl=
+e":["",""],"wgMainPageTitle":"Main Page","wgFormattedNamespaces":{"-2":"=
+Media","-1":"Special","0":"","1":"Talk","2":"User","3":"User talk","4":"=
+GPWiki","5":"GPWiki talk","6":"File","7":"File talk","8":"MediaWiki","9"=
+:"MediaWiki talk","10":"Template","11":"Template talk","12":"Help","13":=
+"Help talk","14":"Category","15":"Category talk","510":"D3DBook","511":"=
+D3DBook talk"},"wgNamespaceIds":{"media":-2,"special":-1,"":0,"talk":1,"=
+user":2,"user_talk":3,"gpwiki":4,"gpwiki_talk":5,"file":6,"file_talk":7,=
+"mediawiki":8,"mediawiki_talk":9,"template":10,"template_talk":11,"help"=
+:12,"help_talk":13,"category":14,"category_talk":15,"d3dbook":510,"d3dbo=
+ok_talk":511,"image":6,"image_talk":7},"wgSiteName":"GPWiki","wgFileExte=
+nsions":["png","gif","jpg","jpeg","zip","txt","gz"],"wgDBname":
+"gpw_mw_db","wgExtensionAssetsPath":"/extensions","wgResourceLoaderMaxQu=
+eryLength":-1});};if(isCompatible()){document.write("\x3cscript src=3D\"=
+/load.php?debug=3Dfalse\x26amp;lang=3Den-gb\x26amp;modules=3Djquery%7Cme=
+diawiki\x26amp;only=3Dscripts\x26amp;skin=3Dvector\x26amp;version=3D2011=
+0820T205500Z\"\x3e\x3c/script\x3e");}delete isCompatible;;
+------------hpdfrZrjwVBsyfwwssXCal--

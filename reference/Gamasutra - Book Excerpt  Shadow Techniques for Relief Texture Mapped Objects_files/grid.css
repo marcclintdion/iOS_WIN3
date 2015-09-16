@@ -1,0 +1,362 @@
+/* --------------------------------------------------------------
+	THE MEASUREMENTS ON THIS FILE SHOULD NOT BE EDITED.  
+   
+    * Page width:            1006 px (main size) / 766px (tablet size)
+    * Number of columns:     24  / 24
+    * Column width:          40 px / 30px
+    * Margin width:          2 px / 2px
+
+	This file was generated with GridCalc (http://www.problem.se/labs/gridcalc/)
+
+   grid.css   * Sets up an easy-to-use grid of 24 columns and contains RESETS and OVERRIDES misc classes to be used across all sites.
+-------------------------------------------------------------- */
+
+/***** Tablet (Smaller than 1005px) *****/
+@media only screen and (min-width: 766px) and (max-width: 1005px) {
+
+.example										{ margin:0; padding:0; }
+
+}
+
+/***** Phone (portrait 300px) *****/
+@media only screen and (max-width: 765px) {
+.mobile_image_transform img 						{width:100%; height: auto;}
+.example										{ margin:0; padding:0; }
+select {width:95%;}
+.commentslevel1 {width:182px;}
+.commentslevel2 {width:87px;}
+
+}
+	
+/***** Phone (landscape 420px) *****/
+@media only screen and (min-width: 480px) and (max-width: 765px) {
+.mobile_image_transform img {width:100%; height: auto;} 	
+.example										{ margin:0; padding:0; }
+.commentslevel1 {width:338px;}
+.commentslevel2 {width:243px;}
+}
+
+
+/***** Retina *****/
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+
+.example										{ margin:0; padding:0; }
+
+}
+
+
+/* =RESETS AND OVERRIDES
+-------------------------------------------------------------- */
+html, body, div, hr, span, object, iframe, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead  {	
+	margin:0;	
+	padding:0;	
+	border:0;
+}
+
+img 		{line-height:0;}
+
+article, aside, canvas, clearfix, container, details, figcaption, figure, footer, header, hgroup, nav, section, summary, video {
+	display: block;
+} /*for lower FF to work w HTML5*/ 
+
+
+/* =GRID  Blueprint  -------------------------------------------------------------- */
+/***** Screen 1006px *****/
+
+.container {width: 1006px; margin:0 auto; position:relative; word-wrap: break-word;}
+
+/* Sets up basic grid floating and margin. */
+div.span-1, div.span-2, div.span-3, div.span-4, div.span-5, div.span-6, div.span-7, div.span-8, div.span-9, div.span-10, div.span-11, div.span-12, div.span-13, div.span-14, div.span-15, div.span-16, div.span-17, div.span-18, div.span-19, div.span-20, div.span-21, div.span-22, div.span-23, div.span-24 {float:left; margin-right: 2px;}
+
+/* The last column in a row needs this class. */
+div.last { margin-right: 0; }
+
+/* Use these classes to set the width of a column. */
+.span-1  { width: 40px;}
+.span-2  { width: 82px;}
+.span-3  { width: 124px;}
+.span-4  { width: 166px;}
+.span-4 img {max-width:150px;}
+.span-5  { width: 208px;}
+.span-6  { width: 250px;}
+.span-7  { width: 292px;}
+.span-8  { width: 334px;}
+.span-9  { width: 376px;}
+.span-10 { width: 418px;}
+.span-11 { width: 460px;}
+.span-12 { width: 502px;}
+.span-13 { width: 544px;}
+.span-14 { width: 586px;}
+.span-15 { width: 628px;}
+.span-16 { width: 670px;}
+.span-17 { width: 712px;}
+.span-18 { width: 754px;}
+.span-19 { width: 796px;}
+.span-20 { width: 838px;}
+.span-21 { width: 880px;}
+.span-22 { width: 922px;}
+.span-23 { width: 964px;}
+.span-24, div.span-24 { width: 1006px; margin: 0; }
+
+
+/* Add these to a column to append empty cols. */
+.append-1  { padding-right: 42px;}
+.append-2  { padding-right: 84px;}
+.append-3  { padding-right: 126px;}
+.append-4  { padding-right: 168px;}
+.append-5  { padding-right: 210px;}
+.append-6  { padding-right: 252px;}
+.append-7  { padding-right: 294px;}
+.append-8  { padding-right: 336px;}
+.append-9  { padding-right: 378px;}
+.append-10 { padding-right: 420px;}
+.append-11 { padding-right: 462px;}
+.append-12 { padding-right: 504px;}
+.append-13 { padding-right: 546px;}
+.append-14 { padding-right: 588px;}
+.append-15 { padding-right: 630px;}
+.append-16 { padding-right: 672px;}
+.append-17 { padding-right: 714px;}
+.append-18 { padding-right: 756px;}
+.append-19 { padding-right: 798px;}
+.append-20 { padding-right: 840px;}
+.append-21 { padding-right: 882px;}
+.append-22 { padding-right: 924px;}
+.append-23 { padding-right: 966px;}
+
+
+/* Add these to a column to prepend empty cols. */
+.prepend-1  { padding-left: 42px;}
+.prepend-2  { padding-left: 84px;}
+.prepend-3  { padding-left: 126px;}
+.prepend-4  { padding-left: 168px;}
+.prepend-5  { padding-left: 210px;}
+.prepend-6  { padding-left: 252px;}
+.prepend-7  { padding-left: 294px;}
+.prepend-8  { padding-left: 336px;}
+.prepend-9  { padding-left: 378px;}
+.prepend-10 { padding-left: 420px;}
+.prepend-11 { padding-left: 462px;}
+.prepend-12 { padding-left: 504px;}
+.prepend-13 { padding-left: 546px;}
+.prepend-14 { padding-left: 588px;}
+.prepend-15 { padding-left: 630px;}
+.prepend-16 { padding-left: 672px;}
+.prepend-17 { padding-left: 714px;}
+.prepend-18 { padding-left: 756px;}
+.prepend-19 { padding-left: 798px;}
+.prepend-20 { padding-left: 840px;}
+.prepend-21 { padding-left: 882px;}
+.prepend-22 { padding-left: 924px;}
+.prepend-23 { padding-left: 966px;}
+
+
+
+/* Border on right hand side of a column. */
+div.border {
+  padding-right:0px;
+  margin-right:1px;
+  border-right: 1px solid #eee;
+}
+
+/* Border with more whitespace, spans one column. */
+div.colborder {
+  padding-right:42px;
+  margin-right:39px;
+  border-right: 1px solid #eee;
+}
+
+/* Use these classes on an element to push it into the 
+   next column, or to pull it into the previous column.  */
+
+.pull-1 { margin-left: -42px;}
+.pull-2 { margin-left: -84px;}
+.pull-3 { margin-left: -126px;}
+.pull-4 { margin-left: -168px;}
+.pull-5 { margin-left: -210px;}
+.pull-6 { margin-left: -252px;}
+.pull-7 { margin-left: -294px;}
+.pull-8 { margin-left: -336px;}
+.pull-9 { margin-left: -378px;}
+.pull-10 { margin-left: -420px;}
+.pull-11 { margin-left: -462px;}
+.pull-12 { margin-left: -504px;}
+.pull-13 { margin-left: -546px;}
+.pull-14 { margin-left: -588px;}
+.pull-15 { margin-left: -630px;}
+.pull-16 { margin-left: -672px;}
+.pull-17 { margin-left: -714px;}
+.pull-18 { margin-left: -756px;}
+.pull-19 { margin-left: -798px;}
+.pull-20 { margin-left: -840px;}
+.pull-21 { margin-left: -882px;}
+.pull-22 { margin-left: -924px;}
+.pull-23 { margin-left: -966px;}
+.pull-24 { margin-left: -1008px;}
+
+.pull-1, .pull-2, .pull-3, .pull-4, .pull-5, .pull-6, .pull-7, .pull-8, .pull-9, .pull-10, .pull-11, .pull-12, .pull-13, .pull-14, .pull-15, .pull-16, .pull-17, .pull-18, .pull-19, .pull-20, .pull-21, .pull-22, .pull-23, .pull-24 {float:left;position:relative;}
+
+
+.push-1 { margin: 0 -42px 1.5em 42px;}
+.push-2 { margin: 0 -84px 1.5em 84px;}
+.push-3 { margin: 0 -126px 1.5em 126px;}
+.push-4 { margin: 0 -168px 1.5em 168px;}
+.push-5 { margin: 0 -210px 1.5em 210px;}
+.push-6 { margin: 0 -252px 1.5em 252px;}
+.push-7 { margin: 0 -294px 1.5em 294px;}
+.push-8 { margin: 0 -336px 1.5em 336px;}
+.push-9 { margin: 0 -378px 1.5em 378px;}
+.push-10 { margin: 0 -420px 1.5em 420px;}
+.push-11 { margin: 0 -462px 1.5em 462px;}
+.push-12 { margin: 0 -504px 1.5em 504px;}
+.push-13 { margin: 0 -546px 1.5em 546px;}
+.push-14 { margin: 0 -588px 1.5em 588px;}
+.push-15 { margin: 0 -630px 1.5em 630px;}
+.push-16 { margin: 0 -672px 1.5em 672px;}
+.push-17 { margin: 0 -714px 1.5em 714px;}
+.push-18 { margin: 0 -756px 1.5em 756px;}
+.push-19 { margin: 0 -798px 1.5em 798px;}
+.push-20 { margin: 0 -840px 1.5em 840px;}
+.push-21 { margin: 0 -882px 1.5em 882px;}
+.push-22 { margin: 0 -924px 1.5em 924px;}
+.push-23 { margin: 0 -966px 1.5em 966px;}
+.push-24 { margin: 0 -1008px 1.5em 1008px;}
+
+.push-1, .push-2, .push-3, .push-4, .push-5, .push-6, .push-7, .push-8, .push-9, .push-10, .push-11, .push-12, .push-13, .push-14, .push-15, .push-16, .push-17, .push-18, .push-19, .push-20, .push-21, .push-22, .push-23, .push-24 {float:right;position:relative;}
+
+
+/***** Tablet (Smaller than 1005px)  *****/
+@media only screen and (min-width: 766px) {
+.show-phone 						{ display:none !important; }
+.show-tablet 						{ display:inherit !important; }
+.show-screen						{ display:none !important; }
+	
+.hide-phone						{ display:inherit !important; }
+.hide-tablet						{ display:none !important; }
+.hide-screen						{ display:inherit !important; }
+}
+
+
+
+
+
+
+/***** Phone (portrait 300px)  adapted and completed *****/
+@media only screen and (max-width: 765px) {
+
+.container {width: 300px; margin:0 auto; position:relative;}
+
+/* Sets up basic grid floating and margin. */
+div.span-1, div.span-2, div.span-3, div.span-4, div.span-5, div.span-6, div.span-7, div.span-8, div.span-9, div.span-10, div.span-11, div.span-12, div.span-13, div.span-14, div.span-15, div.span-16, div.span-17, div.span-18, div.span-19, div.span-20, div.span-21, div.span-22, div.span-23, div.span-24 {float:left; margin-right: 2px; margin-top:0px}
+
+/* The last column in a row needs this class. */
+div.last { margin-right: 0; }
+
+/* Use these classes to set the width of a column. */
+.span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12, .span-13, .span-14, .span-15, .span-16, .span-17, .span-18, .span-19, .span-20, .span-21, .span-22, .span-23, .span-24, div.span-24 
+								{ width:300px; margin:10px 0 0 0; overflow:hidden; float:left; display:inline; }
+
+.show-phone 						{ display:inherit !important; }
+.show-tablet 						{ display:none !important; }
+.show-screen						{ display:none !important; }
+	
+.hide-phone						{ display:none !important; }
+.hide-tablet						{ display:inherit !important; }
+.hide-screen						{ display:inherit !important; }
+			
+}	 
+
+
+
+
+/***** Phone (landscape 420px) *****/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+.container {width: 456px; margin:0 auto; position:relative;}
+
+/* Sets up basic grid floating and margin. */
+div.span-1, div.span-2, div.span-3, div.span-4, div.span-5, div.span-6, div.span-7, div.span-8, div.span-9, div.span-10, div.span-11, div.span-12, div.span-13, div.span-14, div.span-15, div.span-16, div.span-17, div.span-18, div.span-19, div.span-20, div.span-21, div.span-22, div.span-23, div.span-24 {float:left; margin-right: 2px;}
+
+/* The last column in a row needs this class. */
+div.last { margin-right: 0; }
+
+/* Use these classes to set the width of a column. */
+.span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12, .span-13, .span-14, .span-15, .span-16, .span-17, .span-18, .span-19, .span-20, .span-21, .span-22, .span-23, .span-24, div.span-24 
+								{ width:456px; margin:10px 0 0 0; overflow:hidden; float:left; display:inline; }
+
+.show-phone 						{ display:inherit !important; }
+.show-tablet 						{ display:none !important; }
+.show-screen						{ display:none !important; }
+	
+.hide-phone							{ display:none !important; }
+.hide-tablet						{ display:inherit !important; }
+.hide-screen						{ display:inherit !important; }
+
+}
+
+
+/* Misc classes and elements
+-------------------------------------------------------------- */
+
+/* In case you need to add a gutter above/below an element */
+.prepend-top {
+  margin-top:1.5em;
+}
+.append-bottom {
+  margin-bottom:1.5em;
+}
+=======
+
+/* Use this class on any .span / container to see the grid. */
+.showgrid {
+  background: url(src/grid.png);
+}
+
+/* =Miscellaneous classes and elements
+-------------------------------------------------------------- */
+
+/* To create standard spacing to the left of anything, text, lists, groups of things. */
+.left15  { margin-left:15px;}  /*is the spacing of 1 gutter*/
+.left10  { margin-left:10px;} 
+.right10 { margin-right:10px;} 
+.right15 { margin-right:10px;} 
+
+/* To create standard spacing below anything, text, lists, groups of things. */
+
+.bottom1	{ margin-bottom:1px;}
+.bottom2	{ margin-bottom:2px;}
+.bottom3	{ margin-bottom:3px;}
+.bottom5	{ margin-bottom:5px;}
+.bottom10	{ margin-bottom:10px;}
+.bottom15	{ margin-bottom:15px;}
+.bottom20	{ margin-bottom:20px;}
+.bottom25	{ margin-bottom:25px;}
+.bottom30	{ margin-bottom:30px;}
+.bottom40	{ margin-bottom:40px;}
+.bottom45	{ margin-bottom:45px;}
+.bottom50	{ margin-bottom:50px;}
+.bottom60	{ margin-bottom:60px;}
+.bottom70	{ margin-bottom:70px;}
+.bottom80	{ margin-bottom:80px;}
+.bottom90	{ margin-bottom:90px;}
+
+
+/* Clearing floats without extra markup
+   Based on How To Clear Floats Without Structural Markup by PiE
+   [http://www.positioniseverything.net/easyclearing.html] */
+
+.clearfix:after, .container:after {  content: "\0020";  display: block;  height: 0;  clear: both;  visibility: hidden;  overflow:hidden;}
+.clear 	  { clear:both; }
+
+.first      { margin-left:0; padding-left:0; }
+.last       { margin-right:0; padding-right:0; }
+.top        { margin-top:0; padding-top:0; }
+.bottom     { margin-bottom:0; padding-bottom:0; }
+.right 	  {float:right;}
+.left 	  {float:left;}
+
+.center 	  {text-align:center;}
+.textright  {text-align:right;}
+.textleft   {text-align:left;}
+
+hr.space 	  { background: #08bebc;  color: #08bebc;  visibility: hidden;}

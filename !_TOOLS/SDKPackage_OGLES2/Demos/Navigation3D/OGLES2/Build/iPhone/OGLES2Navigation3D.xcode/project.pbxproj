@@ -1,0 +1,1477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2D500B9A0D5A79CF00DBA0E3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D500B990D5A79CF00DBA0E3 /* QuartzCore.framework */; };
+		BA240AC20FEFE77A00DE852D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA240AC10FEFE77A00DE852D /* OpenGLES.framework */; };
+		F8012BF148F55ABADB3176DD /* CM_US_IL_CHICAGO_013_016_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F882A696CD8B8C381069FCD1 /* CM_US_IL_CHICAGO_013_016_L.DAE.pod */; };
+		F801648E91BFB5D61B9F9E00 /* CM_US_IL_CHICAGO_011_016_H.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8CCE65213EB3CB07E6C3848 /* CM_US_IL_CHICAGO_011_016_H.DAE.pod */; };
+		F8016506BF6C43B1FA6F8C04 /* 017_FOD.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8FCFD06DA4F2F87BD5D384F /* 017_FOD.PNG.pvr */; };
+		F8042BA66282A3C1CFBE9DEC /* CM_US_IL_CHICAGO_013_015_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F89D4926005CED9ABD653F79 /* CM_US_IL_CHICAGO_013_015_L.DAE.pod */; };
+		F804CD931E0A2A06F1BE7336 /* 076_FRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F894CE282930A92F2E319F68 /* 076_FRC.PNG.pvr */; };
+		F806A2C5EC57B084B2C16C5C /* US_IL_13448_CHICAGO_CARBIDE_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8B24F5E1AE1B2C438ECCC60 /* US_IL_13448_CHICAGO_CARBIDE_L.PNG.pvr */; };
+		F8086ADB6B03EFA8288E62AD /* 037_GOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F82EEBD66FCA36AB88BAA02A /* 037_GOC.PNG.pvr */; };
+		F80986110F49A3BE0893BCF1 /* 025_FOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8D3657446958569BF3EAB3E /* 025_FOC.PNG.pvr */; };
+		F80A08BD2A56DD5D20A2F655 /* 032_GOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8E3E435CD76C616901888C8 /* 032_GOC.PNG.pvr */; };
+		F80A1D6F6C1F0326DCD4FA2E /* BuildingFragShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F862DF0C2A0FD082F029E501 /* BuildingFragShader.fsh */; };
+		F80A34D73D7D9E46919268BE /* US_L_CONCRETE-DETAIL.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8CBEC9E0D1F4BC10F01C758 /* US_L_CONCRETE-DETAIL.PNG.pvr */; };
+		F80AB43D83F9FEB6A8CF58BD /* US_IL_CHICAGO_OGILVIE_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8BD1B07DB8F626953019A12 /* US_IL_CHICAGO_OGILVIE_L.PNG.pvr */; };
+		F80B0D6306E321A78186ED94 /* 087_GCA.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F88A2300AFC3D32A05C0F826 /* 087_GCA.PNG.pvr */; };
+		F80BBA9E64AB4B6EFF0DA47E /* 036_FOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F84A5925E026F5D5EC7AB265 /* 036_FOC.PNG.pvr */; };
+		F80E25DAFB8A9ACA146EF699 /* CM_US_IL_CHICAGO_010_016_H.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F86D0C563693C5B0B94F4D3E /* CM_US_IL_CHICAGO_010_016_H.DAE.pod */; };
+		F80E31F368E52B0E965DE940 /* US_IL_13459_CHICAGO_LASALLE_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F820C114ADC43473BBE1DB85 /* US_IL_13459_CHICAGO_LASALLE_L.PNG.pvr */; };
+		F80E3292575C64A9AFF9E3AE /* 086_FOF.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8695FF76046C03748619683 /* 086_FOF.PNG.pvr */; };
+		F80F399AC451CBD0E7BA693D /* 023_RUG.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F858C2A88351F7F4893412CB /* 023_RUG.PNG.pvr */; };
+		F80FE43C761FA78D143BED09 /* US_R_STREET-DASHED.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8BF6A59E880FFBFF54FCF83 /* US_R_STREET-DASHED.PNG.pvr */; };
+		F81019EB448A68E149C13ED5 /* 027_FOD.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F84881ADF55381A61701F97A /* 027_FOD.PNG.pvr */; };
+		F81104D1EB77CE219FF5B3E4 /* CM_US_IL_CHICAGO_011_015_H.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8A48A5B2BB5C6BD7FB8CE2B /* CM_US_IL_CHICAGO_011_015_H.DAE.pod */; };
+		F812461A1015DE7B003F1905 /* libOGLES2Tools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F80B21C91015CA1600A93BE2 /* libOGLES2Tools.a */; };
+		F8130BC2A68DAF3C06D65A76 /* US_IL_13458_CHICAGO_SMURFIT_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F88E3129FA8DC1BB7FFBEB73 /* US_IL_13458_CHICAGO_SMURFIT_L.PNG.pvr */; };
+		F8150852DBF9ECCD76BF3D67 /* CM_US_IL_CHICAGO_012_016_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F867189704FB6E9E9207EFCD /* CM_US_IL_CHICAGO_012_016_L.DAE.pod */; };
+		F817AF1BED4CE30B9D16020E /* 033_GOA.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F84F6E3FD9B0E0A3906CB7E5 /* 033_GOA.PNG.pvr */; };
+		F818C90C089A4F9DC489222A /* US_R_STREET-LANE-FILLER.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8CEC518A4098C5DF33ADC36 /* US_R_STREET-LANE-FILLER.PNG.pvr */; };
+		F81A2D83FCEE183761183B34 /* CM_US_IL_CHICAGO_009_015_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F87013FC25A507472E37C817 /* CM_US_IL_CHICAGO_009_015_L.DAE.pod */; };
+		F81A3B442C8D9A4067B4BB70 /* 069_GCA.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F88944334475E09EFD503935 /* 069_GCA.PNG.pvr */; };
+		F81A6F8E2AB12FC26229AF99 /* 034_FOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8A39C247CC8BEB774554882 /* 034_FOC.PNG.pvr */; };
+		F81AA9A727F820B7778A2AEC /* 068_GCD.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8127D340FC9E806B2A4F6FB /* 068_GCD.PNG.pvr */; };
+		F81D1ACE075BE37872B37519 /* CM_US_IL_CHICAGO_011_014_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F82B7B154B6391D727C845A3 /* CM_US_IL_CHICAGO_011_014_L.DAE.pod */; };
+		F81EA4268D5581293906A879 /* US_IL_CHICAGO_JAMESTHOMPSON_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8AB3EE7264F95D5E32C156B /* US_IL_CHICAGO_JAMESTHOMPSON_L.PNG.pvr */; };
+		F8205A8B130408E100253AE7 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A82130408E100253AE7 /* Default-Portrait.png */; };
+		F8205A8C130408E100253AE7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A83130408E100253AE7 /* Default.png */; };
+		F8205A8D130408E100253AE7 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A84130408E100253AE7 /* Icon-72.png */; };
+		F8205A8E130408E100253AE7 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A85130408E100253AE7 /* Icon-Small-50.png */; };
+		F8205A8F130408E100253AE7 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A86130408E100253AE7 /* Icon-Small.png */; };
+		F8205A90130408E100253AE7 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A87130408E100253AE7 /* Icon-Small@2x.png */; };
+		F8205A91130408E100253AE7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A88130408E100253AE7 /* Icon.png */; };
+		F8205A92130408E100253AE7 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8205A89130408E100253AE7 /* Icon@2x.png */; };
+		F8205A93130408E100253AE7 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = F8205A8A130408E100253AE7 /* iTunesArtwork */; };
+		F820C97F00CC6D4F1CC5729B /* SkyboxVertShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F82069E704456FECDECE0730 /* SkyboxVertShader.vsh */; };
+		F82297005BB34C427E44B949 /* BuildingVertShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F82F14C5A5104CD5E6DBB683 /* BuildingVertShader.vsh */; };
+		F8231276A735ED358EB8D6C9 /* 035_GOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8569E15492EF9DD86BF477C /* 035_GOC.PNG.pvr */; };
+		F823E109234B6511AF6C195F /* US_L_WATER-COLOUR.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F89B878D7EAFA8AF41E5D434 /* US_L_WATER-COLOUR.PNG.pvr */; };
+		F825027C1D3C945AB2AF733C /* Skybox.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8CD01D06885481BFCEFD604 /* Skybox.pvr */; };
+		F825AE09CAF58F3961FBD755 /* 016_RTR.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F87B7302FA50E9E557F17271 /* 016_RTR.PNG.pvr */; };
+		F82662DBF9F32A4C40BF61C5 /* 041_GRB.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F86C9BE4E0C4DB05E9A17370 /* 041_GRB.PNG.pvr */; };
+		F827BE22A82B77CA7779D078 /* CM_US_IL_CHICAGO_010_017_H.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8FA9D5FC35198DA0A08D325 /* CM_US_IL_CHICAGO_010_017_H.DAE.pod */; };
+		F82B7E4395A54B0FDDF57F3D /* 008_RUG.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F81651FD99225768EB7BCCE2 /* 008_RUG.PNG.pvr */; };
+		F82CDD3DE24E6A4A3089CCB6 /* US_IL_13451_CHICAGO_CULTURAL_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F863BD89B622FE32383C7E71 /* US_IL_13451_CHICAGO_CULTURAL_L.PNG.pvr */; };
+		F82FB57BEDEB1579B974EFD8 /* CM_US_IL_CHICAGO_010_014_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F89520350845A7108185DE37 /* CM_US_IL_CHICAGO_010_014_L.DAE.pod */; };
+		F8307EBEE53615E998FE6C9C /* 092_GCA.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8E4579B5887AD8C3ADA2782 /* 092_GCA.PNG.pvr */; };
+		F83187779520A05C8215F8C1 /* 009_RUG.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8CCABA0139F2EF60A5D7578 /* 009_RUG.PNG.pvr */; };
+		F83233723EBB96992A6AFE5E /* 083_FRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F868FC771E2BA29A06FD630C /* 083_FRC.PNG.pvr */; };
+		F833DF0A6DB97D0055EB68C2 /* 067_FCC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8214BEEAC552F73AAD2B7AB /* 067_FCC.PNG.pvr */; };
+		F83630AEB6FB7BF0A7F26EC7 /* US_IL_CHICAGO_UNIONSTATION_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F88A86D5388FF3BD1CF5E22B /* US_IL_CHICAGO_UNIONSTATION_L.PNG.pvr */; };
+		F836A8E9640A951D78AE1991 /* US_IL_13462_CHICAGO_WILLOUGHBY_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8253873976D43669B75A6EA /* US_IL_13462_CHICAGO_WILLOUGHBY_L.PNG.pvr */; };
+		F83700F13BCA3F0EE2B75766 /* CM_US_IL_CHICAGO_009_018_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8D0312EB893F97CB0683F4B /* CM_US_IL_CHICAGO_009_018_L.DAE.pod */; };
+		F8372CE79348D8EEDBAEEE68 /* 035_FOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8F6A88E5D54967100C56EA9 /* 035_FOC.PNG.pvr */; };
+		F8380568D6E340C18EE40DFA /* US_IL_CHICAGO_BOEINGBUILDING_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8F91AD6039BB4DBCAA72519 /* US_IL_CHICAGO_BOEINGBUILDING_L.PNG.pvr */; };
+		F838E9998F1F15C911DFEA23 /* 085_GRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8DFD2685EA834426782F67F /* 085_GRC.PNG.pvr */; };
+		F8393EED18A4021EE56AF2A4 /* US_R_HIGHWAY-SOLID.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8C69AE708C13D45BDF04837 /* US_R_HIGHWAY-SOLID.PNG.pvr */; };
+		F83961D2D4A4245F7B904FFA /* 027_RUW.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F87266F9F17B8E85F5C85E20 /* 027_RUW.PNG.pvr */; };
+		F839E4DE34330696BB43A9F9 /* CM_US_IL_CHICAGO_011_016_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8122DDB93CE355D1A868079 /* CM_US_IL_CHICAGO_011_016_L.DAE.pod */; };
+		F83A2675207F91F35CBAA4EA /* 082_FCD.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F800946FDED32432A5FF9293 /* 082_FCD.PNG.pvr */; };
+		F83A78A697A8C74126F6BC10 /* US_R_WALKWAY-UNMARKED.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8F2749CA63092C3F19C08E3 /* US_R_WALKWAY-UNMARKED.PNG.pvr */; };
+		F83BE96351FF51473BC1487A /* US_L_PARK-COLOUR.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F82F0040038B4651CE1ECA7B /* US_L_PARK-COLOUR.PNG.pvr */; };
+		F83DA56BEF3D63EC2AF0BCC1 /* 028_GOF.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F869927A23F9612150E4EEF6 /* 028_GOF.PNG.pvr */; };
+		F83F2609631D72F80A8AEE7D /* 030_GOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8E17B5BEED31405FFA517E3 /* 030_GOC.PNG.pvr */; };
+		F83F8B522EE7679442184165 /* 007_RUG.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F84604CB326719BB724E4D43 /* 007_RUG.PNG.pvr */; };
+		F8411F7FA35ADD4338A91C4F /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F83A86645DDC3D69B5253277 /* EAGLView.mm */; };
+		F841CD9A1BA808330D268817 /* US_R_STREET-UNMARKED.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8BDD49131DD7ECB58E49731 /* US_R_STREET-UNMARKED.PNG.pvr */; };
+		F8421BE65AE2BB8BDA76431B /* modelindex.nav in Resources */ = {isa = PBXBuildFile; fileRef = F812D995DCB46F2CCF3A898E /* modelindex.nav */; };
+		F8448370747648651F4FADD3 /* CM_US_IL_CHICAGO_012_017_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F88BB1C96B26ED24297023C5 /* CM_US_IL_CHICAGO_012_017_L.DAE.pod */; };
+		F8449B2B62A697A02DFE249F /* CM_US_IL_CHICAGO_008_015_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8DE1B778703BB6A2022F297 /* CM_US_IL_CHICAGO_008_015_L.DAE.pod */; };
+		F8488A229EB0AEAA3FEABE76 /* CM_US_IL_CHICAGO_010_017_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F848692F9E99A0E0772C1063 /* CM_US_IL_CHICAGO_010_017_L.DAE.pod */; };
+		F84BDC909403743333C15F46 /* US_IL_CHICAGO_CITYHALL_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8099BD237C7834030A0DCB5 /* US_IL_CHICAGO_CITYHALL_L.PNG.pvr */; };
+		F84CDFC6E519DD6B22FAFB07 /* US_IL_13461_CHICAGO_UNITRIN_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F80D3D336F107C17AC0B86FD /* US_IL_13461_CHICAGO_UNITRIN_L.PNG.pvr */; };
+		F84E57AEEF17E513CFC24A95 /* CM_US_IL_CHICAGO_009_017_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F837D9E47A46F1471F47A594 /* CM_US_IL_CHICAGO_009_017_L.DAE.pod */; };
+		F84EE74F3F81756F39DBACD3 /* 031_GOD.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8CBF162ADC4D29234136595 /* 031_GOD.PNG.pvr */; };
+		F84F382BFC55A9ED92A0DBE0 /* 073_FRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8076885C372F55EF5B5516C /* 073_FRC.PNG.pvr */; };
+		F84F439D433AD55A8DCC29AF /* 036_GOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F819A4E9A72A480282186997 /* 036_GOC.PNG.pvr */; };
+		F84F49F164D50339747C20AF /* US_R_WALKWAY-SOLID.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8233328814F76990A7AEC64 /* US_R_WALKWAY-SOLID.PNG.pvr */; };
+		F8511E325A14C7B1512D37CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B085DF517D53BDEC57548B /* main.m */; };
+		F856CE54554C18C00BC6A517 /* 034_GOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F883FCE11F20E389A5FB4FA0 /* 034_GOC.PNG.pvr */; };
+		F8574450F0E66F3D3564E76C /* CM_US_IL_CHICAGO_011_017_H.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8BFCAD2524D954356A672F8 /* CM_US_IL_CHICAGO_011_017_H.DAE.pod */; };
+		F857FC0BF21BCF9EC2A60899 /* occlusiondata.nav in Resources */ = {isa = PBXBuildFile; fileRef = F820638D4FFDB0828B3E0D80 /* occlusiondata.nav */; };
+		F858617EBF01BF5C1B2B868E /* CM_US_IL_CHICAGO_011_017_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8A6CD1486DA742F65AB68DB /* CM_US_IL_CHICAGO_011_017_L.DAE.pod */; };
+		F859D887E1BDB8259EE111B8 /* CM_US_IL_CHICAGO_009_016_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F861A015E47B3EE767FA009D /* CM_US_IL_CHICAGO_009_016_L.DAE.pod */; };
+		F85A496912FBCC858D4E1487 /* SkyboxFragShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F87F9BE0FE43FC52B4F6E8A4 /* SkyboxFragShader.fsh */; };
+		F85A531D1A4F394D84AFEAEC /* 074_FRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8D504AF3D2393A12830F03F /* 074_FRC.PNG.pvr */; };
+		F85AC924E4C4044AB6517A8B /* US_IL_CHICAGO_BOARDOFTHETRADE_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F86E88169EF4583C61B64C3F /* US_IL_CHICAGO_BOARDOFTHETRADE_L.PNG.pvr */; };
+		F85AF068FF4F387E202AA27D /* 020_FOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F848B84D751B881D60770B0A /* 020_FOC.PNG.pvr */; };
+		F85B8810D94B473060251E93 /* CM_US_IL_CHICAGO_010_018_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8564E1FA3EF7783F6EB070E /* CM_US_IL_CHICAGO_010_018_L.DAE.pod */; };
+		F85C222C189B051DCA553320 /* 025_RUW.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8FD5E92878352E27633C98C /* 025_RUW.PNG.pvr */; };
+		F85C9B0F8D17AD04B18500F4 /* 056_GRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8CE4B8B91184B7F50C49D24 /* 056_GRC.PNG.pvr */; };
+		F85D8DCB2B7421E8859AE6A8 /* 032_FOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F82A667783F9B1E1BF1C4E52 /* 032_FOC.PNG.pvr */; };
+		F8630E83E2409C83D56FBEC7 /* PVRShell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F86806AB073BCF43114182F8 /* PVRShell.cpp */; };
+		F864940310F75E5100F46F54 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = F864940210F75E5100F46F54 /* Entitlements.plist */; };
+		F86509CBD08D23BF13F6AB72 /* US_R_STREET-SOLID.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8F968FB244D9CA60B6B0BDE /* US_R_STREET-SOLID.PNG.pvr */; };
+		F8658ABA0F6AD27A847108AE /* US_IL_13456_CHICAGO_SEVENTEENTH_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F80FED8B3CF1EED4FD7D68C2 /* US_IL_13456_CHICAGO_SEVENTEENTH_L.PNG.pvr */; };
+		F865D00CD4479A4CCE428ED7 /* 088_FRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8C1B26FD678AA31C8FB7FDA /* 088_FRC.PNG.pvr */; };
+		F869BEBD44384AC2147622A7 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F812B82B586D7AEF8F327E60 /* AppController.mm */; };
+		F869D750AF1B20EB0671155F /* US_IL_CHICAGO_ARTINSTITUTE_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8AB54B1FCE2E0C36320B667 /* US_IL_CHICAGO_ARTINSTITUTE_L.PNG.pvr */; };
+		F86AF5F8E94080B9F659FF5E /* 018_FOD.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8218FB0DF705F3C327ED766 /* 018_FOD.PNG.pvr */; };
+		F86C60508704F3D1C5C0A4DA /* cameratrack.pod in Resources */ = {isa = PBXBuildFile; fileRef = F80B175CFB82A735483BE3BB /* cameratrack.pod */; };
+		F86D5C319B690148EAAD00DE /* 021_FOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8DA83CF5506AB9043784E92 /* 021_FOC.PNG.pvr */; };
+		F87207F4831F4538C4770C93 /* 011_GIE.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F825F1BC2AF596EC84E34E62 /* 011_GIE.PNG.pvr */; };
+		F872A975A97D5E5A83E56633 /* 024_FOB.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8F4D1C2CE3FFF65779B7566 /* 024_FOB.PNG.pvr */; };
+		F8739B5094DFAAB1C4325929 /* UIElements.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8190768EB21810F84026BDF /* UIElements.pvr */; };
+		F875D7F2EE93D7A34C5B47B5 /* ShadowVolVertShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F8429C28B7F3BF36B6E736AB /* ShadowVolVertShader.vsh */; };
+		F87703AAC790C327A9D9933D /* 095_FOD.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F824847FCD13C030836DD5D0 /* 095_FOD.PNG.pvr */; };
+		F877B064CC8BD8E8A7C0FD62 /* 044_GRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F827F6AD631426C45B3BFDE4 /* 044_GRC.PNG.pvr */; };
+		F878155F48483B68CE72E6C4 /* 087_FCA.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F82500DFE8476BDDDC73FE16 /* 087_FCA.PNG.pvr */; };
+		F87A342093F336E329BDFE45 /* US_IL_13454_CHICAGO_UNITED_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8C52BEA2ACC964B1C13F5F5 /* US_IL_13454_CHICAGO_UNITED_L.PNG.pvr */; };
+		F87CF976615B648AD448D285 /* US_IL_13490_CHICAGO_PRUDENTIAL_PART2_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8F7B9AB99A9C2CC5D1E6FD8 /* US_IL_13490_CHICAGO_PRUDENTIAL_PART2_L.PNG.pvr */; };
+		F87D1C7B3F380F1348DE8DB1 /* 012_RSR.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8DBFFA3E4FCCD49D1B9F857 /* 012_RSR.PNG.pvr */; };
+		F87DC43D95D3CD5D1364C53B /* US_T_RAILROAD.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8FA5F634D517DAC67D32D6D /* US_T_RAILROAD.PNG.pvr */; };
+		F8816F737F1FFE3817CD2BAF /* 016_FOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8B86E3328F48E25C5BEEDA1 /* 016_FOC.PNG.pvr */; };
+		F881FEFE6E63FABE81677F6C /* 019_RZG.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F84139148427A64D38B8FAF4 /* 019_RZG.PNG.pvr */; };
+		F8862254AB74EE81A730DD7B /* US_IL_CHICAGO_HILTON_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8915F77BA69F6E560384A45 /* US_IL_CHICAGO_HILTON_L.PNG.pvr */; };
+		F8863DC2E6FC70614ABA6BA7 /* CM_US_IL_CHICAGO_012_015_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F85FAAB08EB013799EFFCE92 /* CM_US_IL_CHICAGO_012_015_L.DAE.pod */; };
+		F88BCF3BDA275A2CC8D4A15B /* 089_FRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8AFD8461FD3408015390226 /* 089_FRC.PNG.pvr */; };
+		F88BFBDB4F2A4EA214265F24 /* 072_FRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8266A61B0BDC62CD423EE7C /* 072_FRC.PNG.pvr */; };
+		F88DBEC1211C1A25E3039ACB /* US_IL_13460_CHICAGO_TRUMP_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8220719376A2B619FFE6DAC /* US_IL_13460_CHICAGO_TRUMP_L.PNG.pvr */; };
+		F89045DD73EE03E3527F855E /* 019_FOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8C7191AE715D95DFBA58E00 /* 019_FOC.PNG.pvr */; };
+		F892D572461B2661FDFF1FBA /* 086_GOF.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8CED7BEDB975E9A20EEFB9F /* 086_GOF.PNG.pvr */; };
+		F8935CA2323F3B511A7F481D /* CM_US_IL_CHICAGO_009_014_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8E789CE0FAAF610701DB55C /* CM_US_IL_CHICAGO_009_014_L.DAE.pod */; };
+		F8936F4FA6354DE03F5996DA /* US_R_CONCRETE.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F857C4A685C2B91FE61404EA /* US_R_CONCRETE.PNG.pvr */; };
+		F8938230FD3B3F9BA4251CB3 /* 023_FOB.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8B37D6C06EA2622C60422FC /* 023_FOB.PNG.pvr */; };
+		F896A8F6D16489798397BEB9 /* 054_GRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F85303D86F2449668B2CAA53 /* 054_GRC.PNG.pvr */; };
+		F89950DE65CF5D47038E9D1A /* US_IL_CHICAGO_DALEY_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8034E12F67B373A57F3398B /* US_IL_CHICAGO_DALEY_L.PNG.pvr */; };
+		F89A8AD4CA838DD26372E01B /* US_IL_CHICAGO_MMART_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8647514CFB197E00B565D7D /* US_IL_CHICAGO_MMART_L.PNG.pvr */; };
+		F89B56A9D8CA24024D935BE8 /* US_IL_CHICAGO_AONCENTER_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F887F3D65B7B2C1AA5A5887B /* US_IL_CHICAGO_AONCENTER_L.PNG.pvr */; };
+		F89E895B465AA001EF14EA15 /* FullscreenFragShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F826E03D8DDF4386970589C1 /* FullscreenFragShader.fsh */; };
+		F8A062DD282E35BDB9100004 /* 026_RUW.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F81A0DF1F7BDDB19B4C3DBED /* 026_RUW.PNG.pvr */; };
+		F8A0C0D2CE9B881292E0C2DB /* OGLES2Navigation3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F2654F674B232B8FC7B6F8 /* OGLES2Navigation3D.cpp */; };
+		F8A41E70CB7EECBFDA3A2E1F /* 061_FRD.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F81FFEC3BAD0751F1524DBE8 /* 061_FRD.PNG.pvr */; };
+		F8A5CACA036E53E507108173 /* 029_GCC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8FB1003A15E3CF1079CF0AE /* 029_GCC.PNG.pvr */; };
+		F8A7060FDA737A879EF6DBD6 /* 087_GCC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F884E3AC9564604067F31ADC /* 087_GCC.PNG.pvr */; };
+		F8A80D005DC91A370024AE4F /* 019_GOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F865C489D7A27D7B57A59BC4 /* 019_GOC.PNG.pvr */; };
+		F8AD060692F16E8D45A2DAD7 /* US_IL_CHICAGO_CHICAGOTHEATRE_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8BCFFAAD2F12AFB9B8E1A1F /* US_IL_CHICAGO_CHICAGOTHEATRE_L.PNG.pvr */; };
+		F8AFA5839BAD3A5F398296F5 /* CM_US_IL_CHICAGO_011_013_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8C31F6267461D0A98A57F46 /* CM_US_IL_CHICAGO_011_013_L.DAE.pod */; };
+		F8B31E7F35871F0276ADFF71 /* 063_GRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8E62A829C20F947793BD0BC /* 063_GRC.PNG.pvr */; };
+		F8B42B71F4E3EA4C53FAC7FE /* US_IL_CHICAGO_LIBRARY_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F88FAF89FD403FF2C7C853A2 /* US_IL_CHICAGO_LIBRARY_L.PNG.pvr */; };
+		F8B778FA72FE6F321A8C9592 /* 077_FRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F885997360AF82BE84B19235 /* 077_FRC.PNG.pvr */; };
+		F8B7F355EAA98E4A8485E74F /* US_IL_CHICAGO_SEARSTOWER_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F834D35FA87FA42CE7ED85F7 /* US_IL_CHICAGO_SEARSTOWER_L.PNG.pvr */; };
+		F8B991BAB64890B164D70DF2 /* 080_GCB.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8DC13702377896AF67A58AB /* 080_GCB.PNG.pvr */; };
+		F8BC0A26D1DFE7D24AF67727 /* PVRShellAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8685712661BB8886AD7514E /* PVRShellAPI.cpp */; };
+		F8BCA92152C4980A724C9C26 /* US_R_STREET-INNER-SHOULDER.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8D37C2760A9C3EC8CC2CC90 /* US_R_STREET-INNER-SHOULDER.PNG.pvr */; };
+		F8BCB610A2D45067EE388260 /* 059_FRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6934E0CE1258DB5EA2CC /* 059_FRC.PNG.pvr */; };
+		F8BDB5AD46119803B64CD293 /* 075_FRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8A392A9651978A206713E25 /* 075_FRC.PNG.pvr */; };
+		F8BEE5BFAED1D035BCEF369E /* 067_GCC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F893B7B14CFE9A35A230D42F /* 067_GCC.PNG.pvr */; };
+		F8C06103EDD6A36138D69957 /* 069_FCA.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F899C38A4018A2FB740E2C3A /* 069_FCA.PNG.pvr */; };
+		F8C61A11194D01F17B9E39B4 /* 055_GRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8225A57524A9DE302FFC673 /* 055_GRC.PNG.pvr */; };
+		F8CA3E94AA275C048BBA1ACF /* 046_GRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8580DC3A6581C9E37DF2DDC /* 046_GRC.PNG.pvr */; };
+		F8CB99FE81E1C63687B24E64 /* 060_FRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8F92A232BAB84D556655F82 /* 060_FRC.PNG.pvr */; };
+		F8CBFFC06F55B33AA43B2D9F /* ShadowVolFragShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F8EE2E289FA48F361285ABD9 /* ShadowVolFragShader.fsh */; };
+		F8CC0B51EAEE22C49202544C /* US_IL_13453_CHICAGO_PRUDENTIAL_PART1_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F88E40D0711B2893939252CD /* US_IL_13453_CHICAGO_PRUDENTIAL_PART1_L.PNG.pvr */; };
+		F8CC856F191C1C630F6A5947 /* FullscreenVertShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F8101B7CF20E6D30689D0AB7 /* FullscreenVertShader.vsh */; };
+		F8CCE9AD71208C37BE91241A /* 033_FOA.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F80C920C2FB787828444759E /* 033_FOA.PNG.pvr */; };
+		F8CF9BF95FD0A9917258F3B7 /* 064_GRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8DE658AB829330B4341F7BE /* 064_GRC.PNG.pvr */; };
+		F8CFDBA70D0C6CF2BF26B584 /* 041_FRB.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F86AF66D4EEB387AC875C936 /* 041_FRB.PNG.pvr */; };
+		F8D055CC466BEB61F42C325A /* US_IL_CHICAGO_MILLENIUMPARK1_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8B060E56EFDE7A8958C4E46 /* US_IL_CHICAGO_MILLENIUMPARK1_L.PNG.pvr */; };
+		F8D0F27C9361D3B29A0E447D /* US_IL_13444_CHICAGO_LEOBURNETT_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F819039B362F51A1737F4649 /* US_IL_13444_CHICAGO_LEOBURNETT_L.PNG.pvr */; };
+		F8D3DD5A7DDAEBA26E7D1847 /* UIVertShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F80DB8B1988A1506186A6D4A /* UIVertShader.vsh */; };
+		F8D67047A79501BDE950A306 /* US_IL_CHICAGO_MILLENIUMPARK2_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F850E991C943E769AAD37454 /* US_IL_CHICAGO_MILLENIUMPARK2_L.PNG.pvr */; };
+		F8D82B5568FE592A6B318492 /* CM_US_IL_CHICAGO_010_015_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F81EE8CD2600B17F1ED72E40 /* CM_US_IL_CHICAGO_010_015_L.DAE.pod */; };
+		F8D96BA3989D916BFDFE0AF0 /* 066_GCB.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F854718CAF5BE0C4452B951D /* 066_GCB.PNG.pvr */; };
+		F8DBEF4E569D2898F2796B50 /* 037_FOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F88A5FC4ABB0D0A3D83B2376 /* 037_FOC.PNG.pvr */; };
+		F8DD445EC802A113BADECABE /* PVRShellOS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F80E48ED567B8029CD035DCC /* PVRShellOS.cpp */; };
+		F8E0475454BBD0C2CEF3D6BA /* US_IL_13447_CHICAGO_REIDMURDOCH_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8D26FE558374C020C7CFB67 /* US_IL_13447_CHICAGO_REIDMURDOCH_L.PNG.pvr */; };
+		F8E0B8A86B7A8C260AD9BD87 /* CM_US_IL_CHICAGO_008_016_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8D884CB7302C95B63C305B7 /* CM_US_IL_CHICAGO_008_016_L.DAE.pod */; };
+		F8E1557E392D9F4E8A4FD679 /* 094_FOD.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F81FEA78DD17F72E552AF330 /* 094_FOD.PNG.pvr */; };
+		F8E2EAE181250AAC836D6E9F /* CM_US_IL_CHICAGO_011_015_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8611DDC3D014F4E0A40E5B7 /* CM_US_IL_CHICAGO_011_015_L.DAE.pod */; };
+		F8E44EF6E3367A39EAB531C0 /* 066_FCB.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F88876E1D8501BAF9B473EA4 /* 066_FCB.PNG.pvr */; };
+		F8E45454EAAB2EDD66D79ADB /* 071_FRC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F89EEB79EE5DBF30EA027BAA /* 071_FRC.PNG.pvr */; };
+		F8E49FB844C4A31D6E5417ED /* US_L_CONCRETE-COLOUR.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F804CF1B9CB46005C486BB7E /* US_L_CONCRETE-COLOUR.PNG.pvr */; };
+		F8E6D019DD3C9C6FADF44E89 /* 006_RUS.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F8BF96F53B7F9D752CDE28C9 /* 006_RUS.PNG.pvr */; };
+		F8EB7B444CC4ECA5BEAEC2A9 /* US_IL_13449_CHICAGO_CROWNFOUNTAIN_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F89D9605B5B8DE729C72B2FC /* US_IL_13449_CHICAGO_CROWNFOUNTAIN_L.PNG.pvr */; };
+		F8EC826CB91EBB022A6249AC /* CM_US_IL_CHICAGO_010_015_H.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8EE5ACB1E5ABB2F30E9AAA2 /* CM_US_IL_CHICAGO_010_015_H.DAE.pod */; };
+		F8EE54652AD35A395E84B098 /* 022_FOC.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F81CD1AE8C7633B10AA488C4 /* 022_FOC.PNG.pvr */; };
+		F8EFF942037E6693A9049B60 /* US_IL_13443_CHICAGO_35EAST_L.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F82EEE89536C470CA4F47F5A /* US_IL_13443_CHICAGO_35EAST_L.PNG.pvr */; };
+		F8F1EDEB69168D5B5FDFD9B1 /* 026_FOD.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F881143409F65BAEA3A36C5B /* 026_FOD.PNG.pvr */; };
+		F8F48C64820A32A0EFA3467C /* 022_RUG.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F897964F81A5EE61420AEAE5 /* 022_RUG.PNG.pvr */; };
+		F8F95A94F84A8FA81DD8AEE5 /* UIFragShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F813CAAEF7C65357811C802F /* UIFragShader.fsh */; };
+		F8FA164CE348DC480E695306 /* CM_US_IL_CHICAGO_010_016_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F89620B31430B0BAB0DE45B1 /* CM_US_IL_CHICAGO_010_016_L.DAE.pod */; };
+		F8FB2220603CF99F350AEEF8 /* CM_US_IL_CHICAGO_011_018_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F8E310154680BDA9232004A0 /* CM_US_IL_CHICAGO_011_018_L.DAE.pod */; };
+		F8FCA1457C45A5E1B4C5F599 /* 070_GOD.PNG.pvr in Resources */ = {isa = PBXBuildFile; fileRef = F82C8E1BC5B72F763EA74D61 /* 070_GOD.PNG.pvr */; };
+		F8FF0967827FDF0DC5DBB301 /* CM_US_IL_CHICAGO_012_014_L.DAE.pod in Resources */ = {isa = PBXBuildFile; fileRef = F80631C073AC3D0BAACFCFFE /* CM_US_IL_CHICAGO_012_014_L.DAE.pod */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F80B21C81015CA1600A93BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = F8748A3A0FF221480052D400;
+			remoteInfo = OGLES2Tools;
+		};
+		F80B21CA1015CA2B00A93BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */;
+			proxyType = 1;
+			remoteGlobalIDString = F8748A390FF221480052D400;
+			remoteInfo = OGLES2Tools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BA909F0A0FF0EADD00A4C97C /* data */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = data;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA909F0B0FF0EADD00A4C97C /* textures */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data/textures;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = textures;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA909F1C0FF0EB3200A4C97C /* shaders */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data/shaders;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = shaders;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* OGLES2Navigation3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OGLES2Navigation3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2D500B990D5A79CF00DBA0E3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		BA240AC10FEFE77A00DE852D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F80071D0512F9FCC6E1B2D7D /* 012_RSR.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 012_RSR.PNG; path = ../../../Media/012_RSR.PNG; sourceTree = SOURCE_ROOT; };
+		F800946FDED32432A5FF9293 /* 082_FCD.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 082_FCD.PNG.pvr; path = ../../082_FCD.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8034E12F67B373A57F3398B /* US_IL_CHICAGO_DALEY_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_DALEY_L.PNG.pvr; path = ../../US_IL_CHICAGO_DALEY_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F804CF1B9CB46005C486BB7E /* US_L_CONCRETE-COLOUR.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = "US_L_CONCRETE-COLOUR.PNG.pvr"; path = "../../US_L_CONCRETE-COLOUR.PNG.pvr"; sourceTree = SOURCE_ROOT; };
+		F80631C073AC3D0BAACFCFFE /* CM_US_IL_CHICAGO_012_014_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_012_014_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_012_014_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8075394766DDBC85A1E53CF /* 063_GRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 063_GRC.PNG; path = ../../../Media/063_GRC.PNG; sourceTree = SOURCE_ROOT; };
+		F8076885C372F55EF5B5516C /* 073_FRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 073_FRC.PNG.pvr; path = ../../073_FRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8078A0281E2D7D187E70D0E /* 068_GCD.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 068_GCD.PNG; path = ../../../Media/068_GCD.PNG; sourceTree = SOURCE_ROOT; };
+		F807FE0B7435FAF509170C6C /* 023_FOB.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 023_FOB.PNG; path = ../../../Media/023_FOB.PNG; sourceTree = SOURCE_ROOT; };
+		F8099BD237C7834030A0DCB5 /* US_IL_CHICAGO_CITYHALL_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_CITYHALL_L.PNG.pvr; path = ../../US_IL_CHICAGO_CITYHALL_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F80B175CFB82A735483BE3BB /* cameratrack.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = cameratrack.pod; path = ../../cameratrack.pod; sourceTree = SOURCE_ROOT; };
+		F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OGLES2Tools.xcode; path = ../../../../../Tools/OGLES2/Build/iPhone/OGLES2Tools.xcode; sourceTree = SOURCE_ROOT; };
+		F80B47F0DE272E28644E8808 /* 059_FRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 059_FRC.PNG; path = ../../../Media/059_FRC.PNG; sourceTree = SOURCE_ROOT; };
+		F80B60DAF220F60B713DED37 /* US_R_STREET-DASHED.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "US_R_STREET-DASHED.PNG"; path = "../../../Media/US_R_STREET-DASHED.PNG"; sourceTree = SOURCE_ROOT; };
+		F80C920C2FB787828444759E /* 033_FOA.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 033_FOA.PNG.pvr; path = ../../033_FOA.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F80CFA5D1B88BC665AB2109C /* 006_RUS.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 006_RUS.PNG; path = ../../../Media/006_RUS.PNG; sourceTree = SOURCE_ROOT; };
+		F80D3D336F107C17AC0B86FD /* US_IL_13461_CHICAGO_UNITRIN_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13461_CHICAGO_UNITRIN_L.PNG.pvr; path = ../../US_IL_13461_CHICAGO_UNITRIN_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F80DB8B1988A1506186A6D4A /* UIVertShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = UIVertShader.vsh; path = ../../UIVertShader.vsh; sourceTree = SOURCE_ROOT; };
+		F80E48ED567B8029CD035DCC /* PVRShellOS.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PVRShellOS.cpp; path = ../../../../../Shell/OS/iPhone/PVRShellOS.cpp; sourceTree = SOURCE_ROOT; };
+		F80FED8B3CF1EED4FD7D68C2 /* US_IL_13456_CHICAGO_SEVENTEENTH_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13456_CHICAGO_SEVENTEENTH_L.PNG.pvr; path = ../../US_IL_13456_CHICAGO_SEVENTEENTH_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8101B7CF20E6D30689D0AB7 /* FullscreenVertShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = FullscreenVertShader.vsh; path = ../../FullscreenVertShader.vsh; sourceTree = SOURCE_ROOT; };
+		F8122DDB93CE355D1A868079 /* CM_US_IL_CHICAGO_011_016_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_011_016_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_011_016_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8127D340FC9E806B2A4F6FB /* 068_GCD.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 068_GCD.PNG.pvr; path = ../../068_GCD.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F812B82B586D7AEF8F327E60 /* AppController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppController.mm; path = ../../../../../Shell/OS/iPhone/AppController.mm; sourceTree = SOURCE_ROOT; };
+		F812D995DCB46F2CCF3A898E /* modelindex.nav */ = {isa = PBXFileReference; lastKnownFileType = file; name = modelindex.nav; path = ../../modelindex.nav; sourceTree = SOURCE_ROOT; };
+		F813CAAEF7C65357811C802F /* UIFragShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = UIFragShader.fsh; path = ../../UIFragShader.fsh; sourceTree = SOURCE_ROOT; };
+		F813D296878F11DFC3CEACB5 /* 031_GOD.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 031_GOD.PNG; path = ../../../Media/031_GOD.PNG; sourceTree = SOURCE_ROOT; };
+		F813D827860076B218B17391 /* 087_GCC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 087_GCC.PNG; path = ../../../Media/087_GCC.PNG; sourceTree = SOURCE_ROOT; };
+		F814182ABDEF908080941719 /* 067_FCC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 067_FCC.PNG; path = ../../../Media/067_FCC.PNG; sourceTree = SOURCE_ROOT; };
+		F81651FD99225768EB7BCCE2 /* 008_RUG.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 008_RUG.PNG.pvr; path = ../../008_RUG.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8165FBE51A75C4273253F8D /* US_IL_13490_CHICAGO_PRUDENTIAL_PART2_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13490_CHICAGO_PRUDENTIAL_PART2_L.PNG; path = ../../../Media/US_IL_13490_CHICAGO_PRUDENTIAL_PART2_L.PNG; sourceTree = SOURCE_ROOT; };
+		F81703AD525EFCA5E043D738 /* 080_GCB.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 080_GCB.PNG; path = ../../../Media/080_GCB.PNG; sourceTree = SOURCE_ROOT; };
+		F819039B362F51A1737F4649 /* US_IL_13444_CHICAGO_LEOBURNETT_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13444_CHICAGO_LEOBURNETT_L.PNG.pvr; path = ../../US_IL_13444_CHICAGO_LEOBURNETT_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8190768EB21810F84026BDF /* UIElements.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = UIElements.pvr; path = ../../UIElements.pvr; sourceTree = SOURCE_ROOT; };
+		F8190F6C20CD023873037C9C /* 007_RUG.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 007_RUG.PNG; path = ../../../Media/007_RUG.PNG; sourceTree = SOURCE_ROOT; };
+		F819A4E9A72A480282186997 /* 036_GOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 036_GOC.PNG.pvr; path = ../../036_GOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F81A0DF1F7BDDB19B4C3DBED /* 026_RUW.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 026_RUW.PNG.pvr; path = ../../026_RUW.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F81B823AFE8B70CF6129B554 /* 026_FOD.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 026_FOD.PNG; path = ../../../Media/026_FOD.PNG; sourceTree = SOURCE_ROOT; };
+		F81CD1AE8C7633B10AA488C4 /* 022_FOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 022_FOC.PNG.pvr; path = ../../022_FOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F81D4F3EEB1AA8A5F5DC5B7C /* 019_GOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 019_GOC.PNG; path = ../../../Media/019_GOC.PNG; sourceTree = SOURCE_ROOT; };
+		F81ED8D2EC0F22F741D90292 /* PVRShellOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRShellOS.h; path = ../../../../../Shell/OS/iPhone/PVRShellOS.h; sourceTree = SOURCE_ROOT; };
+		F81EE8CD2600B17F1ED72E40 /* CM_US_IL_CHICAGO_010_015_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_010_015_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_010_015_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F81F1D27BF327B7311799D4E /* 044_GRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 044_GRC.PNG; path = ../../../Media/044_GRC.PNG; sourceTree = SOURCE_ROOT; };
+		F81F27401BD0096F6068295C /* 064_GRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 064_GRC.PNG; path = ../../../Media/064_GRC.PNG; sourceTree = SOURCE_ROOT; };
+		F81FEA78DD17F72E552AF330 /* 094_FOD.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 094_FOD.PNG.pvr; path = ../../094_FOD.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F81FFEC3BAD0751F1524DBE8 /* 061_FRD.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 061_FRD.PNG.pvr; path = ../../061_FRD.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8205A82130408E100253AE7 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "../../../../../Builds/iPhone/Media/Default-Portrait.png"; sourceTree = SOURCE_ROOT; };
+		F8205A83130408E100253AE7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../../../Builds/iPhone/Media/Default.png; sourceTree = SOURCE_ROOT; };
+		F8205A84130408E100253AE7 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../../../../../Builds/iPhone/Media/Icon-72.png"; sourceTree = SOURCE_ROOT; };
+		F8205A85130408E100253AE7 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "../../../../../Builds/iPhone/Media/Icon-Small-50.png"; sourceTree = SOURCE_ROOT; };
+		F8205A86130408E100253AE7 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "../../../../../Builds/iPhone/Media/Icon-Small.png"; sourceTree = SOURCE_ROOT; };
+		F8205A87130408E100253AE7 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "../../../../../Builds/iPhone/Media/Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
+		F8205A88130408E100253AE7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../../../../Builds/iPhone/Media/Icon.png; sourceTree = SOURCE_ROOT; };
+		F8205A89130408E100253AE7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../../../../Builds/iPhone/Media/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		F8205A8A130408E100253AE7 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = ../../../../../Builds/iPhone/Media/iTunesArtwork; sourceTree = SOURCE_ROOT; };
+		F820638D4FFDB0828B3E0D80 /* occlusiondata.nav */ = {isa = PBXFileReference; lastKnownFileType = file; name = occlusiondata.nav; path = ../../occlusiondata.nav; sourceTree = SOURCE_ROOT; };
+		F82069E704456FECDECE0730 /* SkyboxVertShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = SkyboxVertShader.vsh; path = ../../SkyboxVertShader.vsh; sourceTree = SOURCE_ROOT; };
+		F820C114ADC43473BBE1DB85 /* US_IL_13459_CHICAGO_LASALLE_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13459_CHICAGO_LASALLE_L.PNG.pvr; path = ../../US_IL_13459_CHICAGO_LASALLE_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F82113C21F7FF235992758C0 /* US_L_PARK-COLOUR.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "US_L_PARK-COLOUR.PNG"; path = "../../../Media/US_L_PARK-COLOUR.PNG"; sourceTree = SOURCE_ROOT; };
+		F8214BEEAC552F73AAD2B7AB /* 067_FCC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 067_FCC.PNG.pvr; path = ../../067_FCC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8218A260D88F5E0B0331996 /* US_R_CONCRETE.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_R_CONCRETE.PNG; path = ../../../Media/US_R_CONCRETE.PNG; sourceTree = SOURCE_ROOT; };
+		F8218FB0DF705F3C327ED766 /* 018_FOD.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 018_FOD.PNG.pvr; path = ../../018_FOD.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8220719376A2B619FFE6DAC /* US_IL_13460_CHICAGO_TRUMP_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13460_CHICAGO_TRUMP_L.PNG.pvr; path = ../../US_IL_13460_CHICAGO_TRUMP_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8225A57524A9DE302FFC673 /* 055_GRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 055_GRC.PNG.pvr; path = ../../055_GRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8233328814F76990A7AEC64 /* US_R_WALKWAY-SOLID.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = "US_R_WALKWAY-SOLID.PNG.pvr"; path = "../../US_R_WALKWAY-SOLID.PNG.pvr"; sourceTree = SOURCE_ROOT; };
+		F82348A563DEEF0030BA8C92 /* 092_GCA.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 092_GCA.PNG; path = ../../../Media/092_GCA.PNG; sourceTree = SOURCE_ROOT; };
+		F824847FCD13C030836DD5D0 /* 095_FOD.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 095_FOD.PNG.pvr; path = ../../095_FOD.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F824870C018F394C3A409E81 /* 069_FCA.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 069_FCA.PNG; path = ../../../Media/069_FCA.PNG; sourceTree = SOURCE_ROOT; };
+		F82500DFE8476BDDDC73FE16 /* 087_FCA.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 087_FCA.PNG.pvr; path = ../../087_FCA.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8253873976D43669B75A6EA /* US_IL_13462_CHICAGO_WILLOUGHBY_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13462_CHICAGO_WILLOUGHBY_L.PNG.pvr; path = ../../US_IL_13462_CHICAGO_WILLOUGHBY_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F825F1BC2AF596EC84E34E62 /* 011_GIE.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 011_GIE.PNG.pvr; path = ../../011_GIE.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8266A61B0BDC62CD423EE7C /* 072_FRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 072_FRC.PNG.pvr; path = ../../072_FRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F826E03D8DDF4386970589C1 /* FullscreenFragShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = FullscreenFragShader.fsh; path = ../../FullscreenFragShader.fsh; sourceTree = SOURCE_ROOT; };
+		F82736E57C5A5183C65CCF1B /* 024_FOB.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 024_FOB.PNG; path = ../../../Media/024_FOB.PNG; sourceTree = SOURCE_ROOT; };
+		F827BF2773AC72AC599C659C /* 067_GCC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 067_GCC.PNG; path = ../../../Media/067_GCC.PNG; sourceTree = SOURCE_ROOT; };
+		F827F6AD631426C45B3BFDE4 /* 044_GRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 044_GRC.PNG.pvr; path = ../../044_GRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F828BF71EC84558482068F4B /* US_IL_CHICAGO_AONCENTER_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_AONCENTER_L.PNG; path = ../../../Media/US_IL_CHICAGO_AONCENTER_L.PNG; sourceTree = SOURCE_ROOT; };
+		F82A667783F9B1E1BF1C4E52 /* 032_FOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 032_FOC.PNG.pvr; path = ../../032_FOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F82AEE3CFFD45AEA60B76BDA /* skybox2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybox2.png; path = ../../../Media/skybox2.png; sourceTree = SOURCE_ROOT; };
+		F82B7B154B6391D727C845A3 /* CM_US_IL_CHICAGO_011_014_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_011_014_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_011_014_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F82C8E1BC5B72F763EA74D61 /* 070_GOD.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 070_GOD.PNG.pvr; path = ../../070_GOD.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F82EEBD66FCA36AB88BAA02A /* 037_GOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 037_GOC.PNG.pvr; path = ../../037_GOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F82EEE89536C470CA4F47F5A /* US_IL_13443_CHICAGO_35EAST_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13443_CHICAGO_35EAST_L.PNG.pvr; path = ../../US_IL_13443_CHICAGO_35EAST_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F82F0040038B4651CE1ECA7B /* US_L_PARK-COLOUR.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = "US_L_PARK-COLOUR.PNG.pvr"; path = "../../US_L_PARK-COLOUR.PNG.pvr"; sourceTree = SOURCE_ROOT; };
+		F82F14C5A5104CD5E6DBB683 /* BuildingVertShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = BuildingVertShader.vsh; path = ../../BuildingVertShader.vsh; sourceTree = SOURCE_ROOT; };
+		F82F69C9289DB1C833E8F4C0 /* 023_RUG.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 023_RUG.PNG; path = ../../../Media/023_RUG.PNG; sourceTree = SOURCE_ROOT; };
+		F832FF37CAF0DAA79928FFC4 /* US_L_CONCRETE-COLOUR.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "US_L_CONCRETE-COLOUR.PNG"; path = "../../../Media/US_L_CONCRETE-COLOUR.PNG"; sourceTree = SOURCE_ROOT; };
+		F834D35FA87FA42CE7ED85F7 /* US_IL_CHICAGO_SEARSTOWER_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_SEARSTOWER_L.PNG.pvr; path = ../../US_IL_CHICAGO_SEARSTOWER_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8364B6961A34EF37A11184D /* 086_GOF.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 086_GOF.PNG; path = ../../../Media/086_GOF.PNG; sourceTree = SOURCE_ROOT; };
+		F837D9E47A46F1471F47A594 /* CM_US_IL_CHICAGO_009_017_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_009_017_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_009_017_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F83A1F5C3CD9301907D06259 /* PVRShell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRShell.h; path = ../../../../../Shell/PVRShell.h; sourceTree = SOURCE_ROOT; };
+		F83A86645DDC3D69B5253277 /* EAGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = EAGLView.mm; path = ../../../../../Shell/API/EAGL/OpenGLSupport/EAGLView.mm; sourceTree = SOURCE_ROOT; };
+		F83BE2F66B1464B518A543E0 /* 085_GRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 085_GRC.PNG; path = ../../../Media/085_GRC.PNG; sourceTree = SOURCE_ROOT; };
+		F83CA8B036B108FDED00C625 /* US_IL_CHICAGO_CITYHALL_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_CITYHALL_L.PNG; path = ../../../Media/US_IL_CHICAGO_CITYHALL_L.PNG; sourceTree = SOURCE_ROOT; };
+		F83D07F93BB1EA419D5143E0 /* 033_GOA.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 033_GOA.PNG; path = ../../../Media/033_GOA.PNG; sourceTree = SOURCE_ROOT; };
+		F83F45A9E33F315ECF6E217C /* 037_FOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 037_FOC.PNG; path = ../../../Media/037_FOC.PNG; sourceTree = SOURCE_ROOT; };
+		F84079A00275D14623EACF33 /* UIElements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UIElements.png; path = ../../../Media/UIElements.png; sourceTree = SOURCE_ROOT; };
+		F84139148427A64D38B8FAF4 /* 019_RZG.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 019_RZG.PNG.pvr; path = ../../019_RZG.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8429C28B7F3BF36B6E736AB /* ShadowVolVertShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = ShadowVolVertShader.vsh; path = ../../ShadowVolVertShader.vsh; sourceTree = SOURCE_ROOT; };
+		F8448868FE88BFABA6D0B6E8 /* 082_FCD.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 082_FCD.PNG; path = ../../../Media/082_FCD.PNG; sourceTree = SOURCE_ROOT; };
+		F8452DC13AB99E0D1220EE7B /* US_IL_CHICAGO_BOEINGBUILDING_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_BOEINGBUILDING_L.PNG; path = ../../../Media/US_IL_CHICAGO_BOEINGBUILDING_L.PNG; sourceTree = SOURCE_ROOT; };
+		F84604CB326719BB724E4D43 /* 007_RUG.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 007_RUG.PNG.pvr; path = ../../007_RUG.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F848692F9E99A0E0772C1063 /* CM_US_IL_CHICAGO_010_017_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_010_017_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_010_017_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F84881ADF55381A61701F97A /* 027_FOD.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 027_FOD.PNG.pvr; path = ../../027_FOD.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F848B84D751B881D60770B0A /* 020_FOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 020_FOC.PNG.pvr; path = ../../020_FOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F849A1CA1ACFA4343F9E19EE /* 034_GOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 034_GOC.PNG; path = ../../../Media/034_GOC.PNG; sourceTree = SOURCE_ROOT; };
+		F849E07120C34ECE5A4A896F /* US_IL_CHICAGO_BOARDOFTHETRADE_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_BOARDOFTHETRADE_L.PNG; path = ../../../Media/US_IL_CHICAGO_BOARDOFTHETRADE_L.PNG; sourceTree = SOURCE_ROOT; };
+		F84A3C1BC98057DAE3E98661 /* US_L_WATER-COLOUR.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "US_L_WATER-COLOUR.PNG"; path = "../../../Media/US_L_WATER-COLOUR.PNG"; sourceTree = SOURCE_ROOT; };
+		F84A5925E026F5D5EC7AB265 /* 036_FOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 036_FOC.PNG.pvr; path = ../../036_FOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F84B747CE6C8F99FB0AA50FB /* skybox5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybox5.png; path = ../../../Media/skybox5.png; sourceTree = SOURCE_ROOT; };
+		F84BF0299C9D827A797335C3 /* 083_FRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 083_FRC.PNG; path = ../../../Media/083_FRC.PNG; sourceTree = SOURCE_ROOT; };
+		F84E5453D5C578BD77012352 /* 008_RUG.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 008_RUG.PNG; path = ../../../Media/008_RUG.PNG; sourceTree = SOURCE_ROOT; };
+		F84F6E3FD9B0E0A3906CB7E5 /* 033_GOA.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 033_GOA.PNG.pvr; path = ../../033_GOA.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F85038CC6E24343EC7849050 /* 074_FRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 074_FRC.PNG; path = ../../../Media/074_FRC.PNG; sourceTree = SOURCE_ROOT; };
+		F850E991C943E769AAD37454 /* US_IL_CHICAGO_MILLENIUMPARK2_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_MILLENIUMPARK2_L.PNG.pvr; path = ../../US_IL_CHICAGO_MILLENIUMPARK2_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8522361A627590DF6162B13 /* 041_FRB.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 041_FRB.PNG; path = ../../../Media/041_FRB.PNG; sourceTree = SOURCE_ROOT; };
+		F85303D86F2449668B2CAA53 /* 054_GRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 054_GRC.PNG.pvr; path = ../../054_GRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F85308C9394CA6F6C4B07F2C /* US_L_CONCRETE-DETAIL.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "US_L_CONCRETE-DETAIL.PNG"; path = "../../../Media/US_L_CONCRETE-DETAIL.PNG"; sourceTree = SOURCE_ROOT; };
+		F85358BC9B40E8F4842F7EBD /* 089_FRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 089_FRC.PNG; path = ../../../Media/089_FRC.PNG; sourceTree = SOURCE_ROOT; };
+		F854718CAF5BE0C4452B951D /* 066_GCB.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 066_GCB.PNG.pvr; path = ../../066_GCB.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8564E1FA3EF7783F6EB070E /* CM_US_IL_CHICAGO_010_018_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_010_018_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_010_018_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8569E15492EF9DD86BF477C /* 035_GOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 035_GOC.PNG.pvr; path = ../../035_GOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F85749D2F3A926F4FBE50B80 /* 095_FOD.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 095_FOD.PNG; path = ../../../Media/095_FOD.PNG; sourceTree = SOURCE_ROOT; };
+		F857C4A685C2B91FE61404EA /* US_R_CONCRETE.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_R_CONCRETE.PNG.pvr; path = ../../US_R_CONCRETE.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8580DC3A6581C9E37DF2DDC /* 046_GRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 046_GRC.PNG.pvr; path = ../../046_GRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F858C2A88351F7F4893412CB /* 023_RUG.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 023_RUG.PNG.pvr; path = ../../023_RUG.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F85914A9C43E22A86FD75108 /* 019_FOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 019_FOC.PNG; path = ../../../Media/019_FOC.PNG; sourceTree = SOURCE_ROOT; };
+		F85B3314A63773F61F3BC3F2 /* US_R_STREET-INNER-SHOULDER.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "US_R_STREET-INNER-SHOULDER.PNG"; path = "../../../Media/US_R_STREET-INNER-SHOULDER.PNG"; sourceTree = SOURCE_ROOT; };
+		F85B37202A4F5D379C1F8A9C /* 088_FRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 088_FRC.PNG; path = ../../../Media/088_FRC.PNG; sourceTree = SOURCE_ROOT; };
+		F85C4F0E815DB92235DCA320 /* US_IL_13454_CHICAGO_UNITED_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13454_CHICAGO_UNITED_L.PNG; path = ../../../Media/US_IL_13454_CHICAGO_UNITED_L.PNG; sourceTree = SOURCE_ROOT; };
+		F85CBD4169694C7F7DDB11D0 /* US_IL_CHICAGO_MILLENIUMPARK2_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_MILLENIUMPARK2_L.PNG; path = ../../../Media/US_IL_CHICAGO_MILLENIUMPARK2_L.PNG; sourceTree = SOURCE_ROOT; };
+		F85DC7C565A185681B2C68DE /* US_R_WALKWAY-UNMARKED.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "US_R_WALKWAY-UNMARKED.PNG"; path = "../../../Media/US_R_WALKWAY-UNMARKED.PNG"; sourceTree = SOURCE_ROOT; };
+		F85E140A9248F74DD2153ADD /* 032_FOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 032_FOC.PNG; path = ../../../Media/032_FOC.PNG; sourceTree = SOURCE_ROOT; };
+		F85FAAB08EB013799EFFCE92 /* CM_US_IL_CHICAGO_012_015_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_012_015_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_012_015_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8605603C652D4EC007F8257 /* 046_GRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 046_GRC.PNG; path = ../../../Media/046_GRC.PNG; sourceTree = SOURCE_ROOT; };
+		F8611DDC3D014F4E0A40E5B7 /* CM_US_IL_CHICAGO_011_015_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_011_015_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_011_015_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F861A015E47B3EE767FA009D /* CM_US_IL_CHICAGO_009_016_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_009_016_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_009_016_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F861F5F37F701CB670D320F9 /* skybox6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybox6.png; path = ../../../Media/skybox6.png; sourceTree = SOURCE_ROOT; };
+		F862DF0C2A0FD082F029E501 /* BuildingFragShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = BuildingFragShader.fsh; path = ../../BuildingFragShader.fsh; sourceTree = SOURCE_ROOT; };
+		F863848FD9BDD8A18B60CC96 /* 020_FOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 020_FOC.PNG; path = ../../../Media/020_FOC.PNG; sourceTree = SOURCE_ROOT; };
+		F863BD89B622FE32383C7E71 /* US_IL_13451_CHICAGO_CULTURAL_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13451_CHICAGO_CULTURAL_L.PNG.pvr; path = ../../US_IL_13451_CHICAGO_CULTURAL_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8647514CFB197E00B565D7D /* US_IL_CHICAGO_MMART_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_MMART_L.PNG.pvr; path = ../../US_IL_CHICAGO_MMART_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F864940210F75E5100F46F54 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		F865C489D7A27D7B57A59BC4 /* 019_GOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 019_GOC.PNG.pvr; path = ../../019_GOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F867189704FB6E9E9207EFCD /* CM_US_IL_CHICAGO_012_016_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_012_016_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_012_016_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F86806AB073BCF43114182F8 /* PVRShell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PVRShell.cpp; path = ../../../../../Shell/PVRShell.cpp; sourceTree = SOURCE_ROOT; };
+		F8685712661BB8886AD7514E /* PVRShellAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PVRShellAPI.cpp; path = ../../../../../Shell/API/EAGL/PVRShellAPI.cpp; sourceTree = SOURCE_ROOT; };
+		F868FC771E2BA29A06FD630C /* 083_FRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 083_FRC.PNG.pvr; path = ../../083_FRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8695FF76046C03748619683 /* 086_FOF.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 086_FOF.PNG.pvr; path = ../../086_FOF.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F869927A23F9612150E4EEF6 /* 028_GOF.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 028_GOF.PNG.pvr; path = ../../028_GOF.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F86A954D055DDD5D8656D687 /* 016_RTR.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 016_RTR.PNG; path = ../../../Media/016_RTR.PNG; sourceTree = SOURCE_ROOT; };
+		F86AF66D4EEB387AC875C936 /* 041_FRB.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 041_FRB.PNG.pvr; path = ../../041_FRB.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F86B647531824F367BC657B0 /* 026_RUW.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 026_RUW.PNG; path = ../../../Media/026_RUW.PNG; sourceTree = SOURCE_ROOT; };
+		F86C9BE4E0C4DB05E9A17370 /* 041_GRB.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 041_GRB.PNG.pvr; path = ../../041_GRB.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F86D0C563693C5B0B94F4D3E /* CM_US_IL_CHICAGO_010_016_H.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_010_016_H.DAE.pod; path = ../../CM_US_IL_CHICAGO_010_016_H.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F86E88169EF4583C61B64C3F /* US_IL_CHICAGO_BOARDOFTHETRADE_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_BOARDOFTHETRADE_L.PNG.pvr; path = ../../US_IL_CHICAGO_BOARDOFTHETRADE_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F87013FC25A507472E37C817 /* CM_US_IL_CHICAGO_009_015_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_009_015_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_009_015_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F87266F9F17B8E85F5C85E20 /* 027_RUW.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 027_RUW.PNG.pvr; path = ../../027_RUW.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8758A98EF9495200173E4A2 /* 076_FRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 076_FRC.PNG; path = ../../../Media/076_FRC.PNG; sourceTree = SOURCE_ROOT; };
+		F876E5BE7EC8F1D939672046 /* US_IL_13461_CHICAGO_UNITRIN_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13461_CHICAGO_UNITRIN_L.PNG; path = ../../../Media/US_IL_13461_CHICAGO_UNITRIN_L.PNG; sourceTree = SOURCE_ROOT; };
+		F877E19880F45093F5793FF5 /* 087_FCA.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 087_FCA.PNG; path = ../../../Media/087_FCA.PNG; sourceTree = SOURCE_ROOT; };
+		F87A7DA23C58E481DAF21448 /* 033_FOA.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 033_FOA.PNG; path = ../../../Media/033_FOA.PNG; sourceTree = SOURCE_ROOT; };
+		F87B7302FA50E9E557F17271 /* 016_RTR.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 016_RTR.PNG.pvr; path = ../../016_RTR.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F87CD59FC2EFD8A8525EC88E /* 025_RUW.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 025_RUW.PNG; path = ../../../Media/025_RUW.PNG; sourceTree = SOURCE_ROOT; };
+		F87E14ACD552C17E4FC36790 /* US_R_STREET-LANE-FILLER.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "US_R_STREET-LANE-FILLER.PNG"; path = "../../../Media/US_R_STREET-LANE-FILLER.PNG"; sourceTree = SOURCE_ROOT; };
+		F87F9BE0FE43FC52B4F6E8A4 /* SkyboxFragShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = SkyboxFragShader.fsh; path = ../../SkyboxFragShader.fsh; sourceTree = SOURCE_ROOT; };
+		F8806975F7B0E364561A6154 /* US_R_STREET-SOLID.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "US_R_STREET-SOLID.PNG"; path = "../../../Media/US_R_STREET-SOLID.PNG"; sourceTree = SOURCE_ROOT; };
+		F881143409F65BAEA3A36C5B /* 026_FOD.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 026_FOD.PNG.pvr; path = ../../026_FOD.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F882425ACEEF1DDEE305EA91 /* US_IL_13462_CHICAGO_WILLOUGHBY_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13462_CHICAGO_WILLOUGHBY_L.PNG; path = ../../../Media/US_IL_13462_CHICAGO_WILLOUGHBY_L.PNG; sourceTree = SOURCE_ROOT; };
+		F882A696CD8B8C381069FCD1 /* CM_US_IL_CHICAGO_013_016_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_013_016_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_013_016_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F883FCE11F20E389A5FB4FA0 /* 034_GOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 034_GOC.PNG.pvr; path = ../../034_GOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F884E3AC9564604067F31ADC /* 087_GCC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 087_GCC.PNG.pvr; path = ../../087_GCC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F88538D4F5849097DD90938F /* US_IL_CHICAGO_OGILVIE_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_OGILVIE_L.PNG; path = ../../../Media/US_IL_CHICAGO_OGILVIE_L.PNG; sourceTree = SOURCE_ROOT; };
+		F885997360AF82BE84B19235 /* 077_FRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 077_FRC.PNG.pvr; path = ../../077_FRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F886B697FC1B73357620E8E1 /* 094_FOD.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 094_FOD.PNG; path = ../../../Media/094_FOD.PNG; sourceTree = SOURCE_ROOT; };
+		F88752E5D84805557811A1B9 /* 035_GOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 035_GOC.PNG; path = ../../../Media/035_GOC.PNG; sourceTree = SOURCE_ROOT; };
+		F887EB489B7D0B23B9C9647E /* 022_FOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 022_FOC.PNG; path = ../../../Media/022_FOC.PNG; sourceTree = SOURCE_ROOT; };
+		F887F3D65B7B2C1AA5A5887B /* US_IL_CHICAGO_AONCENTER_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_AONCENTER_L.PNG.pvr; path = ../../US_IL_CHICAGO_AONCENTER_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F88876E1D8501BAF9B473EA4 /* 066_FCB.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 066_FCB.PNG.pvr; path = ../../066_FCB.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F88879A5B64D01957302742C /* 075_FRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 075_FRC.PNG; path = ../../../Media/075_FRC.PNG; sourceTree = SOURCE_ROOT; };
+		F88944334475E09EFD503935 /* 069_GCA.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 069_GCA.PNG.pvr; path = ../../069_GCA.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F88A2300AFC3D32A05C0F826 /* 087_GCA.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 087_GCA.PNG.pvr; path = ../../087_GCA.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F88A5FC4ABB0D0A3D83B2376 /* 037_FOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 037_FOC.PNG.pvr; path = ../../037_FOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F88A86D5388FF3BD1CF5E22B /* US_IL_CHICAGO_UNIONSTATION_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_UNIONSTATION_L.PNG.pvr; path = ../../US_IL_CHICAGO_UNIONSTATION_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F88BB1C96B26ED24297023C5 /* CM_US_IL_CHICAGO_012_017_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_012_017_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_012_017_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F88E0D816D169BDC9A632C46 /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ../../../../../Shell/OS/iPhone/AppController.h; sourceTree = SOURCE_ROOT; };
+		F88E3129FA8DC1BB7FFBEB73 /* US_IL_13458_CHICAGO_SMURFIT_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13458_CHICAGO_SMURFIT_L.PNG.pvr; path = ../../US_IL_13458_CHICAGO_SMURFIT_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F88E40D0711B2893939252CD /* US_IL_13453_CHICAGO_PRUDENTIAL_PART1_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13453_CHICAGO_PRUDENTIAL_PART1_L.PNG.pvr; path = ../../US_IL_13453_CHICAGO_PRUDENTIAL_PART1_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F88F25179BCA76516C9DBBAA /* US_IL_CHICAGO_UNIONSTATION_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_UNIONSTATION_L.PNG; path = ../../../Media/US_IL_CHICAGO_UNIONSTATION_L.PNG; sourceTree = SOURCE_ROOT; };
+		F88FAF89FD403FF2C7C853A2 /* US_IL_CHICAGO_LIBRARY_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_LIBRARY_L.PNG.pvr; path = ../../US_IL_CHICAGO_LIBRARY_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F890CC6F5FEA0E417DF13BEE /* 071_FRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 071_FRC.PNG; path = ../../../Media/071_FRC.PNG; sourceTree = SOURCE_ROOT; };
+		F8915F77BA69F6E560384A45 /* US_IL_CHICAGO_HILTON_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_HILTON_L.PNG.pvr; path = ../../US_IL_CHICAGO_HILTON_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F892B7FC0A9C2BA1B5D275A6 /* US_IL_CHICAGO_HILTON_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_HILTON_L.PNG; path = ../../../Media/US_IL_CHICAGO_HILTON_L.PNG; sourceTree = SOURCE_ROOT; };
+		F893B7B14CFE9A35A230D42F /* 067_GCC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 067_GCC.PNG.pvr; path = ../../067_GCC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8942716CE7CFDCA3F74B7DF /* 016_FOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 016_FOC.PNG; path = ../../../Media/016_FOC.PNG; sourceTree = SOURCE_ROOT; };
+		F894CE282930A92F2E319F68 /* 076_FRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 076_FRC.PNG.pvr; path = ../../076_FRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F89520350845A7108185DE37 /* CM_US_IL_CHICAGO_010_014_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_010_014_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_010_014_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F89620B31430B0BAB0DE45B1 /* CM_US_IL_CHICAGO_010_016_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_010_016_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_010_016_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F897964F81A5EE61420AEAE5 /* 022_RUG.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 022_RUG.PNG.pvr; path = ../../022_RUG.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F899C38A4018A2FB740E2C3A /* 069_FCA.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 069_FCA.PNG.pvr; path = ../../069_FCA.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F89B878D7EAFA8AF41E5D434 /* US_L_WATER-COLOUR.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = "US_L_WATER-COLOUR.PNG.pvr"; path = "../../US_L_WATER-COLOUR.PNG.pvr"; sourceTree = SOURCE_ROOT; };
+		F89C3B7143612E96AD81C0E0 /* US_IL_CHICAGO_CHICAGOTHEATRE_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_CHICAGOTHEATRE_L.PNG; path = ../../../Media/US_IL_CHICAGO_CHICAGOTHEATRE_L.PNG; sourceTree = SOURCE_ROOT; };
+		F89C64F49903116C0319356C /* US_IL_CHICAGO_MMART_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_MMART_L.PNG; path = ../../../Media/US_IL_CHICAGO_MMART_L.PNG; sourceTree = SOURCE_ROOT; };
+		F89CEBB9A262AF613EB0460B /* 037_GOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 037_GOC.PNG; path = ../../../Media/037_GOC.PNG; sourceTree = SOURCE_ROOT; };
+		F89D4926005CED9ABD653F79 /* CM_US_IL_CHICAGO_013_015_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_013_015_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_013_015_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F89D9605B5B8DE729C72B2FC /* US_IL_13449_CHICAGO_CROWNFOUNTAIN_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13449_CHICAGO_CROWNFOUNTAIN_L.PNG.pvr; path = ../../US_IL_13449_CHICAGO_CROWNFOUNTAIN_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F89E9C57AEEA8336C573F49E /* 087_GCA.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 087_GCA.PNG; path = ../../../Media/087_GCA.PNG; sourceTree = SOURCE_ROOT; };
+		F89EEB79EE5DBF30EA027BAA /* 071_FRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 071_FRC.PNG.pvr; path = ../../071_FRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8A0F14320265051FB417A56 /* 032_GOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 032_GOC.PNG; path = ../../../Media/032_GOC.PNG; sourceTree = SOURCE_ROOT; };
+		F8A25B7B26C53D026FC9A65E /* 029_GCC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 029_GCC.PNG; path = ../../../Media/029_GCC.PNG; sourceTree = SOURCE_ROOT; };
+		F8A30AF61DDFA5F34BCC1176 /* 035_FOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 035_FOC.PNG; path = ../../../Media/035_FOC.PNG; sourceTree = SOURCE_ROOT; };
+		F8A392A9651978A206713E25 /* 075_FRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 075_FRC.PNG.pvr; path = ../../075_FRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8A39C247CC8BEB774554882 /* 034_FOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 034_FOC.PNG.pvr; path = ../../034_FOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8A48A5B2BB5C6BD7FB8CE2B /* CM_US_IL_CHICAGO_011_015_H.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_011_015_H.DAE.pod; path = ../../CM_US_IL_CHICAGO_011_015_H.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8A4B89E65E0A059315F6368 /* 041_GRB.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 041_GRB.PNG; path = ../../../Media/041_GRB.PNG; sourceTree = SOURCE_ROOT; };
+		F8A68B5BFFB185E4DD8AA59D /* 070_GOD.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 070_GOD.PNG; path = ../../../Media/070_GOD.PNG; sourceTree = SOURCE_ROOT; };
+		F8A6CD1486DA742F65AB68DB /* CM_US_IL_CHICAGO_011_017_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_011_017_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_011_017_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8A74D77E96CBFE595CA7084 /* US_IL_13447_CHICAGO_REIDMURDOCH_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13447_CHICAGO_REIDMURDOCH_L.PNG; path = ../../../Media/US_IL_13447_CHICAGO_REIDMURDOCH_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8A7BCB58E347D553C388023 /* US_IL_13448_CHICAGO_CARBIDE_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13448_CHICAGO_CARBIDE_L.PNG; path = ../../../Media/US_IL_13448_CHICAGO_CARBIDE_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8A7C8B8B1D44D087AB2978D /* 066_FCB.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 066_FCB.PNG; path = ../../../Media/066_FCB.PNG; sourceTree = SOURCE_ROOT; };
+		F8AB22FC03EC11E117ECC7CF /* US_IL_CHICAGO_JAMESTHOMPSON_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_JAMESTHOMPSON_L.PNG; path = ../../../Media/US_IL_CHICAGO_JAMESTHOMPSON_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8AB3EE7264F95D5E32C156B /* US_IL_CHICAGO_JAMESTHOMPSON_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_JAMESTHOMPSON_L.PNG.pvr; path = ../../US_IL_CHICAGO_JAMESTHOMPSON_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8AB54B1FCE2E0C36320B667 /* US_IL_CHICAGO_ARTINSTITUTE_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_ARTINSTITUTE_L.PNG.pvr; path = ../../US_IL_CHICAGO_ARTINSTITUTE_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8AC7884808B1DD3043FD6A3 /* 086_FOF.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 086_FOF.PNG; path = ../../../Media/086_FOF.PNG; sourceTree = SOURCE_ROOT; };
+		F8AD6CA970A564A0488D803B /* US_R_WALKWAY-SOLID.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "US_R_WALKWAY-SOLID.PNG"; path = "../../../Media/US_R_WALKWAY-SOLID.PNG"; sourceTree = SOURCE_ROOT; };
+		F8ADF6D3593E66EE84CFBC81 /* US_T_RAILROAD.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_T_RAILROAD.PNG; path = ../../../Media/US_T_RAILROAD.PNG; sourceTree = SOURCE_ROOT; };
+		F8AFD8461FD3408015390226 /* 089_FRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 089_FRC.PNG.pvr; path = ../../089_FRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8B060E56EFDE7A8958C4E46 /* US_IL_CHICAGO_MILLENIUMPARK1_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_MILLENIUMPARK1_L.PNG.pvr; path = ../../US_IL_CHICAGO_MILLENIUMPARK1_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8B085DF517D53BDEC57548B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../../../../Shell/OS/iPhone/main.m; sourceTree = SOURCE_ROOT; };
+		F8B24F5E1AE1B2C438ECCC60 /* US_IL_13448_CHICAGO_CARBIDE_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13448_CHICAGO_CARBIDE_L.PNG.pvr; path = ../../US_IL_13448_CHICAGO_CARBIDE_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8B26BE569CB800FFDD0F828 /* 027_RUW.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 027_RUW.PNG; path = ../../../Media/027_RUW.PNG; sourceTree = SOURCE_ROOT; };
+		F8B37D6C06EA2622C60422FC /* 023_FOB.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 023_FOB.PNG.pvr; path = ../../023_FOB.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8B6217AC7F49AF14E5D0572 /* US_IL_13460_CHICAGO_TRUMP_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13460_CHICAGO_TRUMP_L.PNG; path = ../../../Media/US_IL_13460_CHICAGO_TRUMP_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8B8575D4904DF1A088413A8 /* 025_FOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 025_FOC.PNG; path = ../../../Media/025_FOC.PNG; sourceTree = SOURCE_ROOT; };
+		F8B86E3328F48E25C5BEEDA1 /* 016_FOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 016_FOC.PNG.pvr; path = ../../016_FOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8BA1F04D4B2171A86ABBC82 /* EAGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EAGLView.h; path = ../../../../../Shell/API/EAGL/OpenGLSupport/EAGLView.h; sourceTree = SOURCE_ROOT; };
+		F8BC5276C9A0FF3296E2ACCB /* 056_GRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 056_GRC.PNG; path = ../../../Media/056_GRC.PNG; sourceTree = SOURCE_ROOT; };
+		F8BCFFAAD2F12AFB9B8E1A1F /* US_IL_CHICAGO_CHICAGOTHEATRE_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_CHICAGOTHEATRE_L.PNG.pvr; path = ../../US_IL_CHICAGO_CHICAGOTHEATRE_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8BD1B07DB8F626953019A12 /* US_IL_CHICAGO_OGILVIE_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_OGILVIE_L.PNG.pvr; path = ../../US_IL_CHICAGO_OGILVIE_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8BDD49131DD7ECB58E49731 /* US_R_STREET-UNMARKED.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = "US_R_STREET-UNMARKED.PNG.pvr"; path = "../../US_R_STREET-UNMARKED.PNG.pvr"; sourceTree = SOURCE_ROOT; };
+		F8BF6A59E880FFBFF54FCF83 /* US_R_STREET-DASHED.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = "US_R_STREET-DASHED.PNG.pvr"; path = "../../US_R_STREET-DASHED.PNG.pvr"; sourceTree = SOURCE_ROOT; };
+		F8BF96F53B7F9D752CDE28C9 /* 006_RUS.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 006_RUS.PNG.pvr; path = ../../006_RUS.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8BFC2A67A761E2BC1E22F6E /* PVRShellImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRShellImpl.h; path = ../../../../../Shell/PVRShellImpl.h; sourceTree = SOURCE_ROOT; };
+		F8BFCAD2524D954356A672F8 /* CM_US_IL_CHICAGO_011_017_H.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_011_017_H.DAE.pod; path = ../../CM_US_IL_CHICAGO_011_017_H.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8C0A3C6442F10D14563443A /* 028_GOF.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 028_GOF.PNG; path = ../../../Media/028_GOF.PNG; sourceTree = SOURCE_ROOT; };
+		F8C1B26FD678AA31C8FB7FDA /* 088_FRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 088_FRC.PNG.pvr; path = ../../088_FRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8C31F6267461D0A98A57F46 /* CM_US_IL_CHICAGO_011_013_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_011_013_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_011_013_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8C391DB3A6AE629F4F22478 /* 017_FOD.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 017_FOD.PNG; path = ../../../Media/017_FOD.PNG; sourceTree = SOURCE_ROOT; };
+		F8C4DF2867A088BC174C3E0C /* US_IL_CHICAGO_SEARSTOWER_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_SEARSTOWER_L.PNG; path = ../../../Media/US_IL_CHICAGO_SEARSTOWER_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8C52BEA2ACC964B1C13F5F5 /* US_IL_13454_CHICAGO_UNITED_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13454_CHICAGO_UNITED_L.PNG.pvr; path = ../../US_IL_13454_CHICAGO_UNITED_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8C5668F0ADB273E1CEA75E2 /* skybox4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybox4.png; path = ../../../Media/skybox4.png; sourceTree = SOURCE_ROOT; };
+		F8C69AE708C13D45BDF04837 /* US_R_HIGHWAY-SOLID.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = "US_R_HIGHWAY-SOLID.PNG.pvr"; path = "../../US_R_HIGHWAY-SOLID.PNG.pvr"; sourceTree = SOURCE_ROOT; };
+		F8C7191AE715D95DFBA58E00 /* 019_FOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 019_FOC.PNG.pvr; path = ../../019_FOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8C7711C04AE581065DA3488 /* US_IL_13449_CHICAGO_CROWNFOUNTAIN_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13449_CHICAGO_CROWNFOUNTAIN_L.PNG; path = ../../../Media/US_IL_13449_CHICAGO_CROWNFOUNTAIN_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8C86CA693E1FEB2C03EC18B /* US_IL_13444_CHICAGO_LEOBURNETT_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13444_CHICAGO_LEOBURNETT_L.PNG; path = ../../../Media/US_IL_13444_CHICAGO_LEOBURNETT_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8CA6934E0CE1258DB5EA2CC /* 059_FRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 059_FRC.PNG.pvr; path = ../../059_FRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8CB447BF41B6E599BEECC4C /* US_IL_CHICAGO_ARTINSTITUTE_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_ARTINSTITUTE_L.PNG; path = ../../../Media/US_IL_CHICAGO_ARTINSTITUTE_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8CBB54DE5A0BCF0B1D3CC40 /* 055_GRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 055_GRC.PNG; path = ../../../Media/055_GRC.PNG; sourceTree = SOURCE_ROOT; };
+		F8CBEC9E0D1F4BC10F01C758 /* US_L_CONCRETE-DETAIL.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = "US_L_CONCRETE-DETAIL.PNG.pvr"; path = "../../US_L_CONCRETE-DETAIL.PNG.pvr"; sourceTree = SOURCE_ROOT; };
+		F8CBF162ADC4D29234136595 /* 031_GOD.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 031_GOD.PNG.pvr; path = ../../031_GOD.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8CC29A9ED3F5C714BD4D5E7 /* US_IL_CHICAGO_LIBRARY_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_LIBRARY_L.PNG; path = ../../../Media/US_IL_CHICAGO_LIBRARY_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8CCABA0139F2EF60A5D7578 /* 009_RUG.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 009_RUG.PNG.pvr; path = ../../009_RUG.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8CCE65213EB3CB07E6C3848 /* CM_US_IL_CHICAGO_011_016_H.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_011_016_H.DAE.pod; path = ../../CM_US_IL_CHICAGO_011_016_H.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8CD01D06885481BFCEFD604 /* Skybox.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = Skybox.pvr; path = ../../Skybox.pvr; sourceTree = SOURCE_ROOT; };
+		F8CE4B8B91184B7F50C49D24 /* 056_GRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 056_GRC.PNG.pvr; path = ../../056_GRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8CEC518A4098C5DF33ADC36 /* US_R_STREET-LANE-FILLER.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = "US_R_STREET-LANE-FILLER.PNG.pvr"; path = "../../US_R_STREET-LANE-FILLER.PNG.pvr"; sourceTree = SOURCE_ROOT; };
+		F8CED7BEDB975E9A20EEFB9F /* 086_GOF.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 086_GOF.PNG.pvr; path = ../../086_GOF.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8CFB9012C185F0599517EBE /* 073_FRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 073_FRC.PNG; path = ../../../Media/073_FRC.PNG; sourceTree = SOURCE_ROOT; };
+		F8D0312EB893F97CB0683F4B /* CM_US_IL_CHICAGO_009_018_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_009_018_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_009_018_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8D0DF10578798846BCDB085 /* PVRShellAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRShellAPI.h; path = ../../../../../Shell/API/EAGL/PVRShellAPI.h; sourceTree = SOURCE_ROOT; };
+		F8D1B981035D881980DE2A9D /* 036_FOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 036_FOC.PNG; path = ../../../Media/036_FOC.PNG; sourceTree = SOURCE_ROOT; };
+		F8D26FE558374C020C7CFB67 /* US_IL_13447_CHICAGO_REIDMURDOCH_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13447_CHICAGO_REIDMURDOCH_L.PNG.pvr; path = ../../US_IL_13447_CHICAGO_REIDMURDOCH_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8D2B529CA3476294E9DFC0B /* US_R_HIGHWAY-SOLID.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "US_R_HIGHWAY-SOLID.PNG"; path = "../../../Media/US_R_HIGHWAY-SOLID.PNG"; sourceTree = SOURCE_ROOT; };
+		F8D3657446958569BF3EAB3E /* 025_FOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 025_FOC.PNG.pvr; path = ../../025_FOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8D37C2760A9C3EC8CC2CC90 /* US_R_STREET-INNER-SHOULDER.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = "US_R_STREET-INNER-SHOULDER.PNG.pvr"; path = "../../US_R_STREET-INNER-SHOULDER.PNG.pvr"; sourceTree = SOURCE_ROOT; };
+		F8D504AF3D2393A12830F03F /* 074_FRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 074_FRC.PNG.pvr; path = ../../074_FRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8D74FF5629A2EDB0B1BF619 /* 019_RZG.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 019_RZG.PNG; path = ../../../Media/019_RZG.PNG; sourceTree = SOURCE_ROOT; };
+		F8D840C68246A9D83862E55C /* 011_GIE.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 011_GIE.PNG; path = ../../../Media/011_GIE.PNG; sourceTree = SOURCE_ROOT; };
+		F8D884CB7302C95B63C305B7 /* CM_US_IL_CHICAGO_008_016_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_008_016_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_008_016_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8D969705743658D850A4536 /* 060_FRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 060_FRC.PNG; path = ../../../Media/060_FRC.PNG; sourceTree = SOURCE_ROOT; };
+		F8DA83CF5506AB9043784E92 /* 021_FOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 021_FOC.PNG.pvr; path = ../../021_FOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8DB2D6B2B88F8E79E840080 /* 022_RUG.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 022_RUG.PNG; path = ../../../Media/022_RUG.PNG; sourceTree = SOURCE_ROOT; };
+		F8DB3C5584899F4FD9C89275 /* 069_GCA.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 069_GCA.PNG; path = ../../../Media/069_GCA.PNG; sourceTree = SOURCE_ROOT; };
+		F8DBFFA3E4FCCD49D1B9F857 /* 012_RSR.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 012_RSR.PNG.pvr; path = ../../012_RSR.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8DC13702377896AF67A58AB /* 080_GCB.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 080_GCB.PNG.pvr; path = ../../080_GCB.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8DC76C9563AD190D2F2DF35 /* 021_FOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 021_FOC.PNG; path = ../../../Media/021_FOC.PNG; sourceTree = SOURCE_ROOT; };
+		F8DE1B778703BB6A2022F297 /* CM_US_IL_CHICAGO_008_015_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_008_015_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_008_015_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8DE658AB829330B4341F7BE /* 064_GRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 064_GRC.PNG.pvr; path = ../../064_GRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8DF65787EA708601EBC8004 /* 030_GOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 030_GOC.PNG; path = ../../../Media/030_GOC.PNG; sourceTree = SOURCE_ROOT; };
+		F8DFD2685EA834426782F67F /* 085_GRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 085_GRC.PNG.pvr; path = ../../085_GRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8E003495FABBF1EBB053706 /* 077_FRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 077_FRC.PNG; path = ../../../Media/077_FRC.PNG; sourceTree = SOURCE_ROOT; };
+		F8E0B4C6D98EDF7B7D47C195 /* 054_GRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 054_GRC.PNG; path = ../../../Media/054_GRC.PNG; sourceTree = SOURCE_ROOT; };
+		F8E17B5BEED31405FFA517E3 /* 030_GOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 030_GOC.PNG.pvr; path = ../../030_GOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8E1C9F55EC0D14E041F14F3 /* 066_GCB.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 066_GCB.PNG; path = ../../../Media/066_GCB.PNG; sourceTree = SOURCE_ROOT; };
+		F8E29EF67A9FEE139C04A736 /* US_IL_13443_CHICAGO_35EAST_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13443_CHICAGO_35EAST_L.PNG; path = ../../../Media/US_IL_13443_CHICAGO_35EAST_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8E310154680BDA9232004A0 /* CM_US_IL_CHICAGO_011_018_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_011_018_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_011_018_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8E3E435CD76C616901888C8 /* 032_GOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 032_GOC.PNG.pvr; path = ../../032_GOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8E4579B5887AD8C3ADA2782 /* 092_GCA.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 092_GCA.PNG.pvr; path = ../../092_GCA.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8E45D8A2AA456114E29DAC6 /* 018_FOD.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 018_FOD.PNG; path = ../../../Media/018_FOD.PNG; sourceTree = SOURCE_ROOT; };
+		F8E49ECEEE01D1BAAC51B9F4 /* US_IL_13458_CHICAGO_SMURFIT_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13458_CHICAGO_SMURFIT_L.PNG; path = ../../../Media/US_IL_13458_CHICAGO_SMURFIT_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8E5BB210D3429F90036763F /* 027_FOD.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 027_FOD.PNG; path = ../../../Media/027_FOD.PNG; sourceTree = SOURCE_ROOT; };
+		F8E606BA44DC3F614B2981A2 /* US_IL_13459_CHICAGO_LASALLE_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13459_CHICAGO_LASALLE_L.PNG; path = ../../../Media/US_IL_13459_CHICAGO_LASALLE_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8E62A829C20F947793BD0BC /* 063_GRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 063_GRC.PNG.pvr; path = ../../063_GRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8E66BA1F83960F61FF88E4A /* 036_GOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 036_GOC.PNG; path = ../../../Media/036_GOC.PNG; sourceTree = SOURCE_ROOT; };
+		F8E789CE0FAAF610701DB55C /* CM_US_IL_CHICAGO_009_014_L.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_009_014_L.DAE.pod; path = ../../CM_US_IL_CHICAGO_009_014_L.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8EBEF90CC52BD9FEA78D0C8 /* skybox1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybox1.png; path = ../../../Media/skybox1.png; sourceTree = SOURCE_ROOT; };
+		F8EC8D5DA50CF09EC3B495EA /* US_IL_13453_CHICAGO_PRUDENTIAL_PART1_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13453_CHICAGO_PRUDENTIAL_PART1_L.PNG; path = ../../../Media/US_IL_13453_CHICAGO_PRUDENTIAL_PART1_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8ED092E627A652B3C29F2EC /* 061_FRD.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 061_FRD.PNG; path = ../../../Media/061_FRD.PNG; sourceTree = SOURCE_ROOT; };
+		F8EE2E289FA48F361285ABD9 /* ShadowVolFragShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = ShadowVolFragShader.fsh; path = ../../ShadowVolFragShader.fsh; sourceTree = SOURCE_ROOT; };
+		F8EE5ACB1E5ABB2F30E9AAA2 /* CM_US_IL_CHICAGO_010_015_H.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_010_015_H.DAE.pod; path = ../../CM_US_IL_CHICAGO_010_015_H.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8F049042F21381B4F580A2A /* skybox3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybox3.png; path = ../../../Media/skybox3.png; sourceTree = SOURCE_ROOT; };
+		F8F2654F674B232B8FC7B6F8 /* OGLES2Navigation3D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OGLES2Navigation3D.cpp; path = ../../OGLES2Navigation3D.cpp; sourceTree = SOURCE_ROOT; };
+		F8F2749CA63092C3F19C08E3 /* US_R_WALKWAY-UNMARKED.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = "US_R_WALKWAY-UNMARKED.PNG.pvr"; path = "../../US_R_WALKWAY-UNMARKED.PNG.pvr"; sourceTree = SOURCE_ROOT; };
+		F8F28DB10B0AA69E667FC992 /* 072_FRC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 072_FRC.PNG; path = ../../../Media/072_FRC.PNG; sourceTree = SOURCE_ROOT; };
+		F8F4592DBC271B5F38224661 /* 009_RUG.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 009_RUG.PNG; path = ../../../Media/009_RUG.PNG; sourceTree = SOURCE_ROOT; };
+		F8F4D1C2CE3FFF65779B7566 /* 024_FOB.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 024_FOB.PNG.pvr; path = ../../024_FOB.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8F53EF436798D61D9CAC000 /* US_IL_13451_CHICAGO_CULTURAL_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13451_CHICAGO_CULTURAL_L.PNG; path = ../../../Media/US_IL_13451_CHICAGO_CULTURAL_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8F6A88E5D54967100C56EA9 /* 035_FOC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 035_FOC.PNG.pvr; path = ../../035_FOC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8F7B9AB99A9C2CC5D1E6FD8 /* US_IL_13490_CHICAGO_PRUDENTIAL_PART2_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_13490_CHICAGO_PRUDENTIAL_PART2_L.PNG.pvr; path = ../../US_IL_13490_CHICAGO_PRUDENTIAL_PART2_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8F84A57F89398BB4786EF27 /* US_IL_13456_CHICAGO_SEVENTEENTH_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_13456_CHICAGO_SEVENTEENTH_L.PNG; path = ../../../Media/US_IL_13456_CHICAGO_SEVENTEENTH_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8F91AD6039BB4DBCAA72519 /* US_IL_CHICAGO_BOEINGBUILDING_L.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_IL_CHICAGO_BOEINGBUILDING_L.PNG.pvr; path = ../../US_IL_CHICAGO_BOEINGBUILDING_L.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8F92A232BAB84D556655F82 /* 060_FRC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 060_FRC.PNG.pvr; path = ../../060_FRC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8F968FB244D9CA60B6B0BDE /* US_R_STREET-SOLID.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = "US_R_STREET-SOLID.PNG.pvr"; path = "../../US_R_STREET-SOLID.PNG.pvr"; sourceTree = SOURCE_ROOT; };
+		F8FA5F634D517DAC67D32D6D /* US_T_RAILROAD.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = US_T_RAILROAD.PNG.pvr; path = ../../US_T_RAILROAD.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8FA9D5FC35198DA0A08D325 /* CM_US_IL_CHICAGO_010_017_H.DAE.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = CM_US_IL_CHICAGO_010_017_H.DAE.pod; path = ../../CM_US_IL_CHICAGO_010_017_H.DAE.pod; sourceTree = SOURCE_ROOT; };
+		F8FB1003A15E3CF1079CF0AE /* 029_GCC.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 029_GCC.PNG.pvr; path = ../../029_GCC.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8FB71CD389F4873674A1605 /* 034_FOC.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 034_FOC.PNG; path = ../../../Media/034_FOC.PNG; sourceTree = SOURCE_ROOT; };
+		F8FBC5A05A16DB669C9D88AA /* US_IL_CHICAGO_DALEY_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_DALEY_L.PNG; path = ../../../Media/US_IL_CHICAGO_DALEY_L.PNG; sourceTree = SOURCE_ROOT; };
+		F8FCFD06DA4F2F87BD5D384F /* 017_FOD.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 017_FOD.PNG.pvr; path = ../../017_FOD.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8FD5E92878352E27633C98C /* 025_RUW.PNG.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = 025_RUW.PNG.pvr; path = ../../025_RUW.PNG.pvr; sourceTree = SOURCE_ROOT; };
+		F8FE058D0463DCE1A7B37584 /* US_R_STREET-UNMARKED.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "US_R_STREET-UNMARKED.PNG"; path = "../../../Media/US_R_STREET-UNMARKED.PNG"; sourceTree = SOURCE_ROOT; };
+		F8FE58CEB2658A6D4AA17279 /* US_IL_CHICAGO_MILLENIUMPARK1_L.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = US_IL_CHICAGO_MILLENIUMPARK1_L.PNG; path = ../../../Media/US_IL_CHICAGO_MILLENIUMPARK1_L.PNG; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F812461A1015DE7B003F1905 /* libOGLES2Tools.a in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */,
+				2D500B9A0D5A79CF00DBA0E3 /* QuartzCore.framework in Frameworks */,
+				BA240AC20FEFE77A00DE852D /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* OGLES2Navigation3D.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */,
+				F85E2B260DD21E3F00CA9BEB /* PVRDemo */,
+				F8DAC1360DD2069F008D2EBD /* PVRShell */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				F8E27FF71004EDC30006BBB4 /* Shaders */,
+				F82C4A6F10298C9800FF3CC6 /* Effects */,
+				F8E27FF61004EDBD0006BBB4 /* Textures */,
+				F8E27FF51004EDB10006BBB4 /* Models */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				F864940210F75E5100F46F54 /* Entitlements.plist */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8205A82130408E100253AE7 /* Default-Portrait.png */,
+				F8205A83130408E100253AE7 /* Default.png */,
+				F8205A84130408E100253AE7 /* Icon-72.png */,
+				F8205A85130408E100253AE7 /* Icon-Small-50.png */,
+				F8205A86130408E100253AE7 /* Icon-Small.png */,
+				F8205A87130408E100253AE7 /* Icon-Small@2x.png */,
+				F8205A88130408E100253AE7 /* Icon.png */,
+				F8205A89130408E100253AE7 /* Icon@2x.png */,
+				F8205A8A130408E100253AE7 /* iTunesArtwork */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA240AC10FEFE77A00DE852D /* OpenGLES.framework */,
+				1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */,
+				2D500B990D5A79CF00DBA0E3 /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F80B21C11015CA1600A93BE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F80B21C91015CA1600A93BE2 /* libOGLES2Tools.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F82C4A6F10298C9800FF3CC6 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Effects;
+			sourceTree = "<group>";
+		};
+		F85E2B260DD21E3F00CA9BEB /* PVRDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F8F2654F674B232B8FC7B6F8 /* OGLES2Navigation3D.cpp */,
+			);
+			name = PVRDemo;
+			sourceTree = "<group>";
+		};
+		F8DAC1360DD2069F008D2EBD /* PVRShell */ = {
+			isa = PBXGroup;
+			children = (
+				F86806AB073BCF43114182F8 /* PVRShell.cpp */,
+				F8685712661BB8886AD7514E /* PVRShellAPI.cpp */,
+				F83A86645DDC3D69B5253277 /* EAGLView.mm */,
+				F80E48ED567B8029CD035DCC /* PVRShellOS.cpp */,
+				F8B085DF517D53BDEC57548B /* main.m */,
+				F812B82B586D7AEF8F327E60 /* AppController.mm */,
+				F83A1F5C3CD9301907D06259 /* PVRShell.h */,
+				F8BFC2A67A761E2BC1E22F6E /* PVRShellImpl.h */,
+				F8D0DF10578798846BCDB085 /* PVRShellAPI.h */,
+				F8BA1F04D4B2171A86ABBC82 /* EAGLView.h */,
+				F81ED8D2EC0F22F741D90292 /* PVRShellOS.h */,
+				F88E0D816D169BDC9A632C46 /* AppController.h */,
+			);
+			name = PVRShell;
+			sourceTree = "<group>";
+		};
+		F8E27FF51004EDB10006BBB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F812D995DCB46F2CCF3A898E /* modelindex.nav */,
+				F820638D4FFDB0828B3E0D80 /* occlusiondata.nav */,
+				F80B175CFB82A735483BE3BB /* cameratrack.pod */,
+				F8DE1B778703BB6A2022F297 /* CM_US_IL_CHICAGO_008_015_L.DAE.pod */,
+				F8D884CB7302C95B63C305B7 /* CM_US_IL_CHICAGO_008_016_L.DAE.pod */,
+				F8E789CE0FAAF610701DB55C /* CM_US_IL_CHICAGO_009_014_L.DAE.pod */,
+				F87013FC25A507472E37C817 /* CM_US_IL_CHICAGO_009_015_L.DAE.pod */,
+				F861A015E47B3EE767FA009D /* CM_US_IL_CHICAGO_009_016_L.DAE.pod */,
+				F837D9E47A46F1471F47A594 /* CM_US_IL_CHICAGO_009_017_L.DAE.pod */,
+				F8D0312EB893F97CB0683F4B /* CM_US_IL_CHICAGO_009_018_L.DAE.pod */,
+				F89520350845A7108185DE37 /* CM_US_IL_CHICAGO_010_014_L.DAE.pod */,
+				F81EE8CD2600B17F1ED72E40 /* CM_US_IL_CHICAGO_010_015_L.DAE.pod */,
+				F8EE5ACB1E5ABB2F30E9AAA2 /* CM_US_IL_CHICAGO_010_015_H.DAE.pod */,
+				F86D0C563693C5B0B94F4D3E /* CM_US_IL_CHICAGO_010_016_H.DAE.pod */,
+				F89620B31430B0BAB0DE45B1 /* CM_US_IL_CHICAGO_010_016_L.DAE.pod */,
+				F848692F9E99A0E0772C1063 /* CM_US_IL_CHICAGO_010_017_L.DAE.pod */,
+				F8FA9D5FC35198DA0A08D325 /* CM_US_IL_CHICAGO_010_017_H.DAE.pod */,
+				F8564E1FA3EF7783F6EB070E /* CM_US_IL_CHICAGO_010_018_L.DAE.pod */,
+				F8C31F6267461D0A98A57F46 /* CM_US_IL_CHICAGO_011_013_L.DAE.pod */,
+				F82B7B154B6391D727C845A3 /* CM_US_IL_CHICAGO_011_014_L.DAE.pod */,
+				F8611DDC3D014F4E0A40E5B7 /* CM_US_IL_CHICAGO_011_015_L.DAE.pod */,
+				F8A48A5B2BB5C6BD7FB8CE2B /* CM_US_IL_CHICAGO_011_015_H.DAE.pod */,
+				F8CCE65213EB3CB07E6C3848 /* CM_US_IL_CHICAGO_011_016_H.DAE.pod */,
+				F8122DDB93CE355D1A868079 /* CM_US_IL_CHICAGO_011_016_L.DAE.pod */,
+				F8A6CD1486DA742F65AB68DB /* CM_US_IL_CHICAGO_011_017_L.DAE.pod */,
+				F8BFCAD2524D954356A672F8 /* CM_US_IL_CHICAGO_011_017_H.DAE.pod */,
+				F8E310154680BDA9232004A0 /* CM_US_IL_CHICAGO_011_018_L.DAE.pod */,
+				F80631C073AC3D0BAACFCFFE /* CM_US_IL_CHICAGO_012_014_L.DAE.pod */,
+				F85FAAB08EB013799EFFCE92 /* CM_US_IL_CHICAGO_012_015_L.DAE.pod */,
+				F867189704FB6E9E9207EFCD /* CM_US_IL_CHICAGO_012_016_L.DAE.pod */,
+				F88BB1C96B26ED24297023C5 /* CM_US_IL_CHICAGO_012_017_L.DAE.pod */,
+				F89D4926005CED9ABD653F79 /* CM_US_IL_CHICAGO_013_015_L.DAE.pod */,
+				F882A696CD8B8C381069FCD1 /* CM_US_IL_CHICAGO_013_016_L.DAE.pod */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F8E27FF61004EDBD0006BBB4 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				F84079A00275D14623EACF33 /* UIElements.png */,
+				F8EBEF90CC52BD9FEA78D0C8 /* skybox1.png */,
+				F82AEE3CFFD45AEA60B76BDA /* skybox2.png */,
+				F8F049042F21381B4F580A2A /* skybox3.png */,
+				F8C5668F0ADB273E1CEA75E2 /* skybox4.png */,
+				F84B747CE6C8F99FB0AA50FB /* skybox5.png */,
+				F861F5F37F701CB670D320F9 /* skybox6.png */,
+				F80CFA5D1B88BC665AB2109C /* 006_RUS.PNG */,
+				F8190F6C20CD023873037C9C /* 007_RUG.PNG */,
+				F84E5453D5C578BD77012352 /* 008_RUG.PNG */,
+				F8F4592DBC271B5F38224661 /* 009_RUG.PNG */,
+				F8D840C68246A9D83862E55C /* 011_GIE.PNG */,
+				F80071D0512F9FCC6E1B2D7D /* 012_RSR.PNG */,
+				F8942716CE7CFDCA3F74B7DF /* 016_FOC.PNG */,
+				F86A954D055DDD5D8656D687 /* 016_RTR.PNG */,
+				F8C391DB3A6AE629F4F22478 /* 017_FOD.PNG */,
+				F8E45D8A2AA456114E29DAC6 /* 018_FOD.PNG */,
+				F85914A9C43E22A86FD75108 /* 019_FOC.PNG */,
+				F81D4F3EEB1AA8A5F5DC5B7C /* 019_GOC.PNG */,
+				F8D74FF5629A2EDB0B1BF619 /* 019_RZG.PNG */,
+				F863848FD9BDD8A18B60CC96 /* 020_FOC.PNG */,
+				F8DC76C9563AD190D2F2DF35 /* 021_FOC.PNG */,
+				F887EB489B7D0B23B9C9647E /* 022_FOC.PNG */,
+				F8DB2D6B2B88F8E79E840080 /* 022_RUG.PNG */,
+				F807FE0B7435FAF509170C6C /* 023_FOB.PNG */,
+				F82F69C9289DB1C833E8F4C0 /* 023_RUG.PNG */,
+				F82736E57C5A5183C65CCF1B /* 024_FOB.PNG */,
+				F8B8575D4904DF1A088413A8 /* 025_FOC.PNG */,
+				F87CD59FC2EFD8A8525EC88E /* 025_RUW.PNG */,
+				F81B823AFE8B70CF6129B554 /* 026_FOD.PNG */,
+				F86B647531824F367BC657B0 /* 026_RUW.PNG */,
+				F8E5BB210D3429F90036763F /* 027_FOD.PNG */,
+				F8B26BE569CB800FFDD0F828 /* 027_RUW.PNG */,
+				F8C0A3C6442F10D14563443A /* 028_GOF.PNG */,
+				F8A25B7B26C53D026FC9A65E /* 029_GCC.PNG */,
+				F8DF65787EA708601EBC8004 /* 030_GOC.PNG */,
+				F813D296878F11DFC3CEACB5 /* 031_GOD.PNG */,
+				F85E140A9248F74DD2153ADD /* 032_FOC.PNG */,
+				F8A0F14320265051FB417A56 /* 032_GOC.PNG */,
+				F87A7DA23C58E481DAF21448 /* 033_FOA.PNG */,
+				F83D07F93BB1EA419D5143E0 /* 033_GOA.PNG */,
+				F8FB71CD389F4873674A1605 /* 034_FOC.PNG */,
+				F849A1CA1ACFA4343F9E19EE /* 034_GOC.PNG */,
+				F8A30AF61DDFA5F34BCC1176 /* 035_FOC.PNG */,
+				F88752E5D84805557811A1B9 /* 035_GOC.PNG */,
+				F8D1B981035D881980DE2A9D /* 036_FOC.PNG */,
+				F8E66BA1F83960F61FF88E4A /* 036_GOC.PNG */,
+				F83F45A9E33F315ECF6E217C /* 037_FOC.PNG */,
+				F89CEBB9A262AF613EB0460B /* 037_GOC.PNG */,
+				F8522361A627590DF6162B13 /* 041_FRB.PNG */,
+				F8A4B89E65E0A059315F6368 /* 041_GRB.PNG */,
+				F81F1D27BF327B7311799D4E /* 044_GRC.PNG */,
+				F8605603C652D4EC007F8257 /* 046_GRC.PNG */,
+				F8E0B4C6D98EDF7B7D47C195 /* 054_GRC.PNG */,
+				F8CBB54DE5A0BCF0B1D3CC40 /* 055_GRC.PNG */,
+				F8BC5276C9A0FF3296E2ACCB /* 056_GRC.PNG */,
+				F80B47F0DE272E28644E8808 /* 059_FRC.PNG */,
+				F8D969705743658D850A4536 /* 060_FRC.PNG */,
+				F8ED092E627A652B3C29F2EC /* 061_FRD.PNG */,
+				F8075394766DDBC85A1E53CF /* 063_GRC.PNG */,
+				F81F27401BD0096F6068295C /* 064_GRC.PNG */,
+				F8A7C8B8B1D44D087AB2978D /* 066_FCB.PNG */,
+				F8E1C9F55EC0D14E041F14F3 /* 066_GCB.PNG */,
+				F814182ABDEF908080941719 /* 067_FCC.PNG */,
+				F827BF2773AC72AC599C659C /* 067_GCC.PNG */,
+				F8078A0281E2D7D187E70D0E /* 068_GCD.PNG */,
+				F824870C018F394C3A409E81 /* 069_FCA.PNG */,
+				F8DB3C5584899F4FD9C89275 /* 069_GCA.PNG */,
+				F8A68B5BFFB185E4DD8AA59D /* 070_GOD.PNG */,
+				F890CC6F5FEA0E417DF13BEE /* 071_FRC.PNG */,
+				F8F28DB10B0AA69E667FC992 /* 072_FRC.PNG */,
+				F8CFB9012C185F0599517EBE /* 073_FRC.PNG */,
+				F85038CC6E24343EC7849050 /* 074_FRC.PNG */,
+				F88879A5B64D01957302742C /* 075_FRC.PNG */,
+				F8758A98EF9495200173E4A2 /* 076_FRC.PNG */,
+				F8E003495FABBF1EBB053706 /* 077_FRC.PNG */,
+				F81703AD525EFCA5E043D738 /* 080_GCB.PNG */,
+				F8448868FE88BFABA6D0B6E8 /* 082_FCD.PNG */,
+				F84BF0299C9D827A797335C3 /* 083_FRC.PNG */,
+				F83BE2F66B1464B518A543E0 /* 085_GRC.PNG */,
+				F8AC7884808B1DD3043FD6A3 /* 086_FOF.PNG */,
+				F8364B6961A34EF37A11184D /* 086_GOF.PNG */,
+				F877E19880F45093F5793FF5 /* 087_FCA.PNG */,
+				F89E9C57AEEA8336C573F49E /* 087_GCA.PNG */,
+				F813D827860076B218B17391 /* 087_GCC.PNG */,
+				F85B37202A4F5D379C1F8A9C /* 088_FRC.PNG */,
+				F85358BC9B40E8F4842F7EBD /* 089_FRC.PNG */,
+				F82348A563DEEF0030BA8C92 /* 092_GCA.PNG */,
+				F886B697FC1B73357620E8E1 /* 094_FOD.PNG */,
+				F85749D2F3A926F4FBE50B80 /* 095_FOD.PNG */,
+				F8E29EF67A9FEE139C04A736 /* US_IL_13443_CHICAGO_35EAST_L.PNG */,
+				F8C86CA693E1FEB2C03EC18B /* US_IL_13444_CHICAGO_LEOBURNETT_L.PNG */,
+				F8A74D77E96CBFE595CA7084 /* US_IL_13447_CHICAGO_REIDMURDOCH_L.PNG */,
+				F8A7BCB58E347D553C388023 /* US_IL_13448_CHICAGO_CARBIDE_L.PNG */,
+				F8C7711C04AE581065DA3488 /* US_IL_13449_CHICAGO_CROWNFOUNTAIN_L.PNG */,
+				F8F53EF436798D61D9CAC000 /* US_IL_13451_CHICAGO_CULTURAL_L.PNG */,
+				F8EC8D5DA50CF09EC3B495EA /* US_IL_13453_CHICAGO_PRUDENTIAL_PART1_L.PNG */,
+				F85C4F0E815DB92235DCA320 /* US_IL_13454_CHICAGO_UNITED_L.PNG */,
+				F8F84A57F89398BB4786EF27 /* US_IL_13456_CHICAGO_SEVENTEENTH_L.PNG */,
+				F8E49ECEEE01D1BAAC51B9F4 /* US_IL_13458_CHICAGO_SMURFIT_L.PNG */,
+				F8E606BA44DC3F614B2981A2 /* US_IL_13459_CHICAGO_LASALLE_L.PNG */,
+				F8B6217AC7F49AF14E5D0572 /* US_IL_13460_CHICAGO_TRUMP_L.PNG */,
+				F876E5BE7EC8F1D939672046 /* US_IL_13461_CHICAGO_UNITRIN_L.PNG */,
+				F882425ACEEF1DDEE305EA91 /* US_IL_13462_CHICAGO_WILLOUGHBY_L.PNG */,
+				F8165FBE51A75C4273253F8D /* US_IL_13490_CHICAGO_PRUDENTIAL_PART2_L.PNG */,
+				F828BF71EC84558482068F4B /* US_IL_CHICAGO_AONCENTER_L.PNG */,
+				F8CB447BF41B6E599BEECC4C /* US_IL_CHICAGO_ARTINSTITUTE_L.PNG */,
+				F849E07120C34ECE5A4A896F /* US_IL_CHICAGO_BOARDOFTHETRADE_L.PNG */,
+				F8452DC13AB99E0D1220EE7B /* US_IL_CHICAGO_BOEINGBUILDING_L.PNG */,
+				F89C3B7143612E96AD81C0E0 /* US_IL_CHICAGO_CHICAGOTHEATRE_L.PNG */,
+				F83CA8B036B108FDED00C625 /* US_IL_CHICAGO_CITYHALL_L.PNG */,
+				F8FBC5A05A16DB669C9D88AA /* US_IL_CHICAGO_DALEY_L.PNG */,
+				F892B7FC0A9C2BA1B5D275A6 /* US_IL_CHICAGO_HILTON_L.PNG */,
+				F8AB22FC03EC11E117ECC7CF /* US_IL_CHICAGO_JAMESTHOMPSON_L.PNG */,
+				F8CC29A9ED3F5C714BD4D5E7 /* US_IL_CHICAGO_LIBRARY_L.PNG */,
+				F8FE58CEB2658A6D4AA17279 /* US_IL_CHICAGO_MILLENIUMPARK1_L.PNG */,
+				F85CBD4169694C7F7DDB11D0 /* US_IL_CHICAGO_MILLENIUMPARK2_L.PNG */,
+				F89C64F49903116C0319356C /* US_IL_CHICAGO_MMART_L.PNG */,
+				F88538D4F5849097DD90938F /* US_IL_CHICAGO_OGILVIE_L.PNG */,
+				F8C4DF2867A088BC174C3E0C /* US_IL_CHICAGO_SEARSTOWER_L.PNG */,
+				F88F25179BCA76516C9DBBAA /* US_IL_CHICAGO_UNIONSTATION_L.PNG */,
+				F832FF37CAF0DAA79928FFC4 /* US_L_CONCRETE-COLOUR.PNG */,
+				F85308C9394CA6F6C4B07F2C /* US_L_CONCRETE-DETAIL.PNG */,
+				F82113C21F7FF235992758C0 /* US_L_PARK-COLOUR.PNG */,
+				F84A3C1BC98057DAE3E98661 /* US_L_WATER-COLOUR.PNG */,
+				F8218A260D88F5E0B0331996 /* US_R_CONCRETE.PNG */,
+				F8D2B529CA3476294E9DFC0B /* US_R_HIGHWAY-SOLID.PNG */,
+				F80B60DAF220F60B713DED37 /* US_R_STREET-DASHED.PNG */,
+				F85B3314A63773F61F3BC3F2 /* US_R_STREET-INNER-SHOULDER.PNG */,
+				F87E14ACD552C17E4FC36790 /* US_R_STREET-LANE-FILLER.PNG */,
+				F8806975F7B0E364561A6154 /* US_R_STREET-SOLID.PNG */,
+				F8FE058D0463DCE1A7B37584 /* US_R_STREET-UNMARKED.PNG */,
+				F8AD6CA970A564A0488D803B /* US_R_WALKWAY-SOLID.PNG */,
+				F85DC7C565A185681B2C68DE /* US_R_WALKWAY-UNMARKED.PNG */,
+				F8ADF6D3593E66EE84CFBC81 /* US_T_RAILROAD.PNG */,
+				F8190768EB21810F84026BDF /* UIElements.pvr */,
+				F8CD01D06885481BFCEFD604 /* Skybox.pvr */,
+				F8BF96F53B7F9D752CDE28C9 /* 006_RUS.PNG.pvr */,
+				F84604CB326719BB724E4D43 /* 007_RUG.PNG.pvr */,
+				F81651FD99225768EB7BCCE2 /* 008_RUG.PNG.pvr */,
+				F8CCABA0139F2EF60A5D7578 /* 009_RUG.PNG.pvr */,
+				F825F1BC2AF596EC84E34E62 /* 011_GIE.PNG.pvr */,
+				F8DBFFA3E4FCCD49D1B9F857 /* 012_RSR.PNG.pvr */,
+				F8B86E3328F48E25C5BEEDA1 /* 016_FOC.PNG.pvr */,
+				F87B7302FA50E9E557F17271 /* 016_RTR.PNG.pvr */,
+				F8FCFD06DA4F2F87BD5D384F /* 017_FOD.PNG.pvr */,
+				F8218FB0DF705F3C327ED766 /* 018_FOD.PNG.pvr */,
+				F8C7191AE715D95DFBA58E00 /* 019_FOC.PNG.pvr */,
+				F865C489D7A27D7B57A59BC4 /* 019_GOC.PNG.pvr */,
+				F84139148427A64D38B8FAF4 /* 019_RZG.PNG.pvr */,
+				F848B84D751B881D60770B0A /* 020_FOC.PNG.pvr */,
+				F8DA83CF5506AB9043784E92 /* 021_FOC.PNG.pvr */,
+				F81CD1AE8C7633B10AA488C4 /* 022_FOC.PNG.pvr */,
+				F897964F81A5EE61420AEAE5 /* 022_RUG.PNG.pvr */,
+				F8B37D6C06EA2622C60422FC /* 023_FOB.PNG.pvr */,
+				F858C2A88351F7F4893412CB /* 023_RUG.PNG.pvr */,
+				F8F4D1C2CE3FFF65779B7566 /* 024_FOB.PNG.pvr */,
+				F8D3657446958569BF3EAB3E /* 025_FOC.PNG.pvr */,
+				F8FD5E92878352E27633C98C /* 025_RUW.PNG.pvr */,
+				F881143409F65BAEA3A36C5B /* 026_FOD.PNG.pvr */,
+				F81A0DF1F7BDDB19B4C3DBED /* 026_RUW.PNG.pvr */,
+				F84881ADF55381A61701F97A /* 027_FOD.PNG.pvr */,
+				F87266F9F17B8E85F5C85E20 /* 027_RUW.PNG.pvr */,
+				F869927A23F9612150E4EEF6 /* 028_GOF.PNG.pvr */,
+				F8FB1003A15E3CF1079CF0AE /* 029_GCC.PNG.pvr */,
+				F8E17B5BEED31405FFA517E3 /* 030_GOC.PNG.pvr */,
+				F8CBF162ADC4D29234136595 /* 031_GOD.PNG.pvr */,
+				F82A667783F9B1E1BF1C4E52 /* 032_FOC.PNG.pvr */,
+				F8E3E435CD76C616901888C8 /* 032_GOC.PNG.pvr */,
+				F80C920C2FB787828444759E /* 033_FOA.PNG.pvr */,
+				F84F6E3FD9B0E0A3906CB7E5 /* 033_GOA.PNG.pvr */,
+				F8A39C247CC8BEB774554882 /* 034_FOC.PNG.pvr */,
+				F883FCE11F20E389A5FB4FA0 /* 034_GOC.PNG.pvr */,
+				F8F6A88E5D54967100C56EA9 /* 035_FOC.PNG.pvr */,
+				F8569E15492EF9DD86BF477C /* 035_GOC.PNG.pvr */,
+				F84A5925E026F5D5EC7AB265 /* 036_FOC.PNG.pvr */,
+				F819A4E9A72A480282186997 /* 036_GOC.PNG.pvr */,
+				F88A5FC4ABB0D0A3D83B2376 /* 037_FOC.PNG.pvr */,
+				F82EEBD66FCA36AB88BAA02A /* 037_GOC.PNG.pvr */,
+				F86AF66D4EEB387AC875C936 /* 041_FRB.PNG.pvr */,
+				F86C9BE4E0C4DB05E9A17370 /* 041_GRB.PNG.pvr */,
+				F827F6AD631426C45B3BFDE4 /* 044_GRC.PNG.pvr */,
+				F8580DC3A6581C9E37DF2DDC /* 046_GRC.PNG.pvr */,
+				F85303D86F2449668B2CAA53 /* 054_GRC.PNG.pvr */,
+				F8225A57524A9DE302FFC673 /* 055_GRC.PNG.pvr */,
+				F8CE4B8B91184B7F50C49D24 /* 056_GRC.PNG.pvr */,
+				F8CA6934E0CE1258DB5EA2CC /* 059_FRC.PNG.pvr */,
+				F8F92A232BAB84D556655F82 /* 060_FRC.PNG.pvr */,
+				F81FFEC3BAD0751F1524DBE8 /* 061_FRD.PNG.pvr */,
+				F8E62A829C20F947793BD0BC /* 063_GRC.PNG.pvr */,
+				F8DE658AB829330B4341F7BE /* 064_GRC.PNG.pvr */,
+				F88876E1D8501BAF9B473EA4 /* 066_FCB.PNG.pvr */,
+				F854718CAF5BE0C4452B951D /* 066_GCB.PNG.pvr */,
+				F8214BEEAC552F73AAD2B7AB /* 067_FCC.PNG.pvr */,
+				F893B7B14CFE9A35A230D42F /* 067_GCC.PNG.pvr */,
+				F8127D340FC9E806B2A4F6FB /* 068_GCD.PNG.pvr */,
+				F899C38A4018A2FB740E2C3A /* 069_FCA.PNG.pvr */,
+				F88944334475E09EFD503935 /* 069_GCA.PNG.pvr */,
+				F82C8E1BC5B72F763EA74D61 /* 070_GOD.PNG.pvr */,
+				F89EEB79EE5DBF30EA027BAA /* 071_FRC.PNG.pvr */,
+				F8266A61B0BDC62CD423EE7C /* 072_FRC.PNG.pvr */,
+				F8076885C372F55EF5B5516C /* 073_FRC.PNG.pvr */,
+				F8D504AF3D2393A12830F03F /* 074_FRC.PNG.pvr */,
+				F8A392A9651978A206713E25 /* 075_FRC.PNG.pvr */,
+				F894CE282930A92F2E319F68 /* 076_FRC.PNG.pvr */,
+				F885997360AF82BE84B19235 /* 077_FRC.PNG.pvr */,
+				F8DC13702377896AF67A58AB /* 080_GCB.PNG.pvr */,
+				F800946FDED32432A5FF9293 /* 082_FCD.PNG.pvr */,
+				F868FC771E2BA29A06FD630C /* 083_FRC.PNG.pvr */,
+				F8DFD2685EA834426782F67F /* 085_GRC.PNG.pvr */,
+				F8695FF76046C03748619683 /* 086_FOF.PNG.pvr */,
+				F8CED7BEDB975E9A20EEFB9F /* 086_GOF.PNG.pvr */,
+				F82500DFE8476BDDDC73FE16 /* 087_FCA.PNG.pvr */,
+				F88A2300AFC3D32A05C0F826 /* 087_GCA.PNG.pvr */,
+				F884E3AC9564604067F31ADC /* 087_GCC.PNG.pvr */,
+				F8C1B26FD678AA31C8FB7FDA /* 088_FRC.PNG.pvr */,
+				F8AFD8461FD3408015390226 /* 089_FRC.PNG.pvr */,
+				F8E4579B5887AD8C3ADA2782 /* 092_GCA.PNG.pvr */,
+				F81FEA78DD17F72E552AF330 /* 094_FOD.PNG.pvr */,
+				F824847FCD13C030836DD5D0 /* 095_FOD.PNG.pvr */,
+				F82EEE89536C470CA4F47F5A /* US_IL_13443_CHICAGO_35EAST_L.PNG.pvr */,
+				F819039B362F51A1737F4649 /* US_IL_13444_CHICAGO_LEOBURNETT_L.PNG.pvr */,
+				F8D26FE558374C020C7CFB67 /* US_IL_13447_CHICAGO_REIDMURDOCH_L.PNG.pvr */,
+				F8B24F5E1AE1B2C438ECCC60 /* US_IL_13448_CHICAGO_CARBIDE_L.PNG.pvr */,
+				F89D9605B5B8DE729C72B2FC /* US_IL_13449_CHICAGO_CROWNFOUNTAIN_L.PNG.pvr */,
+				F863BD89B622FE32383C7E71 /* US_IL_13451_CHICAGO_CULTURAL_L.PNG.pvr */,
+				F88E40D0711B2893939252CD /* US_IL_13453_CHICAGO_PRUDENTIAL_PART1_L.PNG.pvr */,
+				F8C52BEA2ACC964B1C13F5F5 /* US_IL_13454_CHICAGO_UNITED_L.PNG.pvr */,
+				F80FED8B3CF1EED4FD7D68C2 /* US_IL_13456_CHICAGO_SEVENTEENTH_L.PNG.pvr */,
+				F88E3129FA8DC1BB7FFBEB73 /* US_IL_13458_CHICAGO_SMURFIT_L.PNG.pvr */,
+				F820C114ADC43473BBE1DB85 /* US_IL_13459_CHICAGO_LASALLE_L.PNG.pvr */,
+				F8220719376A2B619FFE6DAC /* US_IL_13460_CHICAGO_TRUMP_L.PNG.pvr */,
+				F80D3D336F107C17AC0B86FD /* US_IL_13461_CHICAGO_UNITRIN_L.PNG.pvr */,
+				F8253873976D43669B75A6EA /* US_IL_13462_CHICAGO_WILLOUGHBY_L.PNG.pvr */,
+				F8F7B9AB99A9C2CC5D1E6FD8 /* US_IL_13490_CHICAGO_PRUDENTIAL_PART2_L.PNG.pvr */,
+				F887F3D65B7B2C1AA5A5887B /* US_IL_CHICAGO_AONCENTER_L.PNG.pvr */,
+				F8AB54B1FCE2E0C36320B667 /* US_IL_CHICAGO_ARTINSTITUTE_L.PNG.pvr */,
+				F86E88169EF4583C61B64C3F /* US_IL_CHICAGO_BOARDOFTHETRADE_L.PNG.pvr */,
+				F8F91AD6039BB4DBCAA72519 /* US_IL_CHICAGO_BOEINGBUILDING_L.PNG.pvr */,
+				F8BCFFAAD2F12AFB9B8E1A1F /* US_IL_CHICAGO_CHICAGOTHEATRE_L.PNG.pvr */,
+				F8099BD237C7834030A0DCB5 /* US_IL_CHICAGO_CITYHALL_L.PNG.pvr */,
+				F8034E12F67B373A57F3398B /* US_IL_CHICAGO_DALEY_L.PNG.pvr */,
+				F8915F77BA69F6E560384A45 /* US_IL_CHICAGO_HILTON_L.PNG.pvr */,
+				F8AB3EE7264F95D5E32C156B /* US_IL_CHICAGO_JAMESTHOMPSON_L.PNG.pvr */,
+				F88FAF89FD403FF2C7C853A2 /* US_IL_CHICAGO_LIBRARY_L.PNG.pvr */,
+				F8B060E56EFDE7A8958C4E46 /* US_IL_CHICAGO_MILLENIUMPARK1_L.PNG.pvr */,
+				F850E991C943E769AAD37454 /* US_IL_CHICAGO_MILLENIUMPARK2_L.PNG.pvr */,
+				F8647514CFB197E00B565D7D /* US_IL_CHICAGO_MMART_L.PNG.pvr */,
+				F8BD1B07DB8F626953019A12 /* US_IL_CHICAGO_OGILVIE_L.PNG.pvr */,
+				F834D35FA87FA42CE7ED85F7 /* US_IL_CHICAGO_SEARSTOWER_L.PNG.pvr */,
+				F88A86D5388FF3BD1CF5E22B /* US_IL_CHICAGO_UNIONSTATION_L.PNG.pvr */,
+				F804CF1B9CB46005C486BB7E /* US_L_CONCRETE-COLOUR.PNG.pvr */,
+				F8CBEC9E0D1F4BC10F01C758 /* US_L_CONCRETE-DETAIL.PNG.pvr */,
+				F82F0040038B4651CE1ECA7B /* US_L_PARK-COLOUR.PNG.pvr */,
+				F89B878D7EAFA8AF41E5D434 /* US_L_WATER-COLOUR.PNG.pvr */,
+				F857C4A685C2B91FE61404EA /* US_R_CONCRETE.PNG.pvr */,
+				F8C69AE708C13D45BDF04837 /* US_R_HIGHWAY-SOLID.PNG.pvr */,
+				F8BF6A59E880FFBFF54FCF83 /* US_R_STREET-DASHED.PNG.pvr */,
+				F8D37C2760A9C3EC8CC2CC90 /* US_R_STREET-INNER-SHOULDER.PNG.pvr */,
+				F8CEC518A4098C5DF33ADC36 /* US_R_STREET-LANE-FILLER.PNG.pvr */,
+				F8F968FB244D9CA60B6B0BDE /* US_R_STREET-SOLID.PNG.pvr */,
+				F8BDD49131DD7ECB58E49731 /* US_R_STREET-UNMARKED.PNG.pvr */,
+				F8233328814F76990A7AEC64 /* US_R_WALKWAY-SOLID.PNG.pvr */,
+				F8F2749CA63092C3F19C08E3 /* US_R_WALKWAY-UNMARKED.PNG.pvr */,
+				F8FA5F634D517DAC67D32D6D /* US_T_RAILROAD.PNG.pvr */,
+			);
+			name = Textures;
+			sourceTree = "<group>";
+		};
+		F8E27FF71004EDC30006BBB4 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				F80DB8B1988A1506186A6D4A /* UIVertShader.vsh */,
+				F813CAAEF7C65357811C802F /* UIFragShader.fsh */,
+				F87F9BE0FE43FC52B4F6E8A4 /* SkyboxFragShader.fsh */,
+				F82069E704456FECDECE0730 /* SkyboxVertShader.vsh */,
+				F862DF0C2A0FD082F029E501 /* BuildingFragShader.fsh */,
+				F82F14C5A5104CD5E6DBB683 /* BuildingVertShader.vsh */,
+				F8101B7CF20E6D30689D0AB7 /* FullscreenVertShader.vsh */,
+				F826E03D8DDF4386970589C1 /* FullscreenFragShader.fsh */,
+				F8429C28B7F3BF36B6E736AB /* ShadowVolVertShader.vsh */,
+				F8EE2E289FA48F361285ABD9 /* ShadowVolFragShader.fsh */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* OGLES2Navigation3D */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "OGLES2Navigation3D" */;
+			buildPhases = (
+				F823D6BD1028C4B200D01178 /* ShellScript */,
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				BA909F0A0FF0EADD00A4C97C /* data */,
+				BA909F0B0FF0EADD00A4C97C /* textures */,
+				BA909F1C0FF0EB3200A4C97C /* shaders */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F80B21CB1015CA2B00A93BE2 /* PBXTargetDependency */,
+			);
+			name = OGLES2Navigation3D;
+			productName = foo;
+			productReference = 1D6058910D05DD3D006BFB54 /* OGLES2Navigation3D.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OGLES2Navigation3D" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F80B21C11015CA1600A93BE2 /* Products */;
+					ProjectRef = F80B21C01015CA1600A93BE2 /* OGLES2Tools.xcode */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* OGLES2Navigation3D */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F80B21C91015CA1600A93BE2 /* libOGLES2Tools.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOGLES2Tools.a;
+			remoteRef = F80B21C81015CA1600A93BE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F864940310F75E5100F46F54 /* Entitlements.plist in Resources */,
+				F8205A8B130408E100253AE7 /* Default-Portrait.png in Resources */,
+				F8205A8C130408E100253AE7 /* Default.png in Resources */,
+				F8205A8D130408E100253AE7 /* Icon-72.png in Resources */,
+				F8205A8E130408E100253AE7 /* Icon-Small-50.png in Resources */,
+				F8205A8F130408E100253AE7 /* Icon-Small.png in Resources */,
+				F8205A90130408E100253AE7 /* Icon-Small@2x.png in Resources */,
+				F8205A91130408E100253AE7 /* Icon.png in Resources */,
+				F8205A92130408E100253AE7 /* Icon@2x.png in Resources */,
+				F8205A93130408E100253AE7 /* iTunesArtwork in Resources */,
+				F8421BE65AE2BB8BDA76431B /* modelindex.nav in Resources */,
+				F857FC0BF21BCF9EC2A60899 /* occlusiondata.nav in Resources */,
+				F86C60508704F3D1C5C0A4DA /* cameratrack.pod in Resources */,
+				F8449B2B62A697A02DFE249F /* CM_US_IL_CHICAGO_008_015_L.DAE.pod in Resources */,
+				F8E0B8A86B7A8C260AD9BD87 /* CM_US_IL_CHICAGO_008_016_L.DAE.pod in Resources */,
+				F8935CA2323F3B511A7F481D /* CM_US_IL_CHICAGO_009_014_L.DAE.pod in Resources */,
+				F81A2D83FCEE183761183B34 /* CM_US_IL_CHICAGO_009_015_L.DAE.pod in Resources */,
+				F859D887E1BDB8259EE111B8 /* CM_US_IL_CHICAGO_009_016_L.DAE.pod in Resources */,
+				F84E57AEEF17E513CFC24A95 /* CM_US_IL_CHICAGO_009_017_L.DAE.pod in Resources */,
+				F83700F13BCA3F0EE2B75766 /* CM_US_IL_CHICAGO_009_018_L.DAE.pod in Resources */,
+				F82FB57BEDEB1579B974EFD8 /* CM_US_IL_CHICAGO_010_014_L.DAE.pod in Resources */,
+				F8D82B5568FE592A6B318492 /* CM_US_IL_CHICAGO_010_015_L.DAE.pod in Resources */,
+				F8EC826CB91EBB022A6249AC /* CM_US_IL_CHICAGO_010_015_H.DAE.pod in Resources */,
+				F80E25DAFB8A9ACA146EF699 /* CM_US_IL_CHICAGO_010_016_H.DAE.pod in Resources */,
+				F8FA164CE348DC480E695306 /* CM_US_IL_CHICAGO_010_016_L.DAE.pod in Resources */,
+				F8488A229EB0AEAA3FEABE76 /* CM_US_IL_CHICAGO_010_017_L.DAE.pod in Resources */,
+				F827BE22A82B77CA7779D078 /* CM_US_IL_CHICAGO_010_017_H.DAE.pod in Resources */,
+				F85B8810D94B473060251E93 /* CM_US_IL_CHICAGO_010_018_L.DAE.pod in Resources */,
+				F8AFA5839BAD3A5F398296F5 /* CM_US_IL_CHICAGO_011_013_L.DAE.pod in Resources */,
+				F81D1ACE075BE37872B37519 /* CM_US_IL_CHICAGO_011_014_L.DAE.pod in Resources */,
+				F8E2EAE181250AAC836D6E9F /* CM_US_IL_CHICAGO_011_015_L.DAE.pod in Resources */,
+				F81104D1EB77CE219FF5B3E4 /* CM_US_IL_CHICAGO_011_015_H.DAE.pod in Resources */,
+				F801648E91BFB5D61B9F9E00 /* CM_US_IL_CHICAGO_011_016_H.DAE.pod in Resources */,
+				F839E4DE34330696BB43A9F9 /* CM_US_IL_CHICAGO_011_016_L.DAE.pod in Resources */,
+				F858617EBF01BF5C1B2B868E /* CM_US_IL_CHICAGO_011_017_L.DAE.pod in Resources */,
+				F8574450F0E66F3D3564E76C /* CM_US_IL_CHICAGO_011_017_H.DAE.pod in Resources */,
+				F8FB2220603CF99F350AEEF8 /* CM_US_IL_CHICAGO_011_018_L.DAE.pod in Resources */,
+				F8FF0967827FDF0DC5DBB301 /* CM_US_IL_CHICAGO_012_014_L.DAE.pod in Resources */,
+				F8863DC2E6FC70614ABA6BA7 /* CM_US_IL_CHICAGO_012_015_L.DAE.pod in Resources */,
+				F8150852DBF9ECCD76BF3D67 /* CM_US_IL_CHICAGO_012_016_L.DAE.pod in Resources */,
+				F8448370747648651F4FADD3 /* CM_US_IL_CHICAGO_012_017_L.DAE.pod in Resources */,
+				F8042BA66282A3C1CFBE9DEC /* CM_US_IL_CHICAGO_013_015_L.DAE.pod in Resources */,
+				F8012BF148F55ABADB3176DD /* CM_US_IL_CHICAGO_013_016_L.DAE.pod in Resources */,
+				F8739B5094DFAAB1C4325929 /* UIElements.pvr in Resources */,
+				F825027C1D3C945AB2AF733C /* Skybox.pvr in Resources */,
+				F8E6D019DD3C9C6FADF44E89 /* 006_RUS.PNG.pvr in Resources */,
+				F83F8B522EE7679442184165 /* 007_RUG.PNG.pvr in Resources */,
+				F82B7E4395A54B0FDDF57F3D /* 008_RUG.PNG.pvr in Resources */,
+				F83187779520A05C8215F8C1 /* 009_RUG.PNG.pvr in Resources */,
+				F87207F4831F4538C4770C93 /* 011_GIE.PNG.pvr in Resources */,
+				F87D1C7B3F380F1348DE8DB1 /* 012_RSR.PNG.pvr in Resources */,
+				F8816F737F1FFE3817CD2BAF /* 016_FOC.PNG.pvr in Resources */,
+				F825AE09CAF58F3961FBD755 /* 016_RTR.PNG.pvr in Resources */,
+				F8016506BF6C43B1FA6F8C04 /* 017_FOD.PNG.pvr in Resources */,
+				F86AF5F8E94080B9F659FF5E /* 018_FOD.PNG.pvr in Resources */,
+				F89045DD73EE03E3527F855E /* 019_FOC.PNG.pvr in Resources */,
+				F8A80D005DC91A370024AE4F /* 019_GOC.PNG.pvr in Resources */,
+				F881FEFE6E63FABE81677F6C /* 019_RZG.PNG.pvr in Resources */,
+				F85AF068FF4F387E202AA27D /* 020_FOC.PNG.pvr in Resources */,
+				F86D5C319B690148EAAD00DE /* 021_FOC.PNG.pvr in Resources */,
+				F8EE54652AD35A395E84B098 /* 022_FOC.PNG.pvr in Resources */,
+				F8F48C64820A32A0EFA3467C /* 022_RUG.PNG.pvr in Resources */,
+				F8938230FD3B3F9BA4251CB3 /* 023_FOB.PNG.pvr in Resources */,
+				F80F399AC451CBD0E7BA693D /* 023_RUG.PNG.pvr in Resources */,
+				F872A975A97D5E5A83E56633 /* 024_FOB.PNG.pvr in Resources */,
+				F80986110F49A3BE0893BCF1 /* 025_FOC.PNG.pvr in Resources */,
+				F85C222C189B051DCA553320 /* 025_RUW.PNG.pvr in Resources */,
+				F8F1EDEB69168D5B5FDFD9B1 /* 026_FOD.PNG.pvr in Resources */,
+				F8A062DD282E35BDB9100004 /* 026_RUW.PNG.pvr in Resources */,
+				F81019EB448A68E149C13ED5 /* 027_FOD.PNG.pvr in Resources */,
+				F83961D2D4A4245F7B904FFA /* 027_RUW.PNG.pvr in Resources */,
+				F83DA56BEF3D63EC2AF0BCC1 /* 028_GOF.PNG.pvr in Resources */,
+				F8A5CACA036E53E507108173 /* 029_GCC.PNG.pvr in Resources */,
+				F83F2609631D72F80A8AEE7D /* 030_GOC.PNG.pvr in Resources */,
+				F84EE74F3F81756F39DBACD3 /* 031_GOD.PNG.pvr in Resources */,
+				F85D8DCB2B7421E8859AE6A8 /* 032_FOC.PNG.pvr in Resources */,
+				F80A08BD2A56DD5D20A2F655 /* 032_GOC.PNG.pvr in Resources */,
+				F8CCE9AD71208C37BE91241A /* 033_FOA.PNG.pvr in Resources */,
+				F817AF1BED4CE30B9D16020E /* 033_GOA.PNG.pvr in Resources */,
+				F81A6F8E2AB12FC26229AF99 /* 034_FOC.PNG.pvr in Resources */,
+				F856CE54554C18C00BC6A517 /* 034_GOC.PNG.pvr in Resources */,
+				F8372CE79348D8EEDBAEEE68 /* 035_FOC.PNG.pvr in Resources */,
+				F8231276A735ED358EB8D6C9 /* 035_GOC.PNG.pvr in Resources */,
+				F80BBA9E64AB4B6EFF0DA47E /* 036_FOC.PNG.pvr in Resources */,
+				F84F439D433AD55A8DCC29AF /* 036_GOC.PNG.pvr in Resources */,
+				F8DBEF4E569D2898F2796B50 /* 037_FOC.PNG.pvr in Resources */,
+				F8086ADB6B03EFA8288E62AD /* 037_GOC.PNG.pvr in Resources */,
+				F8CFDBA70D0C6CF2BF26B584 /* 041_FRB.PNG.pvr in Resources */,
+				F82662DBF9F32A4C40BF61C5 /* 041_GRB.PNG.pvr in Resources */,
+				F877B064CC8BD8E8A7C0FD62 /* 044_GRC.PNG.pvr in Resources */,
+				F8CA3E94AA275C048BBA1ACF /* 046_GRC.PNG.pvr in Resources */,
+				F896A8F6D16489798397BEB9 /* 054_GRC.PNG.pvr in Resources */,
+				F8C61A11194D01F17B9E39B4 /* 055_GRC.PNG.pvr in Resources */,
+				F85C9B0F8D17AD04B18500F4 /* 056_GRC.PNG.pvr in Resources */,
+				F8BCB610A2D45067EE388260 /* 059_FRC.PNG.pvr in Resources */,
+				F8CB99FE81E1C63687B24E64 /* 060_FRC.PNG.pvr in Resources */,
+				F8A41E70CB7EECBFDA3A2E1F /* 061_FRD.PNG.pvr in Resources */,
+				F8B31E7F35871F0276ADFF71 /* 063_GRC.PNG.pvr in Resources */,
+				F8CF9BF95FD0A9917258F3B7 /* 064_GRC.PNG.pvr in Resources */,
+				F8E44EF6E3367A39EAB531C0 /* 066_FCB.PNG.pvr in Resources */,
+				F8D96BA3989D916BFDFE0AF0 /* 066_GCB.PNG.pvr in Resources */,
+				F833DF0A6DB97D0055EB68C2 /* 067_FCC.PNG.pvr in Resources */,
+				F8BEE5BFAED1D035BCEF369E /* 067_GCC.PNG.pvr in Resources */,
+				F81AA9A727F820B7778A2AEC /* 068_GCD.PNG.pvr in Resources */,
+				F8C06103EDD6A36138D69957 /* 069_FCA.PNG.pvr in Resources */,
+				F81A3B442C8D9A4067B4BB70 /* 069_GCA.PNG.pvr in Resources */,
+				F8FCA1457C45A5E1B4C5F599 /* 070_GOD.PNG.pvr in Resources */,
+				F8E45454EAAB2EDD66D79ADB /* 071_FRC.PNG.pvr in Resources */,
+				F88BFBDB4F2A4EA214265F24 /* 072_FRC.PNG.pvr in Resources */,
+				F84F382BFC55A9ED92A0DBE0 /* 073_FRC.PNG.pvr in Resources */,
+				F85A531D1A4F394D84AFEAEC /* 074_FRC.PNG.pvr in Resources */,
+				F8BDB5AD46119803B64CD293 /* 075_FRC.PNG.pvr in Resources */,
+				F804CD931E0A2A06F1BE7336 /* 076_FRC.PNG.pvr in Resources */,
+				F8B778FA72FE6F321A8C9592 /* 077_FRC.PNG.pvr in Resources */,
+				F8B991BAB64890B164D70DF2 /* 080_GCB.PNG.pvr in Resources */,
+				F83A2675207F91F35CBAA4EA /* 082_FCD.PNG.pvr in Resources */,
+				F83233723EBB96992A6AFE5E /* 083_FRC.PNG.pvr in Resources */,
+				F838E9998F1F15C911DFEA23 /* 085_GRC.PNG.pvr in Resources */,
+				F80E3292575C64A9AFF9E3AE /* 086_FOF.PNG.pvr in Resources */,
+				F892D572461B2661FDFF1FBA /* 086_GOF.PNG.pvr in Resources */,
+				F878155F48483B68CE72E6C4 /* 087_FCA.PNG.pvr in Resources */,
+				F80B0D6306E321A78186ED94 /* 087_GCA.PNG.pvr in Resources */,
+				F8A7060FDA737A879EF6DBD6 /* 087_GCC.PNG.pvr in Resources */,
+				F865D00CD4479A4CCE428ED7 /* 088_FRC.PNG.pvr in Resources */,
+				F88BCF3BDA275A2CC8D4A15B /* 089_FRC.PNG.pvr in Resources */,
+				F8307EBEE53615E998FE6C9C /* 092_GCA.PNG.pvr in Resources */,
+				F8E1557E392D9F4E8A4FD679 /* 094_FOD.PNG.pvr in Resources */,
+				F87703AAC790C327A9D9933D /* 095_FOD.PNG.pvr in Resources */,
+				F8EFF942037E6693A9049B60 /* US_IL_13443_CHICAGO_35EAST_L.PNG.pvr in Resources */,
+				F8D0F27C9361D3B29A0E447D /* US_IL_13444_CHICAGO_LEOBURNETT_L.PNG.pvr in Resources */,
+				F8E0475454BBD0C2CEF3D6BA /* US_IL_13447_CHICAGO_REIDMURDOCH_L.PNG.pvr in Resources */,
+				F806A2C5EC57B084B2C16C5C /* US_IL_13448_CHICAGO_CARBIDE_L.PNG.pvr in Resources */,
+				F8EB7B444CC4ECA5BEAEC2A9 /* US_IL_13449_CHICAGO_CROWNFOUNTAIN_L.PNG.pvr in Resources */,
+				F82CDD3DE24E6A4A3089CCB6 /* US_IL_13451_CHICAGO_CULTURAL_L.PNG.pvr in Resources */,
+				F8CC0B51EAEE22C49202544C /* US_IL_13453_CHICAGO_PRUDENTIAL_PART1_L.PNG.pvr in Resources */,
+				F87A342093F336E329BDFE45 /* US_IL_13454_CHICAGO_UNITED_L.PNG.pvr in Resources */,
+				F8658ABA0F6AD27A847108AE /* US_IL_13456_CHICAGO_SEVENTEENTH_L.PNG.pvr in Resources */,
+				F8130BC2A68DAF3C06D65A76 /* US_IL_13458_CHICAGO_SMURFIT_L.PNG.pvr in Resources */,
+				F80E31F368E52B0E965DE940 /* US_IL_13459_CHICAGO_LASALLE_L.PNG.pvr in Resources */,
+				F88DBEC1211C1A25E3039ACB /* US_IL_13460_CHICAGO_TRUMP_L.PNG.pvr in Resources */,
+				F84CDFC6E519DD6B22FAFB07 /* US_IL_13461_CHICAGO_UNITRIN_L.PNG.pvr in Resources */,
+				F836A8E9640A951D78AE1991 /* US_IL_13462_CHICAGO_WILLOUGHBY_L.PNG.pvr in Resources */,
+				F87CF976615B648AD448D285 /* US_IL_13490_CHICAGO_PRUDENTIAL_PART2_L.PNG.pvr in Resources */,
+				F89B56A9D8CA24024D935BE8 /* US_IL_CHICAGO_AONCENTER_L.PNG.pvr in Resources */,
+				F869D750AF1B20EB0671155F /* US_IL_CHICAGO_ARTINSTITUTE_L.PNG.pvr in Resources */,
+				F85AC924E4C4044AB6517A8B /* US_IL_CHICAGO_BOARDOFTHETRADE_L.PNG.pvr in Resources */,
+				F8380568D6E340C18EE40DFA /* US_IL_CHICAGO_BOEINGBUILDING_L.PNG.pvr in Resources */,
+				F8AD060692F16E8D45A2DAD7 /* US_IL_CHICAGO_CHICAGOTHEATRE_L.PNG.pvr in Resources */,
+				F84BDC909403743333C15F46 /* US_IL_CHICAGO_CITYHALL_L.PNG.pvr in Resources */,
+				F89950DE65CF5D47038E9D1A /* US_IL_CHICAGO_DALEY_L.PNG.pvr in Resources */,
+				F8862254AB74EE81A730DD7B /* US_IL_CHICAGO_HILTON_L.PNG.pvr in Resources */,
+				F81EA4268D5581293906A879 /* US_IL_CHICAGO_JAMESTHOMPSON_L.PNG.pvr in Resources */,
+				F8B42B71F4E3EA4C53FAC7FE /* US_IL_CHICAGO_LIBRARY_L.PNG.pvr in Resources */,
+				F8D055CC466BEB61F42C325A /* US_IL_CHICAGO_MILLENIUMPARK1_L.PNG.pvr in Resources */,
+				F8D67047A79501BDE950A306 /* US_IL_CHICAGO_MILLENIUMPARK2_L.PNG.pvr in Resources */,
+				F89A8AD4CA838DD26372E01B /* US_IL_CHICAGO_MMART_L.PNG.pvr in Resources */,
+				F80AB43D83F9FEB6A8CF58BD /* US_IL_CHICAGO_OGILVIE_L.PNG.pvr in Resources */,
+				F8B7F355EAA98E4A8485E74F /* US_IL_CHICAGO_SEARSTOWER_L.PNG.pvr in Resources */,
+				F83630AEB6FB7BF0A7F26EC7 /* US_IL_CHICAGO_UNIONSTATION_L.PNG.pvr in Resources */,
+				F8E49FB844C4A31D6E5417ED /* US_L_CONCRETE-COLOUR.PNG.pvr in Resources */,
+				F80A34D73D7D9E46919268BE /* US_L_CONCRETE-DETAIL.PNG.pvr in Resources */,
+				F83BE96351FF51473BC1487A /* US_L_PARK-COLOUR.PNG.pvr in Resources */,
+				F823E109234B6511AF6C195F /* US_L_WATER-COLOUR.PNG.pvr in Resources */,
+				F8936F4FA6354DE03F5996DA /* US_R_CONCRETE.PNG.pvr in Resources */,
+				F8393EED18A4021EE56AF2A4 /* US_R_HIGHWAY-SOLID.PNG.pvr in Resources */,
+				F80FE43C761FA78D143BED09 /* US_R_STREET-DASHED.PNG.pvr in Resources */,
+				F8BCA92152C4980A724C9C26 /* US_R_STREET-INNER-SHOULDER.PNG.pvr in Resources */,
+				F818C90C089A4F9DC489222A /* US_R_STREET-LANE-FILLER.PNG.pvr in Resources */,
+				F86509CBD08D23BF13F6AB72 /* US_R_STREET-SOLID.PNG.pvr in Resources */,
+				F841CD9A1BA808330D268817 /* US_R_STREET-UNMARKED.PNG.pvr in Resources */,
+				F84F49F164D50339747C20AF /* US_R_WALKWAY-SOLID.PNG.pvr in Resources */,
+				F83A78A697A8C74126F6BC10 /* US_R_WALKWAY-UNMARKED.PNG.pvr in Resources */,
+				F87DC43D95D3CD5D1364C53B /* US_T_RAILROAD.PNG.pvr in Resources */,
+				F8D3DD5A7DDAEBA26E7D1847 /* UIVertShader.vsh in Resources */,
+				F8F95A94F84A8FA81DD8AEE5 /* UIFragShader.fsh in Resources */,
+				F85A496912FBCC858D4E1487 /* SkyboxFragShader.fsh in Resources */,
+				F820C97F00CC6D4F1CC5729B /* SkyboxVertShader.vsh in Resources */,
+				F80A1D6F6C1F0326DCD4FA2E /* BuildingFragShader.fsh in Resources */,
+				F82297005BB34C427E44B949 /* BuildingVertShader.vsh in Resources */,
+				F8CC856F191C1C630F6A5947 /* FullscreenVertShader.vsh in Resources */,
+				F89E895B465AA001EF14EA15 /* FullscreenFragShader.fsh in Resources */,
+				F875D7F2EE93D7A34C5B47B5 /* ShadowVolVertShader.vsh in Resources */,
+				F8CBFFC06F55B33AA43B2D9F /* ShadowVolFragShader.fsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F823D6BD1028C4B200D01178 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ../../ && test -f content.mak \\\n&& make -f content.mak textures PVRTEXTOOL=../../../Utilities/PVRTexTool/PVRTexToolCL/MacOS_x86/PVRTexTool || true";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8A0C0D2CE9B881292E0C2DB /* OGLES2Navigation3D.cpp in Sources */,
+				F8630E83E2409C83D56FBEC7 /* PVRShell.cpp in Sources */,
+				F8BC0A26D1DFE7D24AF67727 /* PVRShellAPI.cpp in Sources */,
+				F8411F7FA35ADD4338A91C4F /* EAGLView.mm in Sources */,
+				F8DD445EC802A113BADECABE /* PVRShellOS.cpp in Sources */,
+				F8511E325A14C7B1512D37CC /* main.m in Sources */,
+				F869BEBD44384AC2147622A7 /* AppController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F80B21CB1015CA2B00A93BE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OGLES2Tools;
+			targetProxy = F80B21CA1015CA2B00A93BE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					_DEBUG,
+					BUILD_OGLES2,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/c++/4.2.1/armv6-apple-darwin9";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				PRODUCT_NAME = OGLES2Navigation3D;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../../../Builds/OGLES2/Include ../../../../../Tools/OGLES2 ../../../../../Tools";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = stabs;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = BUILD_OGLES2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/c++/4.2.1/armv6-apple-darwin9";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PREBINDING = NO;
+				PRODUCT_NAME = OGLES2Navigation3D;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../../../Builds/OGLES2/Include ../../../../../Tools/OGLES2 ../../../../../Tools";
+			};
+			name = Release;
+		};
+		F864940010F75E0600F46F54 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = BUILD_OGLES2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/c++/4.2.1/armv6-apple-darwin9";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PREBINDING = NO;
+				PRODUCT_NAME = OGLES2Navigation3D;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../../../Builds/OGLES2/Include ../../../../../Tools/OGLES2 ../../../../../Tools";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		F864940110F75E0600F46F54 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Distribution;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "OGLES2Navigation3D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				F864940110F75E0600F46F54 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OGLES2Navigation3D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				F864940010F75E0600F46F54 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

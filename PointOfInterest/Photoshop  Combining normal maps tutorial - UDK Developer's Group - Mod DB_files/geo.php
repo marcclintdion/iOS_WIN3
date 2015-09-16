@@ -1,0 +1,1 @@
+gn_country='CA';ip='184.66.148.196';exdate=new Date();exdate.setDate(exdate.getDate()+ 7);document.cookie="gn_country=CA; expires=" + exdate.toGMTString() + "; path=/";document.write('<script src="http://cdn.triggertag.gorillanation.com/js/6328_CA.php" type="text/javascript"><\/script>'); 

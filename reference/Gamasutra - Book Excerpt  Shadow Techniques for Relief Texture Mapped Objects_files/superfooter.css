@@ -1,0 +1,76 @@
+/* SUPERFOOTER this is for most sites and generally a darker type background.  BLUE overrides below for light colored backgrounds
+--------------------------------------- */
+#rightlinks ul, #rightlinks_light ul {
+	width:780px;   /*this number is for the standard width blueprint grid footer container of 998*/
+	/*color:#999;  original color for superfooter but stripped in order to let local site css override*/   
+	border-bottom:1px solid #666;
+	margin:0;
+	padding:4px;
+}
+
+#rightlinks ul li, #rightlinks_light ul li {display: inline;}
+
+#rightlinks ul li a, #rightlinks_light ul li a {
+	/*color:#999;*/
+	text-decoration:none;
+	font-weight:normal;
+}
+
+#rightlinks ul li a:hover, #rightlinks_light ul li a:hover {
+	/*color:#999;*/
+	text-decoration:underline;
+}
+
+#rightlinks ul.blue {
+	color:#9cf;
+	border-bottom:0;
+	font-weight:normal;
+}
+
+#rightlinks ul li a.blue { /*this is default and for darker colored bg.  for lighter backgrounds, use below class*/
+	color:#9cf;
+	font-weight:normal;
+}
+
+#rightlinks #left, #rightlinks_light #left  {/*this is default and for darker colored bg.  for lighter backgrounds, use below class*/
+	float:left;
+	width:88px;
+	/* height:111px; */
+	min-height:111px;
+	margin:0;
+	padding:0;
+}
+
+#rightlinks, #rightlinks_light {
+	float:right;
+	margin-top:11px;
+	padding:0;
+}
+
+#rightlinks ul li, #rightlinks_light ul li {
+	display:inline;
+}
+
+#rightlinks ul.normal,
+#rightlinks ul li a.normal,
+#rightlinks-light ul.normal,
+#rightlinks_light ul li a.normal {
+	/*color:#999;*/
+	font-weight:normal; 
+}
+
+#footercontent .left {}
+
+/* SUPERFOOTER  LIGHT COLORED BACKGROUND overrides - this sets up the BLUE links on a LIGHT background
+make sure your 'footercontent_light  wrapper is in place on those blue link areas
+--------------------------------------- */
+#rightlinks_light ul.blue {
+	color:#369;
+	border-bottom:0;
+	font-weight:normal;
+}
+
+#rightlinks_light ul li a.blue {
+	color:#369;
+	font-weight:normal;
+}
